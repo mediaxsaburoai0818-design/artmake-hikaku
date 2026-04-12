@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -507,6 +508,36 @@ export default function FirstTimePage() {
                 </div>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* 関連記事 */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
+      </Link>
+      <Link href="/knowledge/pain" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクの痛みについて</p>
+      </Link>
+      <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
+      </Link>
+      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">部位別</span>
+        <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
+      </Link>
+      <Link href="/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">ランキング</span>
+        <p className="font-semibold mt-1">アートメイクおすすめクリニックTOP5</p>
+      </Link>
           </div>
         </div>
       </section>

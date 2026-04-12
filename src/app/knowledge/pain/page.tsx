@@ -396,6 +396,36 @@ export default function PainPage() {
         </div>
       </section>
 
+
+      {/* 関連記事 */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+      <Link href="/knowledge/duration" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクの持続期間</p>
+      </Link>
+      <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
+      </Link>
+      <Link href="/knowledge/tattoo-difference" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクとタトゥーの違い</p>
+      </Link>
+      <Link href="/about" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">基本情報</span>
+        <p className="font-semibold mt-1">アートメイクとは？基礎知識まとめ</p>
+      </Link>
+      <Link href="/faq" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">FAQ</span>
+        <p className="font-semibold mt-1">アートメイクよくある質問</p>
+      </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto text-center">

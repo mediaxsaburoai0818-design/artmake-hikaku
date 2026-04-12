@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -722,6 +723,36 @@ export default function LipPage() {
                 </div>
               </details>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+      {/* 関連記事 */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">部位別</span>
+        <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
+      </Link>
+      <Link href="/parts/eyeliner" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">部位別</span>
+        <p className="font-semibold mt-1">アイラインアートメイクの種類・相場</p>
+      </Link>
+      <Link href="/purpose/40s-50s" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">目的別</span>
+        <p className="font-semibold mt-1">40代50代向けアートメイク</p>
+      </Link>
+      <Link href="/knowledge/pain" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">知識</span>
+        <p className="font-semibold mt-1">アートメイクの痛みについて</p>
+      </Link>
+      <Link href="/about" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">基本情報</span>
+        <p className="font-semibold mt-1">アートメイクとは？基礎知識まとめ</p>
+      </Link>
           </div>
         </div>
       </section>
