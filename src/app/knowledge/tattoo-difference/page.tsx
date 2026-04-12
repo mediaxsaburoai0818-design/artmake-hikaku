@@ -402,19 +402,7 @@ export default function TattooDifferencePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-bold text-white text-lg mb-4">アートメイク比較ナビ</p>
-          <p className="text-sm mb-4">眉毛・アイライン・リップのアートメイククリニックを徹底比較</p>
-          <div className="flex justify-center gap-6 text-sm mb-6">
-            <Link href="/" className="hover:text-white transition-colors">トップ</Link>
-            <Link href="/knowledge/tattoo-difference" className="hover:text-white transition-colors">タトゥーとの違い</Link>
-            <Link href="/knowledge/risk" className="hover:text-white transition-colors">デメリット・後悔</Link>
-            <Link href="/faq" className="hover:text-white transition-colors">FAQ</Link>
-          </div>
-          <p className="text-xs">&copy; 2026 アートメイク比較ナビ. All rights reserved.</p>
-        </div>
-      </footer>
+      
     </main>
   )
 }

@@ -401,33 +401,7 @@ export default function FortyFiftyPage() {
       </section>
 
       {/* ===== Footer ===== */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-bold text-white text-lg mb-4">
-            アートメイク比較ナビ
-          </p>
-          <nav className="flex justify-center gap-6 text-sm mb-6 flex-wrap">
-            <a href="/" className="hover:text-white transition-colors">
-              ランキング
-            </a>
-            <a href="/about" className="hover:text-white transition-colors">
-              アートメイクとは
-            </a>
-            <a href="/compare" className="hover:text-white transition-colors">
-              比較表
-            </a>
-            <a href="/faq" className="hover:text-white transition-colors">
-              FAQ
-            </a>
-          </nav>
-          <p className="text-sm mb-6">
-            眉毛・アイライン・リップのアートメイククリニックを徹底比較
-          </p>
-          <p className="text-xs">
-            &copy; 2026 アートメイク比較ナビ. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      
     </main>
   );
 }

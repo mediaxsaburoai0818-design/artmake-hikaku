@@ -323,13 +323,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="font-bold text-white text-lg mb-4">アートメイク比較ナビ</p>
-          <p className="text-sm mb-6">眉毛・アイライン・リップのアートメイククリニックを徹底比較</p>
-          <p className="text-xs">&copy; 2026 アートメイク比較ナビ. All rights reserved.</p>
-        </div>
-      </footer>
+      
     </main>
   )
 }
