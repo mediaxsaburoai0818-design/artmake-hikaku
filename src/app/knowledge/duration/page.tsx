@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'アートメイクは何年持つ？部位別の持続期間と長持ちさせるコツ【2026年最新】',
@@ -162,6 +163,7 @@ const faqs = [
 export default function DurationPage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "知識" }, { name: "持続期間" }]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

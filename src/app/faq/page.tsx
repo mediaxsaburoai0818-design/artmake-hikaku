@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'アートメイクよくある質問30選【2026年最新】全疑問を徹底解説',
@@ -185,6 +186,7 @@ export default function FaqPage() {
 
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "よくある質問" }]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

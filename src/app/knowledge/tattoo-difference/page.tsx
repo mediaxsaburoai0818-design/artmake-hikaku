@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'アートメイクとタトゥーの違いとは？8項目で徹底比較【2026年最新】',
@@ -170,6 +171,7 @@ const faqs = [
 export default function TattooDifferencePage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "知識" }, { name: "タトゥーとの違い" }]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

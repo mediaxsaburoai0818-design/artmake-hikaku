@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function GinzaAreaPage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "エリア" }, { name: "銀座" }]} />
       {/* ===== Hero ===== */}
       <section className="bg-gradient-to-br from-pink-50 to-rose-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

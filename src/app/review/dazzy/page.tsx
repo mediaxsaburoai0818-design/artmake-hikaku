@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'デイジークリニック（DAZZY CLINIC）の口コミ・評判｜アートメイク料金・技法を徹底調査【2026年最新】',
@@ -31,6 +32,7 @@ const pricingTable = [
 export default function DazzyClinicReviewPage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "クリニック" }, { name: "デイジークリニック" }]} />
       <section className="bg-gradient-to-br from-pink-50 to-rose-100 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">口コミ・評判レビュー</p>

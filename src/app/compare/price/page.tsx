@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -218,6 +219,7 @@ const faqs = [
 export default function PriceComparisonPage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "比較" }, { name: "料金比較" }]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

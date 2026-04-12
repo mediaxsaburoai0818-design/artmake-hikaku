@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -119,6 +120,7 @@ const faqs = [
 export default function CreageVsMedicalbrowPage() {
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={[{ name: "比較" }, { name: "クレアージュ vs メディカルブロー" }]} />
       {/* Hero */}
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
