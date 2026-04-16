@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Noto_Sans_JP } from "next/font/google";
+import { Zen_Maru_Gothic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const notoSansJP = Noto_Sans_JP({
+const zenMaru = Zen_Maru_Gothic({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "700"],
@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${notoSansJP.className} h-full antialiased`}>
+    <html lang="ja" className={`${zenMaru.className} h-full antialiased`}>
       <head>
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />
         <meta httpEquiv="Expires" content="0" />
       </head>
-      <body className="min-h-full flex flex-col bg-white text-gray-800">
+      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
         <Header />
         <div className="flex-1">{children}</div>
         <Footer />

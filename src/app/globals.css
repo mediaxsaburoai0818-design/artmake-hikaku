@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFBF9;
+  --foreground: #2D2A26;
+  --pink-sheer: #E8A0BF;
+  --pink-beige: #F5E6E0;
+  --gold: #C9A96E;
+  --gold-light: #E8D5B0;
+  --blush: #FFF0EB;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-sheer: var(--pink-sheer);
+  --color-beige: var(--pink-beige);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-blush: var(--blush);
+  --font-sans: var(--font-zen-maru);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Glass card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Gold underline accent */
+.gold-underline {
+  background-image: linear-gradient(transparent 60%, var(--gold-light) 60%);
+  display: inline;
+}
+
+/* Glow button hover */
+.btn-glow {
+  transition: all 0.3s ease;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 24px rgba(201, 169, 110, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Wave separator */
+.wave-separator {
+  position: relative;
+}
+.wave-separator::after {
+  content: '';
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: inherit;
+  clip-path: ellipse(55% 100% at 50% 0%);
+}
+
+/* Soft gradient backgrounds */
+.bg-hero-gradient {
+  background: linear-gradient(135deg, #FFFBF9 0%, #F5E6E0 40%, #FFF0EB 70%, #FFFBF9 100%);
+}
+
+.bg-section-warm {
+  background: linear-gradient(180deg, #FFFBF9 0%, #FFF0EB 100%);
+}
+
+/* Score badge shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.badge-gold {
+  background: linear-gradient(90deg, #C9A96E, #E8D5B0, #C9A96E);
+  background-size: 200% auto;
+  animation: shimmer 3s ease-in-out infinite;
+  color: white;
+}
+
+/* Smooth details animation */
+details summary {
+  list-style: none;
+}
+details summary::-webkit-details-marker {
+  display: none;
 }
