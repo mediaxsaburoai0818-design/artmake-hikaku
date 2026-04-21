@@ -140,7 +140,7 @@ export default function Home() {
       <section className="max-w-[900px] mx-auto px-5 pt-16 pb-10 text-center border-b-[3px] border-[#1A1A1A]">
         <p className="text-[11px] text-[var(--gold)] tracking-[4px] uppercase mb-4">April 2026 Issue</p>
         <h1 className="text-[40px] md:text-[40px] font-bold leading-[1.3] mb-4 tracking-[-1px]">
-          2026年、最も<span className="text-[var(--gold)]">選ばれた</span><br />クリニックは？
+          最も<span className="text-[var(--gold)]">選ばれた</span><br />アートメイククリニックは？
         </h1>
         <p className="text-[15px] text-[#666] mb-8 leading-[1.8]">
           5社を100点独自採点。料金・技術力・口コミで徹底比較。<br />
