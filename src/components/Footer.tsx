@@ -2,20 +2,19 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#2D2A26] text-[#A8A29E] py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+    <footer className="bg-[#1A1A1A] text-[#666] py-12 px-4">
+      <div className="max-w-[900px] mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           <div>
             <h3 className="font-bold text-lg mb-4">
-              <span className="text-[var(--gold)]">Art</span>
-              <span className="text-[var(--pink-sheer)]">Make</span>
-              <span className="text-white text-sm ml-1">比較ナビ</span>
+              <em className="text-[var(--gold)] not-italic">ArtMake</em>
+              <span className="text-white"> PRESS</span>
             </h3>
-            <p className="text-sm mb-3">眉毛・リップ・アイラインのアートメイククリニックを100点独自採点で徹底比較</p>
+            <p className="text-sm mb-3 text-[#666]">眉毛・リップ・アイラインのアートメイククリニックを100点独自採点で徹底比較</p>
           </div>
 
           <div>
-            <h4 className="text-[var(--gold-light)] font-semibold mb-4">クリニック</h4>
+            <h4 className="text-[var(--gold)] font-semibold mb-4 text-xs uppercase tracking-[2px]">Clinic</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/review/medicalbrow" className="hover:text-[var(--gold)] transition-colors">メディカルブロー</Link></li>
               <li><Link href="/review/creage" className="hover:text-[var(--gold)] transition-colors">クレアージュ東京</Link></li>
@@ -27,7 +26,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[var(--gold-light)] font-semibold mb-4">目的・部位別</h4>
+            <h4 className="text-[var(--gold)] font-semibold mb-4 text-xs uppercase tracking-[2px]">Guide</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/purpose/cheap" className="hover:text-[var(--gold)] transition-colors">安い・コスパ重視</Link></li>
               <li><Link href="/purpose/natural" className="hover:text-[var(--gold)] transition-colors">ナチュラル重視</Link></li>
@@ -41,7 +40,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[var(--gold-light)] font-semibold mb-4">エリア別</h4>
+            <h4 className="text-[var(--gold)] font-semibold mb-4 text-xs uppercase tracking-[2px]">Area</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/area/tokyo" className="hover:text-[var(--gold)] transition-colors">東京</Link></li>
               <li><Link href="/area/ginza" className="hover:text-[var(--gold)] transition-colors">銀座</Link></li>
@@ -53,12 +52,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[var(--gold-light)] font-semibold mb-4">お役立ち情報</h4>
+            <h4 className="text-[var(--gold)] font-semibold mb-4 text-xs uppercase tracking-[2px]">Info</h4>
             <ul className="space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-[var(--gold)] transition-colors">アートメイクとは</Link></li>
-              <li><Link href="/knowledge/risk" className="hover:text-[var(--gold)] transition-colors">やめたほうがいい？</Link></li>
-              <li><Link href="/knowledge/duration" className="hover:text-[var(--gold)] transition-colors">何年持つ？</Link></li>
-              <li><Link href="/knowledge/pain" className="hover:text-[var(--gold)] transition-colors">痛い？ダウンタイム</Link></li>
+              <li><Link href="/knowledge/risk" className="hover:text-[var(--gold)] transition-colors">やめたほうがいい?</Link></li>
+              <li><Link href="/knowledge/duration" className="hover:text-[var(--gold)] transition-colors">何年持つ?</Link></li>
+              <li><Link href="/knowledge/pain" className="hover:text-[var(--gold)] transition-colors">痛い?ダウンタイム</Link></li>
               <li><Link href="/knowledge/tattoo-difference" className="hover:text-[var(--gold)] transition-colors">タトゥーとの違い</Link></li>
               <li><Link href="/faq" className="hover:text-[var(--gold)] transition-colors">よくある質問30選</Link></li>
               <li><Link href="/compare/medicalbrow-vs-dazzy" className="hover:text-[var(--gold)] transition-colors">メディカルブロー vs デイジー</Link></li>
@@ -67,13 +66,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-[#3D3A36] pt-8">
+        <div className="border-t border-[#333] pt-8">
           <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
             <Link href="/terms/" className="hover:text-[var(--gold)] transition-colors">利用規約</Link>
             <Link href="/privacy/" className="hover:text-[var(--gold)] transition-colors">プライバシーポリシー</Link>
             <Link href="/content-policy/" className="hover:text-[var(--gold)] transition-colors">記事制作ポリシー</Link>
           </div>
-          <p className="text-center text-sm">&copy; 2026 アートメイク比較ナビ. All rights reserved.</p>
+          <p className="text-center text-sm text-[#666] tracking-[1px]">&copy; 2026 ArtMake PRESS. All rights reserved.</p>
         </div>
       </div>
     </footer>

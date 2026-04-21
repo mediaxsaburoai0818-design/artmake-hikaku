@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案C：SNSポップ × #ArtMake部</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Zen Maru Gothic',sans-serif; background:#FAFAFF; color:#2D2B3D; }
+
+header { background:rgba(255,255,255,.9); backdrop-filter:blur(16px); border-bottom:1px solid #E8E4F0; position:sticky; top:0; z-index:50; padding:14px 20px; }
+header .inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+header .logo { font-size:18px; font-weight:700; }
+header .logo .hash { color:#C8B6FF; }
+header .logo .art { color:#FF8A80; }
+header .logo .make { color:#B8F0E0; }
+header nav a { font-size:13px; color:#999; text-decoration:none; margin-left:16px; }
+
+/* Hero */
+.hero { background:linear-gradient(135deg,#C8B6FF 0%,#B8F0E0 50%,#FFD6CC 100%); padding:60px 20px 50px; text-align:center; position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle at 30% 40%,rgba(255,255,255,.3) 0%,transparent 50%); }
+.hero .content { position:relative; z-index:1; max-width:900px; margin:0 auto; }
+.hero .badge { display:inline-block; background:rgba(255,255,255,.6); backdrop-filter:blur(8px); padding:6px 16px; border-radius:20px; font-size:12px; color:#6B5FBF; font-weight:700; margin-bottom:20px; }
+.hero h1 { font-size:34px; color:#2D2B3D; margin-bottom:16px; line-height:1.4; }
+.hero h1 .highlight { background:rgba(255,255,255,.5); padding:2px 8px; border-radius:8px; }
+.hero p { font-size:14px; color:#555; margin-bottom:28px; }
+
+/* Characters */
+.hero .charas { display:flex; justify-content:center; gap:24px; margin-bottom:32px; }
+.hero .chara-bubble { background:rgba(255,255,255,.7); backdrop-filter:blur(12px); border-radius:20px; padding:16px 20px; text-align:center; min-width:140px; transition:all .3s; }
+.hero .chara-bubble:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.1); }
+.hero .chara-bubble .icon { margin-bottom:6px; }
+.hero .chara-bubble .icon img { width:64px; height:64px; border-radius:50%; object-fit:cover; }
+.hero .chara-bubble .name { font-weight:700; font-size:14px; }
+.hero .chara-bubble .role { font-size:10px; color:#888; }
+.hero .cta { display:inline-block; background:#FF8A80; color:#fff; padding:16px 40px; border-radius:30px; font-weight:700; font-size:16px; text-decoration:none; box-shadow:0 4px 16px rgba(255,138,128,.4); transition:all .3s; }
+.hero .cta:hover { transform:scale(1.05); box-shadow:0 8px 28px rgba(255,138,128,.5); }
+
+/* Stats */
+.stats { max-width:900px; margin:-30px auto 0; padding:0 20px; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; position:relative; z-index:2; }
+.stat-card { background:#fff; border-radius:16px; padding:20px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,.06); }
+.stat-card .num { font-size:22px; font-weight:700; background:linear-gradient(135deg,#C8B6FF,#FF8A80); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.stat-card .label { font-size:10px; color:#999; margin-top:4px; }
+
+/* Section */
+.section { max-width:900px; margin:0 auto; padding:48px 20px; }
+.section-title { text-align:center; font-size:24px; font-weight:700; margin-bottom:8px; }
+.section-sub { text-align:center; font-size:13px; color:#999; margin-bottom:32px; }
+
+/* Clinic Cards - Pop Style */
+.clinic-grid { display:grid; gap:20px; }
+.clinic-card { background:#fff; border-radius:20px; padding:24px; border:2px solid transparent; transition:all .3s; box-shadow:0 2px 12px rgba(0,0,0,.04); }
+.clinic-card:nth-child(1) { border-color:#C8B6FF; }
+.clinic-card:nth-child(2) { border-color:#B8F0E0; }
+.clinic-card:nth-child(3) { border-color:#FFD6CC; }
+.clinic-card:hover { transform:translateY(-4px); box-shadow:0 12px 32px rgba(0,0,0,.08); }
+.clinic-card .top-row { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
+.clinic-card .rank-badge { width:36px; height:36px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:16px; color:#fff; }
+.clinic-card:nth-child(1) .rank-badge { background:linear-gradient(135deg,#C8B6FF,#9B8FD8); }
+.clinic-card:nth-child(2) .rank-badge { background:linear-gradient(135deg,#B8F0E0,#7DCBB4); }
+.clinic-card:nth-child(3) .rank-badge { background:linear-gradient(135deg,#FFD6CC,#FF8A80); }
+.clinic-card h3 { font-size:18px; }
+.clinic-card .score { font-size:13px; font-weight:700; color:#C8B6FF; margin-bottom:12px; }
+.clinic-card .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.clinic-card .tags span { background:#F5F3FF; padding:4px 10px; border-radius:20px; font-size:11px; color:#6B5FBF; }
+
+/* Chat Bubbles */
+.chat-area { margin-bottom:16px; }
+.chat-bubble { display:flex; gap:10px; margin-bottom:10px; align-items:flex-start; }
+.chat-bubble .avatar { flex-shrink:0; width:32px; height:32px; border-radius:50%; overflow:hidden; }
+.chat-bubble .avatar img { width:100%; height:100%; object-fit:cover; }
+.chat-bubble .msg { background:#F5F3FF; padding:10px 14px; border-radius:0 14px 14px 14px; font-size:12px; color:#555; line-height:1.6; max-width:80%; }
+.chat-bubble .msg strong { color:#6B5FBF; }
+.chat-bubble.right { flex-direction:row-reverse; }
+.chat-bubble.right .msg { background:#FFF0EE; border-radius:14px 0 14px 14px; }
+.chat-bubble.right .msg strong { color:#FF8A80; }
+.chat-bubble.green .msg { background:#EEFFF8; }
+.chat-bubble.green .msg strong { color:#4CAF50; }
+
+.clinic-card .btn { display:block; text-align:center; padding:12px; border-radius:14px; font-weight:700; font-size:14px; text-decoration:none; color:#fff; transition:all .3s; }
+.clinic-card:nth-child(1) .btn { background:linear-gradient(135deg,#C8B6FF,#9B8FD8); }
+.clinic-card:nth-child(2) .btn { background:linear-gradient(135deg,#B8F0E0,#7DCBB4); }
+.clinic-card:nth-child(3) .btn { background:linear-gradient(135deg,#FFD6CC,#FF8A80); }
+.clinic-card .btn:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(0,0,0,.15); }
+
+footer { background:#2D2B3D; color:#888; text-align:center; padding:40px 20px; font-size:12px; margin-top:48px; }
+
+@media(max-width:768px){
+  .hero h1 { font-size:24px; }
+  .hero .charas { flex-wrap:wrap; gap:12px; }
+  .hero .chara-bubble { min-width:100px; }
+  .stats { grid-template-columns:repeat(2,1fr); margin-top:-20px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <div class="logo"><span class="hash">#</span><span class="art">Art</span><span class="make">Make</span>部</div>
+    <nav>
+      <a href="#">ランキング</a>
+      <a href="#">目的別</a>
+      <a href="#">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="content">
+    <div class="badge">2026年4月最新 | みんなで選んだ！</div>
+    <h1>あなたに似合う眉、<br><span class="highlight">見つけよう！</span></h1>
+    <p>アートメイク部の3人が、5つのクリニックを本音トーク。<br>100点独自採点であなたにぴったりのクリニックが見つかる！</p>
+
+    <div class="charas">
+      <div class="chara-bubble">
+        <div class="icon"><img src="chara-mayuko.jpg" alt="まゆこ"></div>
+        <div class="name">まゆこ</div>
+        <div class="role">眉毛エキスパート</div>
+      </div>
+      <div class="chara-bubble">
+        <div class="icon"><img src="chara-cosme.jpg" alt="コスメちゃん"></div>
+        <div class="name">コスメちゃん</div>
+        <div class="role">ビジュアル重視</div>
+      </div>
+      <div class="chara-bubble">
+        <div class="icon"><img src="chara-kenta.jpg" alt="ケンタ"></div>
+        <div class="name">ケンタ</div>
+        <div class="role">メンズ代表</div>
+      </div>
+    </div>
+
+    <a href="#" class="cta">ランキングを見る！</a>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat-card"><div class="num">5社</div><div class="label">厳選クリニック</div></div>
+  <div class="stat-card"><div class="num">100点</div><div class="label">独自採点</div></div>
+  <div class="stat-card"><div class="num">28,000円〜</div><div class="label">最安料金</div></div>
+  <div class="stat-card"><div class="num">23万件超</div><div class="label">最大症例数</div></div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">おすすめクリニック TOP3</h2>
+  <p class="section-sub">#ArtMake部 の本音トーク</p>
+
+  <div class="clinic-grid">
+    <div class="clinic-card">
+      <div class="top-row">
+        <div class="rank-badge">1</div>
+        <div>
+          <h3>メディカルブロー</h3>
+          <div class="score">独自採点 95/100</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span>7Dストローク®</span>
+        <span>累計23万件</span>
+        <span>モニター28,000円〜</span>
+      </div>
+      <div class="chat-area">
+        <div class="chat-bubble">
+          <div class="avatar"><img src="chara-mayuko.jpg" alt="まゆこ"></div>
+          <div class="msg"><strong>眉子：</strong>技術力で選ぶならダントツ1位！7Dストロークは本当に自然すぎる✨</div>
+        </div>
+        <div class="chat-bubble right">
+          <div class="avatar"><img src="chara-kenta.jpg" alt="ケンタ"></div>
+          <div class="msg"><strong>ケンタ：</strong>メンズもOKなのが嬉しい。周りに全然バレなかった笑</div>
+        </div>
+        <div class="chat-bubble green">
+          <div class="avatar"><img src="chara-cosme.jpg" alt="コスメちゃん"></div>
+          <div class="msg"><strong>コスメちゃん：</strong>モニター価格でこの品質はコスパ最強！！</div>
+        </div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+
+    <div class="clinic-card">
+      <div class="top-row">
+        <div class="rank-badge">2</div>
+        <div>
+          <h3>クレアージュ東京</h3>
+          <div class="score">独自採点 92/100</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span>3回施術</span>
+        <span>指名料無料</span>
+        <span>実績10,000件</span>
+      </div>
+      <div class="chat-area">
+        <div class="chat-bubble">
+          <div class="avatar"><img src="chara-mayuko.jpg" alt="まゆこ"></div>
+          <div class="msg"><strong>眉子：</strong>3回に分けるから超自然！「やってます感ゼロ」が最高ポイント</div>
+        </div>
+        <div class="chat-bubble green">
+          <div class="avatar"><img src="chara-cosme.jpg" alt="コスメちゃん"></div>
+          <div class="msg"><strong>コスメちゃん：</strong>指名料無料なの地味に嬉しい〜！料金が明朗で安心</div>
+        </div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+
+    <div class="clinic-card">
+      <div class="top-row">
+        <div class="rank-badge">3</div>
+        <div>
+          <h3>デイジークリニック</h3>
+          <div class="score">独自採点 90/100</div>
+        </div>
+      </div>
+      <div class="tags">
+        <span>世界的アーティスト監修</span>
+        <span>最大50%OFF</span>
+        <span>3技法から選択</span>
+      </div>
+      <div class="chat-area">
+        <div class="chat-bubble green">
+          <div class="avatar"><img src="chara-cosme.jpg" alt="コスメちゃん"></div>
+          <div class="msg"><strong>コスメちゃん：</strong>デザイン力がレベチ！トレンド眉にしたいならここ一択💕</div>
+        </div>
+        <div class="chat-bubble right">
+          <div class="avatar"><img src="chara-kenta.jpg" alt="ケンタ"></div>
+          <div class="msg"><strong>ケンタ：</strong>50%OFFモニターは争奪戦。早めに予約がおすすめ</div>
+        </div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>案C：SNS × ポップカルチャー「#ArtMake部」</p>
+  <p style="margin-top:8px">© 2026 #ArtMake部 Demo</p>
+</footer>
+</body>
+</html>

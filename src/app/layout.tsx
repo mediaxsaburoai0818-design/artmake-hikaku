@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Zen_Maru_Gothic } from "next/font/google";
+import { Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const zenMaru = Zen_Maru_Gothic({
+const zenKaku = Zen_Kaku_Gothic_New({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "700"],
@@ -21,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja" className={`${zenMaru.className} h-full antialiased`}>
+    <html lang="ja" className={`${zenKaku.className} h-full antialiased`}>
       <head>
         <meta httpEquiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <meta httpEquiv="Pragma" content="no-cache" />

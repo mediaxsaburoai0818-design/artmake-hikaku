@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>案A：韓国コスメ風 × ミオ</title>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Zen Maru Gothic',sans-serif; background:#F5EDE3; color:#2C2C2C; }
+
+/* Header */
+header { background:rgba(255,255,255,0.85); backdrop-filter:blur(16px); border-bottom:1px solid #E8DDD0; position:sticky; top:0; z-index:50; padding:14px 20px; }
+header .inner { max-width:900px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; }
+header .logo { font-size:20px; font-weight:700; }
+header .logo span:first-child { color:#D4A5A5; }
+header .logo span:last-child { color:#2C2C2C; font-size:13px; margin-left:4px; }
+header nav a { font-size:13px; color:#7A6B63; text-decoration:none; margin-left:20px; }
+
+/* Hero */
+.hero { max-width:900px; margin:0 auto; padding:60px 20px 40px; display:flex; align-items:center; gap:40px; }
+.hero-text { flex:1; }
+.hero-text .tag { display:inline-block; background:#D4A5A5; color:#fff; font-size:11px; padding:4px 12px; border-radius:20px; margin-bottom:16px; }
+.hero-text h1 { font-size:32px; line-height:1.4; margin-bottom:16px; }
+.hero-text h1 em { font-style:normal; background:linear-gradient(transparent 60%,#F0D5C8 60%); }
+.hero-text p { color:#7A6B63; font-size:14px; line-height:1.8; margin-bottom:24px; }
+.hero-text .cta { display:inline-block; background:#D4A5A5; color:#fff; padding:14px 32px; border-radius:30px; font-weight:700; text-decoration:none; font-size:15px; transition:all .3s; }
+.hero-text .cta:hover { box-shadow:0 8px 24px rgba(212,165,165,.4); transform:translateY(-2px); }
+.hero-chara { width:220px; height:300px; background:#fff; border-radius:24px; display:flex; flex-direction:column; align-items:center; justify-content:center; box-shadow:0 8px 30px rgba(0,0,0,.06); }
+.hero-chara img { width:180px; height:180px; object-fit:cover; border-radius:50%; margin-bottom:12px; border:3px solid #E8DDD0; }
+.hero-chara .name { font-weight:700; font-size:16px; color:#D4A5A5; }
+.hero-chara .desc { font-size:11px; color:#999; margin-top:4px; }
+
+/* Stats */
+.stats { max-width:900px; margin:0 auto; padding:0 20px 40px; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+.stat-card { background:rgba(255,255,255,.7); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.5); border-radius:16px; padding:20px; text-align:center; }
+.stat-card .num { font-size:24px; font-weight:700; color:#D4A5A5; }
+.stat-card .label { font-size:11px; color:#999; margin-top:4px; }
+
+/* Section */
+.section { max-width:900px; margin:0 auto; padding:40px 20px; }
+.section-title { text-align:center; font-size:22px; font-weight:700; margin-bottom:8px; }
+.section-sub { text-align:center; font-size:13px; color:#999; margin-bottom:32px; }
+
+/* Clinic Cards */
+.clinic-grid { display:grid; grid-template-columns:1fr; gap:20px; }
+.clinic-card { background:rgba(255,255,255,.8); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.6); border-radius:20px; padding:28px; transition:all .3s; }
+.clinic-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(212,165,165,.15); }
+.clinic-card .rank { display:inline-block; background:linear-gradient(135deg,#D4A5A5,#E8C8C8); color:#fff; width:32px; height:32px; border-radius:50%; text-align:center; line-height:32px; font-weight:700; font-size:14px; margin-bottom:12px; }
+.clinic-card h3 { font-size:18px; margin-bottom:8px; }
+.clinic-card .score { color:#D4A5A5; font-weight:700; font-size:14px; margin-bottom:12px; }
+.clinic-card .tags { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:16px; }
+.clinic-card .tags span { background:#F5EDE3; padding:4px 10px; border-radius:20px; font-size:11px; color:#7A6B63; }
+.clinic-card .comment { background:#FFF8F5; border-radius:12px; padding:14px; display:flex; gap:12px; align-items:flex-start; }
+.clinic-card .comment .avatar { font-size:28px; flex-shrink:0; }
+.clinic-card .comment .text { font-size:12px; color:#7A6B63; line-height:1.6; }
+.clinic-card .comment .text strong { color:#D4A5A5; }
+.clinic-card .btn { display:block; text-align:center; background:#D4A5A5; color:#fff; padding:12px; border-radius:12px; margin-top:16px; text-decoration:none; font-weight:700; font-size:14px; transition:all .3s; }
+.clinic-card .btn:hover { background:#C49090; }
+
+/* Footer */
+footer { background:#2C2C2C; color:#999; text-align:center; padding:40px 20px; font-size:12px; margin-top:40px; }
+
+@media(max-width:768px){
+  .hero { flex-direction:column; text-align:center; padding-top:40px; }
+  .hero-chara { width:160px; height:220px; }
+  .hero-chara .face { font-size:60px; }
+  .stats { grid-template-columns:repeat(2,1fr); }
+  .hero-text h1 { font-size:24px; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="inner">
+    <div class="logo"><span>Art</span>Make<span>比較ナビ</span></div>
+    <nav>
+      <a href="#">ランキング</a>
+      <a href="#">クリニック</a>
+      <a href="#">目的別</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="tag">2026年4月最新</div>
+    <h1><em>眉が変わると、印象が変わる。</em><br>あなたに合うクリニックを見つけよう</h1>
+    <p>アートメイク体験者のミオが、5つのクリニックを本音レビュー。<br>料金・技術力・口コミで100点独自採点しました。</p>
+    <a href="#" class="cta">ランキングを見る</a>
+  </div>
+  <div class="hero-chara">
+    <img src="chara-mio.jpg" alt="ミオ">
+    <div class="name">ミオ</div>
+    <div class="desc">アートメイク体験者<br>美容ライター</div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat-card"><div class="num">5社</div><div class="label">厳選クリニック</div></div>
+  <div class="stat-card"><div class="num">100点</div><div class="label">独自採点制</div></div>
+  <div class="stat-card"><div class="num">28,000円〜</div><div class="label">最安料金</div></div>
+  <div class="stat-card"><div class="num">23万件超</div><div class="label">最大症例数</div></div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">おすすめクリニック TOP3</h2>
+  <p class="section-sub">ミオが本音で採点しました</p>
+
+  <div class="clinic-grid">
+    <div class="clinic-card">
+      <div class="rank">1</div>
+      <h3>メディカルブロー</h3>
+      <div class="score">独自採点 95/100</div>
+      <div class="tags">
+        <span>7Dストローク®</span>
+        <span>累計23万件</span>
+        <span>モニター28,000円〜</span>
+        <span>全国展開</span>
+      </div>
+      <div class="comment">
+        <div class="avatar"><img src="chara-mio.jpg" alt="ミオ" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"></div>
+        <div class="text"><strong>ミオの一言：</strong>「7Dストロークの仕上がりは本当に自然！モニター価格ならコスパも最強。迷ったらここから始めてみて」</div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+
+    <div class="clinic-card">
+      <div class="rank">2</div>
+      <h3>クレアージュ東京</h3>
+      <div class="score">独自採点 92/100</div>
+      <div class="tags">
+        <span>3回施術</span>
+        <span>実績10,000件</span>
+        <span>指名料無料</span>
+        <span>40-50代人気</span>
+      </div>
+      <div class="comment">
+        <div class="avatar"><img src="chara-mio.jpg" alt="ミオ" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"></div>
+        <div class="text"><strong>ミオの一言：</strong>「3回に分けて自然に定着させるから"やりすぎ感"がゼロ。大人の女性にぴったり」</div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+
+    <div class="clinic-card">
+      <div class="rank">3</div>
+      <h3>デイジークリニック</h3>
+      <div class="score">独自採点 90/100</div>
+      <div class="tags">
+        <span>世界的アーティスト監修</span>
+        <span>最大50%OFF</span>
+        <span>3種類の技法</span>
+      </div>
+      <div class="comment">
+        <div class="avatar"><img src="chara-mio.jpg" alt="ミオ" style="width:40px;height:40px;border-radius:50%;object-fit:cover;"></div>
+        <div class="text"><strong>ミオの一言：</strong>「トレンド感のある眉に仕上がる！モニターなら49,800円〜とコスパも抜群」</div>
+      </div>
+      <a href="#" class="btn">公式サイトを見る →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>案A：韓国コスメ風 × おしゃれキャラ「ミオ」</p>
+  <p style="margin-top:8px">© 2026 アートメイク比較ナビ デモページ</p>
+</footer>
+</body>
+</html>

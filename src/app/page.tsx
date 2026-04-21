@@ -2,6 +2,7 @@ const clinics = [
   {
     rank: 1,
     name: 'メディカルブロー',
+    reviewPath: '/review/medicalbrow/',
     score: 95,
     rating: 4.8,
     reviewCount: 2450,
@@ -17,10 +18,15 @@ const clinics = [
     cons: ['アーティストランクで料金が変動', '人気のため予約が取りにくい場合あり'],
     recommend: '自然な毛並み感を重視する方、コスパと技術力の両立を求める方',
     scores: { cost: 28, cases: 25, counseling: 18, safety: 14, access: 10 },
+    dialogue: [
+      { name: 'アカネ', img: '/chara-akane.jpg', text: '技術力とコスパのバランスが最強。迷ったらここ一択!' },
+      { name: 'ユウ', img: '/chara-yuu.jpg', text: 'メンズもOK。自然すぎて周りに気づかれなかった' },
+    ],
   },
   {
     rank: 2,
     name: 'クレアージュ東京',
+    reviewPath: '/review/creage/',
     score: 92,
     rating: 4.7,
     reviewCount: 1850,
@@ -36,10 +42,14 @@ const clinics = [
     cons: ['3回通う必要がある', '1回あたりの単価はやや高め'],
     recommend: '自然さを最優先する方、40代以上の方、指名料を気にしたくない方',
     scores: { cost: 25, cases: 24, counseling: 20, safety: 14, access: 9 },
+    dialogue: [
+      { name: 'アカネ', img: '/chara-akane.jpg', text: '3回に分けるから本当に自然。指名料無料なのも嬉しい! 大人の女性に推したい' },
+    ],
   },
   {
     rank: 3,
     name: 'DAZZY CLINIC（デイジークリニック）',
+    reviewPath: '/review/dazzy/',
     score: 90,
     rating: 4.6,
     reviewCount: 1620,
@@ -55,10 +65,15 @@ const clinics = [
     cons: ['院によって対応技法が異なる', 'モニター枠に限りあり'],
     recommend: 'デザイン重視の方、トレンド眉にしたい方、コスパ重視の方',
     scores: { cost: 29, cases: 22, counseling: 17, safety: 14, access: 8 },
+    dialogue: [
+      { name: 'ユウ', img: '/chara-yuu.jpg', text: 'デザイン力は間違いない。トレンド感重視ならここ' },
+      { name: 'アカネ', img: '/chara-akane.jpg', text: 'モニター50%OFFは見逃せない!' },
+    ],
   },
   {
     rank: 4,
     name: 'FIRST ARTMAKE（ファーストアートメイク）',
+    reviewPath: '/review/first-artmake/',
     score: 87,
     rating: 4.5,
     reviewCount: 980,
@@ -74,10 +89,14 @@ const clinics = [
     cons: ['銀座1院のみ', '症例数は大手に比べて少なめ'],
     recommend: 'アートメイク初心者、カウンセリング重視の方、銀座エリアで探している方',
     scores: { cost: 26, cases: 18, counseling: 20, safety: 15, access: 8 },
+    dialogue: [
+      { name: 'ユウ', img: '/chara-yuu.jpg', text: '初めてでも安心感がすごい。カウンセリングが本当に丁寧' },
+    ],
   },
   {
     rank: 5,
     name: 'トゥルーデザインクリニック',
+    reviewPath: '/review/true-design/',
     score: 85,
     rating: 4.5,
     reviewCount: 1120,
@@ -93,6 +112,9 @@ const clinics = [
     cons: ['大阪1院のみ', '関東からは通いにくい'],
     recommend: '40代以上の方、関西エリアの方、リタッチコストを抑えたい方',
     scores: { cost: 27, cases: 20, counseling: 18, safety: 13, access: 7 },
+    dialogue: [
+      { name: 'アカネ', img: '/chara-akane.jpg', text: '40代以上なら絶対ここ。年齢に合ったデザインが本当に上手' },
+    ],
   },
 ]
 
@@ -114,84 +136,98 @@ const faqs = [
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Hero */}
-      <section className="bg-hero-gradient py-24 px-4 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: 'radial-gradient(circle at 30% 20%, var(--pink-sheer) 0%, transparent 50%), radial-gradient(circle at 70% 80%, var(--gold-light) 0%, transparent 50%)' }} />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="text-[var(--gold)] text-sm font-semibold mb-3 tracking-widest">2026年4月最新</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6 leading-tight">
-            <span className="gold-underline">理想の眉</span>に出会える<br className="hidden md:block" />
-            アートメイククリニックTOP5
-          </h1>
-          <p className="text-lg text-[#6B6560] mb-10 leading-relaxed">
-            眉毛アートメイク5社を100点独自採点で徹底比較。<br />
-            料金・技術力・口コミ・安全性であなたに最適なクリニックが見つかる。
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a href="#ranking" className="bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full text-lg font-semibold btn-glow shadow-lg">ランキングを見る</a>
-            <a href="#comparison" className="glass-card text-[var(--gold)] px-8 py-4 rounded-full text-lg font-semibold hover:bg-white/80 transition-all shadow-lg border border-[var(--gold-light)]">比較表で選ぶ</a>
+      {/* Hero - Magazine Cover */}
+      <section className="max-w-[900px] mx-auto px-5 pt-16 pb-10 text-center border-b-[3px] border-[#1A1A1A]">
+        <p className="text-[11px] text-[var(--gold)] tracking-[4px] uppercase mb-4">April 2026 Issue</p>
+        <h1 className="text-[40px] md:text-[40px] font-bold leading-[1.3] mb-4 tracking-[-1px]">
+          2026年、最も<span className="text-[var(--gold)]">選ばれた</span><br />クリニックは？
+        </h1>
+        <p className="text-[15px] text-[#666] mb-8 leading-[1.8]">
+          5社を100点独自採点。料金・技術力・口コミで徹底比較。<br />
+          ユウとアカネが本音でレビューします。
+        </p>
+
+        {/* Character Row */}
+        <div className="flex justify-center gap-10 mb-8">
+          <div className="text-center">
+            <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-2 border-2 border-[var(--gold)]">
+              <img src="/chara-yuu.jpg" alt="ユウ" className="w-full h-full object-cover" />
+            </div>
+            <div className="font-bold text-[13px]">ユウ</div>
+            <div className="text-[11px] text-[#999]">メンズ美容に興味あり</div>
           </div>
+          <div className="text-center">
+            <div className="w-20 h-20 rounded-full overflow-hidden mx-auto mb-2 border-2 border-[var(--gold)]">
+              <img src="/chara-akane.jpg" alt="アカネ" className="w-full h-full object-cover" />
+            </div>
+            <div className="font-bold text-[13px]">アカネ</div>
+            <div className="text-[11px] text-[#999]">リサーチ好き美容女子</div>
+          </div>
+        </div>
+
+        {/* CTA Row */}
+        <div className="flex gap-4 justify-center flex-wrap">
+          <a href="#ranking" className="bg-[#1A1A1A] text-white px-10 py-3.5 font-bold text-[14px] tracking-[1px] hover:bg-[var(--gold)] transition-all">RANKING</a>
+          <a href="#comparison" className="border-2 border-[#1A1A1A] text-[#1A1A1A] px-10 py-3.5 font-bold text-[14px] tracking-[1px] hover:border-[var(--gold)] hover:text-[var(--gold)] transition-all">COMPARE</a>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="py-14 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {[
-              { value: '5社', label: '厳選クリニック' },
-              { value: '100点', label: '独自採点制' },
-              { value: '28,000円〜', label: '最安料金' },
-              { value: '23万件超', label: '最大症例数' },
-            ].map((s, i) => (
-              <div key={i} className="glass-card rounded-2xl p-5">
-                <div className="text-2xl md:text-3xl font-bold text-[var(--gold)]">{s.value}</div>
-                <div className="text-sm text-[#8B8580] mt-1">{s.label}</div>
-              </div>
-            ))}
+      <div className="max-w-[900px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-[var(--border)]">
+        {[
+          { value: '5', label: 'CLINICS' },
+          { value: '100', label: 'SCORE' },
+          { value: '28,000~', label: 'YEN' },
+          { value: '230,000+', label: 'CASES' },
+        ].map((s, i) => (
+          <div key={i} className="bg-[var(--background)] py-6 text-center">
+            <div className="text-[28px] font-bold text-[#1A1A1A]">{s.value}</div>
+            <div className="text-[11px] text-[#999] mt-1 tracking-[1px]">{s.label}</div>
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
 
-      {/* 比較表 */}
-      <section className="py-16 px-4 bg-section-warm" id="comparison">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">5社一覧比較表</h2>
-          <p className="text-center text-[#8B8580] mb-8">ひと目でわかるクリニック比較</p>
-          <div className="overflow-x-auto">
-            <table className="w-full glass-card rounded-2xl overflow-hidden shadow-lg">
-              <thead className="bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white">
-                <tr>
-                  <th className="p-4">順位</th>
-                  <th className="p-4 text-left">クリニック名</th>
-                  <th className="p-4">独自採点</th>
-                  <th className="p-4">眉毛料金</th>
-                  <th className="p-4">技法</th>
-                  <th className="p-4">エリア</th>
+      {/* Comparison Table */}
+      <section className="max-w-[900px] mx-auto px-5 py-12" id="comparison">
+        <div className="section-title">
+          <h2>5社一覧比較表</h2>
+          <span className="en">Comparison 2026</span>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full bg-white border border-[var(--border)]">
+            <thead className="bg-[#1A1A1A] text-white">
+              <tr>
+                <th className="p-4 text-[12px] uppercase tracking-[1px]">Rank</th>
+                <th className="p-4 text-left text-[12px] uppercase tracking-[1px]">クリニック名</th>
+                <th className="p-4 text-[12px] uppercase tracking-[1px]">Score</th>
+                <th className="p-4 text-[12px] uppercase tracking-[1px]">眉毛料金</th>
+                <th className="p-4 text-[12px] uppercase tracking-[1px]">技法</th>
+                <th className="p-4 text-[12px] uppercase tracking-[1px]">エリア</th>
+              </tr>
+            </thead>
+            <tbody>
+              {clinics.map((c, i) => (
+                <tr key={i} className={`${i % 2 === 0 ? 'bg-white' : 'bg-[var(--surface)]'} hover:bg-[var(--border)]/30 transition-colors border-b border-[var(--border)]`}>
+                  <td className="p-4 text-center font-bold text-lg text-[var(--gold)]">{String(c.rank).padStart(2, '0')}</td>
+                  <td className="p-4 font-semibold">{c.name}</td>
+                  <td className="p-4 text-center"><span className="text-[var(--gold)] font-bold text-sm">{c.score}/100</span></td>
+                  <td className="p-4 text-sm">{c.eyebrowPrice}</td>
+                  <td className="p-4 text-sm">{c.technique}</td>
+                  <td className="p-4 text-sm">{c.areas.split('、').slice(0, 2).join('、')}他</td>
                 </tr>
-              </thead>
-              <tbody>
-                {clinics.map((c, i) => (
-                  <tr key={i} className={`${i % 2 === 0 ? 'bg-white/50' : 'bg-[var(--blush)]/30'} hover:bg-[var(--pink-beige)]/50 transition-colors`}>
-                    <td className="p-4 text-center font-bold text-lg">{c.rank === 1 ? '🥇' : c.rank === 2 ? '🥈' : c.rank === 3 ? '🥉' : `${c.rank}位`}</td>
-                    <td className="p-4 font-semibold">{c.name}</td>
-                    <td className="p-4 text-center"><span className="badge-gold px-3 py-1 rounded-full font-bold text-sm">{c.score}/100</span></td>
-                    <td className="p-4 text-sm">{c.eyebrowPrice}</td>
-                    <td className="p-4 text-sm">{c.technique}</td>
-                    <td className="p-4 text-sm">{c.areas.split('、').slice(0, 2).join('、')}他</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
-      {/* 採点基準 */}
-      <section className="py-14 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">独自100点採点の評価基準</h2>
-          <p className="text-center text-[#8B8580] mb-8">5つの観点で公平に評価</p>
+      {/* Scoring Criteria */}
+      <section className="py-12 px-5 bg-[var(--surface)]">
+        <div className="max-w-[900px] mx-auto">
+          <div className="section-title">
+            <h2>独自100点採点の評価基準</h2>
+            <span className="en">Scoring Criteria</span>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
             {[
               { label: '料金の透明性', score: 30, desc: '料金体系の明瞭さ、追加費用の有無' },
@@ -200,139 +236,172 @@ export default function Home() {
               { label: '安全性', score: 15, desc: '医療資格、衛生管理、アフターケア' },
               { label: 'アクセス', score: 10, desc: '立地、展開院数、予約の取りやすさ' },
             ].map((item, i) => (
-              <div key={i} className="glass-card rounded-2xl p-5 text-center hover:shadow-md transition-shadow">
+              <div key={i} className="bg-white border border-[var(--border)] p-5 text-center hover:border-[var(--gold)] transition-all">
                 <div className="text-2xl font-bold text-[var(--gold)] mb-1">{item.score}点</div>
                 <div className="font-semibold text-sm mb-1">{item.label}</div>
-                <div className="text-xs text-[#8B8580]">{item.desc}</div>
+                <div className="text-xs text-[#999]">{item.desc}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ランキング詳細 */}
-      <section className="py-16 px-4 bg-section-warm" id="ranking">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">おすすめランキングTOP5</h2>
-          <p className="text-center text-[#8B8580] mb-12">詳細レビュー</p>
-          <div className="space-y-10">
-            {clinics.map((c) => (
-              <div key={c.rank} className={`glass-card rounded-3xl shadow-lg p-8 ${c.rank <= 3 ? 'border border-[var(--gold-light)]' : 'border border-[var(--pink-beige)]'}`}>
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <div className={`text-4xl font-bold ${c.rank === 1 ? 'text-[var(--gold)]' : 'text-[#8B8580]'}`}>
-                      {c.rank === 1 ? '👑 ' : ''}{c.rank}位
-                    </div>
-                    <h3 className="text-2xl font-bold mt-2">{c.name}</h3>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-[var(--gold)] text-lg">{'★'.repeat(Math.round(c.rating))}</span>
-                      <span className="text-sm text-[#8B8580]">{c.rating} / 5.0（{c.reviewCount}件）</span>
-                    </div>
-                  </div>
-                  <span className="badge-gold px-4 py-2 rounded-full font-bold text-xl shadow-md">{c.score}/100</span>
-                </div>
-                <div className="grid grid-cols-5 gap-2 mb-6">
+      {/* Ranking Detail */}
+      <section className="max-w-[900px] mx-auto px-5 py-12" id="ranking">
+        <div className="section-title">
+          <h2>クリニックランキング</h2>
+          <span className="en">Top Clinics 2026</span>
+        </div>
+
+        <div className="flex flex-col gap-6">
+          {clinics.map((c) => (
+            <div key={c.rank} className="bg-white border border-[var(--border)] hover:border-[var(--gold)] hover:shadow-[0_4px_20px_rgba(0,0,0,0.05)] transition-all grid grid-cols-1 md:grid-cols-[60px_1fr] gap-5 p-7">
+              {/* Rank Column */}
+              <div className="flex md:flex-col items-center gap-2 md:pt-1">
+                <div className="text-[36px] font-bold text-[var(--gold)] leading-none">{String(c.rank).padStart(2, '0')}</div>
+                <div className="text-[9px] text-[#999] tracking-[1px] mt-0 md:mt-0.5">RANK</div>
+              </div>
+
+              {/* Content */}
+              <div>
+                <h3 className="text-[18px] font-bold mb-1">{c.name}</h3>
+                <div className="text-[13px] text-[var(--gold)] font-bold mb-3">SCORE {c.score}/100</div>
+
+                {/* Score Breakdown */}
+                <div className="grid grid-cols-5 gap-2 mb-4">
                   {Object.entries(c.scores).map(([key, val]) => {
                     const labels: Record<string, string> = { cost: '料金', cases: '実績', counseling: 'カウンセリング', safety: '安全性', access: 'アクセス' }
                     const maxes: Record<string, number> = { cost: 30, cases: 25, counseling: 20, safety: 15, access: 10 }
                     return (
                       <div key={key} className="text-center">
-                        <div className="text-xs text-[#8B8580]">{labels[key]}</div>
-                        <div className="font-bold text-[var(--gold)]">{val}/{maxes[key]}</div>
+                        <div className="text-[10px] text-[#999]">{labels[key]}</div>
+                        <div className="font-bold text-[var(--gold)] text-sm">{val}/{maxes[key]}</div>
                       </div>
                     )
                   })}
                 </div>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="bg-[var(--blush)] text-[var(--gold)] px-3 py-1 rounded-full text-sm font-semibold border border-[var(--gold-light)]">眉 {c.eyebrowPrice}</span>
-                  <span className="bg-[var(--pink-beige)] text-[var(--foreground)] px-3 py-1 rounded-full text-sm font-semibold">{c.technique}</span>
-                  <span className="bg-white text-[#6B6560] px-3 py-1 rounded-full text-sm font-semibold border border-[var(--pink-beige)]">{c.areas.split('、')[0]}</span>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  {c.features.map((f, i) => (
+                    <span key={i} className="border border-[var(--border)] px-2.5 py-1 text-[11px] text-[#666]">{f}</span>
+                  ))}
                 </div>
-                <p className="text-[#6B6560] mb-6 leading-relaxed">{c.description}</p>
-                <div className="mb-6">
-                  <h4 className="font-bold mb-2 text-[var(--foreground)]">おすすめポイント</h4>
-                  <ul className="space-y-1">{c.features.map((f, i) => <li key={i} className="flex items-start gap-2 text-sm"><span className="text-[var(--gold)]">✦</span>{f}</li>)}</ul>
+
+                {/* Price Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
+                  <span className="border border-[var(--border)] px-2.5 py-1 text-[11px] text-[#666]">眉 {c.eyebrowPrice}</span>
+                  <span className="border border-[var(--border)] px-2.5 py-1 text-[11px] text-[#666]">{c.technique}</span>
+                  <span className="border border-[var(--border)] px-2.5 py-1 text-[11px] text-[#666]">{c.areas.split('、')[0]}</span>
                 </div>
-                <div className="grid md:grid-cols-2 gap-4 mb-6">
-                  <div className="bg-[#F0FAF0] rounded-2xl p-4">
-                    <h4 className="font-bold text-green-700 mb-2">メリット</h4>
-                    <ul className="space-y-1">{c.pros.map((p, i) => <li key={i} className="text-sm flex items-start gap-1"><span className="text-green-500">✓</span>{p}</li>)}</ul>
+
+                <p className="text-[#666] mb-4 leading-relaxed text-sm">{c.description}</p>
+
+                {/* Pros / Cons */}
+                <div className="grid md:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-[var(--surface)] p-4">
+                    <h4 className="font-bold text-sm mb-2">メリット</h4>
+                    <ul className="space-y-1">{c.pros.map((p, i) => <li key={i} className="text-sm flex items-start gap-1"><span className="text-[var(--gold)]">+</span>{p}</li>)}</ul>
                   </div>
-                  <div className="bg-[#FFF0F0] rounded-2xl p-4">
-                    <h4 className="font-bold text-red-400 mb-2">デメリット</h4>
-                    <ul className="space-y-1">{c.cons.map((p, i) => <li key={i} className="text-sm flex items-start gap-1"><span className="text-red-400">✗</span>{p}</li>)}</ul>
+                  <div className="bg-[var(--surface)] p-4">
+                    <h4 className="font-bold text-sm mb-2">デメリット</h4>
+                    <ul className="space-y-1">{c.cons.map((p, i) => <li key={i} className="text-sm flex items-start gap-1"><span className="text-[#999]">-</span>{p}</li>)}</ul>
                   </div>
                 </div>
-                <div className="bg-[var(--blush)] p-3 rounded-2xl mb-5">
+
+                {/* Recommend */}
+                <div className="bg-[var(--surface)] p-3 mb-4">
                   <p className="text-sm"><strong className="text-[var(--gold)]">こんな方におすすめ：</strong>{c.recommend}</p>
                 </div>
-                <button className="w-full bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white py-4 rounded-full font-bold text-lg btn-glow shadow-md">{c.name} の公式サイトを見る →</button>
+
+                {/* Dialogue */}
+                <div className="bg-[var(--surface)] p-4 flex gap-3 mb-4">
+                  <div className="flex gap-1 flex-shrink-0">
+                    {c.dialogue.map((d, i) => (
+                      <img key={i} src={d.img} alt={d.name} className="w-7 h-7 rounded-full object-cover" />
+                    ))}
+                  </div>
+                  <div className="text-[12px] text-[#555] leading-[1.7]">
+                    {c.dialogue.map((d, i) => (
+                      <span key={i}>
+                        {i > 0 && <br />}
+                        <span className="font-bold text-[var(--gold)]">{d.name}：</span>「{d.text}」
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <a href={c.reviewPath} className="inline-block bg-[#1A1A1A] text-white px-6 py-2.5 text-[12px] font-bold tracking-[1px] hover:bg-[var(--gold)] transition-all">VIEW DETAIL →</a>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* 施術方法 */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">眉毛アートメイクの施術方法</h2>
-          <p className="text-center text-[#8B8580] mb-8">あなたに合った技法を選ぼう</p>
+      {/* Treatment Methods */}
+      <section className="py-12 px-5 bg-[var(--surface)]">
+        <div className="max-w-[900px] mx-auto">
+          <div className="section-title">
+            <h2>眉毛アートメイクの施術方法</h2>
+            <span className="en">Treatment Methods</span>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { name: '2D（パウダー）', desc: 'ふんわりパウダー眉。機械彫りで均一に。脂性肌の方におすすめ。', price: '安め' },
               { name: '3D（ストローク）', desc: '毛並みを1本1本手彫り。すっぴんでも自然。ナチュラル派に人気。', price: '中程度' },
               { name: '4D（コンビネーション）', desc: '2D+3Dの組み合わせ。最もメイク感のある仕上がり。', price: 'やや高め' },
-              { name: '7D（ストローク®）', desc: 'メディカルブロー独自。毛流れまで再現。最新技術。', price: '高め' },
+              { name: '7D（ストローク(R)）', desc: 'メディカルブロー独自。毛流れまで再現。最新技術。', price: '高め' },
             ].map((t, i) => (
-              <div key={i} className="glass-card rounded-2xl p-5 hover:shadow-md transition-all border border-[var(--pink-beige)]">
-                <h3 className="font-bold text-lg mb-2 text-[var(--foreground)]">{t.name}</h3>
-                <p className="text-sm text-[#6B6560] mb-3">{t.desc}</p>
-                <span className="text-xs bg-[var(--blush)] text-[var(--gold)] px-3 py-1 rounded-full font-medium">料金目安：{t.price}</span>
+              <div key={i} className="bg-white border border-[var(--border)] p-5 hover:border-[var(--gold)] transition-all">
+                <h3 className="font-bold text-lg mb-2">{t.name}</h3>
+                <p className="text-sm text-[#666] mb-3">{t.desc}</p>
+                <span className="text-[11px] border border-[var(--border)] text-[var(--gold)] px-3 py-1 font-medium">料金目安：{t.price}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 選び方 */}
-      <section className="py-16 px-4 bg-section-warm">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">失敗しないクリニックの選び方</h2>
-          <p className="text-center text-[#8B8580] mb-8">5つのポイントをチェック</p>
-          <div className="space-y-5">
-            {[
-              { num: 1, title: '医療機関であることを確認', desc: 'アートメイクは医療行為です。医師・看護師資格のある施術者がいるクリニックを選びましょう。' },
-              { num: 2, title: '症例写真で仕上がりをチェック', desc: '「2週間後」の症例写真を確認。施術直後は濃く見えますが、2週間後が最終仕上がりです。' },
-              { num: 3, title: 'カウンセリングの質を重視', desc: 'デザイン提案力・修正対応が丁寧かどうか。カウンセリングに時間をかけてくれるクリニックは信頼できます。' },
-              { num: 4, title: '料金の総額を確認', desc: '施術料金+指名料+麻酔代+リタッチ料金の総額を確認。クレアージュは指名料無料です。' },
-              { num: 5, title: '無料カウンセリングを活用', desc: '2〜3院のカウンセリングを受けて比較するのがおすすめです。' },
-            ].map((s) => (
-              <div key={s.num} className="glass-card rounded-2xl p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white w-9 h-9 rounded-full flex items-center justify-center font-bold text-sm shadow-sm">{s.num}</span>
-                  <h3 className="font-bold text-lg">{s.title}</h3>
-                </div>
-                <p className="text-[#6B6560] text-sm ml-12">{s.desc}</p>
+      {/* How to Choose */}
+      <section className="max-w-[900px] mx-auto px-5 py-12">
+        <div className="section-title">
+          <h2>失敗しないクリニックの選び方</h2>
+          <span className="en">How to Choose</span>
+        </div>
+        <div className="space-y-4">
+          {[
+            { num: 1, title: '医療機関であることを確認', desc: 'アートメイクは医療行為です。医師・看護師資格のある施術者がいるクリニックを選びましょう。' },
+            { num: 2, title: '症例写真で仕上がりをチェック', desc: '「2週間後」の症例写真を確認。施術直後は濃く見えますが、2週間後が最終仕上がりです。' },
+            { num: 3, title: 'カウンセリングの質を重視', desc: 'デザイン提案力・修正対応が丁寧かどうか。カウンセリングに時間をかけてくれるクリニックは信頼できます。' },
+            { num: 4, title: '料金の総額を確認', desc: '施術料金+指名料+麻酔代+リタッチ料金の総額を確認。クレアージュは指名料無料です。' },
+            { num: 5, title: '無料カウンセリングを活用', desc: '2〜3院のカウンセリングを受けて比較するのがおすすめです。' },
+          ].map((s) => (
+            <div key={s.num} className="bg-white border border-[var(--border)] p-6 hover:border-[var(--gold)] transition-all">
+              <div className="flex items-center gap-3 mb-2">
+                <span className="bg-[#1A1A1A] text-white w-9 h-9 flex items-center justify-center font-bold text-sm">{s.num}</span>
+                <h3 className="font-bold text-lg">{s.title}</h3>
               </div>
-            ))}
-          </div>
+              <p className="text-[#666] text-sm ml-12">{s.desc}</p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-4 bg-white" id="faq">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-2">よくある質問</h2>
-          <p className="text-center text-[#8B8580] mb-8">FAQ</p>
+      <section className="py-12 px-5 bg-[var(--surface)]" id="faq">
+        <div className="max-w-[900px] mx-auto">
+          <div className="section-title">
+            <h2>よくある質問</h2>
+            <span className="en">FAQ</span>
+          </div>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <details key={i} className="glass-card rounded-2xl shadow-sm group">
-                <summary className="px-6 py-4 cursor-pointer font-semibold hover:bg-[var(--blush)] transition-colors rounded-2xl flex items-center justify-between">
+              <details key={i} className="bg-white border border-[var(--border)] group">
+                <summary className="px-6 py-4 cursor-pointer font-semibold hover:bg-[var(--surface)] transition-colors flex items-center justify-between">
                   <span>Q{i + 1}. {faq.q}</span>
                   <span className="text-[var(--gold)] text-xl ml-2 group-open:rotate-45 transition-transform">+</span>
                 </summary>
-                <div className="px-6 py-4 border-t border-[var(--pink-beige)] text-[#6B6560] leading-relaxed">{faq.a}</div>
+                <div className="px-6 py-4 border-t border-[var(--border)] text-[#666] leading-relaxed text-sm">{faq.a}</div>
               </details>
             ))}
           </div>
@@ -340,12 +409,11 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #C9A96E 0%, #E8D5B0 50%, #E8A0BF 100%)' }}>
-        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 0%, transparent 50%)' }} />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-4xl font-bold mb-6 text-white drop-shadow-sm">理想の眉毛を手に入れよう</h2>
-          <p className="text-xl mb-8 text-white/90">まずは無料カウンセリングから。あなたに最適なクリニックが見つかる。</p>
-          <a href="#ranking" className="inline-block bg-white text-[var(--gold)] px-10 py-5 rounded-full text-xl font-semibold hover:shadow-xl transition-all btn-glow">おすすめランキングを見る</a>
+      <section className="py-20 px-5 bg-[#1A1A1A]">
+        <div className="max-w-[900px] mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">理想の眉毛を手に入れよう</h2>
+          <p className="text-lg mb-8 text-[#999]">まずは無料カウンセリングから。あなたに最適なクリニックが見つかる。</p>
+          <a href="#ranking" className="inline-block bg-[var(--gold)] text-white px-10 py-4 font-bold text-lg tracking-[1px] hover:bg-[var(--gold-light)] transition-all">VIEW RANKING</a>
         </div>
       </section>
     </main>
