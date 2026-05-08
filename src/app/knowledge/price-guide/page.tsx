@@ -279,6 +279,10 @@ export default function PriceGuidePage() {
                 <p className="font-bold text-sm">モニター募集情報</p>
                 <p className="text-xs text-[#8B8580] mt-1">最大60%OFFで受ける方法</p>
               </Link>
+              <Link href="/compare/all-clinics" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+                <p className="font-bold text-sm">全5クリニック完全比較</p>
+                <p className="text-xs text-[#8B8580] mt-1">15項目で徹底ランキング</p>
+              </Link>
             </div>
           </div>
         </div>

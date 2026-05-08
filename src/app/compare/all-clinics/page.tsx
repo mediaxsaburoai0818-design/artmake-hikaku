@@ -168,6 +168,24 @@ export default function AllClinicsPage() {
         </div>
       </section>
 
+      {/* 編集部による詳細解説 */}
+      <section className="px-4 pb-8">
+        <div className="max-w-4xl mx-auto glass-card rounded-3xl p-8 border border-[var(--pink-beige)]">
+          <h2 className="text-xl font-bold mb-4">アートメイククリニック全5院比較 - 編集部が独自採点で徹底検証</h2>
+          <div className="text-sm text-[#6B6560] leading-relaxed space-y-4">
+            <p>
+              アートメイクは医療行為であり、クリニック選びで仕上がりが大きく変わります。本ページでは、メディカルブロー・クレアージュ東京・デイジークリニック・ファーストアートメイク・トゥルーデザインクリニックの主要5院を、料金・技法・症例数・口コミ・展開エリアなど<strong>15項目にわたって横断比較</strong>しています。各クリニックの公式情報と実際の利用者の声をもとに、100点満点の独自スコアリングで客観的に評価しました。
+            </p>
+            <p>
+              「料金だけで選んで後悔した」「自分に合う技法が分からなかった」という声は少なくありません。眉毛アートメイクひとつとっても、7Dストローク・パウダー・手彫りなど技法はさまざまで、クリニックごとに得意分野が異なります。この比較ページでは、コスパ重視・自然さ重視・初心者向け・40代50代向け・メンズ・関西エリアといった<strong>目的別の最適クリニック</strong>も提示しているため、ご自身の優先順位に合った1院が見つかります。
+            </p>
+            <p>
+              さらに、眉・リップ・アイラインの<strong>部位別おすすめ</strong>や、4つの質問で最適なクリニックが分かる選び方フローチャートも掲載。2026年4月時点の最新料金に基づいた情報で、初めてアートメイクを検討する方から、クリニックの乗り換えを考えている方まで、幅広く参考にしていただけます。
+            </p>
+          </div>
+        </div>
+      </section>
+
       <div className="glass-card rounded-3xl p-6 mb-10 border border-[var(--gold-light)] max-w-4xl mx-auto">
         <h2 className="text-xl font-bold mb-4 text-[var(--gold)]">この記事でわかること</h2>
         <ul className="space-y-2 text-sm">
@@ -216,6 +234,102 @@ export default function AllClinicsPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 各クリニック個別分析 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">各クリニックの強み・弱み詳細分析</h2>
+
+          <div className="space-y-8">
+            <div className="glass-card rounded-2xl p-6 border border-[var(--pink-beige)]">
+              <h3 className="text-lg font-bold mb-3 text-[var(--gold)]">メディカルブロー - 技術力と実績で圧倒する業界最大手</h3>
+              <div className="text-sm text-[#6B6560] leading-relaxed space-y-3">
+                <p>メディカルブローの最大の強みは、累計23万件を超える圧倒的な症例実績と、独自開発の7Dストローク技術です。従来の4Dストロークをさらに進化させ、毛の流れ・太さ・濃淡まで再現する精密技術は、他院にはない独自の優位性を持っています。全国9院以上を展開し、どの地域からもアクセスしやすい点も大きなメリットです。</p>
+                <p>一方、アーティストランク制による料金変動には注意が必要です。トップランクの施術者を指名すると追加で最大25,000円の指名料がかかるため、総額が想定以上になることがあります。とはいえ、学割・ペア割で最大25%OFFになる制度もあり、条件次第ではコストパフォーマンスが非常に高くなります。自然な毛並み感を最優先する方には最もおすすめできるクリニックです。</p>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-[var(--pink-beige)]">
+              <h3 className="text-lg font-bold mb-3 text-[var(--gold)]">クレアージュ東京 - 3回分けメソッドで失敗リスクを最小化</h3>
+              <div className="text-sm text-[#6B6560] leading-relaxed space-y-3">
+                <p>クレアージュ東京が他院と一線を画すのは、施術を3回に分けて慎重に仕上げる独自のメソッドです。1回目でベースを作り、2回目で色味を調整し、3回目で完成度を高めるこのアプローチは、「一度入れたら簡単には消えない」というアートメイクの特性を考慮した非常に合理的な手法と言えます。特に40代・50代の方からの支持が厚く、年齢に合ったナチュラルなデザイン提案に定評があります。</p>
+                <p>指名料が完全無料なのも見逃せないポイントです。1回あたり44,000円と料金が明確で、「カウンセリングで聞いた金額と実際の請求額が違った」というトラブルが起きにくい明朗会計を実現しています。ただし、3回通院する必要があるため、忙しい方や遠方の方にはやや不便に感じる可能性があります。</p>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-[var(--pink-beige)]">
+              <h3 className="text-lg font-bold mb-3 text-[var(--gold)]">デイジークリニック - コスパ最強のモニター価格と高いデザイン力</h3>
+              <div className="text-sm text-[#6B6560] leading-relaxed space-y-3">
+                <p>デイジークリニックの最大の魅力は、モニター制度を活用した場合の圧倒的なコストパフォーマンスです。手彫りの眉アートメイクがモニター価格で2回49,800円からと、主要クリニックの中で最安水準を実現しています。世界的に活躍するアーティストが監修しており、低価格でありながらデザインの質は高い水準を維持しています。</p>
+                <p>また、機械彫り・手彫り・コンビネーションの3技法から選べる柔軟性と、オンラインカウンセリングに対応している利便性も強みです。ただし、院によって対応技法が異なるケースがあるため、希望の技法が自分の最寄り院で受けられるかを事前に確認する必要があります。予算を最優先する方、デザイン性を重視したい方におすすめです。</p>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-[var(--pink-beige)]">
+              <h3 className="text-lg font-bold mb-3 text-[var(--gold)]">ファーストアートメイク - 初心者に寄り添う丁寧なカウンセリング</h3>
+              <div className="text-sm text-[#6B6560] leading-relaxed space-y-3">
+                <p>ファーストアートメイクは「はじめてのアートメイク」に特化したクリニックです。施術前のカウンセリングに特に時間をかけ、デザインの微調整を何度でも対応してくれる丁寧さが最大の強みです。痛みに敏感な方には麻酔の追加対応も行っており、「初めてだから不安」という方の心理的ハードルを下げる取り組みが充実しています。</p>
+                <p>銀座駅徒歩3分という好立地も魅力ですが、現時点では東京都内の1院のみの展開のため、地方在住の方にはアクセス面でのデメリットがあります。また、大手と比較すると症例数は限定的です。とはいえ、「初めてだからこそ安心できるクリニックで受けたい」という方にとっては、最も信頼できる選択肢の一つです。</p>
+              </div>
+            </div>
+
+            <div className="glass-card rounded-2xl p-6 border border-[var(--pink-beige)]">
+              <h3 className="text-lg font-bold mb-3 text-[var(--gold)]">トゥルーデザインクリニック - 関西エリアでリタッチコスト最安</h3>
+              <div className="text-sm text-[#6B6560] leading-relaxed space-y-3">
+                <p>トゥルーデザインクリニックは関西エリアを拠点とするクリニックで、リタッチ料金29,700円からという長期コストの安さが際立ちます。アートメイクは1〜3年で徐々に薄くなるため、定期的なリタッチが必要になりますが、このリタッチ費用を抑えられることは、長い目で見ると大きなメリットです。トレンドに敏感なデザイン提案力にも定評があります。</p>
+                <p>大阪の心斎橋を拠点としているため、関西在住の方にとっては非常にアクセスが良い一方、関東から通うのは現実的ではありません。症例数も非公開であるため、実績の透明性という点では大手に劣ります。ただし、関西エリアで「長期的なコストを抑えつつ、トレンド感のある眉を維持したい」という方には最適な選択肢です。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 比較のポイント */}
+      <section className="py-12 px-4 bg-section-warm">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">比較のポイント - 独自スコアリングの評価方法</h2>
+          <div className="glass-card rounded-3xl p-8 border border-[var(--gold-light)]">
+            <div className="text-sm text-[#6B6560] leading-relaxed space-y-4">
+              <p>
+                本ランキングでは、アートメイクを検討する際に重要となる<strong>5つの評価軸</strong>を設定し、各クリニックを100点満点で独自採点しています。評価軸と配点は以下のとおりです。
+              </p>
+              <div className="grid md:grid-cols-5 gap-3 my-6">
+                <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
+                  <p className="font-bold text-[var(--gold)] text-lg">30点</p>
+                  <p className="font-bold text-sm mt-1">料金の透明性</p>
+                  <p className="text-xs mt-1">料金体系の明瞭さ、追加費用の有無、総額の分かりやすさを評価</p>
+                </div>
+                <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
+                  <p className="font-bold text-[var(--gold)] text-lg">25点</p>
+                  <p className="font-bold text-sm mt-1">症例実績</p>
+                  <p className="text-xs mt-1">累計症例数、ビフォーアフター写真の質・量、施術者の経験値</p>
+                </div>
+                <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
+                  <p className="font-bold text-[var(--gold)] text-lg">20点</p>
+                  <p className="font-bold text-sm mt-1">カウンセリング</p>
+                  <p className="text-xs mt-1">ヒアリングの丁寧さ、デザイン提案力、修正対応の柔軟さ</p>
+                </div>
+                <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
+                  <p className="font-bold text-[var(--gold)] text-lg">15点</p>
+                  <p className="font-bold text-sm mt-1">安全性</p>
+                  <p className="text-xs mt-1">医療資格の有無、衛生管理体制、アフターケアの充実度</p>
+                </div>
+                <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
+                  <p className="font-bold text-[var(--gold)] text-lg">10点</p>
+                  <p className="font-bold text-sm mt-1">アクセス</p>
+                  <p className="text-xs mt-1">展開院数、駅からの距離、予約の取りやすさ</p>
+                </div>
+              </div>
+              <p>
+                料金の透明性に最も高い配点（30点）を置いている理由は、アートメイクのトラブルで最も多いのが「想定外の追加費用」に関するものだからです。指名料・麻酔代・リタッチ料金を含めた総額で比較することで、実際にかかる費用を正確に把握できるようにしています。
+              </p>
+              <p>
+                なお、各クリニックの評価は2026年4月時点の公式情報・利用者の口コミ・編集部による実地調査に基づいています。料金やサービス内容は随時変更される可能性があるため、最新の情報は各クリニックの公式サイトでご確認ください。
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -395,8 +509,33 @@ export default function AllClinicsPage() {
         </div>
       </section>
 
-      {/* 関連記事 */}
+      {/* よくある質問 */}
       <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-8">アートメイククリニック比較でよくある質問</h2>
+          <div className="space-y-4">
+            {[
+              { q: '5院の中で最もコスパが良いクリニックはどこですか？', a: 'モニター制度を活用した場合、デイジークリニックが最もコスパに優れています。眉アートメイクがモニター価格で2回49,800円からと、主要5院の中で最安水準です。ただし、モニター枠には限りがあるため、早めの予約をおすすめします。通常料金で比較した場合はメディカルブローのモニター1回28,000円も有力な選択肢です。' },
+              { q: 'アートメイクの施術回数は何回がベストですか？', a: '一般的には2回の施術がスタンダードです。1回目でベースを作り、2回目で色味やデザインを微調整します。クレアージュ東京では3回に分けて施術する独自メソッドを採用しており、より慎重に仕上がりをコントロールできます。脂性肌の方や色が定着しにくい方は、追加施術が必要になることもあります。' },
+              { q: '初めてのアートメイクで失敗しないためのクリニック選びのコツは？', a: '最も重要なのは、症例写真の量と質を確認することです。施術直後ではなく「2週間後」の症例写真を公開しているクリニックは信頼できます。また、カウンセリングの丁寧さも重視してください。ファーストアートメイクは初心者向けの丁寧なカウンセリングに定評があり、初めての方に特におすすめです。2〜3院の無料カウンセリングを受けて比較するのがベストです。' },
+              { q: '指名料がかかるクリニックとかからないクリニックの違いは？', a: 'クレアージュ東京は指名料完全無料で、どのアーティストを選んでも追加費用がかかりません。一方、メディカルブローはアーティストランク制を採用しており、上位ランクの施術者を指名すると5,000〜25,000円の指名料が別途かかります。総額で比較する際は、施術料金だけでなく指名料・麻酔代・リタッチ料金を含めた金額で検討することが大切です。' },
+              { q: '関東と関西でおすすめのクリニックは変わりますか？', a: 'はい、エリアによっておすすめは異なります。関東在住の方には、全国展開しているメディカルブロー、有楽町のクレアージュ東京、銀座のファーストアートメイクが便利です。関西在住の方には、大阪・心斎橋のトゥルーデザインクリニックが最もアクセスしやすく、リタッチ29,700円からと長期コストも安いためおすすめです。' },
+              { q: 'メンズアートメイクに対応しているクリニックはどこですか？', a: '5院すべてがメンズ対応していますが、特にメディカルブローはメンズ専用メニューを用意しており、男性の骨格・毛質に合わせたデザイン提案の実績が豊富です。男性の眉アートメイクは自然さが特に重要になるため、症例数が多く毛並み再現技術に優れたクリニックを選ぶことをおすすめします。' },
+            ].map((faq, i) => (
+              <details key={i} className="glass-card rounded-2xl border border-[var(--pink-beige)] group">
+                <summary className="px-6 py-4 cursor-pointer font-semibold hover:bg-[var(--blush)] transition-colors flex items-center justify-between rounded-2xl">
+                  <span className="text-sm">Q{i + 1}. {faq.q}</span>
+                  <span className="text-[var(--gold)] text-xl ml-2 group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="px-6 py-4 border-t border-[var(--pink-beige)] text-[#6B6560] leading-relaxed text-sm">{faq.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 関連記事 */}
+      <section className="py-12 px-4 bg-section-warm">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold mb-4">関連記事</h2>
           <div className="grid md:grid-cols-3 gap-4">
@@ -412,9 +551,52 @@ export default function AllClinicsPage() {
               <p className="font-bold text-sm">メディカルブロー vs デイジー</p>
               <p className="text-xs text-[#8B8580] mt-1">人気2院を10項目で比較</p>
             </Link>
+            <Link href="/review/medicalbrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">メディカルブローの口コミ・評判</p>
+              <p className="text-xs text-[#8B8580] mt-1">1位クリニックの詳細レビュー</p>
+            </Link>
+            <Link href="/review/creage" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">クレアージュ東京の口コミ・評判</p>
+              <p className="text-xs text-[#8B8580] mt-1">3回分けメソッドの実力は？</p>
+            </Link>
+            <Link href="/review/dazzy" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">デイジークリニックの口コミ・評判</p>
+              <p className="text-xs text-[#8B8580] mt-1">モニター価格の実態を調査</p>
+            </Link>
+            <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">アートメイク失敗事例10選</p>
+              <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
+            </Link>
+            <Link href="/knowledge/price-guide" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">料金相場ガイド</p>
+              <p className="text-xs text-[#8B8580] mt-1">1回いくら？総額を解説</p>
+            </Link>
+            <Link href="/knowledge/counseling" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">カウンセリングガイド</p>
+              <p className="text-xs text-[#8B8580] mt-1">聞くべき質問リスト</p>
+            </Link>
           </div>
         </div>
       </section>
+
+      {/* FAQ JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              { '@type': 'Question', name: '5院の中で最もコスパが良いクリニックはどこですか？', acceptedAnswer: { '@type': 'Answer', text: 'モニター制度を活用した場合、デイジークリニックが最もコスパに優れています。眉アートメイクがモニター価格で2回49,800円からと、主要5院の中で最安水準です。通常料金で比較した場合はメディカルブローのモニター1回28,000円も有力な選択肢です。' } },
+              { '@type': 'Question', name: 'アートメイクの施術回数は何回がベストですか？', acceptedAnswer: { '@type': 'Answer', text: '一般的には2回の施術がスタンダードです。1回目でベースを作り、2回目で色味やデザインを微調整します。クレアージュ東京では3回に分けて施術する独自メソッドを採用しており、より慎重に仕上がりをコントロールできます。' } },
+              { '@type': 'Question', name: '初めてのアートメイクで失敗しないためのクリニック選びのコツは？', acceptedAnswer: { '@type': 'Answer', text: '最も重要なのは、症例写真の量と質を確認することです。施術直後ではなく「2週間後」の症例写真を公開しているクリニックは信頼できます。また、カウンセリングの丁寧さも重視してください。2〜3院の無料カウンセリングを受けて比較するのがベストです。' } },
+              { '@type': 'Question', name: '指名料がかかるクリニックとかからないクリニックの違いは？', acceptedAnswer: { '@type': 'Answer', text: 'クレアージュ東京は指名料完全無料で、どのアーティストを選んでも追加費用がかかりません。メディカルブローはアーティストランク制を採用しており、上位ランクの施術者を指名すると5,000〜25,000円の指名料が別途かかります。' } },
+              { '@type': 'Question', name: '関東と関西でおすすめのクリニックは変わりますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、エリアによっておすすめは異なります。関東在住の方にはメディカルブロー、クレアージュ東京、ファーストアートメイクが便利です。関西在住の方にはトゥルーデザインクリニックが最もアクセスしやすく、リタッチ29,700円からと長期コストも安いためおすすめです。' } },
+              { '@type': 'Question', name: 'メンズアートメイクに対応しているクリニックはどこですか？', acceptedAnswer: { '@type': 'Answer', text: '5院すべてがメンズ対応していますが、特にメディカルブローはメンズ専用メニューを用意しており、男性の骨格・毛質に合わせたデザイン提案の実績が豊富です。' } },
+            ],
+          }),
+        }}
+      />
     </main>
   )
 }

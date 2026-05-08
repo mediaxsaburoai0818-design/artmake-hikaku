@@ -646,6 +646,10 @@ export default function PriceComparisonPage() {
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">安くて上手いアートメイク</p>
       </Link>
+      <Link href="/compare/all-clinics" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">全5クリニック15項目完全比較</p>
+      </Link>
       <Link href="/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">ランキング</span>
         <p className="font-semibold mt-1">アートメイクおすすめクリニックTOP5</p>

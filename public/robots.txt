@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_next/static/media/
 
 Sitemap: https://artmake-hikaku.com/sitemap.xml

@@ -193,6 +193,10 @@ export default function Home() {
           <h2>5社一覧比較表</h2>
           <span className="en">Comparison 2026</span>
         </div>
+        <div className="bg-[var(--surface)] border border-[var(--border)] p-5 mb-8 text-center">
+          <p className="text-sm text-[#666] mb-3">15項目の完全比較・目的別おすすめ・選び方フローチャートはこちら</p>
+          <a href="/compare/all-clinics" className="inline-block bg-[#1A1A1A] text-white px-8 py-3 font-bold text-[13px] tracking-[1px] hover:bg-[var(--gold)] transition-all">全クリニック完全比較ページ →</a>
+        </div>
         <div className="overflow-x-auto">
           <table className="w-full bg-white border border-[var(--border)]">
             <thead className="bg-[#1A1A1A] text-white">
