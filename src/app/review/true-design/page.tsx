@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'トゥルーデザインクリニックの口コミ・評判｜アートメイク料金・技術力を徹底調査【2026年最新】',
@@ -63,6 +64,39 @@ export default function TrueDesignReviewPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 評価分布 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
+            <div className="flex items-center gap-6 mb-4">
+              <div className="text-center">
+                <p className="text-4xl font-bold text-rose-500">3.9</p>
+                <p className="text-sm text-gray-500">総合評価</p>
+              </div>
+              <div className="flex-1 space-y-2">
+                {[
+                  { stars: 5, percent: 38, count: 3 },
+                  { stars: 4, percent: 25, count: 2 },
+                  { stars: 3, percent: 25, count: 2 },
+                  { stars: 2, percent: 13, count: 1 },
+                  { stars: 1, percent: 0, count: 0 },
+                ].map(row => (
+                  <div key={row.stars} className="flex items-center gap-2 text-sm">
+                    <span className="w-8 text-right">{row.stars}★</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3">
+                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
+                    </div>
+                    <span className="w-8 text-gray-500">{row.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
           </div>
         </div>
       </section>
@@ -138,6 +172,21 @@ export default function TrueDesignReviewPage() {
             </table>
           </div>
           <p className="text-sm text-gray-500 mt-4 text-center">※ リタッチ料金29,700円〜は業界でもリーズナブルな価格帯です。</p>
+        </div>
+      </section>
+
+      {/* キャンペーン・割引情報 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
+            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>カウンセリング無料</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>モニター募集中（詳細は公式サイトで確認）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>リタッチ1回29,700円〜のリーズナブルな維持費</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+          </div>
         </div>
       </section>
 
@@ -239,19 +288,19 @@ export default function TrueDesignReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/first-artmake" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/first-artmake/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">ファーストアートメイクの口コミ・評判</p>
       </Link>
-      <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
-      <Link href="/purpose/natural" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/natural/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">自然な仕上がりのアートメイク</p>
       </Link>
@@ -274,6 +323,13 @@ export default function TrueDesignReviewPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "トゥルーデザインクリニックの口コミ・評判は？", "acceptedAnswer": {"@type": "Answer", "text": "40代・50代の方を中心に「年齢に合った自然な眉に仕上がった」「似合わせ力が高い」と高評価の口コミが多いです。関西エリアNo.1の満足度を誇り、リピーターも多いクリニックです。"}}, {"@type": "Question", "name": "トゥルーデザインメソッドとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "トゥルーデザインクリニック独自の技法で、年齢・骨格・肌質を総合的に分析し、「今の自分に本当に似合う眉」をデザインするメソッドです。特に40代・50代の骨格変化に対応したデザインが得意です。"}}, {"@type": "Question", "name": "トゥルーデザインクリニックの料金は高いですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉2回59,400円〜と平均的な価格帯です。特にリタッチ料金が29,700円〜とリーズナブルなため、長期的なメンテナンス費用を考えるとコスパに優れています。"}}, {"@type": "Question", "name": "トゥルーデザインクリニックは大阪以外にありますか？", "acceptedAnswer": {"@type": "Answer", "text": "現在は大阪（心斎橋）の1院のみです。関西エリア以外の方は通院の負担を考慮する必要があります。関東在住の方はメディカルブローなど全国展開のクリニックも検討しましょう。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "トゥルーデザイン", "item": "https://artmake-hikaku-navi.com/review/true-design/"}]}) }} />
     </main>
   )
 }

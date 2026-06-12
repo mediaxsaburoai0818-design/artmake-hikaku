@@ -23,11 +23,11 @@ export default function Header() {
                 Clinic
               </span>
               <div className="absolute top-full left-0 bg-[#1A1A1A] border border-[#333] shadow-lg p-3 min-w-[200px] hidden group-hover:block">
-                <Link href="/review/medicalbrow" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メディカルブロー</Link>
-                <Link href="/review/creage" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">クレアージュ東京</Link>
-                <Link href="/review/dazzy" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">デイジークリニック</Link>
-                <Link href="/review/first-artmake" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">ファーストアートメイク</Link>
-                <Link href="/review/true-design" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">トゥルーデザイン</Link>
+                <Link href="/review/medicalbrow/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メディカルブロー</Link>
+                <Link href="/review/creage/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">クレアージュ東京</Link>
+                <Link href="/review/dazzy/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">デイジークリニック</Link>
+                <Link href="/review/first-artmake/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">ファーストアートメイク</Link>
+                <Link href="/review/true-design/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">トゥルーデザイン</Link>
               </div>
             </div>
             <div className="relative group">
@@ -35,9 +35,9 @@ export default function Header() {
                 Compare
               </span>
               <div className="absolute top-full left-0 bg-[#1A1A1A] border border-[#333] shadow-lg p-3 min-w-[220px] hidden group-hover:block">
-                <Link href="/compare/medicalbrow-vs-dazzy" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メディカルブロー vs デイジー</Link>
-                <Link href="/compare/creage-vs-medicalbrow" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">クレアージュ vs メディカルブロー</Link>
-                <Link href="/compare/price" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">料金比較</Link>
+                <Link href="/compare/medicalbrow-vs-dazzy/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メディカルブロー vs デイジー</Link>
+                <Link href="/compare/creage-vs-medicalbrow/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">クレアージュ vs メディカルブロー</Link>
+                <Link href="/compare/price/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">料金比較</Link>
               </div>
             </div>
             <div className="relative group">
@@ -45,17 +45,17 @@ export default function Header() {
                 Guide
               </span>
               <div className="absolute top-full left-0 bg-[#1A1A1A] border border-[#333] shadow-lg p-3 min-w-[180px] hidden group-hover:block">
-                <Link href="/purpose/cheap" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">安い・コスパ重視</Link>
-                <Link href="/purpose/natural" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">ナチュラル重視</Link>
-                <Link href="/purpose/mens" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メンズ</Link>
-                <Link href="/purpose/40s-50s" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">40代・50代</Link>
-                <Link href="/purpose/first-time" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">初心者</Link>
+                <Link href="/purpose/cheap/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">安い・コスパ重視</Link>
+                <Link href="/purpose/natural/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">ナチュラル重視</Link>
+                <Link href="/purpose/mens/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">メンズ</Link>
+                <Link href="/purpose/40s-50s/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">40代・50代</Link>
+                <Link href="/purpose/first-time/" className="block py-2 text-sm text-[#aaa] hover:text-[var(--gold)]">初心者</Link>
               </div>
             </div>
-            <Link href="/about" className="text-xs text-[#aaa] uppercase tracking-[1px] hover:text-[var(--gold)] transition-colors">
+            <Link href="/about/" className="text-xs text-[#aaa] uppercase tracking-[1px] hover:text-[var(--gold)] transition-colors">
               About
             </Link>
-            <Link href="/faq" className="text-xs text-[#aaa] uppercase tracking-[1px] hover:text-[var(--gold)] transition-colors">
+            <Link href="/faq/" className="text-xs text-[#aaa] uppercase tracking-[1px] hover:text-[var(--gold)] transition-colors">
               FAQ
             </Link>
           </nav>
@@ -76,35 +76,35 @@ export default function Header() {
             <Link href="/" className="block font-semibold text-[var(--gold)] uppercase tracking-[1px] text-sm" onClick={() => setIsMenuOpen(false)}>Ranking</Link>
 
             <div className="text-xs font-bold text-[var(--gold)] mt-3 uppercase tracking-[2px]">Clinic</div>
-            <Link href="/review/medicalbrow" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メディカルブロー</Link>
-            <Link href="/review/creage" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>クレアージュ東京</Link>
-            <Link href="/review/dazzy" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>デイジークリニック</Link>
-            <Link href="/review/first-artmake" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>ファーストアートメイク</Link>
-            <Link href="/review/true-design" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>トゥルーデザイン</Link>
+            <Link href="/review/medicalbrow/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メディカルブロー</Link>
+            <Link href="/review/creage/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>クレアージュ東京</Link>
+            <Link href="/review/dazzy/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>デイジークリニック</Link>
+            <Link href="/review/first-artmake/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>ファーストアートメイク</Link>
+            <Link href="/review/true-design/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>トゥルーデザイン</Link>
 
             <div className="text-xs font-bold text-[var(--gold)] mt-3 uppercase tracking-[2px]">Compare</div>
-            <Link href="/compare/medicalbrow-vs-dazzy" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メディカルブロー vs デイジー</Link>
-            <Link href="/compare/creage-vs-medicalbrow" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>クレアージュ vs メディカルブロー</Link>
-            <Link href="/compare/price" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>料金比較</Link>
+            <Link href="/compare/medicalbrow-vs-dazzy/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メディカルブロー vs デイジー</Link>
+            <Link href="/compare/creage-vs-medicalbrow/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>クレアージュ vs メディカルブロー</Link>
+            <Link href="/compare/price/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>料金比較</Link>
 
             <div className="text-xs font-bold text-[var(--gold)] mt-3 uppercase tracking-[2px]">Guide</div>
-            <Link href="/purpose/cheap" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>安い・コスパ重視</Link>
-            <Link href="/purpose/natural" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>ナチュラル重視</Link>
-            <Link href="/purpose/mens" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メンズ</Link>
-            <Link href="/purpose/40s-50s" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>40代・50代</Link>
-            <Link href="/purpose/first-time" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>初心者</Link>
+            <Link href="/purpose/cheap/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>安い・コスパ重視</Link>
+            <Link href="/purpose/natural/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>ナチュラル重視</Link>
+            <Link href="/purpose/mens/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>メンズ</Link>
+            <Link href="/purpose/40s-50s/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>40代・50代</Link>
+            <Link href="/purpose/first-time/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>初心者</Link>
 
             <div className="text-xs font-bold text-[var(--gold)] mt-3 uppercase tracking-[2px]">Parts</div>
-            <Link href="/parts/eyebrow" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>眉毛アートメイク</Link>
-            <Link href="/parts/lip" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>リップアートメイク</Link>
-            <Link href="/parts/eyeliner" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>アイラインアートメイク</Link>
+            <Link href="/parts/eyebrow/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>眉毛アートメイク</Link>
+            <Link href="/parts/lip/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>リップアートメイク</Link>
+            <Link href="/parts/eyeliner/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>アイラインアートメイク</Link>
 
             <div className="text-xs font-bold text-[var(--gold)] mt-3 uppercase tracking-[2px]">Info</div>
-            <Link href="/about" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>アートメイクとは</Link>
-            <Link href="/knowledge/risk" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>やめたほうがいい?</Link>
-            <Link href="/knowledge/duration" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>何年持つ?</Link>
-            <Link href="/knowledge/pain" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>痛い?ダウンタイム</Link>
-            <Link href="/faq" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>よくある質問30選</Link>
+            <Link href="/about/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>アートメイクとは</Link>
+            <Link href="/knowledge/risk/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>やめたほうがいい?</Link>
+            <Link href="/knowledge/duration/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>何年持つ?</Link>
+            <Link href="/knowledge/pain/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>痛い?ダウンタイム</Link>
+            <Link href="/faq/" className="block text-sm pl-3 text-[#aaa]" onClick={() => setIsMenuOpen(false)}>よくある質問30選</Link>
           </nav>
         )}
       </div>

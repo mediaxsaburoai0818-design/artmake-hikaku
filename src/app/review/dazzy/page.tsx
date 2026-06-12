@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'デイジークリニック（DAZZY CLINIC）の口コミ・評判｜アートメイク料金・技法を徹底調査【2026年最新】',
@@ -64,6 +65,39 @@ export default function DazzyClinicReviewPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 評価分布 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
+            <div className="flex items-center gap-6 mb-4">
+              <div className="text-center">
+                <p className="text-4xl font-bold text-rose-500">3.9</p>
+                <p className="text-sm text-gray-500">総合評価</p>
+              </div>
+              <div className="flex-1 space-y-2">
+                {[
+                  { stars: 5, percent: 38, count: 3 },
+                  { stars: 4, percent: 25, count: 2 },
+                  { stars: 3, percent: 25, count: 2 },
+                  { stars: 2, percent: 13, count: 1 },
+                  { stars: 1, percent: 0, count: 0 },
+                ].map(row => (
+                  <div key={row.stars} className="flex items-center gap-2 text-sm">
+                    <span className="w-8 text-right">{row.stars}★</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3">
+                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
+                    </div>
+                    <span className="w-8 text-gray-500">{row.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
           </div>
         </div>
       </section>
@@ -142,6 +176,21 @@ export default function DazzyClinicReviewPage() {
         </div>
       </section>
 
+      {/* キャンペーン・割引情報 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
+            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>初回限定価格あり（詳細は公式サイトで確認）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>LINE友達追加で割引クーポン配布中</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>モニター価格で最大50%OFF</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
       {/* メリデメ */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -202,14 +251,14 @@ export default function DazzyClinicReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">DAZZY CLINICはこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ モニター価格で安くアートメイクを受けたい方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 技法を自分で選びたい方（機械彫り・手彫り・コンビ）</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 来院前にオンラインで相談したい方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 眉以外（リップ・アイライン）も検討中の方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">モニター価格で安くアートメイクを受けたい方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">技法を自分で選びたい方（機械彫り・手彫り・コンビ）</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">来院前にオンラインで相談したい方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">眉以外（リップ・アイライン）も検討中の方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 名古屋・広島エリアの方 → メディカルブローがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ アーティストを細かく指名したい方 → メディカルブローがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">名古屋・広島エリアの方 → メディカルブローがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">アーティストを細かく指名したい方 → メディカルブローがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -241,19 +290,19 @@ export default function DazzyClinicReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/creage" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
       </Link>
-      <Link href="/compare/medicalbrow-vs-dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/medicalbrow-vs-dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">メディカルブロー vs デイジー徹底比較</p>
       </Link>
-      <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
@@ -276,6 +325,13 @@ export default function DazzyClinicReviewPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "DAZZY CLINICのモニター価格はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉アートメイクのモニター手彫り2回で49,800円が最安です。通常価格から最大50%OFFになりますが、モニター枠には限りがあるため早めの予約をおすすめします。"}}, {"@type": "Question", "name": "DAZZY CLINICの3種類の技法の違いは？", "acceptedAnswer": {"@type": "Answer", "text": "「機械彫り」はマシンで均一に色を入れるパウダー仕上げ、「手彫り」は1本1本手作業で描く自然な毛並み仕上げ、「機械彫り+手彫り」は両方を組み合わせたハイブリッド施術です。迷ったらカウンセリングで相談しましょう。"}}, {"@type": "Question", "name": "DAZZY CLINICは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、強い痛みを感じる方は少ないです。口コミでは「チクチクする程度」「思ったより全然痛くなかった」という声が多いです。痛みに弱い方は事前に相談しましょう。"}}, {"@type": "Question", "name": "DAZZY CLINICとメディカルブローどっちがいい？", "acceptedAnswer": {"@type": "Answer", "text": "コスパ重視＋技法の選択肢ならDAZZY CLINIC、実績数＋全国展開ならメディカルブローがおすすめです。DAZZY CLINICは3種類の技法から選べるのが強み、メディカルブローは累計23万件の実績と7Dストローク®が強みです。"}}, {"@type": "Question", "name": "オンラインカウンセリングはどうやって受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトからオンラインカウンセリングの予約が可能です。ビデオ通話で自宅にいながらデザインの相談や料金の確認ができるため、遠方の方や初めての方に特におすすめです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "デイジークリニック", "item": "https://artmake-hikaku-navi.com/review/dazzy/"}]}) }} />
     </main>
   )
 }

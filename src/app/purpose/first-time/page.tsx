@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アートメイク初めての方へ｜初心者ガイド・施術の流れ・痛み解説【2026年最新】| アートメイク比較ナビ",
@@ -520,19 +521,19 @@ export default function FirstTimePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/knowledge/pain" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/pain/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクの痛みについて</p>
       </Link>
-      <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/risk/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
       </Link>
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
@@ -570,6 +571,13 @@ export default function FirstTimePage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "アートメイクは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "麻酔クリームを使用するため、強い痛みはほとんどありません。「毛抜きで毛を抜く程度」「チクチクする程度」という方が多いです。痛みに弱い方は事前に相談すると追加麻酔の対応も可能です。"}}, {"@type": "Question", "name": "アートメイクで失敗することはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "施術者の技術やデザイン力に左右されるため、クリニック選びが重要です。失敗を防ぐには、症例写真が豊富な実績あるクリニックを選び、カウンセリングで入念にデザインを決めましょう。万一の修正も2回目の施術で調整可能です。"}}, {"@type": "Question", "name": "施術後いつからメイクできますか？", "acceptedAnswer": {"@type": "Answer", "text": "施術部位以外のメイクは当日からOK。施術部位のメイクは、かさぶたが完全に剥がれた後（約1〜2週間後）から可能です。クレンジング時に施術部位を強くこすらないよう注意してください。"}}, {"@type": "Question", "name": "何回通えば完成しますか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的に2回の施術で完成です。1回目で土台を作り、4〜6週間後の2回目で微調整して仕上げます。クレアージュ東京は3回に分けて施術するアプローチです。1回だけでは色素の定着が不十分なため、必ず2回目を受けましょう。"}}, {"@type": "Question", "name": "カウンセリングだけ受けて帰ることはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、ほとんどのクリニックでカウンセリングのみの来院が可能です。無料カウンセリングを実施しているクリニックも多いため、まずは話を聞いてから判断できます。複数のクリニックを比較検討することをおすすめします。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "初心者", "item": "https://artmake-hikaku-navi.com/purpose/first-time/"}]}) }} />
     </main>
   );
 }

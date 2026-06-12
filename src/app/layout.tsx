@@ -11,6 +11,8 @@ const zenKaku = Zen_Kaku_Gothic_New({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://artmake-hikaku.com"),
+  alternates: { canonical: "./" },
   title: "アートメイク比較ナビ【2026年最新】おすすめクリニックランキング",
   description: "【2026年4月最新】アートメイク・眉毛アートメイクのおすすめクリニック5社を徹底比較。料金・技術力・口コミで100点独自採点。メディカルブロー、クレアージュ、デイジークリニック等を完全解説。",
 };

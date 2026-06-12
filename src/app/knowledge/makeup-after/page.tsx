@@ -30,7 +30,7 @@ const downtimeCare = [
 const coverTips = [
   { icon: '🩹', title: '施術部位は隠さず保護', desc: 'ダウンタイム中の赤みをファンデで隠そうとすると、色素定着が妨げられます。隠すよりも保護優先。マスクや前髪でカバー。' },
   { icon: '👓', title: '眉施術なら眼鏡やマスクを活用', desc: '仕事で人前に出る場合、眼鏡やマスクで自然にカバーできます。写真撮影は控えめに。' },
-  { icon: '🏠', title: 'ダウンタイム中は在宅勤務', desc: '可能であれば施術後3〜5日は在宅勤務や有給取得がおすすめ。施術後の1週間は大事な予定を入れないように。' },
+  { icon: '', title: 'ダウンタイム中は在宅勤務', desc: '可能であれば施術後3〜5日は在宅勤務や有給取得がおすすめ。施術後の1週間は大事な予定を入れないように。' },
   { icon: '🧢', title: 'リップ施術なら帽子・マスク', desc: 'リップは2週間ほどダウンタイムがあるため、マスクで隠すのが一般的。冬場の施術が隠しやすくおすすめ。' },
 ]
 
@@ -171,15 +171,15 @@ export default function MakeupAfterPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/progress" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/progress/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">経過・ダウンタイム</p>
                 <p className="text-xs text-[#8B8580] mt-1">術後の経過を解説</p>
               </Link>
-              <Link href="/knowledge/bathing" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/bathing/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">お風呂はいつから？</p>
                 <p className="text-xs text-[#8B8580] mt-1">入浴制限を解説</p>
               </Link>
-              <Link href="/knowledge/sunscreen" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/sunscreen/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">紫外線対策</p>
                 <p className="text-xs text-[#8B8580] mt-1">日焼け止めのタイミング</p>
               </Link>
@@ -202,6 +202,7 @@ export default function MakeupAfterPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "施術後のメイク", "item": "https://artmake-hikaku-navi.com/knowledge/makeup-after/"}]}) }} />
     </main>
   )
 }

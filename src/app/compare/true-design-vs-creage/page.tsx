@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'トゥルーデザインクリニック vs クレアージュ東京 徹底比較【2026年最新】40代50代向け10項目で解説',
@@ -404,21 +405,28 @@ export default function TrueDesignVsCreagePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold mb-4">関連記事</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/review/true-design" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/true-design/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">トゥルーデザインクリニック</p>
               <p className="text-xs text-[#8B8580] mt-1">口コミ・評判を徹底調査</p>
             </Link>
-            <Link href="/review/creage" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/creage/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">クレアージュ東京</p>
               <p className="text-xs text-[#8B8580] mt-1">口コミ・評判を徹底調査</p>
             </Link>
-            <Link href="/purpose/40s-50s" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/purpose/40s-50s/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">40代50代のアートメイク</p>
               <p className="text-xs text-[#8B8580] mt-1">年代別おすすめガイド</p>
             </Link>
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "トゥルーデザイン vs クレアージュ", "item": "https://artmake-hikaku-navi.com/compare/true-design-vs-creage/"}]}) }} />
     </main>
   )
 }

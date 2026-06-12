@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: '記事制作ポリシー | アートメイク比較ナビ',
@@ -185,6 +186,12 @@ export default function ContentPolicyPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "記事制作ポリシー", "item": "https://artmake-hikaku-navi.com/content-policy/"}]}) }} />
     </main>
   )
 }

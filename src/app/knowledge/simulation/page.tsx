@@ -234,15 +234,15 @@ export default function SimulationPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/price-guide" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/price-guide/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">料金相場ガイド</p>
                 <p className="text-xs text-[#8B8580] mt-1">相場と内訳を徹底解説</p>
               </Link>
-              <Link href="/purpose/cheap" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/cheap/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">安いクリニック特集</p>
                 <p className="text-xs text-[#8B8580] mt-1">コスパ重視の選び方</p>
               </Link>
-              <Link href="/knowledge/retouch" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/retouch/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">リタッチ完全ガイド</p>
                 <p className="text-xs text-[#8B8580] mt-1">頻度と料金を解説</p>
               </Link>
@@ -265,6 +265,7 @@ export default function SimulationPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "料金シミュレーション", "item": "https://artmake-hikaku-navi.com/knowledge/simulation/"}]}) }} />
     </main>
   )
 }

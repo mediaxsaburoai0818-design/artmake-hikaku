@@ -68,7 +68,7 @@ const clinicMonitors = [
 ]
 
 const merits = [
-  { icon: '💰', title: '通常料金より大幅に安い', desc: '25〜50%OFFが相場。高品質な施術を低価格で受けられるのが最大のメリット。' },
+  { icon: '', title: '通常料金より大幅に安い', desc: '25〜50%OFFが相場。高品質な施術を低価格で受けられるのが最大のメリット。' },
   { icon: '🏥', title: '医療機関での施術は変わらない', desc: 'モニターでも有資格者（医師・看護師）が施術するため、安全性は通常と同じ。' },
   { icon: '📸', title: '経過観察が丁寧', desc: '症例写真撮影のため定着確認のフォローがあり、結果的に仕上がりを確認してもらえる。' },
 ]
@@ -238,15 +238,15 @@ export default function MonitorConditionPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/purpose/monitor" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/monitor/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">モニター募集ガイド</p>
                 <p className="text-xs text-[#8B8580] mt-1">安く受ける完全ガイド</p>
               </Link>
-              <Link href="/purpose/cheap" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/cheap/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">安いクリニック特集</p>
                 <p className="text-xs text-[#8B8580] mt-1">コスパ重視の選び方</p>
               </Link>
-              <Link href="/review/medicalbrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/review/medicalbrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">メディカルブロー口コミ</p>
                 <p className="text-xs text-[#8B8580] mt-1">業界最大手の評判を徹底調査</p>
               </Link>
@@ -269,6 +269,7 @@ export default function MonitorConditionPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "モニター条件", "item": "https://artmake-hikaku-navi.com/purpose/monitor-condition/"}]}) }} />
     </main>
   )
 }

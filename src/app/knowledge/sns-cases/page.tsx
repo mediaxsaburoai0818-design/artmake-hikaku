@@ -23,11 +23,11 @@ const trustCriteria = [
 ]
 
 const redFlags = [
-  { icon: '⚠️', title: '施術直後の濃い写真のみ', desc: '定着前は色が濃く見えるため、鮮やかな写真ばかりの場合は注意。1ヶ月後の写真を必ず確認しましょう。' },
-  { icon: '⚠️', title: '加工が強すぎる写真', desc: 'フィルターで肌が均一化されていたり、眉だけ異様にくっきりしている症例は実物と異なる可能性大。' },
-  { icon: '⚠️', title: '同じ人物の使い回し', desc: '異なるクリニックで同じ症例写真が使われているケースも。Google画像検索で確認できます。' },
-  { icon: '⚠️', title: '症例数が極端に少ない', desc: '公式アカウントでも症例が数十件程度しかない場合、実績不足の可能性があります。' },
-  { icon: '⚠️', title: 'いいね・フォロワーの急増', desc: '短期間でフォロワーが急増しているアカウントは買っている可能性。投稿の継続性も確認。' },
+  { icon: '', title: '施術直後の濃い写真のみ', desc: '定着前は色が濃く見えるため、鮮やかな写真ばかりの場合は注意。1ヶ月後の写真を必ず確認しましょう。' },
+  { icon: '', title: '加工が強すぎる写真', desc: 'フィルターで肌が均一化されていたり、眉だけ異様にくっきりしている症例は実物と異なる可能性大。' },
+  { icon: '', title: '同じ人物の使い回し', desc: '異なるクリニックで同じ症例写真が使われているケースも。Google画像検索で確認できます。' },
+  { icon: '', title: '症例数が極端に少ない', desc: '公式アカウントでも症例が数十件程度しかない場合、実績不足の可能性があります。' },
+  { icon: '', title: 'いいね・フォロワーの急増', desc: '短期間でフォロワーが急増しているアカウントは買っている可能性。投稿の継続性も確認。' },
 ]
 
 const clinicSns = [
@@ -211,15 +211,15 @@ export default function SnsCasesPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">失敗事例10選</p>
                 <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
               </Link>
-              <Link href="/knowledge/risk" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/risk/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">やめたほうがいい？</p>
                 <p className="text-xs text-[#8B8580] mt-1">デメリット7つの真実</p>
               </Link>
-              <Link href="/review/medicalbrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/review/medicalbrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">メディカルブロー口コミ</p>
                 <p className="text-xs text-[#8B8580] mt-1">業界最大手の評判</p>
               </Link>
@@ -242,6 +242,7 @@ export default function SnsCasesPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "症例・SNS活用", "item": "https://artmake-hikaku-navi.com/knowledge/sns-cases/"}]}) }} />
     </main>
   )
 }

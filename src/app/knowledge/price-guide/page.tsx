@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: '眉毛アートメイク1回いくら？料金相場と総額ガイド【2026年最新】',
@@ -267,19 +268,19 @@ export default function PriceGuidePage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/compare/price" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/compare/price/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">料金比較表</p>
                 <p className="text-xs text-[#8B8580] mt-1">全クリニックの料金を一覧比較</p>
               </Link>
-              <Link href="/purpose/cheap" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/cheap/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">安いクリニック特集</p>
                 <p className="text-xs text-[#8B8580] mt-1">コスパ重視の選び方</p>
               </Link>
-              <Link href="/purpose/monitor" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/monitor/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">モニター募集情報</p>
                 <p className="text-xs text-[#8B8580] mt-1">最大60%OFFで受ける方法</p>
               </Link>
-              <Link href="/compare/all-clinics" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/compare/all-clinics/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">全5クリニック完全比較</p>
                 <p className="text-xs text-[#8B8580] mt-1">15項目で徹底ランキング</p>
               </Link>
@@ -287,6 +288,13 @@ export default function PriceGuidePage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "料金ガイド", "item": "https://artmake-hikaku-navi.com/knowledge/price-guide/"}]}) }} />
     </main>
   )
 }

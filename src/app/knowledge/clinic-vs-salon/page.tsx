@@ -339,23 +339,23 @@ export default function ClinicVsSalonPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/knowledge/risk/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">知識</span>
               <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
             </Link>
-            <Link href="/knowledge/allergy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/knowledge/allergy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">知識</span>
               <p className="font-semibold mt-1">アートメイクとアレルギー</p>
             </Link>
-            <Link href="/knowledge/price-guide" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/knowledge/price-guide/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">知識</span>
               <p className="font-semibold mt-1">料金相場ガイド</p>
             </Link>
-            <Link href="/knowledge/counseling" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/knowledge/counseling/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">知識</span>
               <p className="font-semibold mt-1">カウンセリングのポイント</p>
             </Link>
-            <Link href="/knowledge/failure" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/knowledge/failure/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">知識</span>
               <p className="font-semibold mt-1">アートメイクの失敗事例と対策</p>
             </Link>
@@ -398,6 +398,7 @@ export default function ClinicVsSalonPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "クリニック vs サロン", "item": "https://artmake-hikaku-navi.com/knowledge/clinic-vs-salon/"}]}) }} />
     </main>
   )
 }

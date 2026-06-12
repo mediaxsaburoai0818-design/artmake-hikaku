@@ -40,7 +40,7 @@ const timeline = [
 const precautions = [
   { icon: '✋', title: '2週間は「我慢」が鉄則', desc: '色素定着の最重要期間。楽しみは施術後に計画することで、せっかくの施術を無駄にしません。' },
   { icon: '🗓️', title: '旅行・イベント前は施術を避ける', desc: '海外旅行・温泉旅行・プールイベント直前の施術は避けましょう。最低3週間の余裕があると安心。' },
-  { icon: '❓', title: '迷ったらクリニックに相談', desc: 'クリニックごとに推奨する制限期間は異なります。自己判断せず、施術を受けたクリニックに電話確認が最も確実。' },
+  { icon: '', title: '迷ったらクリニックに相談', desc: 'クリニックごとに推奨する制限期間は異なります。自己判断せず、施術を受けたクリニックに電話確認が最も確実。' },
   { icon: '🌡️', title: 'お湯の温度にも注意', desc: 'シャワーは熱すぎないぬるめのお湯で。熱いお湯は色素流出を早めます。38℃前後がおすすめ。' },
 ]
 
@@ -173,15 +173,15 @@ export default function SaunaPoolPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/bathing" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/bathing/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">お風呂はいつから？</p>
                 <p className="text-xs text-[#8B8580] mt-1">入浴制限を詳しく解説</p>
               </Link>
-              <Link href="/knowledge/makeup-after" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/makeup-after/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">メイクはいつから？</p>
                 <p className="text-xs text-[#8B8580] mt-1">部位別解禁タイミング</p>
               </Link>
-              <Link href="/knowledge/progress" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/progress/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">経過・ダウンタイム</p>
                 <p className="text-xs text-[#8B8580] mt-1">術後の経過を解説</p>
               </Link>
@@ -204,6 +204,7 @@ export default function SaunaPoolPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "サウナ・温泉・プール", "item": "https://artmake-hikaku-navi.com/knowledge/sauna-pool/"}]}) }} />
     </main>
   )
 }

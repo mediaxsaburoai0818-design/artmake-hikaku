@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "メンズアートメイク｜男性向け眉毛アートメイクおすすめクリニック【2026年最新】| アートメイク比較ナビ",
@@ -358,7 +359,7 @@ export default function MensPage() {
                 desc: "リモートワークが増えた現在、カメラ越しの顔の印象は重要。整った眉は画面映えし、プロフェッショナルな印象を強化します。",
               },
               {
-                icon: "🎯",
+                icon: "",
                 title: "自信がパフォーマンスを上げる",
                 desc: "外見に自信が持てると、内面にもポジティブな影響が。自信を持って話せるようになることで、仕事のパフォーマンスも向上します。",
               },
@@ -439,19 +440,19 @@ export default function MensPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
-      <Link href="/purpose/natural" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/natural/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">自然な仕上がりのアートメイク</p>
       </Link>
@@ -489,6 +490,13 @@ export default function MensPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "男性がアートメイクを受けるのは恥ずかしくないですか？", "acceptedAnswer": {"@type": "Answer", "text": "全く恥ずかしいことではありません。メンズアートメイクの施術件数は年々増加しており、現在では男性の来院比率が2〜3割を占めるクリニックもあります。美容医療は男女問わず一般的になっています。"}}, {"@type": "Question", "name": "アートメイクしたことが周りにバレますか？", "acceptedAnswer": {"@type": "Answer", "text": "自然なデザイン・色味で施術すれば、ほとんどバレません。「眉を整えた？」と言われる程度で、アートメイクだと気づかれることは稀です。施術直後は少し濃く見えますが、1〜2週間で自然に馴染みます。"}}, {"@type": "Question", "name": "男性の施術で痛みは強いですか？", "acceptedAnswer": {"@type": "Answer", "text": "麻酔クリームを使用するため、強い痛みは感じません。男性は女性より皮膚が厚いため、痛みを感じにくい傾向があるという声もあります。「チクチクする程度」という方がほとんどです。"}}, {"@type": "Question", "name": "施術後すぐに仕事に復帰できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、基本的に翌日から通常通り仕事ができます。眉毛のアートメイクはダウンタイムが軽く、赤みも1〜2日で引きます。ただし施術直後は濃く見えるため、気になる方は金曜夕方の施術がおすすめです。"}}, {"@type": "Question", "name": "将来的に眉の形を変えたくなったらどうなりますか？", "acceptedAnswer": {"@type": "Answer", "text": "アートメイクは1〜3年で徐々に薄くなるため、次回施術時にデザインを変更できます。完全に消したい場合はレーザー除去も可能です。流行に合わせてデザインを微調整できる柔軟性がアートメイクのメリットです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "メンズ", "item": "https://artmake-hikaku-navi.com/purpose/mens/"}]}) }} />
     </main>
   );
 }

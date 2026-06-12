@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'アートメイクのデメリット8選｜メリットと比較して後悔しない判断を【2026年最新】',
@@ -102,15 +103,15 @@ export default function DemeritPage() {
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">失敗事例10選</p>
                 <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
               </Link>
-              <Link href="/knowledge/risk" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/risk/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">やめたほうがいい？</p>
                 <p className="text-xs text-[#8B8580] mt-1">7つの不安を徹底解説</p>
               </Link>
-              <Link href="/knowledge/pain" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/pain/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">痛い？ダウンタイム</p>
                 <p className="text-xs text-[#8B8580] mt-1">痛みレベルと経過</p>
               </Link>
@@ -118,6 +119,12 @@ export default function DemeritPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "デメリット", "item": "https://artmake-hikaku-navi.com/knowledge/demerit/"}]}) }} />
     </main>
   )
 }

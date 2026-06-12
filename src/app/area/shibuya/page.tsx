@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'アートメイク 渋谷 おすすめクリニック｜料金・アクセス徹底比較【2026年最新】',
@@ -47,11 +48,33 @@ const clinics = [
     point: '3回に分けて慎重に色を重ねる独自のアプローチ。指名料無料で、どの施術者を選んでも追加費用なし。渋谷から電車で15分と少し距離はあるが、品質重視の方に選ばれている。',
     link: '/review/creage',
   },
+  {
+    rank: 4,
+    name: 'ナチュラルアートメイク東京 渋谷院',
+    score: 88,
+    price: '88,000円（2回）',
+    access: '渋谷駅より徒歩2分',
+    station: 'JR各線・東京メトロ各線「渋谷駅」',
+    hours: '10:00〜19:00',
+    point: '全国24院展開の大手グループの渋谷院。眉2回88,000円で駅徒歩2分の好アクセス。渋谷エリアで手軽にアートメイクを始めたい方におすすめ。※最新情報は公式サイトでご確認ください',
+    link: '#',
+  },
+  {
+    rank: 5,
+    name: 'Bx clinic tokyo',
+    score: 87,
+    price: '77,000円〜',
+    access: '恵比寿駅より徒歩3分（渋谷からもアクセス可）',
+    station: 'JR山手線・東京メトロ日比谷線「恵比寿駅」',
+    hours: '10:00〜19:00',
+    point: '完全アーティスト指名制で、自分に合った施術者を選べるのが魅力。眉77,000円〜。恵比寿駅徒歩3分で、渋谷からも1駅と好アクセス。※最新情報は公式サイトでご確認ください',
+    link: '#',
+  },
 ]
 
 const areaFeatures = [
   { icon: '👩', title: '若い女性が多いエリア', desc: '20〜30代の女性が多く、最新トレンドに敏感な客層。ナチュラルからトレンド眉まで幅広いニーズに対応するクリニックが揃う。' },
-  { icon: '✨', title: 'トレンド発信地', desc: '渋谷・表参道は美容トレンドの発信地。最新技法をいち早く取り入れたクリニックが多く、SNS映えするデザインが得意。' },
+  { icon: '', title: 'トレンド発信地', desc: '渋谷・表参道は美容トレンドの発信地。最新技法をいち早く取り入れたクリニックが多く、SNS映えするデザインが得意。' },
   { icon: '🚃', title: 'アクセス抜群', desc: 'JR・東京メトロ・東急など複数路線が乗り入れ。渋谷駅から表参道は徒歩15分、電車で1駅とエリア内の移動も便利。' },
   { icon: '🛍', title: '施術後の過ごし方が充実', desc: '施術後のショッピングやカフェ巡りに困らないエリア。表参道ヒルズ、渋谷スクランブルスクエアなど商業施設も充実。' },
 ]
@@ -86,7 +109,7 @@ export default function ShibuyaAreaPage() {
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="#clinics" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">クリニック一覧を見る</a>
-            <Link href="/area/tokyo" className="inline-block border-2 border-[var(--gold)] text-[var(--gold)] px-8 py-4 rounded-full font-bold hover:bg-[var(--blush)] transition-colors">東京全体を見る</Link>
+            <Link href="/area/tokyo/" className="inline-block border-2 border-[var(--gold)] text-[var(--gold)] px-8 py-4 rounded-full font-bold hover:bg-[var(--blush)] transition-colors">東京全体を見る</Link>
           </div>
         </div>
       </section>
@@ -160,7 +183,7 @@ export default function ShibuyaAreaPage() {
                   <tr key={i} className={i % 2 === 0 ? 'bg-[var(--blush)]' : 'bg-white/50'}>
                     <td className="p-4 text-sm font-bold">{c.name}</td>
                     <td className="p-4 text-center text-sm font-bold text-[var(--gold)]">{c.price}</td>
-                    <td className="p-4 text-center text-sm">{c.rank === 3 ? '3回' : c.rank === 1 ? '1回〜' : '2回'}</td>
+                    <td className="p-4 text-center text-sm">{c.rank === 3 ? '3回' : c.rank === 1 || c.rank === 5 ? '1回〜' : '2回'}</td>
                     <td className="p-4 text-sm text-[#6B6560]">{c.access.split('。')[0]}</td>
                   </tr>
                 ))}
@@ -182,6 +205,8 @@ export default function ShibuyaAreaPage() {
                 <ul className="space-y-1 text-sm text-[#6B6560]">
                   <li>・デイジークリニック渋谷本院：ハチ公口より徒歩5分</li>
                   <li>・メディカルブロー表参道院：東京メトロ銀座線で1駅「表参道駅」A1出口より徒歩3分</li>
+                  <li>・ナチュラルアートメイク東京 渋谷院：渋谷駅より徒歩2分</li>
+                  <li>・Bx clinic tokyo：恵比寿駅より徒歩3分（渋谷から1駅）</li>
                   <li>・クレアージュ東京：JR山手線で約15分「有楽町駅」より徒歩1分</li>
                 </ul>
               </div>
@@ -242,21 +267,28 @@ export default function ShibuyaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold mb-4">関連記事</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/area/tokyo" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/area/tokyo/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="text-[var(--gold)] text-xs font-semibold">エリア</p>
               <p className="font-bold text-sm mt-1">東京のおすすめクリニック</p>
             </Link>
-            <Link href="/area/shinjuku" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/area/shinjuku/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="text-[var(--gold)] text-xs font-semibold">エリア</p>
               <p className="font-bold text-sm mt-1">新宿エリアのおすすめ</p>
             </Link>
-            <Link href="/area/ginza" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/area/ginza/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="text-[var(--gold)] text-xs font-semibold">エリア</p>
               <p className="font-bold text-sm mt-1">銀座エリアのおすすめ</p>
             </Link>
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "渋谷", "item": "https://artmake-hikaku-navi.com/area/shibuya/"}]}) }} />
     </main>
   )
 }

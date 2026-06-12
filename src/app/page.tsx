@@ -1,3 +1,4 @@
+import AuthorBox from '@/components/AuthorBox'
 const clinics = [
   {
     rank: 1,
@@ -195,7 +196,7 @@ export default function Home() {
         </div>
         <div className="bg-[var(--surface)] border border-[var(--border)] p-5 mb-8 text-center">
           <p className="text-sm text-[#666] mb-3">15項目の完全比較・目的別おすすめ・選び方フローチャートはこちら</p>
-          <a href="/compare/all-clinics" className="inline-block bg-[#1A1A1A] text-white px-8 py-3 font-bold text-[13px] tracking-[1px] hover:bg-[var(--gold)] transition-all">全クリニック完全比較ページ →</a>
+          <a href="/compare/all-clinics/" className="inline-block bg-[#1A1A1A] text-white px-8 py-3 font-bold text-[13px] tracking-[1px] hover:bg-[var(--gold)] transition-all">全クリニック完全比較ページ →</a>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full bg-white border border-[var(--border)]">
@@ -420,6 +421,9 @@ export default function Home() {
           <a href="#ranking" className="inline-block bg-[var(--gold)] text-white px-10 py-4 font-bold text-lg tracking-[1px] hover:bg-[var(--gold-light)] transition-all">VIEW RANKING</a>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
     </main>
   )
 }

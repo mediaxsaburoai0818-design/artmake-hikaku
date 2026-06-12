@@ -52,8 +52,8 @@ const dayFlow = [
 ]
 
 const compareTips = [
-  { icon: '📝', title: 'メモは必須', desc: '2〜3院を比較する場合、記憶だけでは混同します。院ごとにメモを取りましょう。' },
-  { icon: '💰', title: '総額見積書をもらう', desc: '口頭での説明だけでなく、書面で総額見積もりをもらうことで後日の比較が正確になります。' },
+  { icon: '', title: 'メモは必須', desc: '2〜3院を比較する場合、記憶だけでは混同します。院ごとにメモを取りましょう。' },
+  { icon: '', title: '総額見積書をもらう', desc: '口頭での説明だけでなく、書面で総額見積もりをもらうことで後日の比較が正確になります。' },
   { icon: '🏥', title: '雰囲気・清潔感も評価軸に', desc: '待合室の清潔感、スタッフの対応、院内の衛生管理など、感覚的な部分も重要な判断材料です。' },
   { icon: '⏰', title: '即決を迫られたら要注意', desc: 'その日限定割引などで即決を迫るクリニックは避けましょう。冷静に比較する時間が必要です。' },
 ]
@@ -110,7 +110,7 @@ export default function CounselingPage() {
                   <div className="flex-1">
                     <span className="bg-[var(--blush)] text-[var(--gold)] text-xs px-2 py-0.5 rounded-full mb-2 inline-block">{q.cat}</span>
                     <h3 className="font-bold mb-2">{q.q}</h3>
-                    <p className="text-[#6B6560] text-xs leading-relaxed">💡 {q.why}</p>
+                    <p className="text-[#6B6560] text-xs leading-relaxed">{q.why}</p>
                   </div>
                 </div>
               </div>
@@ -186,19 +186,19 @@ export default function CounselingPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">失敗事例10選</p>
                 <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
               </Link>
-              <Link href="/knowledge/price-guide" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/price-guide/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">料金相場ガイド</p>
                 <p className="text-xs text-[#8B8580] mt-1">相場と内訳を解説</p>
               </Link>
-              <Link href="/purpose/first-time" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/first-time/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">初めての方へ</p>
                 <p className="text-xs text-[#8B8580] mt-1">初心者向けガイド</p>
               </Link>
-              <Link href="/compare/all-clinics" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/compare/all-clinics/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">全5クリニック完全比較</p>
                 <p className="text-xs text-[#8B8580] mt-1">15項目で徹底ランキング</p>
               </Link>
@@ -221,6 +221,7 @@ export default function CounselingPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "カウンセリング質問集", "item": "https://artmake-hikaku-navi.com/knowledge/counseling/"}]}) }} />
     </main>
   )
 }

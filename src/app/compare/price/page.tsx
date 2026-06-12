@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アートメイク料金比較【2026年最新】眉毛・リップ・アイラインの相場と最安クリニック",
@@ -630,23 +631,23 @@ export default function PriceComparisonPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
-      <Link href="/compare/medicalbrow-vs-dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/medicalbrow-vs-dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">メディカルブロー vs デイジー比較</p>
       </Link>
-      <Link href="/purpose/cheap" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/cheap/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">安くて上手いアートメイク</p>
       </Link>
-      <Link href="/compare/all-clinics" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/all-clinics/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">全5クリニック15項目完全比較</p>
       </Link>
@@ -686,6 +687,13 @@ export default function PriceComparisonPage() {
 
       {/* Footer */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "料金比較", "item": "https://artmake-hikaku-navi.com/compare/price/"}]}) }} />
     </main>
   );
 }

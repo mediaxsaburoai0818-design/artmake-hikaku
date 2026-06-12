@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アートメイク 新宿 おすすめクリニック2選｜駅近・アクセス抜群【2026年最新】| アートメイク比較ナビ",
@@ -43,7 +44,7 @@ export default function ShinjukuAreaPage() {
               クリニック一覧を見る
             </a>
             <a
-              href="/area/tokyo"
+              href="/area/tokyo/"
               className="bg-white hover:bg-gray-50 text-rose-500 px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg border-2 border-rose-500"
             >
               東京全体を見る
@@ -258,19 +259,19 @@ export default function ShinjukuAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">東京のおすすめアートメイククリニック</p>
       </Link>
-      <Link href="/area/ginza" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/ginza/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">銀座エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
@@ -308,6 +309,13 @@ export default function ShinjukuAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "新宿で一番安いアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院が28,000円〜（2回セット）で最安です。施術者ランクによって料金が変動しますが、下位ランクでも基本的な技術研修は共通のため品質は保証されています。"}}, {"@type": "Question", "name": "新宿駅からの行き方を教えてください", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院は南口から徒歩5分、デイジークリニック新宿院は東口から徒歩5分です。どちらも駅から近く迷いにくい立地にあります。"}}, {"@type": "Question", "name": "メディカルブローとデイジーの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローは6Dストローク（毛並み）が得意で料金も安め。デイジーはオリジナルの「dazzy brow」（パウダー×毛並みのハイブリッド）が特徴で、より華やかな仕上がりを求める方に人気です。"}}, {"@type": "Question", "name": "土日は予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "新宿エリアは人気が高いため、土日は2〜3週間前の予約がおすすめです。平日の夕方以降なら比較的空いていることが多いです。"}}, {"@type": "Question", "name": "新宿でメンズアートメイクは受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、メディカルブロー新宿院はメンズアートメイクの実績も豊富です。男性の眉毛デザインに特化した施術者も在籍しています。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "新宿", "item": "https://artmake-hikaku-navi.com/area/shinjuku/"}]}) }} />
     </main>
   );
 }

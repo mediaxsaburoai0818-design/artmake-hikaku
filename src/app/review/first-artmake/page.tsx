@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ファーストアートメイクの口コミ・評判｜料金・カウンセリングを徹底調査【2026年最新】',
@@ -63,6 +64,39 @@ export default function FirstArtmakeReviewPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 評価分布 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
+            <div className="flex items-center gap-6 mb-4">
+              <div className="text-center">
+                <p className="text-4xl font-bold text-rose-500">3.9</p>
+                <p className="text-sm text-gray-500">総合評価</p>
+              </div>
+              <div className="flex-1 space-y-2">
+                {[
+                  { stars: 5, percent: 38, count: 3 },
+                  { stars: 4, percent: 25, count: 2 },
+                  { stars: 3, percent: 25, count: 2 },
+                  { stars: 2, percent: 13, count: 1 },
+                  { stars: 1, percent: 0, count: 0 },
+                ].map(row => (
+                  <div key={row.stars} className="flex items-center gap-2 text-sm">
+                    <span className="w-8 text-right">{row.stars}★</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3">
+                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
+                    </div>
+                    <span className="w-8 text-gray-500">{row.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
           </div>
         </div>
       </section>
@@ -141,6 +175,21 @@ export default function FirstArtmakeReviewPage() {
         </div>
       </section>
 
+      {/* キャンペーン・割引情報 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
+            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>初回限定特別価格あり（眉1回38,500円〜）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>2回セット割引でお得に施術可能</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>カウンセリング無料</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
       {/* メリデメ */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -201,14 +250,14 @@ export default function FirstArtmakeReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">FIRST ARTMAKEはこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ アートメイクが初めてで不安な方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 丁寧なカウンセリングを重視する方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 銀座エリアでアクセス良好なクリニックを探している方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 痛みに敏感で痛みの少ない施術を希望する方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">アートメイクが初めてで不安な方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">丁寧なカウンセリングを重視する方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">銀座エリアでアクセス良好なクリニックを探している方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">痛みに敏感で痛みの少ない施術を希望する方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 地方在住で東京に通えない方 → 全国展開のメディカルブローがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 豊富な症例実績を重視する方 → メディカルブロー・デイジーがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">地方在住で東京に通えない方 → 全国展開のメディカルブローがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">豊富な症例実績を重視する方 → メディカルブロー・デイジーがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -239,19 +288,19 @@ export default function FirstArtmakeReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/true-design" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/true-design/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">トゥルーデザインクリニックの口コミ・評判</p>
       </Link>
-      <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
-      <Link href="/purpose/first-time" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/first-time/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">初めてのアートメイクガイド</p>
       </Link>
@@ -274,6 +323,13 @@ export default function FirstArtmakeReviewPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "FIRST ARTMAKEは本当に初心者向けですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。「誰でもはじめられる安心のアートメイク」をコンセプトに、初めての方に特化した丁寧なカウンセリングと施術を提供しています。施術内容やリスク、アフターケアまで詳しく説明してもらえるので、初心者の方でも安心です。"}}, {"@type": "Question", "name": "FIRST ARTMAKEの施術は痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、痛みは最小限に抑えられます。口コミでも「思ったより痛くなかった」「チクチクする程度」という声が多く、痛みに敏感な方でも安心して受けられます。"}}, {"@type": "Question", "name": "FIRST ARTMAKEの眉アートメイクは1回と2回セットどちらがおすすめ？", "acceptedAnswer": {"@type": "Answer", "text": "2回セット（71,500円〜）がおすすめです。アートメイクは通常2回の施術で色の定着を図ります。1回目で形を作り、2回目で微調整と色味の定着を行うため、より自然で長持ちする仕上がりになります。"}}, {"@type": "Question", "name": "FIRST ARTMAKEへのアクセスは？", "acceptedAnswer": {"@type": "Answer", "text": "銀座駅から徒歩3分の好立地です。銀座エリアにあるため、仕事帰りやお買い物のついでにも通いやすい場所にあります。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "ファーストアートメイク", "item": "https://artmake-hikaku-navi.com/review/first-artmake/"}]}) }} />
     </main>
   )
 }

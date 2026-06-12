@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ほくろアートメイクとは？人気の位置・料金・持続期間を徹底解説【2026年最新】',
@@ -102,7 +103,7 @@ export default function MolePage() {
                 <p className="text-xs text-[#6B6560] mt-1">1箇所 約10〜15分</p>
               </div>
               <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
-                <p className="text-2xl mb-2">💰</p>
+                <p className="text-2xl mb-2"></p>
                 <p className="font-bold text-sm">料金相場</p>
                 <p className="text-xs text-[#6B6560] mt-1">1箇所 10,000〜20,000円</p>
               </div>
@@ -240,15 +241,15 @@ export default function MolePage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/parts/eyebrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/parts/eyebrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">眉毛アートメイク</p>
                 <p className="text-xs text-[#8B8580] mt-1">最も人気の部位を徹底解説</p>
               </Link>
-              <Link href="/parts/lip" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/parts/lip/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">リップアートメイク</p>
                 <p className="text-xs text-[#8B8580] mt-1">唇の血色感をアップする施術</p>
               </Link>
-              <Link href="/knowledge/duration" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/duration/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">持続期間ガイド</p>
                 <p className="text-xs text-[#8B8580] mt-1">部位別の持続期間を解説</p>
               </Link>
@@ -256,6 +257,13 @@ export default function MolePage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "ほくろ", "item": "https://artmake-hikaku-navi.com/parts/mole/"}]}) }} />
     </main>
   )
 }

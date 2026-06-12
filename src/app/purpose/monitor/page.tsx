@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'アートメイク モニター募集＆安い料金で受ける方法【2026年最新】',
@@ -33,7 +34,7 @@ const otherDiscounts = [
   { type: '学割', detail: '学生証提示で5〜10%OFF。メディカルブローなどで実施。', icon: '🎓' },
   { type: 'ペア割', detail: '友人・家族と2名同時予約で5〜10%OFF。デイジークリニックなどで実施。', icon: '👯' },
   { type: '乗り換え割', detail: '他院からの乗り換えで5,000〜10,000円OFF。2回目以降の施術が対象。', icon: '🔄' },
-  { type: 'SNS割', detail: 'Instagram等でクリニックをフォロー＆施術レポートを投稿で割引。', icon: '📱' },
+  { type: 'SNS割', detail: 'Instagram等でクリニックをフォロー＆施術レポートを投稿で割引。', icon: '' },
   { type: '紹介割', detail: '既存患者からの紹介で双方に割引適用。紹介者にもリタッチ割引あり。', icon: '🤝' },
   { type: '平日割', detail: '平日の予約で3,000〜5,000円OFF。人気の少ない時間帯が狙い目。', icon: '📅' },
 ]
@@ -99,7 +100,7 @@ export default function MonitorPage() {
                 <p className="text-xs text-[#6B6560]">モニター価格で施術を受ける（通常と同じ品質）</p>
               </div>
               <div className="bg-[var(--blush)] rounded-xl p-4 text-center">
-                <p className="text-2xl mb-2">✨</p>
+                <p className="text-2xl mb-2"></p>
                 <p className="font-bold text-sm mb-1">STEP 3</p>
                 <p className="text-xs text-[#6B6560]">症例写真の提供やレビューを投稿して完了</p>
               </div>
@@ -215,15 +216,15 @@ export default function MonitorPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/purpose/cheap" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/cheap/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">安いクリニック特集</p>
                 <p className="text-xs text-[#8B8580] mt-1">コスパ重視の選び方</p>
               </Link>
-              <Link href="/compare/price" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/compare/price/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">料金比較表</p>
                 <p className="text-xs text-[#8B8580] mt-1">全クリニックの料金を一覧比較</p>
               </Link>
-              <Link href="/review/medicalbrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/review/medicalbrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">メディカルブロー口コミ</p>
                 <p className="text-xs text-[#8B8580] mt-1">業界最大手の評判を徹底調査</p>
               </Link>
@@ -231,6 +232,13 @@ export default function MonitorPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "モニター・安い", "item": "https://artmake-hikaku-navi.com/purpose/monitor/"}]}) }} />
     </main>
   )
 }

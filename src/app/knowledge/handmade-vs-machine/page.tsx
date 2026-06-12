@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'アートメイク手彫りと機械彫りの違い｜仕上がり・痛み・持続・料金を徹底比較【2026年最新】',
@@ -241,15 +242,15 @@ export default function HandmadeVsMachinePage() {
           <div className="mt-12">
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/powder-brow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/powder-brow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">パウダー眉（2D）</p>
                 <p className="text-xs text-[#8B8580] mt-1">ふんわりメイク風の仕上がり</p>
               </Link>
-              <Link href="/knowledge/stroke" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/stroke/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">ストローク（毛並み）</p>
                 <p className="text-xs text-[#8B8580] mt-1">3D・毛並みアートメイク解説</p>
               </Link>
-              <Link href="/parts/eyebrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/parts/eyebrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">眉毛アートメイク</p>
                 <p className="text-xs text-[#8B8580] mt-1">眉アートメイクの総合ガイド</p>
               </Link>
@@ -257,6 +258,13 @@ export default function HandmadeVsMachinePage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "手彫り vs 機械彫り", "item": "https://artmake-hikaku-navi.com/knowledge/handmade-vs-machine/"}]}) }} />
     </main>
   )
 }

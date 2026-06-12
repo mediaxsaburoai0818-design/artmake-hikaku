@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク 東京 おすすめクリニック5選｜エリア別徹底比較【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 東京 おすすめクリニック8選｜エリア別徹底比較【2026年最新】| アートメイク比較ナビ",
   description:
     "東京でおすすめのアートメイククリニック5院を表参道・新宿・銀座・六本木エリア別に徹底比較。メディカルブロー、デイジー、ファーストアートメイク、クレアージュの料金・アクセス・口コミを紹介。",
   keywords: "アートメイク 東京 おすすめ,アートメイク 東京,眉毛アートメイク 東京,アートメイク 東京 安い,アートメイク 東京 人気",
@@ -28,7 +29,7 @@ export default function TokyoAreaPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             東京でおすすめの
             <br className="hidden md:block" />
-            アートメイククリニック5選
+            アートメイククリニック8選
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             東京はアートメイククリニックの激戦区。
@@ -104,7 +105,7 @@ export default function TokyoAreaPage() {
       <section className="py-16 px-4 bg-gray-50" id="clinics">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
-            東京のおすすめクリニック5選
+            東京のおすすめクリニック8選
           </h2>
           <div className="space-y-6">
             {[
@@ -157,6 +158,36 @@ export default function TokyoAreaPage() {
                 areas: "有楽町（銀座エリア）",
                 link: "/review/creage",
                 color: "bg-rose-100",
+              },
+              {
+                rank: 6,
+                name: "THE ARTMAKE TOKYO",
+                price: "88,000円（2回）",
+                access: "銀座一丁目駅より徒歩1分",
+                point: "銀座エリアの専門院。眉2回88,000円（平日モニター価格）とリーズナブル。眉・リップ・ヘアライン・ほくろと幅広いメニューに対応。※最新情報は公式サイトでご確認ください",
+                areas: "銀座",
+                link: "#",
+                color: "bg-rose-200",
+              },
+              {
+                rank: 7,
+                name: "ナチュラルアートメイク東京（渋谷院）",
+                price: "88,000円（2回）",
+                access: "渋谷駅より徒歩2分",
+                point: "全国24院展開の大手グループ。眉2回88,000円で高品質な施術を提供。駅近で通いやすく、渋谷エリアで人気上昇中。※最新情報は公式サイトでご確認ください",
+                areas: "渋谷",
+                link: "#",
+                color: "bg-rose-200",
+              },
+              {
+                rank: 8,
+                name: "Bx clinic tokyo",
+                price: "77,000円〜",
+                access: "恵比寿駅より徒歩3分",
+                point: "完全アーティスト指名制で、自分に合った施術者を選べる。眉77,000円〜。恵比寿の洗練された空間で施術を受けられる。※最新情報は公式サイトでご確認ください",
+                areas: "恵比寿",
+                link: "#",
+                color: "bg-rose-200",
               },
             ].map((clinic) => (
               <div
@@ -224,6 +255,9 @@ export default function TokyoAreaPage() {
                   { name: "ファーストアートメイク", price: "38,500円〜", times: "1回", area: "銀座", station: "銀座駅徒歩3分" },
                   { name: "クレアージュ東京", price: "132,000円", times: "3回", area: "有楽町", station: "有楽町駅徒歩1分" },
                   { name: "デイジークリニック", price: "49,800円〜", times: "2回", area: "新宿", station: "新宿駅徒歩5分" },
+                  { name: "THE ARTMAKE TOKYO", price: "88,000円", times: "2回", area: "銀座", station: "銀座一丁目駅徒歩1分" },
+                  { name: "ナチュラルアートメイク東京", price: "88,000円", times: "2回", area: "渋谷", station: "渋谷駅徒歩2分" },
+                  { name: "Bx clinic tokyo", price: "77,000円〜", times: "1回〜", area: "恵比寿", station: "恵比寿駅徒歩3分" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -299,19 +333,19 @@ export default function TokyoAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/ginza" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/ginza/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">銀座エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/area/shinjuku" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/shinjuku/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">新宿エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
@@ -349,6 +383,13 @@ export default function TokyoAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "東京で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "総合的に見てメディカルブローがおすすめです。表参道・新宿・六本木・銀座と4拠点あり、年間60,000例以上の実績があります。料金も28,000円〜とリーズナブルです。"}}, {"@type": "Question", "name": "東京のどのエリアがアートメイクに通いやすいですか？", "acceptedAnswer": {"@type": "Answer", "text": "アクセス重視なら新宿がおすすめです。JR・私鉄・地下鉄が集中し、どこからでも通いやすい立地です。高級感を重視するなら銀座・表参道エリアがおすすめです。"}}, {"@type": "Question", "name": "東京のクリニックは予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "人気院は土日の予約が埋まりやすい傾向があります。平日夕方以降や、開院直後の時間帯が比較的予約を取りやすいです。2〜3週間前の予約がおすすめです。"}}, {"@type": "Question", "name": "東京で安くアートメイクを受けるコツはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローの下位ランク施術者を選ぶと28,000円〜で受けられます。また、モニター制度の活用やキャンペーン時期を狙うことで、さらにお得に受けられます。"}}, {"@type": "Question", "name": "仕事帰りに通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院は20時まで、デイジークリニック新宿院も19時まで営業しています。新宿・有楽町エリアのクリニックは仕事帰りに通いやすいです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "東京", "item": "https://artmake-hikaku-navi.com/area/tokyo/"}]}) }} />
     </main>
   );
 }

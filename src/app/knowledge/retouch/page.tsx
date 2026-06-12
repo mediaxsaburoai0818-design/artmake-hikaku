@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'アートメイクのリタッチはいつ必要？最適な時期・回数・料金を徹底解説【2026年最新】',
@@ -290,22 +291,22 @@ export default function RetouchPage() {
           <div className="mt-12 glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center">
             <h2 className="text-xl font-bold mb-4">リタッチ料金を抑えるなら</h2>
             <p className="text-[#6B6560] mb-6">トゥルーデザインクリニックは眉リタッチ29,700円〜と5院中最安。コスパ重視の方におすすめです。</p>
-            <Link href="/review/true-design" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">トゥルーデザインの詳細を見る →</Link>
+            <Link href="/review/true-design/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">トゥルーデザインの詳細を見る →</Link>
           </div>
 
           {/* 関連記事 */}
           <div className="mt-12">
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/duration" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/duration/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">持続期間は？</p>
                 <p className="text-xs text-[#8B8580] mt-1">何年持つか徹底解説</p>
               </Link>
-              <Link href="/knowledge/price-guide" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/price-guide/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">料金の相場は？</p>
                 <p className="text-xs text-[#8B8580] mt-1">部位別・クリニック別料金ガイド</p>
               </Link>
-              <Link href="/review/true-design" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/review/true-design/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">トゥルーデザインクリニック</p>
                 <p className="text-xs text-[#8B8580] mt-1">口コミ・評判を徹底調査</p>
               </Link>
@@ -313,6 +314,13 @@ export default function RetouchPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "リタッチガイド", "item": "https://artmake-hikaku-navi.com/knowledge/retouch/"}]}) }} />
     </main>
   )
 }

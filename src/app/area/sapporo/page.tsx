@@ -232,15 +232,15 @@ export default function SapporoAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">東京エリアのおすすめクリニック</p>
             </Link>
-            <Link href="/area/sendai" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/sendai/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">仙台エリアのおすすめクリニック</p>
             </Link>
-            <Link href="/review/creage" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">クリニック</span>
               <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
             </Link>
@@ -278,6 +278,7 @@ export default function SapporoAreaPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "札幌", "item": "https://artmake-hikaku-navi.com/area/sapporo/"}]}) }} />
     </main>
   )
 }

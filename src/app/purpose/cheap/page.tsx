@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アートメイクが安いクリニックランキング｜コスパ最強はどこ？【2026年最新】| アートメイク比較ナビ",
@@ -493,19 +494,19 @@ export default function CheapPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
-      <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
@@ -543,6 +544,13 @@ export default function CheapPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "一番安いクリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉毛アートメイクの最安値はメディカルブローの28,000円〜（2回セット・グランドマスターコース）です。ただし施術者ランクにより料金が変動するため、最安ランクの場合はさらに安くなる場合もあります。"}}, {"@type": "Question", "name": "安いクリニックでも仕上がりは大丈夫？", "acceptedAnswer": {"@type": "Answer", "text": "大手クリニックの下位ランクプランであれば、技術研修は上位ランクと共通のため基本品質は保証されています。ただし経験の差は仕上がりに影響するため、症例写真を確認してから予約することをおすすめします。"}}, {"@type": "Question", "name": "モニター価格にデメリットはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "症例写真がクリニックのSNSやサイトに掲載される可能性があります。顔全体が映るかどうか、掲載媒体はどこかを事前に確認しましょう。目元のみ・院内資料のみのモニターならプライバシーリスクは低いです。"}}, {"@type": "Question", "name": "分割払いは利用できますか？", "acceptedAnswer": {"@type": "Answer", "text": "多くの大手クリニックで医療ローンやクレジットカード分割に対応しています。月々3,000〜5,000円程度の支払いプランも。金利手数料がかかる場合があるので、総支払額を確認しましょう。"}}, {"@type": "Question", "name": "相場より極端に安い個人サロンは危険ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、注意が必要です。アートメイクは医療行為のため、医師・看護師の資格が必要です。医療機関ではない個人サロンは違法の可能性があり、感染症やアレルギー、仕上がりのトラブルリスクが高まります。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "安い・コスパ", "item": "https://artmake-hikaku-navi.com/purpose/cheap/"}]}) }} />
     </main>
   );
 }

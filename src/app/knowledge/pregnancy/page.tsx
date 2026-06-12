@@ -33,12 +33,12 @@ const timeline = [
 const bestTiming = [
   { icon: '👶', title: '卒乳後3ヶ月以降', desc: 'ホルモンバランスが元に戻り、母乳への影響を心配せずに施術できます。' },
   { icon: '📅', title: '月経再開後', desc: '月経が再開してからが一つの目安。ホルモン周期が正常化している証拠です。' },
-  { icon: '🏠', title: '育児のサポート体制が整ってから', desc: '施術後は触らない・濡らさない期間があるため、育児との両立を考慮する必要があります。' },
+  { icon: '', title: '育児のサポート体制が整ってから', desc: '施術後は触らない・濡らさない期間があるため、育児との両立を考慮する必要があります。' },
   { icon: '💪', title: '自分の体調が回復してから', desc: '睡眠不足・疲労蓄積があると施術に耐えにくくなります。心身ともに回復した時期を選びましょう。' },
 ]
 
 const beforeAfter = [
-  { icon: '✅', title: '妊娠前に済ませる選択肢', desc: '妊活開始前にアートメイクを済ませておけば、産後のメイクの負担を軽減できます。ただし1〜3年で薄くなるため、子育てが落ち着くころには再施術が必要です。' },
+  { icon: '', title: '妊娠前に済ませる選択肢', desc: '妊活開始前にアートメイクを済ませておけば、産後のメイクの負担を軽減できます。ただし1〜3年で薄くなるため、子育てが落ち着くころには再施術が必要です。' },
   { icon: '🤱', title: '産後に施術する選択肢', desc: '育児で忙しくなる産後こそメイクの時短効果は大きいメリット。卒乳後のベストタイミングで施術すれば、長期的に恩恵を受けられます。' },
 ]
 
@@ -193,15 +193,15 @@ export default function PregnancyPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/risk" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/risk/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">やめたほうがいい？</p>
                 <p className="text-xs text-[#8B8580] mt-1">デメリット7つの真実</p>
               </Link>
-              <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">失敗事例10選</p>
                 <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
               </Link>
-              <Link href="/purpose/40s-50s" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/40s-50s/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">40-50代の選び方</p>
                 <p className="text-xs text-[#8B8580] mt-1">大人世代向けガイド</p>
               </Link>
@@ -224,6 +224,7 @@ export default function PregnancyPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "妊娠中・授乳中", "item": "https://artmake-hikaku-navi.com/knowledge/pregnancy/"}]}) }} />
     </main>
   )
 }

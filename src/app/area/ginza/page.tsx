@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク 銀座 おすすめクリニック3選｜駅近・高級感で選ぶ【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 銀座 おすすめクリニック4選｜駅近・高級感で選ぶ【2026年最新】| アートメイク比較ナビ",
   description:
     "銀座エリアでおすすめのアートメイククリニック3院を徹底比較。ファーストアートメイク（銀座駅徒歩3分）、メディカルブロー銀座院、クレアージュ（有楽町駅近く）の料金・アクセス・特徴を紹介。",
   keywords: "アートメイク 銀座,アートメイク 銀座 おすすめ,眉毛アートメイク 銀座,アートメイク 有楽町,アートメイク 銀座 安い",
@@ -28,7 +29,7 @@ export default function GinzaAreaPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             銀座でおすすめの
             <br className="hidden md:block" />
-            アートメイククリニック3選
+            アートメイククリニック4選
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             銀座は高級感あふれるクリニックが集まるエリア。
@@ -43,7 +44,7 @@ export default function GinzaAreaPage() {
               クリニック一覧を見る
             </a>
             <a
-              href="/area/tokyo"
+              href="/area/tokyo/"
               className="bg-white hover:bg-gray-50 text-rose-500 px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg border-2 border-rose-500"
             >
               東京全体を見る
@@ -124,6 +125,16 @@ export default function GinzaAreaPage() {
                 link: "/review/creage",
                 color: "bg-amber-600",
               },
+              {
+                rank: 4,
+                name: "THE ARTMAKE TOKYO",
+                price: "88,000円（2回）",
+                access: "銀座一丁目駅より徒歩1分",
+                station: "東京メトロ有楽町線「銀座一丁目駅」",
+                point: "銀座一丁目駅徒歩1分の好立地。眉2回88,000円（平日モニター価格）。眉・リップ・ヘアライン・ほくろと幅広いメニューに対応。アートメイク専門院ならではの高い技術力が魅力。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-200",
+              },
             ].map((clinic) => (
               <div
                 key={clinic.rank}
@@ -189,6 +200,7 @@ export default function GinzaAreaPage() {
                   { name: "メディカルブロー 銀座院", price: "28,000円〜", times: "2回", per: "14,000円〜", distance: "銀座駅 徒歩4分" },
                   { name: "ファーストアートメイク", price: "38,500円〜", times: "1回", per: "38,500円〜", distance: "銀座駅 徒歩3分" },
                   { name: "クレアージュ東京", price: "132,000円", times: "3回", per: "44,000円", distance: "有楽町駅 徒歩1分" },
+                  { name: "THE ARTMAKE TOKYO", price: "88,000円", times: "2回", per: "44,000円", distance: "銀座一丁目駅 徒歩1分" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -264,19 +276,19 @@ export default function GinzaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">東京のおすすめアートメイククリニック</p>
       </Link>
-      <Link href="/area/shinjuku" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/shinjuku/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">新宿エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/creage" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
       </Link>
@@ -314,6 +326,13 @@ export default function GinzaAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "銀座で一番アクセスの良いクリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "クレアージュ東京が有楽町駅日比谷口から徒歩1分と最もアクセスが良いです。ファーストアートメイクも銀座駅から徒歩3分と好立地です。"}}, {"@type": "Question", "name": "銀座エリアのクリニックは料金が高いですか？", "acceptedAnswer": {"@type": "Answer", "text": "必ずしも高くありません。メディカルブロー銀座院は28,000円〜と他エリアと同じ料金設定です。銀座だから割高ということはなく、全国統一料金のクリニックが多いです。"}}, {"@type": "Question", "name": "仕事帰りに通えますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、銀座エリアのクリニックは平日19〜20時まで営業している院が多いです。丸の内・日本橋・新橋からも近いので、オフィスワーカーに人気のエリアです。"}}, {"@type": "Question", "name": "銀座と有楽町のクリニックは歩いて行き来できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、銀座駅と有楽町駅は徒歩5分程度の距離です。カウンセリングを複数院で受けて比較検討する場合にも、同日にハシゴしやすいエリアです。"}}, {"@type": "Question", "name": "男性でも通いやすいクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー銀座院は男性患者も多く、メンズアートメイクの実績も豊富です。銀座は落ち着いた雰囲気なので、男性でも通いやすい環境です。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "銀座", "item": "https://artmake-hikaku-navi.com/area/ginza/"}]}) }} />
     </main>
   );
 }

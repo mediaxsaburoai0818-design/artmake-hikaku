@@ -26,7 +26,7 @@ const washingRules = [
   { icon: '🚿', title: 'ぬるま湯で流す', desc: '熱すぎるお湯は色素流出を促進します。32〜34℃程度のぬるま湯で、シャワーを直接当てずに流す。' },
   { icon: '🧻', title: 'タオルで押し拭き', desc: 'こすらずに、柔らかいタオルで軽く押さえるように水分を吸収。繊維の硬いタオルはNG。' },
   { icon: '🧴', title: '軟膏をすぐ塗布', desc: '洗顔後はすぐに処方された軟膏（ワセリン等）を塗布。乾燥させないことが色素定着のカギ。' },
-  { icon: '❌', title: 'オイルクレンジング禁止', desc: '油分が色素を浮かせる可能性があるため、1〜2週間は泡洗顔のみ。オイルクレンジングは控える。' },
+  { icon: '', title: 'オイルクレンジング禁止', desc: '油分が色素を浮かせる可能性があるため、1〜2週間は泡洗顔のみ。オイルクレンジングは控える。' },
   { icon: '⏱️', title: '洗顔時間は短く', desc: '施術部位を長時間水に晒さないよう、洗顔は1分以内で終わらせるのが理想。' },
 ]
 
@@ -148,15 +148,15 @@ export default function BathingPage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/sauna-pool" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/sauna-pool/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">サウナ・温泉・プール</p>
                 <p className="text-xs text-[#8B8580] mt-1">制限期間を解説</p>
               </Link>
-              <Link href="/knowledge/makeup-after" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/makeup-after/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">メイクはいつから？</p>
                 <p className="text-xs text-[#8B8580] mt-1">部位別解禁タイミング</p>
               </Link>
-              <Link href="/knowledge/progress" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/progress/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">経過・ダウンタイム</p>
                 <p className="text-xs text-[#8B8580] mt-1">術後の経過を解説</p>
               </Link>
@@ -179,6 +179,7 @@ export default function BathingPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "お風呂", "item": "https://artmake-hikaku-navi.com/knowledge/bathing/"}]}) }} />
     </main>
   )
 }

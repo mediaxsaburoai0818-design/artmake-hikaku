@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "リップアートメイク完全ガイド｜施術方法・おすすめクリニック・料金相場【2026年最新】| アートメイク比較ナビ",
@@ -735,23 +736,23 @@ export default function LipPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
-      <Link href="/parts/eyeliner" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyeliner/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">アイラインアートメイクの種類・相場</p>
       </Link>
-      <Link href="/purpose/40s-50s" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/40s-50s/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">40代50代向けアートメイク</p>
       </Link>
-      <Link href="/knowledge/pain" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/pain/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクの痛みについて</p>
       </Link>
-      <Link href="/about" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/about/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">基本情報</span>
         <p className="font-semibold mt-1">アートメイクとは？基礎知識まとめ</p>
       </Link>
@@ -779,7 +780,7 @@ export default function LipPage() {
               おすすめクリニックランキングを見る
             </a>
             <a
-              href="/parts/eyebrow"
+              href="/parts/eyebrow/"
               className="inline-block bg-transparent text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors"
             >
               眉毛アートメイクガイドを見る
@@ -793,6 +794,13 @@ export default function LipPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "リップアートメイクは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "唇は顔の中でも特に敏感な部位のため、眉毛より痛みを感じやすい傾向があります。ただし、施術前に麻酔クリームをしっかり塗布し、施術中も追加麻酔が可能なため、「我慢できないほどの痛み」ではありません。「唇をピリピリつねられる感じ」「ヒリヒリする程度」と表現する方が多いです。痛みに弱い方は事前にクリニックに相談しましょう。"}}, {"@type": "Question", "name": "リップアートメイクの持続期間は？", "acceptedAnswer": {"@type": "Answer", "text": "一般的に1〜3年程度です。唇は粘膜に近く代謝が活発なため、眉毛よりも退色が早い傾向があります。食事や歯磨きなど日常的な摩擦も影響します。1〜2年ごとにリタッチを受けることで、美しい発色を維持できます。"}}, {"@type": "Question", "name": "ヘルペスのリスクはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "リップアートメイク後は唇に微細な傷がつくため、口唇ヘルペスのウイルスを保有している方は再発するリスクがあります。多くのクリニックでは予防のために抗ウイルス薬の事前処方を行っています。過去に口唇ヘルペスの経験がある方は、必ずカウンセリング時に申告してください。"}}, {"@type": "Question", "name": "施術後いつからリップメイクができますか？", "acceptedAnswer": {"@type": "Answer", "text": "皮むけが完了する1〜2週間後からリップメイクが可能です。施術後1週間は唇への刺激を最小限にする必要があるため、口紅やグロスの使用は控えてください。施術後は処方された軟膏でしっかり保湿することが大切です。"}}, {"@type": "Question", "name": "食事はいつから普通にできますか？", "acceptedAnswer": {"@type": "Answer", "text": "施術当日から食事は可能ですが、施術後3〜5日間は注意が必要です。辛い食べ物・熱い食べ物・酸っぱい食べ物は刺激になるため避けてください。ストローで飲み物を飲む、食後はすぐに軟膏を塗り直すなどのケアを心がけましょう。"}}, {"@type": "Question", "name": "どのカラーを選べばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "パーソナルカラーを基準に選ぶのがおすすめです。ブルベの方はピンク〜ローズ系、イエベの方はコーラル〜サーモン系が馴染みやすい傾向です。また、普段のリップカラーより1〜2トーン薄めを選ぶのがポイント。施術直後は濃く見えますが、定着後は30〜50%薄くなります。迷ったらカウンセリングで施術者に相談し、実際に肌に色を当てて確認しましょう。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "リップ", "item": "https://artmake-hikaku-navi.com/parts/lip/"}]}) }} />
     </main>
   );
 }

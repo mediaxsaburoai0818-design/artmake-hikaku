@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "40代・50代のアートメイク｜年齢に合った自然な眉デザインガイド【2026年最新】| アートメイク比較ナビ",
@@ -385,19 +386,19 @@ export default function FortyFiftyPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/creage" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
       </Link>
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
-      <Link href="/parts/lip" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/lip/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">リップアートメイクの種類・相場</p>
       </Link>
@@ -435,6 +436,13 @@ export default function FortyFiftyPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "40代・50代でアートメイクを受けても大丈夫ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、問題ありません。むしろ40代・50代は眉の悩みが深くなる年代で、アートメイクの恩恵を最も受けやすい世代です。健康上の問題がなければ年齢制限はありません。事前のカウンセリングで肌の状態を確認してもらいましょう。"}}, {"@type": "Question", "name": "加齢で薄くなった眉もカバーできますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、得意分野です。3Dストロークで1本ずつ毛を描くことで、自毛のような自然な眉を再現できます。完全に毛がない部分にも施術可能で、まばらな眉を均一に整えることができます。"}}, {"@type": "Question", "name": "周りの人にバレないデザインにできますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、クレアージュ東京の3回施術のように段階的に仕上げる方法なら、周囲に気づかれにくいです。「最近明るくなった」「若返った」と言われることはあっても、アートメイクだと気づかれることは少ないです。"}}, {"@type": "Question", "name": "敏感肌・肌が薄い場合でも施術できますか？", "acceptedAnswer": {"@type": "Answer", "text": "敏感肌の方でも施術可能ですが、事前にパッチテストを行うクリニックを選ぶと安心です。年齢とともに肌が薄くなる傾向があるため、色素の定着具合が異なる場合がありますが、経験豊富な施術者なら適切に調整してくれます。"}}, {"@type": "Question", "name": "リタッチの頻度はどれくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的には1〜2年に1回のリタッチが推奨です。加齢による肌のターンオーバーの変化で、若い方より色素が長持ちする傾向もあります。定期的なリタッチで常に美しい状態をキープできます。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "40代・50代", "item": "https://artmake-hikaku-navi.com/purpose/40s-50s/"}]}) }} />
     </main>
   );
 }

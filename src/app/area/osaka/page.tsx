@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク 大阪 おすすめクリニック4選｜心斎橋・梅田エリア比較【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 大阪 おすすめクリニック7選｜心斎橋・梅田エリア比較【2026年最新】| アートメイク比較ナビ",
   description:
     "大阪でおすすめのアートメイククリニック4院を心斎橋・梅田エリア別に徹底比較。トゥルーデザイン、メディカルブロー、デイジー、クレアージュの料金・アクセス・口コミを紹介。",
   keywords: "アートメイク 大阪 おすすめ,アートメイク 大阪,眉毛アートメイク 大阪,アートメイク 心斎橋,アートメイク 梅田",
@@ -28,7 +29,7 @@ export default function OsakaAreaPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             大阪でおすすめの
             <br className="hidden md:block" />
-            アートメイククリニック4選
+            アートメイククリニック7選
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             大阪は心斎橋・梅田を中心に実力派クリニックが集結。
@@ -83,7 +84,7 @@ export default function OsakaAreaPage() {
       <section className="py-16 px-4 bg-gray-50" id="clinics">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
-            大阪のおすすめクリニック4選
+            大阪のおすすめクリニック7選
           </h2>
           <div className="space-y-6">
             {[
@@ -126,6 +127,36 @@ export default function OsakaAreaPage() {
                 point: "3回施術で丁寧にグラデーションを仕上げる。30代〜50代に人気。落ち着いた院内で安心して施術を受けられる。",
                 link: "/review/creage",
                 color: "bg-rose-200",
+              },
+              {
+                rank: 5,
+                name: "デザインビューティークリニック",
+                price: "33,000円（1回）",
+                access: "梅田/心斎橋/難波の3院展開",
+                station: "各院とも最寄駅より徒歩圏内",
+                point: "眉1回33,000円のワンプライス制でわかりやすい料金体系。テレビCM放映中で知名度急上昇。大阪に3院展開し、通いやすさも魅力。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-100",
+              },
+              {
+                rank: 6,
+                name: "アサイクリニック",
+                price: "66,000円〜（モニター2回）",
+                access: "心斎橋・なんばエリア",
+                station: "大阪メトロ「心斎橋駅」「なんば駅」",
+                point: "内科・皮膚科を併設した総合クリニック。眉モニター2回66,000円〜と良心的な価格設定。医療機関ならではの安心感が魅力。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-100",
+              },
+              {
+                rank: 7,
+                name: "メディカルエピレーションクリニック",
+                price: "33,000円〜（モニター1回）",
+                access: "心斎橋駅より徒歩圏内",
+                station: "大阪メトロ御堂筋線「心斎橋駅」",
+                point: "眉モニター1回33,000円と大阪でもトップクラスの低価格。心斎橋エリアで気軽にアートメイクを試したい方におすすめ。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-100",
               },
             ].map((clinic) => (
               <div
@@ -193,6 +224,9 @@ export default function OsakaAreaPage() {
                   { name: "クレアージュ 大阪院", price: "132,000円", times: "3回", per: "44,000円", area: "梅田" },
                   { name: "デイジークリニック 大阪院", price: "49,800円〜", times: "2回", per: "24,900円〜", area: "心斎橋" },
                   { name: "トゥルーデザイン 心斎橋院", price: "59,400円〜", times: "2回", per: "29,700円〜", area: "心斎橋" },
+                  { name: "デザインビューティークリニック", price: "33,000円", times: "1回", per: "33,000円", area: "梅田/心斎橋/難波" },
+                  { name: "アサイクリニック", price: "66,000円〜", times: "2回（モニター）", per: "33,000円〜", area: "心斎橋・なんば" },
+                  { name: "メディカルエピレーションクリニック", price: "33,000円〜", times: "1回（モニター）", per: "33,000円〜", area: "心斎橋" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -268,19 +302,19 @@ export default function OsakaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">東京のおすすめアートメイククリニック</p>
       </Link>
-      <Link href="/area/nagoya" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/nagoya/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">名古屋エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/area/fukuoka" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/fukuoka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">福岡エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
@@ -318,6 +352,13 @@ export default function OsakaAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "大阪で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "技術力重視ならトゥルーデザインクリニック心斎橋院がおすすめです。完全オーダーメイドのデザイン力が関西トップクラス。コスパ重視ならメディカルブロー大阪院が28,000円〜で最安です。"}}, {"@type": "Question", "name": "心斎橋と梅田、どちらのエリアがおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "JR・阪急で通うなら梅田エリアがアクセス便利です。御堂筋線で通うなら心斎橋も好立地。買い物も楽しみたい方は心斎橋がおすすめです。"}}, {"@type": "Question", "name": "京都や神戸から通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "梅田エリアのメディカルブロー大阪院・クレアージュ大阪院が、JR・阪急で京都・神戸からアクセスしやすいです。片道30〜40分程度で通えます。"}}, {"@type": "Question", "name": "大阪のクリニックは東京と料金が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "大手クリニック（メディカルブロー、デイジー、クレアージュ）は全国統一料金のため、東京と同じ価格で受けられます。トゥルーデザインは大阪が本院です。"}}, {"@type": "Question", "name": "大阪で安くアートメイクを受ける方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー大阪院の下位ランク施術者を選ぶのが最安です。また、デイジークリニックのモニター制度を活用すると10〜20%OFFで受けられます。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "大阪", "item": "https://artmake-hikaku-navi.com/area/osaka/"}]}) }} />
     </main>
   );
 }

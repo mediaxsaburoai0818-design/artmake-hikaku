@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アイラインアートメイク完全ガイド｜施術方法・おすすめクリニック・料金相場【2026年最新】| アートメイク比較ナビ",
@@ -125,7 +126,7 @@ export default function EyelinerPage() {
                 price: "2回 40,000〜70,000円",
               },
               {
-                icon: "✨",
+                icon: "",
                 name: "下アイライン",
                 badge: "目元強調",
                 badgeColor: "bg-amber-400 text-amber-900",
@@ -690,7 +691,7 @@ export default function EyelinerPage() {
                 ],
               },
               {
-                icon: "✨",
+                icon: "",
                 title: "まつエク・まつげパーマについて",
                 items: [
                   {
@@ -824,23 +825,23 @@ export default function EyelinerPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/parts/eyebrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyebrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">眉毛アートメイクの種類・相場</p>
       </Link>
-      <Link href="/parts/lip" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/lip/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">リップアートメイクの種類・相場</p>
       </Link>
-      <Link href="/purpose/natural" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/natural/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">自然な仕上がりのアートメイク</p>
       </Link>
-      <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/risk/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
       </Link>
-      <Link href="/about" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/about/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">基本情報</span>
         <p className="font-semibold mt-1">アートメイクとは？基礎知識まとめ</p>
       </Link>
@@ -868,7 +869,7 @@ export default function EyelinerPage() {
               おすすめクリニックランキングを見る
             </a>
             <a
-              href="/parts/eyebrow"
+              href="/parts/eyebrow/"
               className="inline-block bg-transparent text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors"
             >
               眉毛アートメイクガイドを見る
@@ -882,6 +883,13 @@ export default function EyelinerPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "アイラインアートメイクは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "目元は顔の中でも敏感な部位のため、多少の痛みやチクチク感を感じる方が多いです。ただし、施術前に点眼タイプの麻酔や塗布麻酔をしっかり行うため、「我慢できないほどの痛み」ではありません。粘膜ラインは特に敏感なため、追加麻酔で対応します。痛みに弱い方は事前にクリニックに相談してください。"}}, {"@type": "Question", "name": "上アイラインと下アイライン、どちらがおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "初めての方には上アイラインがおすすめです。上アイラインだけで目力が十分にアップし、最もナチュラルな仕上がりになります。下アイラインは単体だとやや不自然に見える場合があるため、上アイラインとのセットで施術する方が多いです。カウンセリングで目の形に合ったアドバイスをもらいましょう。"}}, {"@type": "Question", "name": "アイラインアートメイクの持続期間は？", "acceptedAnswer": {"@type": "Answer", "text": "一般的に1〜2年程度です。眉毛やリップに比べるとやや退色が早い傾向があります。特に粘膜ライン（インライン）は涙や分泌物の影響で退色が早く、1年程度で薄くなることもあります。上アイラインの通常の位置であれば1〜2年持続するのが一般的です。"}}, {"@type": "Question", "name": "施術後にコンタクトレンズはいつから使えますか？", "acceptedAnswer": {"@type": "Answer", "text": "ソフトコンタクトレンズは施術後2〜3日から、ハードコンタクトレンズは3〜5日から装着可能です。カラーコンタクトは1週間後から。施術当日はメガネをご持参ください。違和感がある場合はさらに休止期間を延ばしてください。クリニックによって指示が異なるため、必ず施術後の説明に従いましょう。"}}, {"@type": "Question", "name": "まつエクをしていても施術できますか？", "acceptedAnswer": {"@type": "Answer", "text": "基本的にはまつエクを外してから施術する必要があります。まつエクが付いていると施術の妨げになり、デザインの精度が下がるためです。施術の3日前までにまつエクを外してご来院ください。施術後のまつエク再開は2週間以上経過してからが目安です。"}}, {"@type": "Question", "name": "テール（跳ね上げライン）は後悔しませんか？", "acceptedAnswer": {"@type": "Answer", "text": "テールラインは華やかで人気がありますが、トレンドの変化で後悔する可能性もあるため、慎重に検討しましょう。アートメイクは1〜2年で薄くなりますが、完全には消えません。初めての方はまずナチュラルなライン（まつげの間を埋めるタイプ）から始め、テールはメイクで足すのが安心な選択肢です。施術者とよく相談してデザインを決めましょう。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "アイライン", "item": "https://artmake-hikaku-navi.com/parts/eyeliner/"}]}) }} />
     </main>
   );
 }

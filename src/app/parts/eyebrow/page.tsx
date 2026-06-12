@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "眉毛アートメイク完全ガイド｜2D/3D/4D/7Dの違い・おすすめクリニック5選【2026年最新】| アートメイク比較ナビ",
@@ -292,7 +293,7 @@ export default function EyebrowPage() {
                 who: "自然体を大切にしたい方",
               },
               {
-                icon: "✨",
+                icon: "",
                 name: "上がり眉",
                 desc: "眉尻を少し上げたデザイン。明るく活発な印象を与える。たれ目がちの方のバランス調整にも効果的。",
                 who: "明るい印象にしたい方",
@@ -715,23 +716,23 @@ export default function EyebrowPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/parts/lip" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/lip/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">リップアートメイクの種類・相場</p>
       </Link>
-      <Link href="/parts/eyeliner" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/parts/eyeliner/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">アイラインアートメイクの種類・相場</p>
       </Link>
-      <Link href="/purpose/natural" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/natural/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">自然な仕上がりのアートメイク</p>
       </Link>
-      <Link href="/purpose/cheap" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/purpose/cheap/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
         <p className="font-semibold mt-1">安くて上手いアートメイク</p>
       </Link>
-      <Link href="/about" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/about/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">基本情報</span>
         <p className="font-semibold mt-1">アートメイクとは？基礎知識まとめ</p>
       </Link>
@@ -759,7 +760,7 @@ export default function EyebrowPage() {
               おすすめクリニックランキングを見る
             </a>
             <a
-              href="/compare"
+              href="/compare/"
               className="inline-block bg-transparent text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors"
             >
               クリニック比較表を見る
@@ -773,6 +774,13 @@ export default function EyebrowPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "眉毛アートメイクの3Dと4Dの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "3D（ストローク）は手彫りで1本ずつ毛並みを描く技法で、自毛のような自然な仕上がりが特徴です。4D（コンビネーション）は3Dの毛並み描写に加えて、2D（パウダー）の技法を組み合わせた施術です。毛並みの自然さにふんわり感がプラスされ、立体的で完成度の高い仕上がりになります。メイクしている時もすっぴんの時も美しく見えるため、現在最も人気のある技法です。"}}, {"@type": "Question", "name": "眉毛アートメイクは何回で完成しますか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的には2回の施術で完成します。1回目で土台を作り、4〜6週間後の2回目で色味やデザインを微調整して仕上げます。1回だけだと色素の定着率が30〜50%程度のため、2回目で密度を上げることできれいに仕上がります。なお、クレアージュ東京は3回に分けて施術するアプローチを採用しています。"}}, {"@type": "Question", "name": "眉毛アートメイクの持続期間はどれくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的に1〜3年程度です。技法（2D/3D/4Dなど）、肌質（脂性肌の方は退色が早い傾向）、生活習慣（紫外線、ピーリング、代謝の速さなど）によって個人差があります。1〜2年ごとにリタッチを受けることで、美しい状態を長期間維持できます。"}}, {"@type": "Question", "name": "痛みはどれくらいですか？麻酔は効きますか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、強い痛みを感じることはほとんどありません。「毛抜きで毛を抜く程度」「軽いチクチク感」と表現する方が多いです。2D（マシン）は比較的痛みが少なく、3D/4D（手彫り含む）はやや感じる方もいます。痛みに弱い方は事前にクリニックに相談すると、追加麻酔にも対応してもらえます。"}}, {"@type": "Question", "name": "どのデザイン（眉の形）を選べばいいですか？", "acceptedAnswer": {"@type": "Answer", "text": "顔の形によって似合う眉は異なります。丸顔の方はアーチ眉、面長の方はストレート眉（平行眉）、逆三角形の方はやや角度のある眉がおすすめです。ただし、カウンセリング時にプロの施術者が骨格・表情筋・黄金比をもとに最適なデザインを提案してくれるので、あまり悩みすぎなくても大丈夫です。"}}, {"@type": "Question", "name": "アートメイク後にメイクはできますか？", "acceptedAnswer": {"@type": "Answer", "text": "施術後1週間程度は施術部位（眉）へのメイクは避けてください。かさぶたが完全に取れるまでは、クレンジングや化粧品が色素の定着を妨げる恐れがあります。眉以外の部分（ファンデーション、アイメイク等）は翌日から可能なクリニックが多いです。"}}, {"@type": "Question", "name": "失敗した場合、修正や除去はできますか？", "acceptedAnswer": {"@type": "Answer", "text": "修正は可能です。色味が薄すぎる・濃すぎる場合はリタッチ時に調整できます。形の大幅な変更や完全な除去にはレーザー治療が必要になることがあり、複数回の施術と追加費用がかかります。失敗を防ぐには、症例写真を多数確認し、カウンセリングで入念にデザインを決めることが大切です。"}}, {"@type": "Question", "name": "男性でも眉毛アートメイクは受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "もちろん受けられます。メンズアートメイクは年々需要が増加しており、薄眉・左右非対称・まばら眉に悩む男性に人気です。男性の場合は太めのストレート眉やナチュラル眉が人気で、メイクをしている印象にならない自然な仕上がりが求められます。メディカルブローやデイジーなど、メンズの症例実績が豊富なクリニックがおすすめです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "眉毛", "item": "https://artmake-hikaku-navi.com/parts/eyebrow/"}]}) }} />
     </main>
   );
 }

@@ -256,19 +256,19 @@ export default function KobeAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/area/osaka" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/osaka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">大阪のおすすめクリニック</p>
             </Link>
-            <Link href="/area/hiroshima" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/hiroshima/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">広島のおすすめクリニック</p>
             </Link>
-            <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">東京のおすすめクリニック</p>
             </Link>
-            <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">比較</span>
               <p className="font-semibold mt-1">アートメイク料金比較</p>
             </Link>
@@ -315,6 +315,7 @@ export default function KobeAreaPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "神戸", "item": "https://artmake-hikaku-navi.com/area/kobe/"}]}) }} />
     </main>
   );
 }

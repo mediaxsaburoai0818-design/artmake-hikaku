@@ -217,15 +217,15 @@ export default function EyebrowShapePage() {
           <div>
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
-              <Link href="/knowledge/stroke" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/stroke/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">毛並み（ストローク）</p>
                 <p className="text-xs text-[#8B8580] mt-1">技法を詳しく解説</p>
               </Link>
-              <Link href="/knowledge/powder-brow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/knowledge/powder-brow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">パウダーブロウ</p>
                 <p className="text-xs text-[#8B8580] mt-1">ふんわり眉の技法</p>
               </Link>
-              <Link href="/purpose/natural" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <Link href="/purpose/natural/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">ナチュラル重視</p>
                 <p className="text-xs text-[#8B8580] mt-1">自然な仕上がり</p>
               </Link>
@@ -248,6 +248,7 @@ export default function EyebrowShapePage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "眉の形・似合う眉", "item": "https://artmake-hikaku-navi.com/knowledge/eyebrow-shape/"}]}) }} />
     </main>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'クレアージュ東京の口コミ・評判｜アートメイク料金・3回施術の特徴を徹底調査【2026年最新】',
@@ -62,6 +63,39 @@ export default function CreageReviewPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 評価分布 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
+            <div className="flex items-center gap-6 mb-4">
+              <div className="text-center">
+                <p className="text-4xl font-bold text-rose-500">3.9</p>
+                <p className="text-sm text-gray-500">総合評価</p>
+              </div>
+              <div className="flex-1 space-y-2">
+                {[
+                  { stars: 5, percent: 38, count: 3 },
+                  { stars: 4, percent: 25, count: 2 },
+                  { stars: 3, percent: 25, count: 2 },
+                  { stars: 2, percent: 13, count: 1 },
+                  { stars: 1, percent: 0, count: 0 },
+                ].map(row => (
+                  <div key={row.stars} className="flex items-center gap-2 text-sm">
+                    <span className="w-8 text-right">{row.stars}★</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3">
+                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
+                    </div>
+                    <span className="w-8 text-gray-500">{row.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
           </div>
         </div>
       </section>
@@ -140,6 +174,21 @@ export default function CreageReviewPage() {
         </div>
       </section>
 
+      {/* キャンペーン・割引情報 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
+            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>3回コースセット割引（1回あたり44,000円のお得な価格）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>ポイント制度あり（施術ごとにポイント付与）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>カウンセリング無料</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
       {/* メリデメ */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -200,14 +249,14 @@ export default function CreageReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">クレアージュ東京はこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 自然で失敗しないアートメイクを求める方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 40代・50代で年齢に合った仕上がりを希望する方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 料金を事前に確定させたい方（明朗会計）</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 地方在住で全国展開のクリニックを探している方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">自然で失敗しないアートメイクを求める方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">40代・50代で年齢に合った仕上がりを希望する方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">料金を事前に確定させたい方（明朗会計）</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">地方在住で全国展開のクリニックを探している方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 2回以内で完成させたい方 → メディカルブローがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ トレンド感のある華やかな眉を希望する方 → デイジーがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">2回以内で完成させたい方 → メディカルブローがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">トレンド感のある華やかな眉を希望する方 → デイジーがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -238,19 +287,19 @@ export default function CreageReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
-      <Link href="/compare/creage-vs-medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/creage-vs-medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">クレアージュ vs メディカルブロー比較</p>
       </Link>
-      <Link href="/compare/price" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
@@ -273,6 +322,13 @@ export default function CreageReviewPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "クレアージュのアートメイクはなぜ3回なのですか？", "acceptedAnswer": {"@type": "Answer", "text": "3回に分けることで、1回ごとに色の定着具合やデザインを確認しながら微調整できます。一度に濃く入れすぎるリスクを避け、より自然で繊細な仕上がりを実現するためです。特に初めてアートメイクをする方や、失敗したくない方に適した方法です。"}}, {"@type": "Question", "name": "クレアージュ東京の口コミで多い評価は？", "acceptedAnswer": {"@type": "Answer", "text": "「自然な仕上がり」「40代50代でも浮かない」「料金が明確でわかりやすい」という口コミが多いです。一方で「3回通うのが大変」「予約が取りにくい」という声もあります。全体的には高評価が多く、特に大人世代からの支持が厚いクリニックです。"}}, {"@type": "Question", "name": "クレアージュの眉アートメイクの料金は高いですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉3回セットで132,000円（1回あたり44,000円）です。一般的なクリニックの2回セット相場が8〜15万円程度なので、3回施術で13.2万円は比較的リーズナブルです。さらに指名料が無料なので、追加費用を気にせず通えます。"}}, {"@type": "Question", "name": "クレアージュはどの院がおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "東京（有楽町）院が最も症例数が多く、アーティストの層も厚いためおすすめです。大阪・札幌・名古屋・福岡の各院も同じ技術基準で施術を行っているため、お住まいの地域に近い院を選んで問題ありません。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "クレアージュ東京", "item": "https://artmake-hikaku-navi.com/review/creage/"}]}) }} />
     </main>
   )
 }

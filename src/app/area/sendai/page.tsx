@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const accessMethods = [
   { method: '新幹線で東京へ', time: '約1時間30分', detail: '東北新幹線「はやぶさ」利用で東京駅まで約1時間30分。日帰り施術も可能。', icon: '🚄' },
-  { method: '飛行機で大阪へ', time: '約1時間10分', detail: '仙台空港から伊丹空港まで直行便あり。トゥルーデザイン大阪心斎橋への遠征も視野に。', icon: '✈️' },
+  { method: '飛行機で大阪へ', time: '約1時間10分', detail: '仙台空港から伊丹空港まで直行便あり。トゥルーデザイン大阪心斎橋への遠征も視野に。', icon: '' },
   { method: '高速バスで東京へ', time: '約5〜6時間', detail: '深夜バス活用で宿泊費ゼロ。新幹線より大幅に低コストだが体力が必要。', icon: '🚌' },
   { method: '新幹線で札幌へ', time: '約4時間30分', detail: '北海道新幹線経由で札幌へ。クレアージュ札幌・デイジー札幌が選択肢。', icon: '🚅' },
 ]
@@ -230,15 +230,15 @@ export default function SendaiAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">東京エリアのおすすめクリニック</p>
             </Link>
-            <Link href="/area/sapporo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/area/sapporo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">札幌エリアのおすすめクリニック</p>
             </Link>
-            <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+            <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">クリニック</span>
               <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
             </Link>
@@ -276,6 +276,7 @@ export default function SendaiAreaPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "仙台", "item": "https://artmake-hikaku-navi.com/area/sendai/"}]}) }} />
     </main>
   )
 }

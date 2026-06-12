@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'デイジークリニック vs ファーストアートメイク 徹底比較【2026年最新】料金・技法・口コミ10項目で解説',
@@ -332,21 +333,28 @@ export default function DazzyVsFirstartmakePage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-bold mb-4">関連記事</h2>
           <div className="grid md:grid-cols-3 gap-4">
-            <Link href="/review/dazzy" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/dazzy/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">デイジークリニック</p>
               <p className="text-xs text-[#8B8580] mt-1">口コミ・評判を徹底調査</p>
             </Link>
-            <Link href="/review/first-artmake" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/first-artmake/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">ファーストアートメイク</p>
               <p className="text-xs text-[#8B8580] mt-1">口コミ・評判を徹底調査</p>
             </Link>
-            <Link href="/compare/price" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/compare/price/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">アートメイク料金比較表</p>
               <p className="text-xs text-[#8B8580] mt-1">全クリニック料金一覧</p>
             </Link>
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map((faq) => ({ "@type": "Question", name: faq.q, acceptedAnswer: { "@type": "Answer", text: faq.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "デイジー vs ファーストアートメイク", "item": "https://artmake-hikaku-navi.com/compare/dazzy-vs-firstartmake/"}]}) }} />
     </main>
   )
 }

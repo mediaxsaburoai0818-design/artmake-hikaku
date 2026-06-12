@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: "アートメイクとは？仕組み・種類・メリットを完全解説【2026年最新】| アートメイク比較ナビ",
@@ -278,7 +279,7 @@ export default function AboutPage() {
                 desc: "生え際や分け目の薄毛をカバー。小顔効果やおでこの形を整える目的にも。男女ともに需要増加中。",
               },
               {
-                icon: "✨",
+                icon: "",
                 name: "ほくろ",
                 popularity: "手軽に人気",
                 desc: "チャームポイントとしてほくろをプラス。口元やまぶたなどに施術するセクシーほくろが人気。施術時間は短め。",
@@ -793,19 +794,19 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/knowledge/duration" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/duration/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクの持続期間</p>
       </Link>
-      <Link href="/knowledge/pain" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/pain/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクの痛みについて</p>
       </Link>
-      <Link href="/knowledge/risk" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/knowledge/risk/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">知識</span>
         <p className="font-semibold mt-1">アートメイクのリスク・副作用</p>
       </Link>
-      <Link href="/faq" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/faq/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">FAQ</span>
         <p className="font-semibold mt-1">アートメイクよくある質問</p>
       </Link>
@@ -843,6 +844,13 @@ export default function AboutPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "アートメイクは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、強い痛みを感じることはほとんどありません。「毛抜きで毛を抜く程度」「チクチクする程度」と表現する方が多いです。痛みに弱い方は、事前にクリニックへ相談すると追加麻酔の対応も可能です。"}}, {"@type": "Question", "name": "アートメイクの持続期間はどれくらいですか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的に1〜3年程度です。肌質（脂性肌の方は早く薄くなる傾向）、生活習慣（紫外線、ピーリング等）、施術部位によって個人差があります。1〜2年ごとのリタッチで美しい状態を維持できます。"}}, {"@type": "Question", "name": "施術後のダウンタイムはどれくらい？", "acceptedAnswer": {"@type": "Answer", "text": "眉毛の場合、施術後1〜2日は赤みが出る程度。3〜7日でかさぶたが形成され、1〜2週間で自然に剥がれます。リップは2〜3日腫れが目立つことがあります。施術当日〜3日は洗顔料の使用やサウナ・プールは控えてください。"}}, {"@type": "Question", "name": "アートメイクを受けた後、MRI検査は受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "基本的に問題なく受けられます。ただし、色素に含まれる微量の金属成分により、施術部位にピリピリ感や熱感を感じる可能性があります。MRI検査を受ける際は、事前に医療機関にアートメイクを受けていることをお伝えください。"}}, {"@type": "Question", "name": "アートメイクを失敗したら修正できますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、修正は可能です。色味の修正はリタッチ時に調整できます。形の大幅な変更やデザインの除去にはレーザー治療が必要になる場合もあります。失敗を防ぐには、症例写真が豊富で実績のあるクリニックを選び、カウンセリングで入念にデザインを決めることが大切です。"}}, {"@type": "Question", "name": "何回施術を受ければ完成しますか？", "acceptedAnswer": {"@type": "Answer", "text": "一般的には2回の施術で完成です。1回目で土台を作り、4〜6週間後の2回目で色味やデザインを微調整して仕上げます。クレアージュ東京は3回に分けて施術し、より自然な定着を目指すアプローチを採用しています。"}}, {"@type": "Question", "name": "男性でもアートメイクは受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "もちろん受けられます。メンズアートメイクは年々需要が増加しており、眉毛の薄さや左右非対称に悩む男性に人気です。メディカルブローやデイジークリニックなど、男性の施術実績が豊富なクリニックを選ぶと安心です。"}}, {"@type": "Question", "name": "妊娠中・授乳中でも施術できますか？", "acceptedAnswer": {"@type": "Answer", "text": "妊娠中の施術は基本的にお断りされるクリニックがほとんどです。麻酔クリームの使用や、施術中のストレスが母体に影響する可能性があるためです。授乳中についてはクリニックにより対応が異なるため、直接ご相談ください。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "アートメイクとは", "item": "https://artmake-hikaku-navi.com/about/"}]}) }} />
     </main>
   );
 }

@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク 福岡 おすすめクリニック3選｜博多・天神エリア比較【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 福岡 おすすめクリニック4選｜博多・天神エリア比較【2026年最新】| アートメイク比較ナビ",
   description:
     "福岡でおすすめのアートメイククリニック3院を博多・天神エリア別に徹底比較。メディカルブロー福岡院、デイジークリニック福岡院、クレアージュ福岡院の料金・アクセス・特徴を紹介。",
   keywords: "アートメイク 福岡,アートメイク 福岡 おすすめ,眉毛アートメイク 福岡,アートメイク 天神,アートメイク 博多",
@@ -28,7 +29,7 @@ export default function FukuokaAreaPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             福岡でおすすめの
             <br className="hidden md:block" />
-            アートメイククリニック3選
+            アートメイククリニック4選
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             福岡は博多・天神エリアを中心に大手クリニックが進出。
@@ -120,6 +121,17 @@ export default function FukuokaAreaPage() {
                 link: "/review/creage",
                 color: "bg-amber-600",
               },
+              {
+                rank: 4,
+                name: "AM CLINIC 福岡博多院",
+                price: "44,000〜77,000円（1回）",
+                access: "博多駅より徒歩圏内",
+                station: "JR各線・地下鉄空港線「博多駅」",
+                hours: "10:00〜19:00",
+                point: "合格率10%以下の厳選されたアーティストのみが在籍。眉1回44,000〜77,000円で、高い技術力が魅力。博多エリアで技術重視の方におすすめ。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-200",
+              },
             ].map((clinic) => (
               <div
                 key={clinic.rank}
@@ -188,6 +200,7 @@ export default function FukuokaAreaPage() {
                   { name: "メディカルブロー 福岡院", price: "28,000円〜", times: "2回", per: "14,000円〜", area: "天神" },
                   { name: "クレアージュ 福岡院", price: "132,000円", times: "3回", per: "44,000円", area: "博多" },
                   { name: "デイジークリニック 福岡院", price: "49,800円〜", times: "2回", per: "24,900円〜", area: "天神" },
+                  { name: "AM CLINIC 福岡博多院", price: "44,000〜77,000円", times: "1回", per: "44,000〜77,000円", area: "博多" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -263,19 +276,19 @@ export default function FukuokaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">東京のおすすめアートメイククリニック</p>
       </Link>
-      <Link href="/area/osaka" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/osaka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">大阪エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/area/nagoya" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/nagoya/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">名古屋エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
@@ -313,6 +326,13 @@ export default function FukuokaAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "福岡で一番安いアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー福岡院が28,000円〜（2回セット）で最安です。東京と同じ料金体系・技術レベルで施術が受けられます。"}}, {"@type": "Question", "name": "博多と天神、どちらのエリアがおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "JR・新幹線で通う方は博多エリア（クレアージュ福岡院）が便利です。地下鉄・西鉄で通う方や買い物も楽しみたい方は天神エリア（メディカルブロー・デイジー）がおすすめです。"}}, {"@type": "Question", "name": "九州の他県から通う方はいますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、熊本・大分・佐賀・長崎など九州各県から博多駅経由で通う方が多いです。新幹線利用で熊本から約40分、鹿児島から約80分でアクセスできます。"}}, {"@type": "Question", "name": "福岡のクリニックは東京と比べて技術レベルは同じですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー・デイジー・クレアージュはいずれも全国統一の研修制度を設けており、基本的な技術レベルは東京と同等です。グランドマスターなど上位ランクの施術者は東京に多い傾向があります。"}}, {"@type": "Question", "name": "福岡でモニター割引を受けられるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "デイジークリニック福岡院でモニター制度を実施しています。施術写真の提供に同意すると10〜20%OFFで受けられます。詳細は公式サイトで最新情報をご確認ください。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "福岡", "item": "https://artmake-hikaku-navi.com/area/fukuoka/"}]}) }} />
     </main>
   );
 }

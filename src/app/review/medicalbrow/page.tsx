@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'メディカルブローの口コミ・評判｜アートメイク料金・技術力を徹底調査【2026年最新】',
@@ -64,6 +65,39 @@ export default function MedicalBrowReviewPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 評価分布 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
+            <div className="flex items-center gap-6 mb-4">
+              <div className="text-center">
+                <p className="text-4xl font-bold text-rose-500">3.8</p>
+                <p className="text-sm text-gray-500">総合評価</p>
+              </div>
+              <div className="flex-1 space-y-2">
+                {[
+                  { stars: 5, percent: 38, count: 3 },
+                  { stars: 4, percent: 25, count: 2 },
+                  { stars: 3, percent: 13, count: 1 },
+                  { stars: 2, percent: 25, count: 2 },
+                  { stars: 1, percent: 0, count: 0 },
+                ].map(row => (
+                  <div key={row.stars} className="flex items-center gap-2 text-sm">
+                    <span className="w-8 text-right">{row.stars}★</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-3">
+                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
+                    </div>
+                    <span className="w-8 text-gray-500">{row.count}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
           </div>
         </div>
       </section>
@@ -142,6 +176,22 @@ export default function MedicalBrowReviewPage() {
         </div>
       </section>
 
+      {/* キャンペーン・割引情報 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
+            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>ペア割25%OFF（友人・家族と一緒の来院で適用）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>学割あり（学生証の提示で割引適用）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>モニター価格での施術受付中（1回28,000円〜）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>シニア割あり</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
       {/* メリデメ */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -202,14 +252,14 @@ export default function MedicalBrowReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">メディカルブローはこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 自然な毛並み眉を求める方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ コスパ重視（モニター28,000円〜）</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ 全国展開で地方からも通いやすい</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">✅ メンズアートメイクを検討中の方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">自然な毛並み眉を求める方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">コスパ重視（モニター28,000円〜）</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">全国展開で地方からも通いやすい</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">メンズアートメイクを検討中の方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 料金を事前に確定させたい方 → クレアージュがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">❌ 関西で40代以上の方 → トゥルーデザインがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">料金を事前に確定させたい方 → クレアージュがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">関西で40代以上の方 → トゥルーデザインがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -240,19 +290,19 @@ export default function MedicalBrowReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/review/dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">デイジークリニックの口コミ・評判</p>
       </Link>
-      <Link href="/review/creage" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
       </Link>
-      <Link href="/compare/medicalbrow-vs-dazzy" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/medicalbrow-vs-dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">メディカルブロー vs デイジー徹底比較</p>
       </Link>
-      <Link href="/compare/creage-vs-medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/compare/creage-vs-medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">クレアージュ vs メディカルブロー比較</p>
       </Link>
@@ -275,6 +325,13 @@ export default function MedicalBrowReviewPage() {
           </div>
         </div>
       </section>
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "メディカルブローのおすすめランクは？", "acceptedAnswer": {"@type": "Answer", "text": "コスパ重視なら「アーティスト」（2回50,000円）、仕上がり重視なら「ロイヤルアーティスト」（2回80,000円）がおすすめです。モニター価格なら「ノービスアーティスト」で1回28,000円から体験できます。"}}, {"@type": "Question", "name": "メディカルブローは本当に痛くないですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、強い痛みを感じる方は少ないです。口コミでも「チクチクする程度」「毛抜きで抜く程度」という声が多いです。痛みに弱い方は事前に相談しましょう。"}}, {"@type": "Question", "name": "メディカルブローの予約はどうすれば？", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトまたは電話で予約可能です。人気院（表参道・新宿）は土日の予約が取りにくいため、平日がおすすめ。1〜2ヶ月前の予約をおすすめします。"}}, {"@type": "Question", "name": "メディカルブローとデイジーどっちがいい？", "acceptedAnswer": {"@type": "Answer", "text": "コスパ＋技術力ならメディカルブロー、デザインの選択肢の多さならデイジークリニックがおすすめです。メディカルブローは7Dストローク®一択ですが、デイジーは3種類の技法から選べます。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "メディカルブロー", "item": "https://artmake-hikaku-navi.com/review/medicalbrow/"}]}) }} />
     </main>
   )
 }

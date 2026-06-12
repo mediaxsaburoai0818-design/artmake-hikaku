@@ -3,8 +3,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'アートメイク全クリニック比較｜5院を15項目で徹底ランキング【2026年最新】',
-  description: '【2026年4月最新】アートメイクおすすめ5クリニックを15項目以上で完全比較。料金・技法・症例数・口コミ・展開エリアから、目的別・部位別おすすめ、選び方フローチャートまで。あなたに最適なクリニックが見つかる。',
+  title: 'アートメイク全クリニック比較｜12院を15項目で徹底ランキング【2026年最新】',
+  description: '【2026年5月最新】アートメイクおすすめ12クリニックを15項目以上で完全比較。メディカルブロー・湘南美容・銀座よしえ等の料金・技法・症例数・口コミを徹底比較。目的別おすすめ、選び方フローチャートまで。',
   keywords: 'アートメイク クリニック 比較,アートメイク ランキング,アートメイク おすすめ,眉毛アートメイク 比較',
   openGraph: {
     title: 'アートメイク全クリニック比較｜5院を15項目で徹底ランキング',
@@ -114,6 +114,146 @@ const clinics = [
     online: 'なし',
     highlight: 'リタッチ29,700円〜で長期コスト最安。関西エリアで通いやすい。トレンドデザインが得意。',
   },
+  {
+    rank: 6,
+    name: '湘南美容クリニック',
+    score: 88,
+    eyebrowPrice: '1回 49,500円〜\nモニター 31,680円〜',
+    lipPrice: '1回 54,500円〜',
+    eyelinePrice: '要問合せ',
+    retouchPrice: '34,650円〜（6ヶ月以内）',
+    technique: '2D/3D/4D/mocchi 2Dパウダー',
+    cases: '非公開（大手実績）',
+    area: '全国約14院対応',
+    counseling: '来院（オンライン相談あり）',
+    designationFee: '要確認',
+    discount: 'モニター割引・BMC会員割引',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: '相談のみ対応',
+    highlight: '大手美容クリニックの安心感。全国14院で通いやすい。mocchi 2Dパウダー等の最新技法を導入。モニター価格あり。',
+  },
+  {
+    rank: 7,
+    name: '銀座よしえクリニック',
+    score: 87,
+    eyebrowPrice: '2回 110,000円〜（2D）\n2回 132,000円〜（3D）',
+    lipPrice: '3回 176,000円〜',
+    eyelinePrice: '3回 110,000円〜',
+    retouchPrice: '24,200円〜（3回目以降）',
+    technique: '2D（パウダー）/3D（毛並み）',
+    cases: '年間1,200名以上',
+    area: '都内8院＋横浜',
+    counseling: '来院（医師カウンセリング）',
+    designationFee: '要確認',
+    discount: '特になし',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: '年間1,200名以上の施術実績。FDA認可済み染料使用で変色リスクが低い。都内8院展開でアクセス良好。',
+  },
+  {
+    rank: 8,
+    name: 'アートメイクギャラリー',
+    score: 86,
+    eyebrowPrice: '1回 75,000円〜',
+    lipPrice: '1回 75,000円〜',
+    eyelinePrice: '1回 55,000円〜',
+    retouchPrice: '要確認',
+    technique: 'AMGオーダーメイド/ストローク/パウダー',
+    cases: '非公開（実績多数）',
+    area: '全国6院（銀座・横浜・梅田・心斎橋・芦屋・博多）',
+    counseling: '来院',
+    designationFee: '要確認',
+    discount: '医療ローン月々3,000円〜',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: '医療アートメイク専門クリニック。AMGオーダーメイド等の多彩な技法。全国6院展開。PayPay等QR決済対応。',
+  },
+  {
+    rank: 9,
+    name: 'グロウクリニック',
+    score: 85,
+    eyebrowPrice: '一律 75,000円',
+    lipPrice: '一律 75,000円',
+    eyelinePrice: '一律 75,000円',
+    retouchPrice: '要確認',
+    technique: '一律料金制（ランク差なし）',
+    cases: '非公開',
+    area: '新宿・京都・大阪',
+    counseling: '来院',
+    designationFee: '指名料 11,000円',
+    discount: '特になし',
+    pain: '麻酔クリーム無料',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: 'アーティストによる料金差なしの一律料金制で明朗会計。厳しい研修を経たスタッフのみ施術。麻酔代無料。',
+  },
+  {
+    rank: 10,
+    name: 'エルムクリニック',
+    score: 84,
+    eyebrowPrice: '1回 59,800円〜',
+    lipPrice: '要確認',
+    eyelinePrice: '要確認',
+    retouchPrice: '要確認',
+    technique: '米国式テクニック/黄金比デザイン',
+    cases: '非公開',
+    area: '全国9院（東京・広島・大阪・京都・福岡・岡山・熊本他）',
+    counseling: '無料カウンセリング',
+    designationFee: '要確認',
+    discount: 'モニター割引・期間限定キャンペーン',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: '全国9院展開で地方在住者もアクセスしやすい。米国式テクニック採用。無料カウンセリング。モニター割引あり。',
+  },
+  {
+    rank: 11,
+    name: 'ジェニーアートメイク',
+    score: 83,
+    eyebrowPrice: '1回 29,800円〜（トレイニー）',
+    lipPrice: '要確認',
+    eyelinePrice: '要確認',
+    retouchPrice: '要確認',
+    technique: '2D/3D/4D/エアリーブロウ',
+    cases: '非公開',
+    area: '新宿・渋谷・横浜・大宮',
+    counseling: '来院',
+    designationFee: 'ランク制',
+    discount: '初回限定価格',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: 'トレイニーランク1回29,800円〜は業界最安水準。4種類の眉デザインから選択可。パッチテスト対応。',
+  },
+  {
+    rank: 12,
+    name: 'プレミアムアートメイク',
+    score: 82,
+    eyebrowPrice: '2回 55,000円〜（ジュニア）\n2回 143,000円〜（エキスパート）',
+    lipPrice: '要確認',
+    eyelinePrice: '要確認',
+    retouchPrice: '要確認',
+    technique: 'マイクロブレーディング/ハイブリッド',
+    cases: '非公開',
+    area: '表参道・銀座・梅田',
+    counseling: '来院',
+    designationFee: '4段階ランク制',
+    discount: '要確認',
+    pain: '麻酔クリーム（ほぼ無痛）',
+    downtime: '1〜2週間',
+    mens: '対応あり',
+    online: 'なし',
+    highlight: 'アーティスト全員が有資格看護師でディプロマ保有。4段階のランク制で予算に応じた選択可。マイクロブレーディングが得意。',
+  },
 ]
 
 const comparisonHeaders = [
@@ -129,6 +269,9 @@ const purposeRecommendations = [
   { purpose: '40代50代', recommended: 'クレアージュ東京（92点）', reason: 'エイジングケアに強く、40代50代の施術実績が特に豊富。3回分けメソッドで失敗リスク最小。' },
   { purpose: 'メンズ', recommended: 'メディカルブロー（95点）', reason: 'メンズ専用メニューあり。男性の骨格・毛質に合わせたデザイン提案の実績が豊富。' },
   { purpose: '関西在住', recommended: 'トゥルーデザインクリニック（85点）', reason: '大阪・神戸エリアでアクセス良好。リタッチ29,700円〜で長期コストも安い。' },
+  { purpose: '大手の安心感', recommended: '湘南美容クリニック（88点）', reason: '全国14院対応。大手美容クリニックの信頼性と最新技法。モニター価格あり。' },
+  { purpose: '地方在住', recommended: 'エルムクリニック（84点）', reason: '全国9院展開で広島・岡山・熊本にも対応。地方在住者に貴重な選択肢。' },
+  { purpose: 'とにかく安く', recommended: 'ジェニーアートメイク（83点）', reason: 'トレイニーランク1回29,800円〜。業界最安水準で始めやすい。' },
 ]
 
 const partRecommendations = [
@@ -543,35 +686,35 @@ export default function AllClinicsPage() {
               <p className="font-bold text-sm">おすすめクリニックTOP5</p>
               <p className="text-xs text-[#8B8580] mt-1">総合ランキングを見る</p>
             </Link>
-            <Link href="/compare/price" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/compare/price/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">アートメイク料金比較表</p>
               <p className="text-xs text-[#8B8580] mt-1">部位別の料金を一覧で比較</p>
             </Link>
-            <Link href="/compare/medicalbrow-vs-dazzy" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/compare/medicalbrow-vs-dazzy/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">メディカルブロー vs デイジー</p>
               <p className="text-xs text-[#8B8580] mt-1">人気2院を10項目で比較</p>
             </Link>
-            <Link href="/review/medicalbrow" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/medicalbrow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">メディカルブローの口コミ・評判</p>
               <p className="text-xs text-[#8B8580] mt-1">1位クリニックの詳細レビュー</p>
             </Link>
-            <Link href="/review/creage" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/creage/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">クレアージュ東京の口コミ・評判</p>
               <p className="text-xs text-[#8B8580] mt-1">3回分けメソッドの実力は？</p>
             </Link>
-            <Link href="/review/dazzy" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/review/dazzy/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">デイジークリニックの口コミ・評判</p>
               <p className="text-xs text-[#8B8580] mt-1">モニター価格の実態を調査</p>
             </Link>
-            <Link href="/knowledge/failure" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">アートメイク失敗事例10選</p>
               <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>
             </Link>
-            <Link href="/knowledge/price-guide" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/knowledge/price-guide/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">料金相場ガイド</p>
               <p className="text-xs text-[#8B8580] mt-1">1回いくら？総額を解説</p>
             </Link>
-            <Link href="/knowledge/counseling" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+            <Link href="/knowledge/counseling/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">カウンセリングガイド</p>
               <p className="text-xs text-[#8B8580] mt-1">聞くべき質問リスト</p>
             </Link>
@@ -597,6 +740,7 @@ export default function AllClinicsPage() {
           }),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "全クリニック比較", "item": "https://artmake-hikaku-navi.com/compare/all-clinics/"}]}) }} />
     </main>
   )
 }

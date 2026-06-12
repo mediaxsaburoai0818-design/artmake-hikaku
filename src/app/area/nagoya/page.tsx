@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク 名古屋 おすすめクリニック2選｜名古屋駅・栄エリア【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 名古屋 おすすめクリニック4選｜名古屋駅・栄エリア【2026年最新】| アートメイク比較ナビ",
   description:
     "名古屋でおすすめのアートメイククリニック2院を徹底比較。メディカルブロー名古屋院、クレアージュ名古屋院の料金・アクセス・特徴を紹介。名古屋駅・栄エリアで通いやすい。",
   keywords: "アートメイク 名古屋,アートメイク 名古屋 おすすめ,眉毛アートメイク 名古屋,アートメイク 栄,アートメイク 名古屋駅",
@@ -28,7 +29,7 @@ export default function NagoyaAreaPage() {
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             名古屋でおすすめの
             <br className="hidden md:block" />
-            アートメイククリニック2選
+            アートメイククリニック4選
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             名古屋駅・栄エリアで通いやすいアートメイククリニックを厳選。
@@ -109,6 +110,28 @@ export default function NagoyaAreaPage() {
                 link: "/review/creage",
                 color: "bg-gray-300",
               },
+              {
+                rank: 3,
+                name: "エースクリニック 名古屋院",
+                price: "66,000円〜（1回）",
+                access: "名古屋駅より徒歩5分",
+                station: "JR各線・名鉄・近鉄・地下鉄「名古屋駅」",
+                hours: "10:00〜19:00",
+                point: "黄金比に基づくオーダーメイドデザインが特徴。眉1回66,000円〜で、一人ひとりの骨格に合わせた施術を提供。名古屋駅エリアで技術力に定評あり。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-amber-600",
+              },
+              {
+                rank: 4,
+                name: "ウェルネスビューティクリニック",
+                price: "54,780円（1回）",
+                access: "栄駅より徒歩2分",
+                station: "地下鉄東山線・名城線「栄駅」",
+                hours: "10:00〜19:00",
+                point: "栄駅徒歩2分の好立地。眉1回54,780円、モニター2回95,700円とお得なプランあり。栄エリアで買い物ついでに通えるのが魅力。※最新情報は公式サイトでご確認ください",
+                link: "#",
+                color: "bg-rose-200",
+              },
             ].map((clinic) => (
               <div
                 key={clinic.rank}
@@ -176,6 +199,8 @@ export default function NagoyaAreaPage() {
                 {[
                   { name: "メディカルブロー 名古屋院", price: "28,000円〜", times: "2回", per: "14,000円〜", retouch: "20,000円〜" },
                   { name: "クレアージュ 名古屋院", price: "132,000円", times: "3回", per: "44,000円", retouch: "33,000円〜" },
+                  { name: "エースクリニック 名古屋院", price: "66,000円〜", times: "1回", per: "66,000円〜", retouch: "要問合せ" },
+                  { name: "ウェルネスビューティクリニック", price: "54,780円", times: "1回", per: "54,780円", retouch: "要問合せ" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -251,19 +276,19 @@ export default function NagoyaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
-      <Link href="/area/tokyo" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">東京のおすすめアートメイククリニック</p>
       </Link>
-      <Link href="/area/osaka" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/osaka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">大阪エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/area/fukuoka" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/area/fukuoka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">エリア</span>
         <p className="font-semibold mt-1">福岡エリアのおすすめクリニック</p>
       </Link>
-      <Link href="/review/medicalbrow" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+      <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・評判</p>
       </Link>
@@ -301,6 +326,13 @@ export default function NagoyaAreaPage() {
 
       {/* ===== Footer ===== */}
       
+      <div className="max-w-4xl mx-auto px-4">
+        <AuthorBox />
+      </div>
+
+      {/* JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "名古屋で一番安いアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー名古屋院が28,000円〜（2回セット）で最安です。東京と同じ料金体系で、品質も同レベルの施術が受けられます。"}}, {"@type": "Question", "name": "名古屋駅から通いやすいクリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "クレアージュ名古屋院が名古屋駅から徒歩3分と最も近いです。メディカルブロー名古屋院も徒歩5分と好アクセスです。"}}, {"@type": "Question", "name": "他県から名古屋に通う方はいますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、三重・岐阜・静岡から通う方が多いです。名古屋駅は新幹線停車駅なので、東京・大阪から2回目以降の通院で利用される方もいます。"}}, {"@type": "Question", "name": "名古屋のクリニックは東京と比べて技術レベルは同じですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー・クレアージュともに全国統一の研修制度があり、技術レベルは東京と同等です。ただし施術者の経験年数には個人差があるため、症例写真で確認することをおすすめします。"}}, {"@type": "Question", "name": "メディカルブローとクレアージュの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローは6Dストローク（毛並み）が得意で料金が安め。クレアージュは3回施術で丁寧にグラデーションを作る手法が特徴で、大人の女性に人気です。仕上がりの好みで選ぶのがおすすめです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "名古屋", "item": "https://artmake-hikaku-navi.com/area/nagoya/"}]}) }} />
     </main>
   );
 }
