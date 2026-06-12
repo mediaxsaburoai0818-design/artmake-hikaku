@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '眉毛アートメイク1回いくら？料金相場と総額ガイド【2026年最新】',
+  title: '眉毛アートメイク1回いくら？料金相場と総額ガイド【2026年6月】',
   description: 'アートメイクの料金相場を部位別（眉・リップ・アイライン）に徹底解説。1回・2回・3回の違い、5クリニック料金比較表、追加費用の注意点、総額シミュレーション、節約テクニックまで網羅。',
   keywords: '眉毛アートメイク 1回 いくら,アートメイク 料金相場,アートメイク 値段,眉毛アートメイク 料金,アートメイク 費用',
   openGraph: {

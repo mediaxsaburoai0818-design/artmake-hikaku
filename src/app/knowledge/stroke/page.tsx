@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '毛並みアートメイク（ストローク）完全ガイド｜3D・7Dの違い・料金・経過【2026年最新】',
+  title: '毛並みアートメイク（ストローク）完全ガイド｜3D・7Dの違い・料金・経過【2026年6月】',
   description: '毛並みアートメイク（ストローク/3D眉）の特徴、7Dストロークとの違い、メリット・デメリット、料金相場、施術経過を徹底解説。おすすめクリニックも紹介。',
   keywords: '毛並みアートメイク,アートメイク ストローク,3D眉 アートメイク,7Dストローク,毛並み 眉アートメイク',
   openGraph: {

@@ -4,69 +4,71 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク料金比較【2026年最新】眉毛・リップ・アイラインの相場と最安クリニック",
+  title: "アートメイク料金比較DB【2026年6月12日調査】眉・リップ・アイラインの公式料金と最安クリニック",
   description:
-    "【2026年4月最新】アートメイクの料金を5社徹底比較。眉毛2回5〜15万円、リップ2回7〜20万円、アイライン2回5〜10万円の相場を解説。モニター価格28,000円〜の最安情報や、料金を安くする5つのコツも紹介。",
+    "5クリニックの公式サイト料金を2026年6月12日に一斉調査した料金比較データベース。眉2回4万円〜・1回あたり換算・モニター価格・指名料/麻酔代などの追加費用まで出典付きで比較。毎月定点更新し、改定履歴も記録します。",
   keywords:
     "アートメイク 料金比較,アートメイク 安い,眉毛アートメイク 値段,アートメイク 相場,アートメイク モニター価格",
   openGraph: {
-    title: "アートメイク料金比較【2026年最新】眉毛・リップ・アイラインの相場",
+    title: "アートメイク料金比較DB【2026年6月調査】公式料金を毎月定点更新",
     description:
       "眉毛・リップ・アイラインのアートメイク料金を5社比較。モニター最安28,000円〜。料金を安くするコツも解説。",
     type: "article",
   },
 };
 
+// 2026年6月12日に各クリニック公式サイトで確認した料金（税込）。毎月定点更新。
+const surveyDate = "2026年6月12日";
 const clinics = [
   {
     name: "メディカルブロー",
-    eyebrow: "2回 50,000〜170,000円",
-    eyebrowMonitor: "1回 28,000円〜",
-    lip: "2回 100,000〜170,000円",
-    eyeliner: "2回 60,000〜80,000円",
-    nomination: "ランクにより変動（5,000〜25,000円）",
-    retouch: "1回 20,000〜90,000円",
-    note: "アーティストランク制。モニター価格あり。学割・ペア割最大25%OFF。",
+    eyebrow: "2回 90,000〜150,000円（ランク別）／1回 50,000〜80,000円",
+    eyebrowMonitor: "初回モニター 28,000〜48,000円（ランク別）",
+    lip: "1回 55,000〜65,000円（モニター40,000円〜）",
+    eyeliner: "上2回 60,000〜80,000円",
+    nomination: "10,000〜20,000円（アンバサダー35,000円）",
+    retouch: "初診料2,200円・再診料1,100円が別途",
+    note: "7Dストローク（商標）。学割10%・ミドル割5%・複数部位割あり。全国8院。",
   },
   {
     name: "クレアージュ",
-    eyebrow: "3回 132,000円",
-    eyebrowMonitor: "なし",
-    lip: "3回 198,000円",
-    eyeliner: "要問合せ",
-    nomination: "無料",
-    retouch: "44,000円 / 回",
-    note: "3回施術で自然定着。指名料なし。明朗会計。",
+    eyebrow: "初回 132,000円（3回分・1回あたり44,000円）",
+    eyebrowMonitor: "全顔モニター 92,400〜105,600円（院による）",
+    lip: "初回 198,000円（3回分）",
+    eyeliner: "上 初回 99,000円（3回分）",
+    nomination: "公式記載なし（要確認）",
+    retouch: "眉44,000円／アイライン33,000円／リップ66,000円",
+    note: "業界では珍しい3回セット設計。施術者は全員看護師資格。初診料3,300円。5院。",
   },
   {
     name: "デイジークリニック",
-    eyebrow: "2回 49,800〜99,800円",
-    eyebrowMonitor: "2回 49,800円〜（手彫り）",
-    lip: "2回 99,000〜132,000円",
-    eyeliner: "2回 66,000〜88,000円",
-    nomination: "要確認",
-    retouch: "1回 33,000円〜",
-    note: "モニター最大50%OFF。3種類の技法から選択可。",
+    eyebrow: "Natural Brow 2回93,800円／dazzy Brow 2回113,800円（新宿本院ページ）",
+    eyebrowMonitor: "公式記載なし（要確認）",
+    lip: "dazzy Lip 2回120,000円・1回77,000円",
+    eyeliner: "上2回95,000円・上下2回125,000円",
+    nomination: "22,000円〜（スタッフによる）",
+    retouch: "アイライン上47,500円ほか",
+    note: "公式サイト内のページで料金表記に差があるため最新は要確認。4院。",
   },
   {
     name: "ファーストアートメイク",
-    eyebrow: "2回 71,500円〜",
-    eyebrowMonitor: "なし",
-    lip: "1回 49,500円〜",
-    eyeliner: "1回 33,000円〜",
-    nomination: "要確認",
-    retouch: "1回 33,000円〜",
-    note: "初心者向け丁寧カウンセリング。銀座駅徒歩3分。",
+    eyebrow: "1回 60,000〜80,000円（ランク別・銀座本院）／トップ2回150,000円",
+    eyebrowMonitor: "モニター2回 計88,000〜98,000円（平日34,900円/回〜）",
+    lip: "公式サイトで要確認",
+    eyeliner: "公式サイトで要確認",
+    nomination: "5,500〜11,000円",
+    retouch: "クリーム麻酔0円・初診料0円・カウンセリングのみ3,300円",
+    note: "エアリーブロウ（ふんわり毛並み）。全国27院で通いやすさ最強クラス。",
   },
   {
     name: "トゥルーデザイン",
-    eyebrow: "2回 59,400円〜",
-    eyebrowMonitor: "なし",
-    lip: "2回 79,200円〜",
-    eyeliner: "2回 49,500円〜",
-    nomination: "要確認",
-    retouch: "29,700円〜",
-    note: "リタッチ料金が安い。40代50代に人気。大阪・心斎橋。",
+    eyebrow: "2回 40,000円（2D）／60,000円（3D）／70,000円（4D）",
+    eyebrowMonitor: "施術写真の掲載条件込みの料金設定（実質モニター型）",
+    lip: "2回 80,000円",
+    eyeliner: "2回 70,000円",
+    nomination: "1回 1,500円",
+    retouch: "初診料0円・再診料1,500円・麻酔3,000円（ピコ施術時）",
+    note: "眉2回4万円〜は今回調査の最安。大阪・心斎橋1院のみ。",
   },
 ];
 
@@ -80,55 +82,55 @@ const cheapRankings = {
     },
     {
       rank: 2,
-      name: "デイジークリニック",
-      price: "2回 49,800円〜",
-      detail: "手彫りモニター。新宿・福岡院限定。",
+      name: "ファーストアートメイク",
+      price: "モニター2回 計88,000円〜（平日34,900円/回〜）",
+      detail: "平日モニターが割安。全国27院。",
     },
     {
       rank: 3,
-      name: "トゥルーデザイン",
-      price: "2回 59,400円〜",
-      detail: "通常価格がモニター級の安さ。",
+      name: "クレアージュ",
+      price: "全顔モニター 92,400円〜（3回分）",
+      detail: "名古屋・札幌・大阪・福岡院のモニター価格。",
     },
   ],
   regular: [
     {
       rank: 1,
-      name: "デイジークリニック",
-      price: "2回 49,800円〜",
-      detail: "手彫りプラン。機械+手彫りは69,800円〜。",
+      name: "トゥルーデザイン",
+      price: "眉2回 40,000円（2Dパウダー）",
+      detail: "今回調査の通常料金最安。写真掲載条件あり。",
     },
     {
       rank: 2,
-      name: "メディカルブロー",
-      price: "2回 50,000円〜",
-      detail: "ノービスアーティストランク。",
+      name: "クレアージュ",
+      price: "1回あたり換算 44,000円（132,000円/3回）",
+      detail: "3回セットを1回換算すると割安。",
     },
     {
       rank: 3,
-      name: "トゥルーデザイン",
-      price: "2回 59,400円〜",
-      detail: "リタッチ込みの総額もお得。",
+      name: "デイジークリニック",
+      price: "Natural Brow 2回 93,800円",
+      detail: "1回あたり46,900円（新宿本院ページ）。",
     },
   ],
   total: [
     {
       rank: 1,
       name: "トゥルーデザイン",
-      price: "2回+リタッチ1回 = 約89,100円〜",
-      detail: "リタッチ29,700円が圧倒的に安い。",
+      price: "眉2回 40,000円〜＋指名料1,500円/回",
+      detail: "追加費用が最小構成（初診0円・再診1,500円）。",
     },
     {
       rank: 2,
-      name: "デイジークリニック",
-      price: "2回+リタッチ1回 = 約82,800円〜",
-      detail: "手彫りプラン+リタッチ。",
+      name: "クレアージュ",
+      price: "132,000円で3回分（リタッチ44,000円）",
+      detail: "初診料3,300円のみ。回数込み設計で総額が読みやすい。",
     },
     {
       rank: 3,
       name: "ファーストアートメイク",
-      price: "2回+リタッチ1回 = 約104,500円〜",
-      detail: "初心者安心の丁寧対応。",
+      price: "モニター2回 計88,000円〜＋麻酔0円",
+      detail: "クリーム麻酔・初診料0円で追加費用が少ない。",
     },
   ],
 };
@@ -257,13 +259,37 @@ export default function PriceComparisonPage() {
       </section>
 
       {/* 料金相場サマリー */}
+      <section className="py-14 bg-white border-b" id="survey-log">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">料金定点観測について（調査日・改定履歴）</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">当サイトは毎月、掲載クリニックの公式サイト料金を確認し、変更があればこのページに履歴を記録します。</p>
+          <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b-2 border-gray-300 text-left">
+                  <th className="py-2 pr-4">調査日</th>
+                  <th className="py-2">確認結果</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年6月12日</td>
+                  <td className="py-2 text-gray-600">定点観測を開始。5クリニックの公式料金を一斉確認し、本ページの全料金を最新化（メディカルブロー・クレアージュ・デイジー・ファーストアートメイク・トゥルーデザイン）。デイジークリニックは公式サイト内のページ間で料金表記に差異があることを確認（新宿本院ページの数値を採用・要最新確認の注記つき）。</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="text-xs text-gray-400 mt-4">出典: 各クリニック公式サイトの料金ページ。料金は全て税込表記。キャンペーン・院により異なる場合があるため、申込前に必ず公式サイトでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-14 bg-white border-b" id="market-price">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">
             アートメイク料金の相場
           </h2>
           <p className="text-center text-gray-500 text-sm mb-8">
-            2026年4月時点の主要クリニック調査に基づく
+            2026年6月12日に5クリニックの公式サイト料金を一斉調査（毎月定点更新）
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl p-6 text-center border border-rose-100">

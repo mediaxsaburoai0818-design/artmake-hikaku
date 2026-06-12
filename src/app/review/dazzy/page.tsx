@@ -4,30 +4,31 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'デイジークリニック（DAZZY CLINIC）の口コミ・評判｜アートメイク料金・技法を徹底調査【2026年最新】',
-  description: 'デイジークリニック（DAZZY CLINIC）の口コミ・評判を徹底調査。世界的アーティスト監修の3種類の技法、モニター最大50%OFFの料金体系、眉・リップ・アイラインの施術を完全解説。',
+  title: 'デイジークリニックの口コミ・評判は？【2026年6月】院別料金・dazzy skin clinicとの関係まで徹底解説',
+  description: 'デイジークリニック（dazzy CLINIC）の口コミ・評判を徹底調査。新宿・札幌・福岡天神の3院体制（旧心斎橋院はDAILY SKIN CLINICへ改称）、院別の料金・院長・指名料、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年6月12日確認）で解説します。',
 }
 
 const goodReviews = [
-  { user: '20代女性（新宿本院）', rating: 5, text: 'モニター価格で眉アートメイクを受けました。手彫りで49,800円という破格の値段なのに、仕上がりがとても自然。カウンセリングも丁寧で、オンラインで事前に相談できたのも良かったです。' },
-  { user: '30代女性（大阪院）', rating: 5, text: '3種類の技法から選べるのが魅力で、機械彫り+手彫りのコンビネーション施術にしました。毛並み感と色持ちの良さを両立できて大満足です。世界的なアーティスト監修だけあって技術力が高いと感じました。' },
-  { user: '20代女性（福岡院）', rating: 4, text: 'リップアートメイクで通いました。すっぴんでも唇の血色が良く見えて、毎朝のメイク時間が大幅短縮。友人にも「肌きれいになった？」と言われるほど顔全体の印象が変わりました。' },
-  { user: '30代女性（新宿本院）', rating: 5, text: 'アイラインの施術を受けました。目元がはっきりして、すっぴんでも自信が持てるようになりました。施術中は麻酔が効いていてほぼ無痛。スタッフの方も優しくてリラックスできました。' },
-  { user: '40代女性（札幌院）', rating: 4, text: '地方でもレベルの高いアートメイクが受けられるのがありがたい。事前にオンラインカウンセリングで不安を解消できたのが決め手になりました。仕上がりも期待通りで、2回目が楽しみです。' },
+  { user: '口コミ集計（GLAM・計235件の分析より）', rating: 5, text: '公開されている口コミ集計では、仕上がりへの満足が97%・全体の肯定的評価が約94%とされています。特にリップアートメイクの技術への評価が高い傾向です。' },
+  { user: 'レビューサイトの傾向（みん評・ホットペッパー等）', rating: 5, text: '「カウンセリングが丁寧」「無理な勧誘がなかった」「LINEのビデオカウンセリングが便利」という声が多く見られます。札幌院はホットペッパーで4.86点（16件）と高評価です。' },
+  { user: 'レビューサイトの傾向', rating: 4, text: '「毎朝のメイク時間が短縮された」「痛みが想定より軽かった」「当日施術にも対応してもらえた」など、施術体験への好意的な声が多数あります。' },
 ]
 
 const badReviews = [
-  { user: '20代女性（新宿本院）', rating: 3, text: '人気のクリニックなので予約が取りにくいです。特に土日は1ヶ月以上先になることも。モニター枠はさらに限られるので、早めの予約が必須です。' },
-  { user: '30代女性（大阪院）', rating: 2, text: 'モニター価格に惹かれて来院しましたが、実際にはモニター枠が埋まっていて通常価格になりました。モニター価格はあくまで空きがある場合のみなので注意が必要です。' },
-  { user: '40代女性（福岡院）', rating: 3, text: '施術自体は満足ですが、展開院が4院と少ないのが不便。リタッチで通う際に選択肢が限られます。もう少し院数が増えてくれるとありがたいです。' },
+  { user: 'レビューサイトの傾向', rating: 3, text: '「施術者のランクによって仕上がりに差がある」という指摘が複数サイトで見られます。指名料（院により5,500円〜33,000円）を払って上位ランクやベテランを指名する利用者も多いようです。' },
+  { user: 'レビューサイトの傾向', rating: 2, text: '「色が濃すぎた」「思ったより早く薄くなった」という仕上がりへの不満や、「カウンセラーの提案の圧が強かった」という声が一部にあります。デザイン確認は納得いくまで行いましょう。' },
+  { user: 'レビューサイトの傾向', rating: 3, text: 'ランク制の追加料金やデザイン提案が有料である点への不満が見られます。料金は院とランクで大きく変わるため、総額を事前に確認するのが重要です。' },
 ]
 
+// 2026年6月12日に各院の公式ページで確認。料金は3院で別建て(全院共通ではない)
 const pricingTable = [
-  { menu: '眉（手彫り）モニター', price: '49,800円', sessions: '2回', note: 'モニター最安' },
-  { menu: '眉（機械彫り+手彫り）', price: '69,800円〜', sessions: '2回', note: '人気メニュー' },
-  { menu: '眉（機械彫り）', price: '69,800円〜', sessions: '2回', note: '色持ち重視' },
-  { menu: 'リップ', price: '99,000円〜', sessions: '2回', note: '血色感UP' },
-  { menu: 'アイライン', price: '66,000円〜', sessions: '2回', note: '目元くっきり' },
+  { menu: '眉 natural brow（福岡天神院）', price: '49,800円', sessions: '2回', note: '3院で最安水準' },
+  { menu: '眉 dazzy brow（福岡天神院）', price: '69,800円', sessions: '2回', note: '' },
+  { menu: '眉 dazzy brow Royal（札幌院）', price: '85,800円', sessions: '2回', note: 'ランク別（〜Premium 138,600円）' },
+  { menu: '眉 Natural Brow（新宿本院）', price: '93,800円', sessions: '2回', note: '' },
+  { menu: '眉 dazzy Brow（新宿本院）', price: '113,800円', sessions: '2回', note: '人気No.1表記' },
+  { menu: 'リップ dazzy Lip', price: '福岡99,000円／新宿120,000円', sessions: '2回', note: '院で異なる' },
+  { menu: 'アイライン上', price: '福岡66,000円／新宿95,000円', sessions: '2回', note: '院で異なる' },
 ]
 
 export default function DazzyClinicReviewPage() {
@@ -38,7 +39,7 @@ export default function DazzyClinicReviewPage() {
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">口コミ・評判レビュー</p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">DAZZY CLINIC（デイジークリニック）の口コミ・評判</h1>
-          <p className="text-xl text-gray-600">世界的アーティスト監修｜3種類の技法×モニター最大50%OFF</p>
+          <p className="text-xl text-gray-600">新宿・札幌・福岡天神の3院体制｜院ごとに異なる料金・指名料を正確に解説</p>
         </div>
       </section>
 
@@ -53,11 +54,11 @@ export default function DazzyClinicReviewPage() {
                   ['クリニック名', 'DAZZY CLINIC（デイジークリニック）'],
                   ['特徴', '世界で活躍する有名アーティスト監修'],
                   ['技法', '3種類（機械彫り、機械彫り+手彫り、手彫り）'],
-                  ['眉毛料金', '2回 49,800円〜（モニター手彫り）、69,800円〜（機械彫り+手彫り）'],
+                  ['眉毛料金', '2回 49,800円〜（福岡天神院 natural brow）〜113,800円（新宿本院 dazzy Brow）※院別料金'],
                   ['リップ料金', '2回 99,000円〜'],
                   ['アイライン料金', '2回 66,000円〜'],
                   ['モニター割引', '最大50%OFF'],
-                  ['展開院', '東京（新宿）、大阪、福岡、札幌（全4院）'],
+                  ['展開院', '新宿本院・札幌院・福岡天神院の3院体制（公式・2025年2月現在）。旧大阪心斎橋院は「DAILY SKIN CLINIC」へ改称'],
                   ['オンライン対応', 'オンラインカウンセリング対応'],
                   ['対応施術', '眉・リップ・アイライン・ヘアライン・ほくろ'],
                 ].map(([label, value], i) => (
@@ -176,17 +177,41 @@ export default function DazzyClinicReviewPage() {
         </div>
       </section>
 
-      {/* キャンペーン・割引情報 */}
+      {/* 院別情報（院長・指名料） */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
-            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>初回限定価格あり（詳細は公式サイトで確認）</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>LINE友達追加で割引クーポン配布中</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>モニター価格で最大50%OFF</li>
+          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h2 className="text-2xl font-bold mb-6">院別の基本情報（院長・指名料・アクセス）</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b-2 border-gray-300 text-left">
+                    <th className="py-2 pr-3">院</th>
+                    <th className="py-2 pr-3">院長</th>
+                    <th className="py-2 pr-3">指名料</th>
+                    <th className="py-2">アクセス</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-200"><td className="py-2 pr-3 font-bold whitespace-nowrap">新宿本院</td><td className="py-2 pr-3">松 清士 院長</td><td className="py-2 pr-3">アーティスト個人指名 22,000円〜（KURAZONO 33,000円等）</td><td className="py-2">新宿駅徒歩5分（歌舞伎町1-6-2）</td></tr>
+                  <tr className="border-b border-gray-200"><td className="py-2 pr-3 font-bold whitespace-nowrap">札幌院</td><td className="py-2 pr-3">民谷 健太郎 院長</td><td className="py-2 pr-3">ランク指名 5,500〜11,000円</td><td className="py-2">大通駅36番出口徒歩1分</td></tr>
+                  <tr><td className="py-2 pr-3 font-bold whitespace-nowrap">福岡天神院</td><td className="py-2 pr-3">寺田 小百合 院長（形成外科専門医・2025年就任）</td><td className="py-2 pr-3">ランク指名 11,000〜33,000円・個人指名22,000円</td><td className="py-2">天神駅西1番出口徒歩2分</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-400 mt-3">出典: デイジークリニック公式 各院ページ（2026年6月12日確認）。予約はWeb・電話のほか、カウンセリングはLINEのビデオ通話に対応（公式FAQ）。</p>
+          </div>
+
+          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-100">
+            <h2 className="text-xl font-bold mb-3">「dazzy skin clinic」とは？アートメイクとの関係</h2>
+            <p className="text-sm text-gray-700 leading-relaxed mb-3">
+              「dazzy skin clinic」で検索される方が探しているのは、次の2つのどちらかです。
+            </p>
+            <ul className="space-y-2 text-sm text-gray-700 mb-3">
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">①</span><span><strong>デイジークリニックの美容皮膚科部門（SKIN）</strong>：公式サイト内にダーマペン4（9,800円〜）・HIFU・ピコレーザー・医療脱毛・点滴などを扱う美容皮膚科セクションがあります。アートメイクとは別メニューです。</span></li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">②</span><span><strong>旧・大阪心斎橋院の改称先</strong>：デイジークリニック心斎橋院は「DAILY SKIN CLINIC 心斎橋院」へ改称し、別ブランドとして運営されています。<strong>デイジーのアートメイクは現在、大阪では受けられません</strong>。大阪でアートメイクを受けたい方は<Link href="/compare/dazzy-vs-true-design/" className="text-rose-600 underline">心斎橋のトゥルーデザインとの比較</Link>をご覧ください。</span></li>
             </ul>
-            <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
+            <p className="text-xs text-gray-400">出典: デイジークリニック公式（skinセクション・院一覧）、ホットペッパービューティー（改称の記載）。2026年6月12日確認</p>
           </div>
         </div>
       </section>
@@ -199,7 +224,7 @@ export default function DazzyClinicReviewPage() {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-green-700">メリット</h3>
               <ul className="space-y-2">
-                {['世界的アーティスト監修の高い技術力', '3種類の技法から自分に合った施術を選べる', 'モニター最大50%OFFで業界最安クラス', '眉2回49,800円〜の圧倒的コスパ', 'オンラインカウンセリング対応で来院前に相談可能', 'リップ・アイラインなど幅広い施術メニュー', '札幌から福岡まで全国4院展開'].map((m, i) => (
+                {['口コミ集計で仕上がり満足97%・肯定率約94%（GLAM・235件分析）', 'リップの技術評価が高い（dazzy Lip）', '福岡天神院は眉2回49,800円〜と料金が手頃', 'LINEビデオ通話でのカウンセリングに対応', '医療ローン・未成年の親権者同意など制度面の案内が明確', '美容皮膚科・医療脱毛も同グループで受けられる', '新宿・札幌・福岡天神の3都市をカバー'].map((m, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-green-500 font-bold">✓</span>{m}</li>
                 ))}
               </ul>
@@ -207,7 +232,7 @@ export default function DazzyClinicReviewPage() {
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-red-700">デメリット</h3>
               <ul className="space-y-2">
-                {['展開院が4院と少なめ', 'モニター枠に限りがある', '人気院は予約が取りにくい', 'モニター以外の通常料金はやや高め', '地方（名古屋・広島等）に院がない', 'ランク制ではないため指名の自由度が低い'].map((d, i) => (
+                {['3院体制のため大阪・名古屋等では受けられない（旧心斎橋院は改称）', '料金・指名料が院ごとに異なり分かりにくい', '施術者ランクで仕上がりに差があるという口コミ傾向', '公式サイトの料金ページが閲覧できない状態が続いている（院別ページで要確認）', 'モニター制度の公式記載がない（第三者サイトの割引情報は要裏取り）'].map((d, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-red-500 font-bold">✗</span>{d}</li>
                 ))}
               </ul>

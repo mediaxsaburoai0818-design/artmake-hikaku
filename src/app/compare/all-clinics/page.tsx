@@ -64,7 +64,7 @@ const clinics = [
     retouchPrice: '33,000円〜',
     technique: 'dazzy brow（3技法選択可）',
     cases: '非公開（多数）',
-    area: '全国4院',
+    area: '3院（新宿・札幌・福岡天神）',
     counseling: 'オンライン+来院',
     designationFee: '料金に含む場合あり',
     discount: 'モニター最大50%OFF',

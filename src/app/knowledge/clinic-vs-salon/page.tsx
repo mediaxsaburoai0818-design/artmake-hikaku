@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
-  title: 'アートメイクはクリニックとサロンどっちがいい？違いを徹底比較 | アートメイク比較ナビ',
+  title: 'アートメイクはクリニックとサロンどっちがいい？【2026年6月】違い・違法リスクを徹底比較 | アートメイク比較ナビ',
   description: 'アートメイクを受けるならクリニック（医療機関）とエステサロンどちらがいい？法律面、安全性、料金、トラブル対応の違いを徹底比較。失敗しないクリニック選びのポイントを解説。',
   keywords: 'アートメイク クリニック サロン 違い,アートメイク 医療機関,アートメイク エステサロン,アートメイク 選び方',
   openGraph: {
