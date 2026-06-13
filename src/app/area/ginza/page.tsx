@@ -222,6 +222,44 @@ export default function GinzaAreaPage() {
         </div>
       </section>
 
+      {/* 銀座の実在クリニック */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">銀座で眉アートメイクが受けられる主なクリニック</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">公式サイトで所在地・最寄駅を確認できたクリニックを掲載（2026年6月13日確認）</p>
+          <div className="space-y-4">
+            <div className="border border-gray-200 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900">メディカルブロー銀座院（表参道メディカルクリニック）</h3>
+              <p className="text-sm text-gray-600 mt-1">中央区銀座7-3-7 ブランエスパ銀座ビル8F／銀座駅C3出口 徒歩5分・新橋駅5番出口 徒歩5分。7Dストローク（商標）が特徴で、アーティストのランク制を採用。</p>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900">アートメイクギャラリー銀座院</h3>
+              <p className="text-sm text-gray-600 mt-1">中央区銀座3-7-2 オーク銀座4F／銀座駅A13出口 徒歩2分・東銀座駅A8出口 徒歩5分。</p>
+            </div>
+            <div className="border border-gray-200 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900">銀座よしえクリニック 銀座院</h3>
+              <p className="text-sm text-gray-600 mt-1">美容皮膚科として眉アートメイクを提供。複数院を展開する医療機関です。</p>
+            </div>
+          </div>
+          <p className="text-xs text-gray-400 mt-4">出典: 各クリニック公式サイト（2026年6月13日確認）。料金・提供メニューは変動するため、来院前に公式サイトでご確認ください。なお「デイジークリニック」は新宿・札幌・福岡天神の3院体制で、銀座院はありません。</p>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-4">
+            <div className="bg-rose-50 border border-rose-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 mb-2">受ける前に: MRIへの影響</h3>
+              <p className="text-sm text-gray-700">アートメイクの色素には金属成分が含まれる場合があり、MRI検査でまれに違和感や発熱を感じることがあります。検査時は施術済みであることを申告しましょう。</p>
+            </div>
+            <div className="bg-rose-50 border border-rose-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 mb-2">除去・修正は難しい</h3>
+              <p className="text-sm text-gray-700">入れた色素の除去はレーザーで複数回かかり、入れるとき以上の時間・費用が必要です。デザインは納得いくまでカウンセリングで確認を。</p>
+            </div>
+            <div className="bg-rose-50 border border-rose-100 rounded-xl p-5">
+              <h3 className="font-bold text-gray-900 mb-2">メンズも対応可</h3>
+              <p className="text-sm text-gray-700">銀座エリアは男性向け眉アートメイクに対応するクリニックもあります。自然な毛流れ重視なら毛並み（ストローク）系の技法が選ばれます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== FAQ ===== */}
       <section className="py-16 px-4 bg-gray-50" id="faq">
         <div className="max-w-4xl mx-auto">

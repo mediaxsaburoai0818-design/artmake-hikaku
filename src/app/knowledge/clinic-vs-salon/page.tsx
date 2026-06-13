@@ -313,6 +313,39 @@ export default function ClinicVsSalonPage() {
         </div>
       </section>
 
+      {/* 公的データ */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">公的データで見る「サロン施術」のリスク</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">国民生活センター・厚生労働省の一次情報にもとづく事実です</p>
+          <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 mb-6">
+            <p className="text-gray-800 leading-relaxed mb-4">
+              独立行政法人 国民生活センターの調査では、アートメイクによる健康被害（危害）の相談が<strong>5年間で121件</strong>寄せられ、そのうち<strong>約95%が医師免許を持たない者によるサロン・エステ等での施術</strong>と見られると報告されています。被害者は全員女性で、皮膚障害が約57%を占め、角膜損傷などの重い事例も含まれます。
+            </p>
+            <ul className="space-y-1 text-sm text-gray-700">
+              <li>・施術場所の内訳: サロン等46件 / エステサロン33件 / 個人宅12件 / 美容院8件 / <strong>医療機関はわずか5件</strong></li>
+              <li>・被害部位: 眼の周り64件・眉43件 / 年代は30代が34.7%で最多</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">出典: 独立行政法人 国民生活センター「アートメイクの危害」（2011年10月27日報道発表）</p>
+          </div>
+          <div className="bg-gray-50 border border-gray-200 rounded-xl p-6">
+            <h3 className="font-bold text-gray-900 mb-3">アートメイクが「医療行為」である法的根拠</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>・厚生労働省通知（平成13年11月8日 医政医発第105号）で「針先に色素を付けながら皮膚に色素を入れる行為」は<strong>医師免許がない者が業として行えば医師法第17条違反</strong>と明示</li>
+              <li>・令和5年（2023年）7月3日付の最新通知では、「○○メイク」「○○タトゥー」など<strong>名称を変えても医療行為に該当する</strong>と再徹底されています</li>
+              <li>・判例でも、無資格でのアートメイク施術・局所麻酔の使用が医業にあたるとして有罪判決が出ています（東京地裁 平成2年3月9日）</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">出典: 厚生労働省 医政医発第105号、令和5年7月3日付通知（堺市・長野市など自治体公式サイトに引用掲載）、判例時報1370号。2026年6月13日確認</p>
+          </div>
+          <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-5">
+            <h3 className="font-bold text-gray-900 mb-2">注意: 「眉毛サロン」と「無資格アートメイクサロン」は別物</h3>
+            <p className="text-sm text-gray-700 leading-relaxed">
+              眉毛を整える・染める「眉毛サロン（アイブロウサロン）」は合法なサービスで、針で色素を入れる医療アートメイクとは別物です。違法なのは、医師免許のない者が色素を皮膚に入れる「アートメイク施術」を行う場合です。持続期間も、医療アートメイクが2〜3年なのに対し、眉を整えるサロンは数週間程度と目的が異なります。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-16 px-4 bg-gray-50" id="faq">
         <div className="max-w-4xl mx-auto">

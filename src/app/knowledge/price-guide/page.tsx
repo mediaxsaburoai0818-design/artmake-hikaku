@@ -241,6 +241,38 @@ export default function PriceGuidePage() {
             ))}
           </div>
 
+          {/* 実質総額 */}
+          <h2 className="text-2xl font-bold mb-3 text-center">「実質総額」で見る眉アートメイク料金</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">施術代だけでなく、指名料・麻酔代・初診料・リタッチまで含めた“結局いくら払うか”で比較しました（2026年6月12日 各公式サイト調査）</p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-rose-50 text-left">
+                  <th className="p-2 border-b-2 border-rose-200">クリニック</th>
+                  <th className="p-2 border-b-2 border-rose-200">眉の基本料金</th>
+                  <th className="p-2 border-b-2 border-rose-200">1回あたり換算</th>
+                  <th className="p-2 border-b-2 border-rose-200">主な追加費用</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">トゥルーデザイン</td><td className="p-2">2回 40,000円(2D)</td><td className="p-2 font-bold text-rose-600">20,000円</td><td className="p-2">指名料1,500円/回・初診0円・再診1,500円</td></tr>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">クレアージュ</td><td className="p-2">3回 132,000円</td><td className="p-2 font-bold text-rose-600">44,000円</td><td className="p-2">初診料3,300円・指名料は公式記載なし</td></tr>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">デイジー(福岡)</td><td className="p-2">2回 49,800円〜</td><td className="p-2 font-bold text-rose-600">24,900円〜</td><td className="p-2">指名料11,000〜33,000円(院による)</td></tr>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">ファースト</td><td className="p-2">モニター2回 88,000円〜</td><td className="p-2 font-bold text-rose-600">44,000円〜</td><td className="p-2">クリーム麻酔0円・初診0円・指名5,500円〜</td></tr>
+                <tr><td className="p-2 font-bold">メディカルブロー</td><td className="p-2">2回 90,000円〜(ランク別)</td><td className="p-2 font-bold text-rose-600">45,000円〜</td><td className="p-2">指名料10,000円〜・初診2,200円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-10">
+            <h3 className="font-bold text-gray-900 mb-2">「安く見えて高くなる」3つの落とし穴</h3>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li>① <strong>回数の違い</strong>: クレアージュは1回の表示でも3回セットが基本。2回設計の他社と単純比較せず「1回あたり換算」で見るのが正解です。</li>
+              <li>② <strong>指名料</strong>: 人気アーティストやランク指名で1回1,500円〜33,000円が上乗せ。2回受ければその倍かかります。</li>
+              <li>③ <strong>リタッチ別料金</strong>: 色は1〜2年で薄れるため、維持にはリタッチ代（眉で2〜6万円程度）が継続的に発生します。初回総額だけでなく維持費も確認しましょう。</li>
+            </ul>
+            <p className="text-xs text-gray-400 mt-3">出典: 各クリニック公式サイト（2026年6月12日確認）。料金・キャンペーンは変動します。詳細は<a href="/compare/price/" className="text-rose-600 underline">料金比較DB</a>をご覧ください。</p>
+          </div>
+
           {/* FAQ */}
           <h2 className="text-2xl font-bold mb-6 text-center">よくある質問（FAQ）</h2>
           <div className="space-y-4 mb-10">

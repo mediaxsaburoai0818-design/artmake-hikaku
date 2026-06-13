@@ -226,6 +226,33 @@ export default function StrokePage() {
             ))}
           </div>
 
+          {/* 用語マッピング */}
+          <h2 className="text-2xl font-bold mb-3 text-center">「2D/3D/4D/6D」は同じ技法でも呼び名が違う</h2>
+          <p className="text-center text-gray-500 text-sm mb-6">D表記には業界の統一基準がなく、クリニックによって呼び方が異なります。施術内容で見分けるのが確実です。</p>
+          <div className="overflow-x-auto mb-4">
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="bg-gray-100 text-left">
+                  <th className="p-2 border-b-2 border-gray-300">よくあるD表記</th>
+                  <th className="p-2 border-b-2 border-gray-300">毛並み/パウダー表記</th>
+                  <th className="p-2 border-b-2 border-gray-300">施術内容</th>
+                  <th className="p-2 border-b-2 border-gray-300">仕上がり</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">2D</td><td className="p-2">パウダー / パウダーグラデーション</td><td className="p-2">機械で面に色を入れる</td><td className="p-2">パウダーで描いたふんわり眉</td></tr>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">3D</td><td className="p-2">毛並み / ストローク / マイクロブレーディング</td><td className="p-2">1本1本線で描く（手彫りが主）</td><td className="p-2">自眉が生えたような自然な眉</td></tr>
+                <tr className="border-b border-gray-200"><td className="p-2 font-bold">4D / 6D</td><td className="p-2">コンビネーション / ミックス</td><td className="p-2">毛並み＋パウダーの組み合わせ</td><td className="p-2">立体感と自然さの両立</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-10">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong>「6D」は「4D」と施術内容に明確な違いはありません。</strong>「6Dが最新・4Dが旧式」という事実はなく、各クリニックが独自の名称として使っているだけです（複数の専門メディアが指摘）。また「毛並み＝手彫り／パウダー＝機械彫り」と説明されることが多いですが、実際はどちらも手彫り・機械彫りの両方で行われる場合があります。<strong>名称ではなく「毛並みか・パウダーか・その組み合わせか」「手彫りか機械彫りか」で確認する</strong>のが失敗しないコツです。
+            </p>
+            <p className="text-xs text-gray-400 mt-3">出典: 各専門クリニック・メディアの技法解説を当サイトで横断整理（2026年6月13日確認）。技法名称はクリニックにより定義が異なります。</p>
+          </div>
+
           {/* FAQ */}
           <h2 className="text-2xl font-bold mb-8 text-center">ストロークアートメイクのよくある質問</h2>
           <div className="space-y-4 mb-10">
