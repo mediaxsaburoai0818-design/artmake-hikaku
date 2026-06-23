@@ -718,6 +718,14 @@ export default function AllClinicsPage() {
               <p className="font-bold text-sm">カウンセリングガイド</p>
               <p className="text-xs text-[#8B8580] mt-1">聞くべき質問リスト</p>
             </Link>
+            <Link href="/compare/artmake-vs-tattoo/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">アートメイクとタトゥーの違い</p>
+              <p className="text-xs text-[#8B8580] mt-1">持続期間・法律・除去まで7項目</p>
+            </Link>
+            <Link href="/compare/mens/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">メンズ眉アートメイク比較</p>
+              <p className="text-xs text-[#8B8580] mt-1">バレない自然な男性眉の選び方</p>
+            </Link>
           </div>
         </div>
       </section>
