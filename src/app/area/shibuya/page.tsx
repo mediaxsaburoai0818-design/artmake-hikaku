@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'アートメイク 渋谷 おすすめクリニック｜料金・アクセス徹底比較【2026年最新】',
   description: '渋谷エリアでおすすめのアートメイククリニックを徹底比較。メディカルブロー表参道院、デイジークリニック渋谷本院などの料金・アクセス・特徴を紹介。渋谷駅から通えるクリニックを厳選。',
   keywords: 'アートメイク 渋谷,アートメイク 渋谷 おすすめ,眉毛アートメイク 渋谷,アートメイク 渋谷 安い,アートメイク 表参道',

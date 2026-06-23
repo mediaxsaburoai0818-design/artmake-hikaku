@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "アートメイク 大阪 おすすめクリニック7選｜心斎橋・梅田エリア比較【2026年最新】| アートメイク比較ナビ",
   description:
     "大阪でおすすめのアートメイククリニック4院を心斎橋・梅田エリア別に徹底比較。トゥルーデザイン、メディカルブロー、デイジー、クレアージュの料金・アクセス・口コミを紹介。",

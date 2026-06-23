@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "アートメイク 新宿 おすすめクリニック2選｜駅近・アクセス抜群【2026年最新】| アートメイク比較ナビ",
   description:
     "新宿エリアでおすすめのアートメイククリニック2院を徹底比較。メディカルブロー新宿院、デイジークリニック新宿院の料金・アクセス・特徴を紹介。新宿駅から徒歩5分以内。",

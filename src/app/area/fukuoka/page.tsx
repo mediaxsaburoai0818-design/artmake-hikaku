@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "アートメイク 福岡 おすすめクリニック4選｜博多・天神エリア比較【2026年最新】| アートメイク比較ナビ",
   description:
     "福岡でおすすめのアートメイククリニック3院を博多・天神エリア別に徹底比較。メディカルブロー福岡院、デイジークリニック福岡院、クレアージュ福岡院の料金・アクセス・特徴を紹介。",

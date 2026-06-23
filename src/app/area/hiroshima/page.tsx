@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "広島でおすすめのアートメイククリニック5選【2026年最新】| アートメイク比較ナビ",
   description:
     "広島でアートメイクが受けられるクリニックの選び方、料金相場、技法の種類を徹底解説。広島エリアのクリニックを選ぶ際のポイントをまとめました。",

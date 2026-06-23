@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'アートメイク 横浜 おすすめクリニック｜神奈川エリア徹底比較【2026年最新】',
   description:
     '横浜・神奈川エリアでアートメイクを受けられるクリニック情報を徹底比較。メディカルブロー横浜院など、通勤通学に便利な横浜エリアの特徴、料金比較、アクセスガイド、FAQを完全ガイド。',

@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: 'アートメイク 札幌 おすすめクリニック｜北海道エリア徹底比較【2026年最新】',
   description:
     '札幌・北海道エリアでアートメイクを受けられるクリニック情報を徹底比較。クレアージュ札幌、デイジー札幌など公式情報で確認できるクリニックを紹介。札幌の特徴、料金比較、アクセスガイドまで完全ガイド。',

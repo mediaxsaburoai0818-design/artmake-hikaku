@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
+  robots: { index: false, follow: true },
   title: "アートメイク 東京 おすすめクリニック8選｜エリア別徹底比較【2026年最新】| アートメイク比較ナビ",
   description:
     "東京でおすすめのアートメイククリニック5院を表参道・新宿・銀座・六本木エリア別に徹底比較。メディカルブロー、デイジー、ファーストアートメイク、クレアージュの料金・アクセス・口コミを紹介。",
