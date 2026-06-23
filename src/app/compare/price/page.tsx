@@ -273,6 +273,10 @@ export default function PriceComparisonPage() {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年6月23日</td>
+                  <td className="py-2 text-gray-600">「眉2回 実質総額（指名料・麻酔・初診/再診込み）比較」を新設。料金本体の数値は6月12日調査値を継続採用（各院公式に改定の告知は確認されず）。次回の料金一斉再調査時に差分を反映予定。</td>
+                </tr>
+                <tr className="border-b border-gray-200">
                   <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年6月12日</td>
                   <td className="py-2 text-gray-600">定点観測を開始。5クリニックの公式料金を一斉確認し、本ページの全料金を最新化（メディカルブロー・クレアージュ・デイジー・ファーストアートメイク・トゥルーデザイン）。デイジークリニックは公式サイト内のページ間で料金表記に差異があることを確認（新宿本院ページの数値を採用・要最新確認の注記つき）。</td>
                 </tr>
@@ -338,6 +342,74 @@ export default function PriceComparisonPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 眉2回 実質総額（追加費用込み） */}
+      <section className="py-16 px-4 bg-white" id="real-total">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">
+            眉アートメイク「実質総額」比較（2回・追加費用込み）
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-8">
+            施術料だけでなく<strong>指名料・麻酔・初診/再診料を合算</strong>した「実際に払う総額」の目安。多くの比較サイトが載せない一次データです（{surveyDate}調査の公式料金ベース）。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
+              <thead className="bg-rose-500 text-white">
+                <tr>
+                  <th className="p-3 text-left min-w-[130px]">クリニック</th>
+                  <th className="p-3 min-w-[150px]">眉2回 施術料</th>
+                  <th className="p-3 min-w-[120px]">指名料</th>
+                  <th className="p-3 min-w-[150px]">麻酔・初診/再診</th>
+                  <th className="p-3 min-w-[150px]">実質総額の目安</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 bg-rose-50/40">
+                  <td className="p-3 font-bold">トゥルーデザイン</td>
+                  <td className="p-3">40,000円（2D）</td>
+                  <td className="p-3">1,500円/回</td>
+                  <td className="p-3">初診0円・再診1,500円・麻酔3,000円（ピコ時）</td>
+                  <td className="p-3 font-bold text-rose-600">約43,000〜46,000円</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">ファーストアートメイク</td>
+                  <td className="p-3">モニター2回 88,000円〜</td>
+                  <td className="p-3">5,500〜11,000円</td>
+                  <td className="p-3">クリーム麻酔0円・初診0円</td>
+                  <td className="p-3 font-bold text-rose-600">約93,500円〜（モニター）</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">メディカルブロー</td>
+                  <td className="p-3">2回 90,000円〜（ランク別）</td>
+                  <td className="p-3">10,000〜20,000円</td>
+                  <td className="p-3">初診2,200円・再診1,100円</td>
+                  <td className="p-3 font-bold text-rose-600">約103,000円〜（ランク・指名で変動）</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">デイジークリニック</td>
+                  <td className="p-3">Natural Brow 2回 93,800円</td>
+                  <td className="p-3">22,000円〜</td>
+                  <td className="p-3">公式要確認</td>
+                  <td className="p-3 font-bold text-rose-600">約115,800円〜</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">クレアージュ</td>
+                  <td className="p-3">132,000円（3回分）</td>
+                  <td className="p-3">公式記載なし</td>
+                  <td className="p-3">初診3,300円</td>
+                  <td className="p-3 font-bold text-rose-600">約135,300円（※3回分）</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">
+            ※{surveyDate}に各院公式サイトで確認した通常料金ベースの概算です。モニター・ランク・院・キャンペーンで変動します。クレアージュは3回セット設計のため回数が他院（2回）と異なる点に注意（1回あたり44,000円）。指名料は最小構成で算出。麻酔・初診/再診は施術内容により変わります。最新・正確な総額は各院のカウンセリングでご確認ください。
+          </p>
+          <p className="text-xs text-gray-500 mt-1">
+            「安く見えて高くなる落とし穴」など実質総額の考え方は<a href="/knowledge/price-guide/" className="text-rose-600 underline">料金相場ガイド</a>でも解説しています。
+          </p>
         </div>
       </section>
 
