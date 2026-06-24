@@ -143,7 +143,15 @@ export default function PermanentRiskPage() {
           </div>
 
           <div className="mt-8">
-            <h2 className="text-xl font-bold mb-4">関連記事</h2>
+            <div className="rounded-2xl border border-rose-200 bg-rose-50/50 p-6 text-center mb-10">
+            <h2 className="text-xl font-bold mb-2">リスクを避けるなら「医療機関」でのクリニック選びが大切</h2>
+            <p className="text-sm text-[#6B6560] mb-4">アートメイクは医行為です。必ず医師・看護師のいる医療機関で、料金・技法・症例・追加費用を比較して信頼できる1院を選びましょう。</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <a href="/compare/all-clinics/" className="inline-block bg-rose-500 text-white font-bold py-2.5 px-6 rounded-full hover:bg-rose-600">クリニック比較ランキング</a>
+              <a href="/compare/price/" className="inline-block border border-rose-400 text-rose-600 font-bold py-2.5 px-6 rounded-full hover:bg-rose-50">料金比較DB</a>
+            </div>
+          </div>
+          <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
               <Link href="/knowledge/duration/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">何年持つ？持続期間</p>

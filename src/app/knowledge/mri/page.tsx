@@ -234,6 +234,18 @@ export default function MriPage() {
         </div>
       </section>
 
+            {/* 比較送客CTA（柱3 医療リスク→比較） */}
+      <div className="max-w-4xl mx-auto px-4 my-10">
+        <div className="rounded-2xl border border-rose-200 bg-rose-50/50 p-6 text-center">
+          <h2 className="text-xl font-bold mb-2">リスクを避けるなら「医療機関」でのクリニック選びが大切</h2>
+          <p className="text-sm text-[#6B6560] mb-4">アートメイクは医行為です。必ず医師・看護師のいる医療機関で、料金・技法・症例・追加費用を比較して信頼できる1院を選びましょう。</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <a href="/compare/all-clinics/" className="inline-block bg-rose-500 text-white font-bold py-2.5 px-6 rounded-full hover:bg-rose-600">クリニック比較ランキング</a>
+            <a href="/compare/price/" className="inline-block border border-rose-400 text-rose-600 font-bold py-2.5 px-6 rounded-full hover:bg-rose-50">料金比較DB</a>
+          </div>
+        </div>
+      </div>
+
       {/* 関連記事 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
