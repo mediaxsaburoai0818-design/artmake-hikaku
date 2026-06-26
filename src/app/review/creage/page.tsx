@@ -317,7 +317,7 @@ export default function CreageReviewPage() {
           <h2 className="text-4xl font-bold mb-6">クレアージュ東京で自然な眉を手に入れよう</h2>
           <p className="text-xl mb-8">3回施術で失敗しないアートメイク。まずは無料カウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">クレアージュ公式サイトへ →</button>
+            <a href="https://t.felmat.net/fmcl?ak=E5617B.1.A96263G.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">クレアージュ公式サイトへ →</a>
             <Link href="/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
           </div>
         </div>

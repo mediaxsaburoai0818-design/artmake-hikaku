@@ -320,7 +320,7 @@ export default function MedicalBrowReviewPage() {
           <h2 className="text-4xl font-bold mb-6">メディカルブローで理想の眉を手に入れよう</h2>
           <p className="text-xl mb-8">モニター1回28,000円〜。まずは無料カウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">メディカルブロー公式サイトへ →</button>
+            <a href="https://t.felmat.net/fmcl?ak=Y4616D.1.683500A.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">メディカルブロー公式サイトへ →</a>
             <Link href="/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
           </div>
         </div>

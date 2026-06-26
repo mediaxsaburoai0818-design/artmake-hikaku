@@ -565,7 +565,15 @@ export default function DazzyVsTrueDesignPage() {
       {/* Footer */}
 
       <div className="max-w-4xl mx-auto px-4">
-        <AuthorBox />
+              <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center">
+          <h2 className="text-xl font-bold mb-4">公式サイトで予約・詳細を確認</h2>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href="https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">デイジークリニック公式へ →</a>
+          </div>
+        </div>
+      </section>
+      <AuthorBox />
       </div>
 
       {/* JSON-LD */}

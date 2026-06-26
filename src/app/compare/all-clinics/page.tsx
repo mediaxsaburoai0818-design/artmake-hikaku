@@ -15,6 +15,8 @@ export const metadata: Metadata = {
 
 // 提携クリニックのアフィリエイトリンク（公式予約）
 const affiliateLinks: Record<string, string> = {
+  'メディカルブロー': 'https://t.felmat.net/fmcl?ak=Y4616D.1.683500A.G135747X',
+  'クレアージュ東京': 'https://t.felmat.net/fmcl?ak=E5617B.1.A96263G.G135747X',
   'デイジークリニック': 'https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X',
   'ファーストアートメイク': 'https://t.felmat.net/fmcl?ak=S10480F.1.7147979S.G135747X',
 };
