@@ -345,7 +345,7 @@ export default function DazzyClinicReviewPage() {
           <h2 className="text-4xl font-bold mb-6">DAZZY CLINICで理想の眉を手に入れよう</h2>
           <p className="text-xl mb-8">モニター2回49,800円〜。まずはオンラインカウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">DAZZY CLINIC公式サイトへ →</button>
+            <a href="https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">DAZZY CLINIC公式サイトへ →</a>
             <Link href="/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
           </div>
         </div>

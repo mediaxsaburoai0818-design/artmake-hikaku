@@ -324,7 +324,11 @@ export default function DazzyVsFirstartmakePage() {
         <div className="max-w-4xl mx-auto glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center">
           <h2 className="text-xl font-bold mb-4">まずは無料カウンセリングで相談</h2>
           <p className="text-[#6B6560] mb-6">どちらのクリニックも無料カウンセリングを実施中。実際に相談して、自分に合うクリニックを見極めましょう。</p>
-          <Link href="/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">おすすめクリニックランキングを見る →</Link>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <a href="https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">デイジークリニック公式へ →</a>
+            <a href="https://t.felmat.net/fmcl?ak=S10480F.1.7147979S.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">ファーストアートメイク公式へ →</a>
+          </div>
+          <p className="mt-4"><Link href="/" className="text-rose-600 hover:underline text-sm">おすすめクリニックランキングを見る →</Link></p>
         </div>
       </section>
 

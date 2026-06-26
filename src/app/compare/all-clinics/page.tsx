@@ -13,6 +13,12 @@ export const metadata: Metadata = {
   },
 }
 
+// 提携クリニックのアフィリエイトリンク（公式予約）
+const affiliateLinks: Record<string, string> = {
+  'デイジークリニック': 'https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X',
+  'ファーストアートメイク': 'https://t.felmat.net/fmcl?ak=S10480F.1.7147979S.G135747X',
+};
+
 const clinics = [
   {
     rank: 1,
@@ -375,6 +381,11 @@ export default function AllClinicsPage() {
                     <p className="text-sm font-bold">{clinic.area}</p>
                   </div>
                 </div>
+                {affiliateLinks[clinic.name] && (
+                  <div className="mt-4 text-center">
+                    <a href={affiliateLinks[clinic.name]} target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white font-bold px-8 py-3 rounded-full btn-glow">{clinic.name}の公式サイトへ →</a>
+                  </div>
+                )}
               </div>
             ))}
           </div>
