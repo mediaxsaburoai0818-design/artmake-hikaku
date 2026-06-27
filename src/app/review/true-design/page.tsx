@@ -8,18 +8,19 @@ export const metadata: Metadata = {
   description: 'トゥルーデザインクリニック（大阪・心斎橋）の口コミ・評判・料金を徹底調査。眉2回40,000円〜、初診料0円・指名料1,500円・麻酔3,000円を含む「実際に払う総額」の目安、部位別料金、写真掲載条件付き料金の注意点まで公式情報（2026年6月12日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
-const goodReviews = [
-  { user: '50代女性（心斎橋院）', rating: 5, text: '50代になって眉毛が薄くなり悩んでいましたが、トゥルーデザインメソッドで年齢に合った自然な眉に仕上げてもらえました。若作りではなく「今の自分に似合う眉」を提案してくれたのが嬉しかったです。' },
-  { user: '40代女性（心斎橋院）', rating: 5, text: 'カウンセリングで骨格や肌質、普段のメイクまで丁寧にヒアリングしてくれました。症例写真も40代の方が多く、仕上がりのイメージが持ちやすかったです。リタッチも29,700円とリーズナブルで助かります。' },
-  { user: '40代女性（心斎橋院）', rating: 4, text: '他院でアートメイクをしたことがありますが、トゥルーデザインは「似合わせ力」が段違い。年齢に合ったデザインの提案力が素晴らしいです。大阪でアートメイクを探している方にはぜひおすすめしたいクリニックです。' },
-  { user: '30代女性（心斎橋院）', rating: 5, text: 'リップアートメイクで通いました。血色感のある自然な仕上がりで、すっぴんでも顔色が良く見えます。2回セットで79,200円は、他のクリニックと比べてもコスパが良いと思います。' },
-  { user: '50代女性（心斎橋院）', rating: 4, text: '友人の紹介で来院。アイラインを施術しましたが、目元がぱっちりして若々しい印象になりました。スタッフの対応も温かく、年齢を気にせず通える雰囲気が良いです。' },
+// 出典・確認観点ベースの口コミ傾向まとめ（個人名・年代・星評価・創作エピソードは使用しない／件数・点数は出典がないため記載しない）
+const goodReviewTrends = [
+  '年齢に合わせた自然な眉デザイン（似合わせ）の提案力を評価する声が見られる。',
+  'カウンセリングで骨格・肌質・普段のメイクまで丁寧にヒアリングしてもらえた、という声がある。',
+  '40代・50代の症例が確認しやすく、仕上がりのイメージが持ちやすいという声が見られる。',
+  '眉2回40,000円〜と料金が抑えめである点を評価する声がある（写真掲載条件付きの設定）。',
 ]
 
-const badReviews = [
-  { user: '30代女性（心斎橋院）', rating: 3, text: '大阪にしか院がないので、関東在住の私にはリタッチの度に通うのが大変です。技術力は高いですが、もう少し展開を広げてほしいです。' },
-  { user: '20代女性（心斎橋院）', rating: 3, text: '40代・50代向けの症例が多い印象で、20代の私には少しデザインの方向性が合わないかもと感じました。若い世代向けのトレンド眉を求める方は他院も検討した方がいいかもしれません。' },
-  { user: '40代女性（心斎橋院）', rating: 2, text: '人気のためか予約が取りにくいです。特に土日は1ヶ月以上先になることも。施術自体は満足でしたが、もう少し枠を増やしてほしいです。' },
+const badReviewTrends = [
+  '院が大阪（心斎橋）1院のみで、関西圏以外からは通いづらいという声が見られる。',
+  '40代・50代向けの症例が中心で、20代向けのトレンド眉とは方向性が合わない場合があるという指摘がある。',
+  '人気のため予約が取りにくいことがある、という声が見られる。',
+  '掲載料金が施術前後写真の掲載を条件とする設定である点に注意を促す声がある。',
 ]
 
 // 2026年6月12日に公式サイトで確認（税込）。料金は施術前後写真をSNS等に掲載する条件付き設定（実質モニター型価格）
@@ -112,63 +113,14 @@ export default function TrueDesignReviewPage() {
         </div>
       </section>
 
-      {/* 評価分布 */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
-            <div className="flex items-center gap-6 mb-4">
-              <div className="text-center">
-                <p className="text-4xl font-bold text-rose-500">3.9</p>
-                <p className="text-sm text-gray-500">総合評価</p>
-              </div>
-              <div className="flex-1 space-y-2">
-                {[
-                  { stars: 5, percent: 38, count: 3 },
-                  { stars: 4, percent: 25, count: 2 },
-                  { stars: 3, percent: 25, count: 2 },
-                  { stars: 2, percent: 13, count: 1 },
-                  { stars: 1, percent: 0, count: 0 },
-                ].map(row => (
-                  <div key={row.stars} className="flex items-center gap-2 text-sm">
-                    <span className="w-8 text-right">{row.stars}★</span>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3">
-                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
-                    </div>
-                    <span className="w-8 text-gray-500">{row.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 総合評価 */}
+      {/* 編集部による総評 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">総合評価</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">編集部による総評</h2>
           <div className="bg-white rounded-xl p-8 shadow-sm">
-            <div className="text-center mb-6">
-              <div className="text-rose-500 text-4xl mb-2">★★★★☆</div>
-              <div className="text-3xl font-bold">4.3 / 5.0</div>
-              <div className="text-sm text-gray-500 mt-1">独自採点 85/100</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                { label: '料金', score: '24/30' },
-                { label: '技術力', score: '22/25' },
-                { label: 'カウンセリング', score: '18/20' },
-                { label: '安全性', score: '13/15' },
-                { label: 'アクセス', score: '8/10' },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-sm text-gray-500">{item.label}</div>
-                  <div className="font-bold text-rose-500">{item.score}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-gray-700 mb-4">トゥルーデザインクリニックは大阪・心斎橋の1院で、年齢に合わせた「似合わせ」を重視した眉デザインを得意とするクリニックです。眉2回40,000円〜と料金が抑えめで、初診料0円・指名料1,500円など諸費用が明確な点は、料金面を重視する方にとって検討しやすい要素です。</p>
+            <p className="text-gray-700 mb-4">一方で、院が大阪1院のみのため関西圏以外からは通院しづらく、人気のため予約が取りにくいことがある点には注意が必要です。掲載料金は施術前後写真の掲載を条件とする設定（実質モニター型価格）である点も、事前に確認しておきたいポイントです。</p>
+            <p className="text-xs text-gray-500">※本ページの評価は当サイト編集部による定性的な所見であり、第三者機関による点数評価ではありません。アートメイクは医療行為であり、効果・色持ち・リスクには個人差があります。</p>
           </div>
         </div>
       </section>
@@ -284,32 +236,32 @@ export default function TrueDesignReviewPage() {
         </div>
       </section>
 
-      {/* 良い口コミ */}
+      {/* 良い口コミの傾向 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">良い口コミ・評判</h2>
-          <div className="space-y-4">
-            {goodReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">良い口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <ul className="space-y-3">
+              {goodReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-green-500 font-bold mt-0.5">✓</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 悪い口コミ */}
+      {/* 気になる口コミの傾向 */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">気になる口コミ・評判</h2>
-          <div className="space-y-4">
-            {badReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">気になる口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
+            <ul className="space-y-3">
+              {badReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-red-400 font-bold mt-0.5">✗</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
