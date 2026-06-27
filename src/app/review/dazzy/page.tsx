@@ -4,8 +4,8 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'デイジークリニックの口コミ・評判は？【2026年6月】院別料金・dazzy skin clinicとの関係まで徹底解説',
-  description: 'デイジークリニック（dazzy CLINIC）の口コミ・評判を徹底調査。新宿・札幌・福岡天神の3院体制（旧心斎橋院はDAILY SKIN CLINICへ改称）、院別の料金・院長・指名料、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年6月12日確認）で解説します。',
+  title: 'dazzy skin clinic（デイジークリニック）の口コミ・評判・料金【2026年6月】指名料込み総額・院別を徹底解説',
+  description: 'dazzy skin clinic（デイジークリニック／dazzy CLINIC）の口コミ・評判・料金を徹底調査。眉2回93,800円〜、指名料22,000円〜を含む「実際に払う総額」の目安、新宿・札幌・福岡天神の院別料金、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年6月12日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
 const goodReviews = [
@@ -26,7 +26,7 @@ const pricingTable = [
   { menu: '眉 dazzy brow（福岡天神院）', price: '69,800円', sessions: '2回', note: '' },
   { menu: '眉 dazzy brow Royal（札幌院）', price: '85,800円', sessions: '2回', note: 'ランク別（〜Premium 138,600円）' },
   { menu: '眉 Natural Brow（新宿本院）', price: '93,800円', sessions: '2回', note: '' },
-  { menu: '眉 dazzy Brow（新宿本院）', price: '113,800円', sessions: '2回', note: '人気No.1表記' },
+  { menu: '眉 dazzy Brow（新宿本院）', price: '113,800円', sessions: '2回', note: '公式サイトで人気メニューと記載' },
   { menu: 'リップ dazzy Lip', price: '福岡99,000円／新宿120,000円', sessions: '2回', note: '院で異なる' },
   { menu: 'アイライン上', price: '福岡66,000円／新宿95,000円', sessions: '2回', note: '院で異なる' },
 ]
@@ -38,8 +38,48 @@ export default function DazzyClinicReviewPage() {
       <section className="bg-gradient-to-br from-pink-50 to-rose-100 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">口コミ・評判レビュー</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">DAZZY CLINIC（デイジークリニック）の口コミ・評判</h1>
-          <p className="text-xl text-gray-600">新宿・札幌・福岡天神の3院体制｜院ごとに異なる料金・指名料を正確に解説</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">dazzy skin clinic（デイジークリニック）の口コミ・評判・料金</h1>
+          <p className="text-xl text-gray-600">新宿・札幌・福岡天神の3院体制｜院ごとに異なる料金・指名料・実質総額を正確に解説</p>
+        </div>
+      </section>
+
+      {/* 30秒でわかる結論 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-2 flex items-center gap-2"><span className="text-rose-500">30秒</span>でわかる結論</h2>
+            <p className="text-sm text-gray-500 mb-6">「dazzy skin clinic」で検索された方の多くは、アートメイクのデイジークリニックを探しています（美容皮膚科部門・旧心斎橋院との違いは<a href="#skin" className="text-rose-600 underline">後述</a>）。</p>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white rounded-xl p-5 border border-green-200">
+                <p className="font-bold text-green-700 mb-2">おすすめできる人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>新宿・札幌・福岡天神エリアで通える方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>機械彫り・手彫り・コンビから技法を選びたい方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>来院前にオンラインで相談したい方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>リップ・アイラインも合わせて検討したい方</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-red-200">
+                <p className="font-bold text-red-700 mb-2">他院も検討したい人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>大阪・名古屋で受けたい方（大阪の旧心斎橋院は別ブランドへ改称済み）</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>指名料を含めた総額をできるだけ抑えたい方</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>全国の多店舗から選びたい方</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-rose-100">
+              <p className="font-bold text-gray-800 mb-3">料金総額の目安（眉・新宿本院・2026年6月12日公式確認・税込）</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>眉 Natural Brow 2回（施術料）</span><span className="font-semibold">93,800円</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>指名料（アーティスト個人指名）</span><span className="font-semibold">22,000円〜</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>麻酔・初診/再診料</span><span className="font-semibold text-gray-500">公式要確認</span></li>
+                <li className="flex justify-between pt-1"><span className="font-bold">指名する場合の実質総額の目安</span><span className="font-bold text-rose-600">約115,800円〜</span></li>
+              </ul>
+              <p className="text-xs text-gray-400 mt-3">※福岡天神院は眉2回49,800円〜（natural brow）と院により大きく異なります。指名しない場合は指名料はかかりません。最新・正確な総額は公式カウンセリングでご確認ください。</p>
+            </div>
+            <p className="text-xs text-gray-500 mt-4">アートメイクは医師・看護師のいる医療機関で行う医療行為です。効果・色持ち・ダウンタイム・リスクには個人差があります。</p>
+          </div>
         </div>
       </section>
 
@@ -144,7 +184,7 @@ export default function DazzyClinicReviewPage() {
               </div>
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-bold mb-2">機械彫り+手彫り</h3>
-                <p className="text-sm text-gray-600">マシンと手彫りを組み合わせたハイブリッド施術。毛並み感と色持ちを両立した人気No.1の技法。</p>
+                <p className="text-sm text-gray-600">マシンと手彫りを組み合わせたハイブリッド施術。毛並み感と色持ちを両立した、公式で人気メニューと案内される技法。</p>
               </div>
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-bold mb-2">手彫り</h3>
@@ -173,7 +213,31 @@ export default function DazzyClinicReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">※ モニター価格は最大50%OFF。枠に限りがあるため早めの予約がおすすめです。</p>
+          <p className="text-sm text-gray-500 mt-4 text-center">※ 出典: デイジークリニック公式 各院ページ（2026年6月12日確認・税込）。料金は3院で別建てのため、受診予定院の最新料金は公式サイトでご確認ください。</p>
+        </div>
+      </section>
+
+      {/* 実際に払う総額 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">「実際に払う総額」の目安</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">施術料だけでなく、<strong>指名料・麻酔・初診/再診</strong>を含めた目安です（新宿本院・眉2回・2026年6月12日公式確認・税込）。</p>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
+              <thead className="bg-rose-500 text-white">
+                <tr><th className="p-3 text-left">項目</th><th className="p-3">金額（税込）</th><th className="p-3 text-left">含む / 含まない</th></tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">眉 Natural Brow 2回（施術料）</td><td className="p-3 text-center">93,800円</td><td className="p-3">基本施術料に含む</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">指名料（アーティスト個人指名）</td><td className="p-3 text-center">22,000円〜</td><td className="p-3">指名する場合のみ別途</td></tr>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">麻酔代</td><td className="p-3 text-center text-gray-500">公式要確認</td><td className="p-3">公式サイトで未確認</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">初診料・再診料</td><td className="p-3 text-center text-gray-500">公式要確認</td><td className="p-3">公式サイトで未確認</td></tr>
+                <tr className="bg-rose-50"><td className="p-3 font-bold">実質総額の目安（指名あり）</td><td className="p-3 text-center font-bold text-rose-600">約115,800円〜</td><td className="p-3 text-xs text-gray-500">指名なしなら93,800円〜</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※院・ランク・指名するアーティスト・キャンペーンで変動します。福岡天神院は眉2回49,800円〜と最安水準です。麻酔・初診/再診の有無は公式サイトで明示が確認できなかったため「要確認」としています。正確な総額はカウンセリングでご確認ください。</p>
+          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
         </div>
       </section>
 
@@ -202,7 +266,7 @@ export default function DazzyClinicReviewPage() {
             <p className="text-xs text-gray-400 mt-3">出典: デイジークリニック公式 各院ページ（2026年6月12日確認）。予約はWeb・電話のほか、カウンセリングはLINEのビデオ通話に対応（公式FAQ）。</p>
           </div>
 
-          <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-100">
+          <div id="skin" className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-100 scroll-mt-20">
             <h2 className="text-xl font-bold mb-3">「dazzy skin clinic」とは？アートメイクとの関係</h2>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
               「dazzy skin clinic」で検索される方が探しているのは、次の2つのどちらかです。
@@ -331,6 +395,10 @@ export default function DazzyClinicReviewPage() {
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
       </Link>
+      <Link href="/compare/all-clinics/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">全5クリニック完全比較</p>
+      </Link>
       <Link href="/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">ランキング</span>
         <p className="font-semibold mt-1">アートメイクおすすめクリニックTOP5</p>
@@ -342,7 +410,7 @@ export default function DazzyClinicReviewPage() {
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">DAZZY CLINICで理想の眉を手に入れよう</h2>
+          <h2 className="text-4xl font-bold mb-6">dazzy skin clinic（デイジークリニック）で理想の眉を</h2>
           <p className="text-xl mb-8">モニター2回49,800円〜。まずはオンラインカウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="https://t.felmat.net/fmcl?ak=M4536K.1.297497C.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">DAZZY CLINIC公式サイトへ →</a>
@@ -356,7 +424,7 @@ export default function DazzyClinicReviewPage() {
 
       {/* JSON-LD */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "DAZZY CLINICのモニター価格はいくらですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉アートメイクのモニター手彫り2回で49,800円が最安です。通常価格から最大50%OFFになりますが、モニター枠には限りがあるため早めの予約をおすすめします。"}}, {"@type": "Question", "name": "DAZZY CLINICの3種類の技法の違いは？", "acceptedAnswer": {"@type": "Answer", "text": "「機械彫り」はマシンで均一に色を入れるパウダー仕上げ、「手彫り」は1本1本手作業で描く自然な毛並み仕上げ、「機械彫り+手彫り」は両方を組み合わせたハイブリッド施術です。迷ったらカウンセリングで相談しましょう。"}}, {"@type": "Question", "name": "DAZZY CLINICは痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、強い痛みを感じる方は少ないです。口コミでは「チクチクする程度」「思ったより全然痛くなかった」という声が多いです。痛みに弱い方は事前に相談しましょう。"}}, {"@type": "Question", "name": "DAZZY CLINICとメディカルブローどっちがいい？", "acceptedAnswer": {"@type": "Answer", "text": "コスパ重視＋技法の選択肢ならDAZZY CLINIC、実績数＋全国展開ならメディカルブローがおすすめです。DAZZY CLINICは3種類の技法から選べるのが強み、メディカルブローは累計23万件の実績と7Dストローク®が強みです。"}}, {"@type": "Question", "name": "オンラインカウンセリングはどうやって受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "公式サイトからオンラインカウンセリングの予約が可能です。ビデオ通話で自宅にいながらデザインの相談や料金の確認ができるため、遠方の方や初めての方に特におすすめです。"}}]}) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "デイジークリニック", "item": "https://artmake-hikaku-navi.com/review/dazzy/"}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "デイジークリニック", "item": "https://artmake-hikaku.com/review/dazzy/"}]}) }} />
     </main>
   )
 }
