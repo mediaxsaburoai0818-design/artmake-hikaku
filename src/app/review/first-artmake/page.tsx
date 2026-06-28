@@ -4,29 +4,31 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ファーストアートメイクの口コミ・評判｜料金・カウンセリングを徹底調査【2026年最新】',
-  description: 'FIRST ARTMAKE（ファーストアートメイク）の口コミ・評判を徹底調査。初心者特化の丁寧なカウンセリング、銀座駅徒歩3分の好立地、眉1回38,500円〜の料金体系を完全解説。良い口コミ・悪い口コミの両方を分析。',
+  title: 'ファーストアートメイクの口コミ・評判・料金【2026年6月】モニター総額・全国27院の注意点を徹底解説',
+  description: 'FIRST ARTMAKE（ファーストアートメイク）の口コミ・評判・料金を徹底調査。眉モニター2回88,000円〜・クリーム麻酔0円/初診0円、指名料を含む「実際に払う総額」の目安、エアリーブロウ・全国27院の注意点まで公式情報（2026年6月12日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
-const goodReviews = [
-  { user: '20代女性（銀座院）', rating: 5, text: '初めてのアートメイクで不安でしたが、カウンセリングが本当に丁寧で安心できました。痛みもほとんどなく、仕上がりもナチュラルで大満足です。「初心者向け」というコンセプト通り、はじめての方にぴったりだと思います。' },
-  { user: '30代女性（銀座院）', rating: 5, text: '銀座駅から徒歩3分で通いやすいのが決め手でした。施術中も細かく声をかけてくれて、痛みの確認もこまめにしてくれます。眉の形も骨格に合わせて提案してくれて、自然な仕上がりに感動しました。' },
-  { user: '40代女性（銀座院）', rating: 4, text: 'アフターケアの説明がとても丁寧で、施術後の経過についても詳しく教えてもらえました。2回セットで71,500円は他院と比較してもリーズナブル。色持ちも良く、2ヶ月経った今も自然な眉をキープしています。' },
-  { user: '20代女性（銀座院）', rating: 5, text: 'リップアートメイクで伺いました。事前のカラー診断で自分に合った色味を提案してもらえて、仕上がりがとても自然。すっぴんでも血色が良く見えるようになりました。痛みも思ったより全然少なかったです。' },
-  { user: '30代女性（銀座院）', rating: 4, text: 'アイラインの施術を受けました。目元がパッと華やかになり、毎朝のメイク時間が大幅に短縮されました。施術前の説明が丁寧で、初心者でも安心して任せられるクリニックです。' },
+// 出典・確認観点ベースの口コミ傾向まとめ（個人名・年代・星評価・創作エピソードは使用しない／件数・点数は出典がないため記載しない）
+const goodReviewTrends = [
+  'エアリーブロウ（ふんわり毛並み）による自然な仕上がりを評価する声が見られる。',
+  '初めての方への丁寧なカウンセリング・説明を評価する声がある。',
+  'クリーム麻酔0円・初診料0円など諸費用が抑えめである点を挙げる声が見られる。',
+  '全国27院展開で通いやすさを評価する声がある。',
 ]
 
-const badReviews = [
-  { user: '20代女性（銀座院）', rating: 3, text: '銀座に1院しかないので、地方から通うには少し不便です。技術やカウンセリングには満足していますが、もう少し院数が増えてくれると嬉しいです。' },
-  { user: '30代女性（銀座院）', rating: 2, text: '土日の予約が非常に取りにくいです。人気があるのはわかりますが、2週間以上先しか空きがないこともあり、仕事が忙しい時期は通いづらかったです。' },
-  { user: '40代女性（銀座院）', rating: 3, text: '施術自体は満足ですが、大手と比べると症例数が少ないのが少し気になりました。もう少し実績を見せてもらえると安心感が増すかなと思います。' },
+const badReviewTrends = [
+  'アーティストのランクによって料金や仕上がりに差がある、という指摘がある。',
+  '人気のため土日の予約が取りにくいことがある、という声が見られる。',
+  '通常料金はランク別で幅があり、総額が分かりにくいという声がある。',
+  'リップ・アイラインの料金は公式で要確認の部分があり、事前確認を促す声がある。',
 ]
 
+// 2026年6月12日に公式サイトで確認（税込）。料金はランク・院・キャンペーンで変動（銀座本院ベース）
 const pricingTable = [
-  { menu: '眉アートメイク（1回）', price: '38,500円〜', note: '初回お試し' },
-  { menu: '眉アートメイク（2回セット）', price: '71,500円〜', note: 'おすすめ' },
-  { menu: 'リップアートメイク（1回）', price: '49,500円〜', note: '' },
-  { menu: 'アイライン（1回）', price: '33,000円〜', note: '' },
+  { menu: '眉（1回・ランク別／銀座本院）', price: '60,000〜80,000円', note: 'トップアーティスト2回150,000円' },
+  { menu: '眉 モニター（2回）', price: '計88,000〜98,000円', note: '平日34,900円/回〜' },
+  { menu: 'リップ', price: '公式サイトで要確認', note: '' },
+  { menu: 'アイライン', price: '公式サイトで要確認', note: '' },
 ]
 
 export default function FirstArtmakeReviewPage() {
@@ -36,8 +38,48 @@ export default function FirstArtmakeReviewPage() {
       <section className="bg-gradient-to-br from-pink-50 to-rose-100 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">口コミ・評判レビュー</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">FIRST ARTMAKE（ファーストアートメイク）の口コミ・評判</h1>
-          <p className="text-xl text-gray-600">誰でもはじめられる安心のアートメイク｜初心者特化の丁寧カウンセリング</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">FIRST ARTMAKE（ファーストアートメイク）の口コミ・評判・料金</h1>
+          <p className="text-xl text-gray-600">全国27院・エアリーブロウ｜モニター総額・諸費用の注意点を徹底調査</p>
+        </div>
+      </section>
+
+      {/* 30秒でわかる結論 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-2 flex items-center gap-2"><span className="text-rose-500">30秒</span>でわかる結論</h2>
+            <p className="text-sm text-gray-500 mb-6">FIRST ARTMAKE（ファーストアートメイク）は全国27院展開のアートメイク。ふんわり毛並みの「エアリーブロウ」が特徴で、クリーム麻酔0円・初診料0円など諸費用が抑えめです。</p>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white rounded-xl p-5 border border-green-200">
+                <p className="font-bold text-green-700 mb-2">おすすめできる人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>ふんわり自然な毛並み眉（エアリーブロウ）を求める方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>全国27院から通いやすい院を選びたい方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>クリーム麻酔0円・初診0円など諸費用を抑えたい方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>モニター価格で費用を抑えたい方</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-red-200">
+                <p className="font-bold text-red-700 mb-2">他院も検討したい人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>通常料金を事前にきっちり確定させたい方（ランク制で変動）</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>リップ・アイラインの料金を先に確認したい方（要確認）</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>3回セットでじっくり定着させたい方</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-rose-100">
+              <p className="font-bold text-gray-800 mb-3">料金総額の目安（眉モニター2回・2026年6月12日公式確認・税込）</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>眉 モニター 2回（施術料・平日34,900円/回〜）</span><span className="font-semibold">88,000〜98,000円</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>指名料</span><span className="font-semibold">5,500〜11,000円</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>クリーム麻酔・初診料</span><span className="font-semibold">0円</span></li>
+                <li className="flex justify-between pt-1"><span className="font-bold">実質総額の目安（指名あり）</span><span className="font-bold text-rose-600">約93,500円〜</span></li>
+              </ul>
+              <p className="text-xs text-gray-400 mt-3">※通常料金はランク別で眉1回60,000〜80,000円（銀座本院）、トップアーティスト2回150,000円。カウンセリングのみの場合は3,300円。最新・正確な総額は公式カウンセリングでご確認ください。</p>
+            </div>
+            <p className="text-xs text-gray-500 mt-4">アートメイクは医師・看護師のいる医療機関で行う医療行為です。効果・色持ち・ダウンタイム・リスクには個人差があります。</p>
+          </div>
         </div>
       </section>
 
@@ -50,103 +92,55 @@ export default function FirstArtmakeReviewPage() {
               <tbody>
                 {[
                   ['クリニック名', 'FIRST ARTMAKE（ファーストアートメイク）'],
-                  ['コンセプト', '「誰でもはじめられる安心のアートメイク」'],
-                  ['特徴', '初心者に特化した丁寧なカウンセリング'],
-                  ['眉毛料金', '1回 38,500円〜 / 2回セット 71,500円〜'],
-                  ['リップ料金', '1回 49,500円〜'],
-                  ['アイライン料金', '1回 33,000円〜'],
-                  ['展開院', '東京（銀座）1院'],
-                  ['アクセス', '銀座駅 徒歩3分'],
-                  ['施術の特徴', '痛みの少ない施術、アフターケア充実'],
-                  ['対象', 'アートメイク初心者・はじめての方に最適'],
+                  ['特徴', 'エアリーブロウ（ふんわり毛並み）'],
+                  ['眉毛料金', '1回 60,000〜80,000円（ランク別・銀座本院）／トップ2回150,000円'],
+                  ['モニター料金', '眉モニター2回 計88,000〜98,000円（平日34,900円/回〜）'],
+                  ['リップ料金', '公式サイトで要確認'],
+                  ['アイライン料金', '公式サイトで要確認'],
+                  ['指名料', '5,500〜11,000円'],
+                  ['麻酔・初診', 'クリーム麻酔0円・初診料0円（カウンセリングのみ3,300円）'],
+                  ['展開院', '全国27院（通いやすさ最強クラス）'],
+                  ['対象', 'アートメイク初心者・はじめての方にも'],
                 ].map(([label, value], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-rose-50/30' : ''}><td className="p-3 font-semibold w-1/3">{label}</td><td className="p-3">{value}</td></tr>
                 ))}
               </tbody>
             </table>
+            <p className="text-xs text-gray-400 mt-3">出典: ファーストアートメイク公式サイト（2026年6月12日確認・税込）。料金はランク・院・キャンペーンで変動します。</p>
           </div>
         </div>
       </section>
 
-      {/* 評価分布 */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
-            <div className="flex items-center gap-6 mb-4">
-              <div className="text-center">
-                <p className="text-4xl font-bold text-rose-500">3.9</p>
-                <p className="text-sm text-gray-500">総合評価</p>
-              </div>
-              <div className="flex-1 space-y-2">
-                {[
-                  { stars: 5, percent: 38, count: 3 },
-                  { stars: 4, percent: 25, count: 2 },
-                  { stars: 3, percent: 25, count: 2 },
-                  { stars: 2, percent: 13, count: 1 },
-                  { stars: 1, percent: 0, count: 0 },
-                ].map(row => (
-                  <div key={row.stars} className="flex items-center gap-2 text-sm">
-                    <span className="w-8 text-right">{row.stars}★</span>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3">
-                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
-                    </div>
-                    <span className="w-8 text-gray-500">{row.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 総合評価 */}
+      {/* 編集部による総評 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">総合評価</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">編集部による総評</h2>
           <div className="bg-white rounded-xl p-8 shadow-sm">
-            <div className="text-center mb-6">
-              <div className="text-rose-500 text-4xl mb-2">★★★★☆</div>
-              <div className="text-3xl font-bold">4.3 / 5.0</div>
-              <div className="text-sm text-gray-500 mt-1">独自採点 87/100</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                { label: '料金', score: '24/30' },
-                { label: 'カウンセリング', score: '19/20' },
-                { label: '技術力', score: '17/20' },
-                { label: '安全性・ケア', score: '14/15' },
-                { label: 'アクセス', score: '13/15' },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-sm text-gray-500">{item.label}</div>
-                  <div className="font-bold text-rose-500">{item.score}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-gray-700 mb-4">FIRST ARTMAKE（ファーストアートメイク）は全国27院という通いやすさが大きな強みのアートメイクです。ふんわり毛並みの「エアリーブロウ」で自然な眉を目指せ、クリーム麻酔0円・初診料0円など諸費用が抑えめな点も検討しやすい要素です。モニター価格なら眉2回88,000円〜（平日34,900円/回〜）と費用を抑えられます。</p>
+            <p className="text-gray-700 mb-4">一方で、通常料金はアーティストのランク制で幅があり（銀座本院で眉1回60,000〜80,000円、トップ2回150,000円）、総額が分かりにくい点には注意が必要です。リップ・アイラインの料金は公式で要確認の部分があるため、希望部位の料金はカウンセリングで確認しましょう。</p>
+            <p className="text-xs text-gray-500">※本ページの評価は当サイト編集部による定性的な所見であり、第三者機関による点数評価ではありません。アートメイクは医療行為であり、効果・色持ち・リスクには個人差があります。</p>
           </div>
         </div>
       </section>
 
-      {/* 初心者特化の特徴 */}
+      {/* エアリーブロウの特徴 */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">FIRST ARTMAKEが初心者に選ばれる理由</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">FIRST ARTMAKEの特徴</h2>
           <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-8">
-            <p className="text-gray-700 mb-4">「誰でもはじめられる安心のアートメイク」をコンセプトに、初めてアートメイクを受ける方に特化したサービスを提供しています。</p>
+            <p className="text-gray-700 mb-4">ふんわりした毛並み感を出す「エアリーブロウ」を軸に、全国27院で通いやすいアートメイクを提供しています。</p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-white rounded-lg p-4">
-                <h3 className="font-bold mb-2">丁寧なカウンセリング</h3>
-                <p className="text-sm text-gray-600">初心者の不安を解消する充実のカウンセリング。施術内容やリスクについても詳しく説明</p>
+                <h3 className="font-bold mb-2">エアリーブロウ</h3>
+                <p className="text-sm text-gray-600">ふんわりした毛並み感を出す技法で、自然な眉を目指す</p>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <h3 className="font-bold mb-2">痛みの少ない施術</h3>
-                <p className="text-sm text-gray-600">麻酔クリームの使用と丁寧な施術で、痛みを最小限に抑える技術を採用</p>
+                <h3 className="font-bold mb-2">諸費用が抑えめ</h3>
+                <p className="text-sm text-gray-600">クリーム麻酔0円・初診料0円。カウンセリングのみの場合3,300円</p>
               </div>
               <div className="bg-white rounded-lg p-4">
-                <h3 className="font-bold mb-2">充実のアフターケア</h3>
-                <p className="text-sm text-gray-600">施術後の経過説明やケア方法まで丁寧にサポート。不安な時はいつでも相談可能</p>
+                <h3 className="font-bold mb-2">全国27院</h3>
+                <p className="text-sm text-gray-600">通いやすさ最強クラスで、地方からも選びやすい</p>
               </div>
             </div>
           </div>
@@ -156,7 +150,7 @@ export default function FirstArtmakeReviewPage() {
       {/* 料金表 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">料金表（税込）</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">部位別料金表（税込）</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg">
               <thead className="bg-rose-500 text-white">
@@ -171,7 +165,31 @@ export default function FirstArtmakeReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">※ 料金は税込表示です。詳細は公式サイトでご確認ください。</p>
+          <p className="text-sm text-gray-500 mt-4 text-center">※ 出典: ファーストアートメイク公式サイト（2026年6月12日確認・税込）。眉はランク別で料金が異なります（銀座本院ベース）。指名料5,500〜11,000円・クリーム麻酔0円・初診料0円。リップ・アイラインは公式で要確認。</p>
+        </div>
+      </section>
+
+      {/* 実際に払う総額 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">「実際に払う総額」の目安</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">施術料だけでなく、<strong>指名料・麻酔・初診料</strong>を含めた目安です（眉モニター2回・2026年6月12日公式確認・税込）。</p>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
+              <thead className="bg-rose-500 text-white">
+                <tr><th className="p-3 text-left">項目</th><th className="p-3">金額（税込）</th><th className="p-3 text-left">含む / 含まない</th></tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">眉 モニター 2回（施術料）</td><td className="p-3 text-center">88,000〜98,000円</td><td className="p-3">基本施術料に含む（平日34,900円/回〜）</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">指名料</td><td className="p-3 text-center">5,500〜11,000円</td><td className="p-3">指名する場合のみ別途</td></tr>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">クリーム麻酔代</td><td className="p-3 text-center">0円</td><td className="p-3">無料</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">初診料</td><td className="p-3 text-center">0円</td><td className="p-3">無料（カウンセリングのみ3,300円）</td></tr>
+                <tr className="bg-rose-50"><td className="p-3 font-bold">実質総額の目安（指名あり）</td><td className="p-3 text-center font-bold text-rose-600">約93,500円〜</td><td className="p-3 text-xs text-gray-500">指名なしなら88,000円〜</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※通常料金はランク別で眉1回60,000〜80,000円（銀座本院）、トップアーティスト2回150,000円と幅があります。料金はランク・院・キャンペーンで変動します。リップ・アイラインは公式で要確認です。正確な総額はカウンセリングでご確認ください。</p>
+          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
         </div>
       </section>
 
@@ -179,11 +197,11 @@ export default function FirstArtmakeReviewPage() {
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
-            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <h3 className="text-lg font-bold mb-3">割引・モニター情報</h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>初回限定特別価格あり（眉1回38,500円〜）</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>2回セット割引でお得に施術可能</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>カウンセリング無料</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>眉モニター2回 計88,000〜98,000円（平日34,900円/回〜）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>クリーム麻酔0円・初診料0円</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>全国27院で通いやすい</li>
             </ul>
             <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
           </div>
@@ -198,7 +216,7 @@ export default function FirstArtmakeReviewPage() {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-green-700">メリット</h3>
               <ul className="space-y-2">
-                {['初心者に特化した丁寧なカウンセリング', '痛みの少ない施術で安心', '銀座駅徒歩3分の好アクセス', 'アフターケアが充実', '眉2回セット71,500円〜のリーズナブルな価格', 'リップ・アイラインにも対応', '「はじめて」に寄り添う安心のコンセプト'].map((m, i) => (
+                {['エアリーブロウ（ふんわり毛並み）で自然な仕上がりを目指せる', 'クリーム麻酔0円・初診料0円と諸費用が抑えめ', 'モニター価格で眉2回88,000円〜（平日34,900円/回〜）', '全国27院で通いやすさ最強クラス', '指名料5,500〜11,000円と分かりやすい', 'はじめての方のカウンセリングが丁寧との声'].map((m, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-green-500 font-bold">✓</span>{m}</li>
                 ))}
               </ul>
@@ -206,7 +224,7 @@ export default function FirstArtmakeReviewPage() {
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-red-700">デメリット</h3>
               <ul className="space-y-2">
-                {['銀座1院のみで地方からは通いにくい', '土日の予約が取りにくい', '大手と比較すると症例数が少ない', '割引制度が少なめ', 'メンズアートメイクの実績が不明'].map((d, i) => (
+                {['通常料金がランク制で幅があり総額が分かりにくい', 'リップ・アイラインの料金は公式で要確認', '人気のため土日の予約が取りにくいことがある', 'アーティストによって仕上がりに差があるという指摘', 'カウンセリングのみの場合3,300円がかかる'].map((d, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-red-500 font-bold">✗</span>{d}</li>
                 ))}
               </ul>
@@ -215,32 +233,32 @@ export default function FirstArtmakeReviewPage() {
         </div>
       </section>
 
-      {/* 良い口コミ */}
+      {/* 良い口コミの傾向 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">良い口コミ・評判</h2>
-          <div className="space-y-4">
-            {goodReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">良い口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <ul className="space-y-3">
+              {goodReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-green-500 font-bold mt-0.5">✓</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 悪い口コミ */}
+      {/* 気になる口コミの傾向 */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">気になる口コミ・評判</h2>
-          <div className="space-y-4">
-            {badReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">気になる口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
+            <ul className="space-y-3">
+              {badReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-red-400 font-bold mt-0.5">✗</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -250,14 +268,14 @@ export default function FirstArtmakeReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">FIRST ARTMAKEはこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">アートメイクが初めてで不安な方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">丁寧なカウンセリングを重視する方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">銀座エリアでアクセス良好なクリニックを探している方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">痛みに敏感で痛みの少ない施術を希望する方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; ふんわり自然な毛並み眉を求める方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 全国27院から通いやすい院を探す方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 麻酔・初診の諸費用を抑えたい方（0円）</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; モニター価格で費用を抑えたい方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">地方在住で東京に通えない方 → 全国展開のメディカルブローがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">豊富な症例実績を重視する方 → メディカルブロー・デイジーがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">&#10007; 料金を事前に確定させたい方 → クレアージュがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">&#10007; 豊富な症例実績を重視する方 → メディカルブローがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -268,10 +286,10 @@ export default function FirstArtmakeReviewPage() {
           <h2 className="text-3xl font-bold text-center mb-8">よくある質問</h2>
           <div className="space-y-4">
             {[
-              { q: 'FIRST ARTMAKEは本当に初心者向けですか？', a: 'はい。「誰でもはじめられる安心のアートメイク」をコンセプトに、初めての方に特化した丁寧なカウンセリングと施術を提供しています。施術内容やリスク、アフターケアまで詳しく説明してもらえるので、初心者の方でも安心です。' },
-              { q: 'FIRST ARTMAKEの施術は痛いですか？', a: '施術前に麻酔クリームを塗布するため、痛みは最小限に抑えられます。口コミでも「思ったより痛くなかった」「チクチクする程度」という声が多く、痛みに敏感な方でも安心して受けられます。' },
-              { q: 'FIRST ARTMAKEの眉アートメイクは1回と2回セットどちらがおすすめ？', a: '2回セット（71,500円〜）がおすすめです。アートメイクは通常2回の施術で色の定着を図ります。1回目で形を作り、2回目で微調整と色味の定着を行うため、より自然で長持ちする仕上がりになります。' },
-              { q: 'FIRST ARTMAKEへのアクセスは？', a: '銀座駅から徒歩3分の好立地です。銀座エリアにあるため、仕事帰りやお買い物のついでにも通いやすい場所にあります。' },
+              { q: 'ファーストアートメイクの眉アートメイクの料金は？', a: '通常料金はランク別で眉1回60,000〜80,000円（銀座本院）、トップアーティスト2回150,000円です（2026年6月12日公式確認・税込）。モニター価格なら眉2回88,000〜98,000円（平日34,900円/回〜）。指名料5,500〜11,000円が別途かかりますが、クリーム麻酔・初診料は0円です。リップ・アイラインの料金は公式で要確認です。' },
+              { q: 'ファーストアートメイクは何院ありますか？', a: '全国27院を展開しており、通いやすさは最強クラスです（2026年6月12日確認）。料金はランクや院によって異なる場合があるため、お住まいに近い院の最新料金を公式で確認しましょう。' },
+              { q: 'ファーストアートメイクの施術は痛いですか？', a: 'クリーム麻酔（0円）を使用するのが一般的で、口コミでは「思ったより痛くなかった」という傾向の声が見られます。痛みの感じ方には個人差があるため、不安な場合は事前に相談しましょう。アートメイクは医療機関で行う医療行為です。' },
+              { q: 'エアリーブロウとは何ですか？', a: 'ふんわりした毛並み感を出すことを目指す眉のデザイン技法です。すっぴんでも自然に見えやすい仕上がりを狙えますが、仕上がりやデザインの方向性には個人差があるため、カウンセリングで希望を伝えて確認しましょう。' },
             ].map((faq, i) => (
               <details key={i} className="bg-gray-50 rounded-lg shadow-sm">
                 <summary className="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-100 transition-colors">Q{i + 1}. {faq.q}</summary>
@@ -298,7 +316,11 @@ export default function FirstArtmakeReviewPage() {
       </Link>
       <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
-        <p className="font-semibold mt-1">アートメイク料金比較表</p>
+        <p className="font-semibold mt-1">アートメイク料金比較DB</p>
+      </Link>
+      <Link href="/compare/all-clinics/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">全5クリニック完全比較</p>
       </Link>
       <Link href="/purpose/first-time/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">目的別</span>
@@ -315,12 +337,13 @@ export default function FirstArtmakeReviewPage() {
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">FIRST ARTMAKEで安心のアートメイクデビュー</h2>
-          <p className="text-xl mb-8">眉1回 38,500円〜。初心者に寄り添う丁寧なカウンセリングから。</p>
+          <h2 className="text-4xl font-bold mb-6">FIRST ARTMAKEで自然な眉を</h2>
+          <p className="text-xl mb-8">全国27院・モニター2回88,000円〜。まずは無料カウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="https://t.felmat.net/fmcl?ak=S10480F.1.7147979S.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">FIRST ARTMAKE 公式サイトへ →</a>
-            <Link href="/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
+            <Link href="/compare/all-clinics/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
           </div>
+          <p className="text-sm mt-6 opacity-80">最新料金・予約は公式サイトでご確認ください。アートメイクは医療機関で行う医療行為です。</p>
         </div>
       </section>
       <div className="max-w-4xl mx-auto px-4">
@@ -328,8 +351,8 @@ export default function FirstArtmakeReviewPage() {
       </div>
 
       {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "FIRST ARTMAKEは本当に初心者向けですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。「誰でもはじめられる安心のアートメイク」をコンセプトに、初めての方に特化した丁寧なカウンセリングと施術を提供しています。施術内容やリスク、アフターケアまで詳しく説明してもらえるので、初心者の方でも安心です。"}}, {"@type": "Question", "name": "FIRST ARTMAKEの施術は痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "施術前に麻酔クリームを塗布するため、痛みは最小限に抑えられます。口コミでも「思ったより痛くなかった」「チクチクする程度」という声が多く、痛みに敏感な方でも安心して受けられます。"}}, {"@type": "Question", "name": "FIRST ARTMAKEの眉アートメイクは1回と2回セットどちらがおすすめ？", "acceptedAnswer": {"@type": "Answer", "text": "2回セット（71,500円〜）がおすすめです。アートメイクは通常2回の施術で色の定着を図ります。1回目で形を作り、2回目で微調整と色味の定着を行うため、より自然で長持ちする仕上がりになります。"}}, {"@type": "Question", "name": "FIRST ARTMAKEへのアクセスは？", "acceptedAnswer": {"@type": "Answer", "text": "銀座駅から徒歩3分の好立地です。銀座エリアにあるため、仕事帰りやお買い物のついでにも通いやすい場所にあります。"}}]}) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "ファーストアートメイク", "item": "https://artmake-hikaku-navi.com/review/first-artmake/"}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "ファーストアートメイクの眉アートメイクの料金は？", "acceptedAnswer": {"@type": "Answer", "text": "通常料金はランク別で眉1回60,000〜80,000円（銀座本院）、トップアーティスト2回150,000円です（2026年6月12日公式確認・税込）。モニター価格なら眉2回88,000〜98,000円（平日34,900円/回〜）。指名料5,500〜11,000円が別途かかりますが、クリーム麻酔・初診料は0円です。リップ・アイラインの料金は公式で要確認です。"}}, {"@type": "Question", "name": "ファーストアートメイクは何院ありますか？", "acceptedAnswer": {"@type": "Answer", "text": "全国27院を展開しており、通いやすさは最強クラスです（2026年6月12日確認）。料金はランクや院によって異なる場合があるため、お住まいに近い院の最新料金を公式で確認しましょう。"}}, {"@type": "Question", "name": "ファーストアートメイクの施術は痛いですか？", "acceptedAnswer": {"@type": "Answer", "text": "クリーム麻酔（0円）を使用するのが一般的で、口コミでは「思ったより痛くなかった」という傾向の声が見られます。痛みの感じ方には個人差があるため、不安な場合は事前に相談しましょう。アートメイクは医療機関で行う医療行為です。"}}, {"@type": "Question", "name": "エアリーブロウとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ふんわりした毛並み感を出すことを目指す眉のデザイン技法です。すっぴんでも自然に見えやすい仕上がりを狙えますが、仕上がりやデザインの方向性には個人差があるため、カウンセリングで希望を伝えて確認しましょう。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "ファーストアートメイク", "item": "https://artmake-hikaku.com/review/first-artmake/"}]}) }} />
     </main>
   )
 }

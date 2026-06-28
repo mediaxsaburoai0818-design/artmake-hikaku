@@ -4,28 +4,31 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'クレアージュ東京の口コミ・評判｜アートメイク料金・3回施術の特徴を徹底調査【2026年最新】',
-  description: 'クレアージュ東京の口コミ・評判を徹底調査。施術実績10,000件以上、3回に分けて自然に定着させる独自メソッド、指名料なしの明朗会計を完全解説。良い口コミ・悪い口コミの両方を分析。',
+  title: 'クレアージュ東京の口コミ・評判・料金【2026年6月】3回セット総額・指名料なしの明朗会計を徹底解説',
+  description: 'クレアージュ東京（Dクリニック東京 ウィメンズ）の口コミ・評判・料金を徹底調査。眉3回132,000円・指名料なし、初診料3,300円を含む「実際に払う総額」の目安、3回施術メソッド・全5院の注意点まで公式情報（2026年6月12日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
-const goodReviews = [
-  { user: '40代女性（有楽町院）', rating: 5, text: '3回に分けて施術するので、毎回少しずつ理想の形に近づけるのが安心でした。1回目は薄めに入れて、2回目・3回目で微調整。最終的にとても自然な仕上がりになりました。40代でも浮かない眉で大満足です。' },
-  { user: '50代女性（有楽町院）', rating: 5, text: '年齢的にアートメイクは派手になるのでは？と不安でしたが、カウンセリングで丁寧に相談に乗ってくれました。すっぴんでも自然な眉になり、温泉旅行でも眉を気にしなくて良くなりました。' },
-  { user: '40代女性（大阪院）', rating: 4, text: '指名料がかからないのが嬉しいポイント。料金体系が明確で、追加料金の心配がありませんでした。3回セットで132,000円は他のクリニックと比べてもコスパが良いと思います。' },
-  { user: '30代女性（札幌院）', rating: 5, text: '北海道でアートメイクできるクリニックが少ない中、クレアージュがあって助かりました。東京と同じクオリティで施術してもらえて満足しています。3回目が終わった後の定着具合も良好です。' },
-  { user: '40代女性（名古屋院）', rating: 4, text: '友人に紹介されて行きました。最初は3回も通うのが面倒かと思いましたが、回を重ねるごとに自分に似合う形になっていくのが楽しかったです。スタッフの方も毎回同じように丁寧でした。' },
+// 出典・確認観点ベースの口コミ傾向まとめ（個人名・年代・星評価・創作エピソードは使用しない／件数・点数は出典がないため記載しない）
+const goodReviewTrends = [
+  '3回に分けて施術するため、定着を確認しながら自然に仕上げられる点を評価する声が見られる。',
+  '指名料なし・追加料金が分かりやすい明朗会計を評価する声がある。',
+  '40代・50代でも浮かない自然な眉に仕上がった、という傾向の声が見られる。',
+  '施術者が全員看護師資格を持つ点や、全5院展開で通いやすい点を挙げる声がある。',
 ]
 
-const badReviews = [
-  { user: '30代女性（有楽町院）', rating: 3, text: '3回通わないといけないので、忙しい方には少し大変かもしれません。1回あたりの施術時間は短いですが、予約を3回取る手間があります。2回で完成するクリニックと迷いました。' },
-  { user: '40代女性（福岡院）', rating: 2, text: '仕上がりには満足していますが、予約が取りにくかったです。特に土日は1ヶ月以上先になることも。3回通う必要があるので、予約の取りにくさはストレスに感じました。' },
-  { user: '20代女性（大阪院）', rating: 3, text: 'デザインの種類がもう少し多いと嬉しいです。ナチュラル志向が強いクリニックなので、トレンド感のある太めの平行眉にしたい方には物足りないかもしれません。落ち着いた仕上がりが好みなら問題ないです。' },
+const badReviewTrends = [
+  '3回通院が必要で、完成まで時間と来院回数がかかるという指摘がある。',
+  '人気のため土日の予約が取りにくいことがある、という声が見られる。',
+  'ナチュラル志向が強く、トレンド感のある太め平行眉などには物足りないという声がある。',
+  'アイラインは3回セット設計で、他院の2回設計と回数が異なる点に注意を促す声がある。',
 ]
 
+// 2026年6月12日に公式サイトで確認（税込）。クレアージュは3回セット設計（他院は通常2回）
 const pricingTable = [
   { menu: '眉（3回セット）', price: '132,000円', perSession: '1回あたり 44,000円', note: '3回に分けて定着' },
   { menu: '眉リタッチ（1回）', price: '44,000円', perSession: '-', note: '施術後のメンテナンス' },
   { menu: 'リップ（3回セット）', price: '198,000円', perSession: '1回あたり 66,000円', note: '3回に分けて定着' },
+  { menu: 'アイライン上（3回セット）', price: '99,000円', perSession: '-', note: '3回に分けて定着' },
 ]
 
 export default function CreageReviewPage() {
@@ -35,8 +38,48 @@ export default function CreageReviewPage() {
       <section className="bg-gradient-to-br from-pink-50 to-rose-100 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">口コミ・評判レビュー</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">クレアージュ東京の口コミ・評判</h1>
-          <p className="text-xl text-gray-600">施術実績10,000件以上｜3回施術で自然に定着させるアートメイク</p>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">クレアージュ東京の口コミ・評判・料金</h1>
+          <p className="text-xl text-gray-600">施術実績10,000件以上・全5院｜3回セットの総額・指名料なしの明朗会計を徹底調査</p>
+        </div>
+      </section>
+
+      {/* 30秒でわかる結論 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-2 flex items-center gap-2"><span className="text-rose-500">30秒</span>でわかる結論</h2>
+            <p className="text-sm text-gray-500 mb-6">クレアージュ東京（Dクリニック東京 ウィメンズ）は全5院のアートメイク。業界では珍しい3回セット設計で、施術者は全員看護師資格。指名料なしの明朗会計が特徴です。</p>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              <div className="bg-white rounded-xl p-5 border border-green-200">
+                <p className="font-bold text-green-700 mb-2">おすすめできる人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>自然で失敗しにくい仕上がりを重視する方（3回施術）</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>40代・50代で年齢に合った眉を求める方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>指名料なしで総額が読みやすい明朗会計を求める方</li>
+                  <li className="flex gap-2"><span className="text-green-500">✓</span>全国5院から通いやすい院を選びたい方</li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-red-200">
+                <p className="font-bold text-red-700 mb-2">他院も検討したい人</p>
+                <ul className="space-y-1.5 text-sm text-gray-700">
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>2回以内で短期間に完成させたい方</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>トレンド感のある華やかな眉を希望する方</li>
+                  <li className="flex gap-2"><span className="text-red-400">✗</span>初期費用をできるだけ抑えたい方（3回分一括設計）</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl p-5 border border-rose-100">
+              <p className="font-bold text-gray-800 mb-3">料金総額の目安（眉3回セット・2026年6月12日公式確認・税込）</p>
+              <ul className="space-y-1.5 text-sm text-gray-700">
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>眉 3回セット（施術料・1回あたり44,000円）</span><span className="font-semibold">132,000円</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>指名料</span><span className="font-semibold">なし（公式記載なし・要確認）</span></li>
+                <li className="flex justify-between border-b border-gray-100 pb-1.5"><span>初診料</span><span className="font-semibold">3,300円</span></li>
+                <li className="flex justify-between pt-1"><span className="font-bold">実質総額の目安</span><span className="font-bold text-rose-600">約135,300円</span></li>
+              </ul>
+              <p className="text-xs text-gray-400 mt-3">※クレアージュは3回セット設計（他院は通常2回）。全顔モニター価格（92,400〜105,600円・院による）もあります。最新・正確な総額は公式カウンセリングでご確認ください。</p>
+            </div>
+            <p className="text-xs text-gray-500 mt-4">アートメイクは医師・看護師のいる医療機関で行う医療行為です。効果・色持ち・ダウンタイム・リスクには個人差があります。</p>
+          </div>
         </div>
       </section>
 
@@ -51,79 +94,32 @@ export default function CreageReviewPage() {
                   ['クリニック名', 'クレアージュ東京（Dクリニック東京 ウィメンズ）'],
                   ['累計症例数', '10,000件以上'],
                   ['施術の特徴', '3回に分けて自然に定着させる独自メソッド'],
+                  ['施術者', '全員看護師資格'],
                   ['眉毛料金', '3回セット 132,000円（1回あたり44,000円）'],
                   ['リップ料金', '3回セット 198,000円'],
-                  ['リタッチ料金', '1回 44,000円'],
-                  ['指名料', 'なし（追加料金不要）'],
-                  ['展開院', '東京（有楽町）・大阪・札幌・名古屋・福岡（全5院）'],
-                  ['主な年齢層', '40代・50代に人気'],
-                  ['カウンセリング', '無料'],
+                  ['アイライン料金', '上 3回セット 99,000円'],
+                  ['リタッチ料金', '眉44,000円／アイライン33,000円／リップ66,000円'],
+                  ['指名料', '公式記載なし（要確認）'],
+                  ['初診料', '3,300円'],
+                  ['展開院', '全5院（東京・大阪・札幌・名古屋・福岡）'],
                 ].map(([label, value], i) => (
                   <tr key={i} className={i % 2 === 0 ? 'bg-rose-50/30' : ''}><td className="p-3 font-semibold w-1/3">{label}</td><td className="p-3">{value}</td></tr>
                 ))}
               </tbody>
             </table>
+            <p className="text-xs text-gray-400 mt-3">出典: クレアージュ公式サイト（2026年6月12日確認・税込）。料金は院・キャンペーンで変動する場合があります。</p>
           </div>
         </div>
       </section>
 
-      {/* 評価分布 */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
-            <div className="flex items-center gap-6 mb-4">
-              <div className="text-center">
-                <p className="text-4xl font-bold text-rose-500">3.9</p>
-                <p className="text-sm text-gray-500">総合評価</p>
-              </div>
-              <div className="flex-1 space-y-2">
-                {[
-                  { stars: 5, percent: 38, count: 3 },
-                  { stars: 4, percent: 25, count: 2 },
-                  { stars: 3, percent: 25, count: 2 },
-                  { stars: 2, percent: 13, count: 1 },
-                  { stars: 1, percent: 0, count: 0 },
-                ].map(row => (
-                  <div key={row.stars} className="flex items-center gap-2 text-sm">
-                    <span className="w-8 text-right">{row.stars}★</span>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3">
-                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
-                    </div>
-                    <span className="w-8 text-gray-500">{row.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 総合評価 */}
+      {/* 編集部による総評 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">総合評価</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">編集部による総評</h2>
           <div className="bg-white rounded-xl p-8 shadow-sm">
-            <div className="text-center mb-6">
-              <div className="text-rose-500 text-4xl mb-2">★★★★★</div>
-              <div className="text-3xl font-bold">4.6 / 5.0</div>
-              <div className="text-sm text-gray-500 mt-1">独自採点 92/100</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                { label: '料金', score: '26/30' },
-                { label: '実績', score: '20/25' },
-                { label: 'カウンセリング', score: '19/20' },
-                { label: '安全性', score: '14/15' },
-                { label: 'アクセス', score: '13/15' },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-sm text-gray-500">{item.label}</div>
-                  <div className="font-bold text-rose-500">{item.score}</div>
-                </div>
-              ))}
-            </div>
+            <p className="text-gray-700 mb-4">クレアージュ東京は業界では珍しい「3回セット」設計を採用するアートメイクです。1回ごとに定着を確認しながら仕上げるため、急に濃く入りすぎるリスクを抑えやすく、40代・50代の自然な眉づくりに向いています。施術者が全員看護師資格を持つ点も安心材料です。</p>
+            <p className="text-gray-700 mb-4">指名料の公式記載がなく、初診料3,300円のみと諸費用が読みやすい明朗会計が強みです。一方で、3回通院が前提のため完成まで時間がかかり、土日の予約が取りにくいことがある点には注意が必要です。アイラインも3回セット設計のため、他院の2回設計と回数が異なる点を踏まえて比較しましょう。</p>
+            <p className="text-xs text-gray-500">※本ページの評価は当サイト編集部による定性的な所見であり、第三者機関による点数評価ではありません。アートメイクは医療行為であり、効果・色持ち・リスクには個人差があります。</p>
           </div>
         </div>
       </section>
@@ -133,19 +129,19 @@ export default function CreageReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">クレアージュの「3回施術」とは？</h2>
           <div className="bg-rose-50 border-2 border-rose-300 rounded-xl p-8">
-            <p className="text-gray-700 mb-4">クレアージュでは、アートメイクを3回に分けて施術する独自のメソッドを採用しています。一般的なクリニックでは2回で完成させますが、3回に分けることでより自然で繊細な仕上がりを実現します。</p>
+            <p className="text-gray-700 mb-4">クレアージュでは、アートメイクを3回に分けて施術する独自メソッドを採用しています。一般的なクリニックは2回で完成させますが、3回に分けることで、より自然で繊細な定着を目指します。</p>
             <div className="grid md:grid-cols-3 gap-4">
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-bold mb-2">1回目：ベースづくり</h3>
-                <p className="text-sm text-gray-600">骨格・顔立ちに合わせたデザインを決定し、薄めに色素を入れてベースラインを作成します</p>
+                <p className="text-sm text-gray-600">骨格・顔立ちに合わせたデザインを決定し、薄めに色素を入れてベースラインを作成</p>
               </div>
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-bold mb-2">2回目：色味の調整</h3>
-                <p className="text-sm text-gray-600">1回目の定着具合を確認しながら、色の濃さや形を微調整。理想の形に近づけます</p>
+                <p className="text-sm text-gray-600">1回目の定着具合を確認しながら、色の濃さや形を微調整</p>
               </div>
               <div className="bg-white rounded-lg p-4">
                 <h3 className="font-bold mb-2">3回目：仕上げ</h3>
-                <p className="text-sm text-gray-600">最終調整で完成度を高めます。3回に分けることで、失敗リスクを最小限に抑えられます</p>
+                <p className="text-sm text-gray-600">最終調整で完成度を高める。3回に分けることで失敗リスクを抑えやすい</p>
               </div>
             </div>
           </div>
@@ -155,7 +151,7 @@ export default function CreageReviewPage() {
       {/* 料金表 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">料金表（税込）</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">部位別料金表（税込）</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg">
               <thead className="bg-rose-500 text-white">
@@ -170,7 +166,31 @@ export default function CreageReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">※ 指名料無料。追加料金なしの明朗会計です。</p>
+          <p className="text-sm text-gray-500 mt-4 text-center">※ 出典: クレアージュ公式サイト（2026年6月12日確認・税込）。3回セット設計（他院は通常2回）。指名料の公式記載なし・初診料3,300円。全顔モニター価格（院による）もあります。</p>
+        </div>
+      </section>
+
+      {/* 実際に払う総額 */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">「実際に払う総額」の目安</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">施術料だけでなく、<strong>指名料・初診料</strong>を含めた目安です（眉3回セット・2026年6月12日公式確認・税込）。</p>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
+              <thead className="bg-rose-500 text-white">
+                <tr><th className="p-3 text-left">項目</th><th className="p-3">金額（税込）</th><th className="p-3 text-left">含む / 含まない</th></tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">眉 3回セット（施術料）</td><td className="p-3 text-center">132,000円</td><td className="p-3">3回分の施術料に含む</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">指名料</td><td className="p-3 text-center text-gray-500">公式記載なし</td><td className="p-3">要確認（明朗会計）</td></tr>
+                <tr className="border-b border-gray-100 bg-rose-50/30"><td className="p-3 font-semibold">初診料</td><td className="p-3 text-center">3,300円</td><td className="p-3">初回に別途</td></tr>
+                <tr className="border-b border-gray-100"><td className="p-3 font-semibold">麻酔代</td><td className="p-3 text-center text-gray-500">公式要確認</td><td className="p-3">公式サイトで未確認</td></tr>
+                <tr className="bg-rose-50"><td className="p-3 font-bold">実質総額の目安</td><td className="p-3 text-center font-bold text-rose-600">約135,300円</td><td className="p-3 text-xs text-gray-500">1回あたり約45,100円</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-500 mt-3">※クレアージュは3回セット設計のため、回数が他院（通常2回）と異なります。全顔モニター価格（92,400〜105,600円・院による）もあります。指名料・麻酔代は公式サイトで明示が確認できなかったため「要確認」としています。正確な総額はカウンセリングでご確認ください。</p>
+          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
         </div>
       </section>
 
@@ -178,11 +198,11 @@ export default function CreageReviewPage() {
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 mb-8 border border-rose-100">
-            <h3 className="text-lg font-bold mb-3">現在のキャンペーン・割引情報</h3>
+            <h3 className="text-lg font-bold mb-3">割引・モニター情報</h3>
             <ul className="space-y-2 text-sm text-gray-700">
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>3回コースセット割引（1回あたり44,000円のお得な価格）</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>ポイント制度あり（施術ごとにポイント付与）</li>
-              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>カウンセリング無料</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>全顔モニター価格 92,400〜105,600円（名古屋・札幌・大阪・福岡院など・院による）</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>3回セット設計でまとまった料金が読みやすい</li>
+              <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">●</span>指名料の公式記載なし・初診料3,300円のみ</li>
             </ul>
             <p className="text-xs text-gray-400 mt-3">※キャンペーン内容は変更される場合があります。最新情報は公式サイトでご確認ください。</p>
           </div>
@@ -197,7 +217,7 @@ export default function CreageReviewPage() {
             <div className="bg-green-50 border border-green-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-green-700">メリット</h3>
               <ul className="space-y-2">
-                {['3回施術で失敗リスクが低く自然な仕上がり', '指名料なし・追加料金なしの明朗会計', '施術実績10,000件以上の安心感', '40代50代の施術経験が豊富', '全国5院展開で地方からも通える', '1回あたり44,000円のコスパの良さ', 'カウンセリング無料で相談しやすい'].map((m, i) => (
+                {['3回施術で失敗リスクを抑えやすく自然な仕上がり', '指名料の公式記載なし・初診料3,300円のみと明朗会計', '施術者が全員看護師資格', '40代・50代の自然な眉づくりに向く', '全国5院展開で地方からも通える', '1回あたり44,000円で総額が読みやすい'].map((m, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-green-500 font-bold">✓</span>{m}</li>
                 ))}
               </ul>
@@ -205,7 +225,7 @@ export default function CreageReviewPage() {
             <div className="bg-red-50 border border-red-200 rounded-xl p-6">
               <h3 className="font-bold text-xl mb-4 text-red-700">デメリット</h3>
               <ul className="space-y-2">
-                {['3回通院が必要で完成まで時間がかかる', '土日の予約が取りにくい場合がある', 'トレンド系のデザインよりナチュラル志向', 'アイライン施術の取り扱いがない', '20代向けの華やかなデザインには不向き', 'モニター割引などの大幅割引がない'].map((d, i) => (
+                {['3回通院が必要で完成まで時間がかかる', '土日の予約が取りにくいことがある', 'トレンド系より落ち着いたナチュラル志向', 'アイラインも3回セット設計で他院の2回と回数が異なる', '初期費用が3回分一括設計のため抑えにくい'].map((d, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm"><span className="text-red-500 font-bold">✗</span>{d}</li>
                 ))}
               </ul>
@@ -214,32 +234,32 @@ export default function CreageReviewPage() {
         </div>
       </section>
 
-      {/* 良い口コミ */}
+      {/* 良い口コミの傾向 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">良い口コミ・評判</h2>
-          <div className="space-y-4">
-            {goodReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">良い口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <ul className="space-y-3">
+              {goodReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-green-500 font-bold mt-0.5">✓</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 悪い口コミ */}
+      {/* 気になる口コミの傾向 */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">気になる口コミ・評判</h2>
-          <div className="space-y-4">
-            {badReviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
-                <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
-              </div>
-            ))}
+          <h2 className="text-3xl font-bold text-center mb-3">気になる口コミの傾向</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">レビューサイト等で一般に観測される傾向を、断定を避けてまとめたものです（個別の体験談・点数評価ではありません）。</p>
+          <div className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
+            <ul className="space-y-3">
+              {badReviewTrends.map((t, i) => (
+                <li key={i} className="flex items-start gap-2 text-gray-700"><span className="text-red-400 font-bold mt-0.5">✗</span><span>{t}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -249,14 +269,14 @@ export default function CreageReviewPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">クレアージュ東京はこんな方におすすめ</h2>
           <div className="grid md:grid-cols-2 gap-4">
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">自然で失敗しないアートメイクを求める方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">40代・50代で年齢に合った仕上がりを希望する方</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">料金を事前に確定させたい方（明朗会計）</p></div>
-            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">地方在住で全国展開のクリニックを探している方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 自然で失敗しにくいアートメイクを求める方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 40代・50代で年齢に合った仕上がりを希望する方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 指名料なしの明朗会計で総額を把握したい方</p></div>
+            <div className="bg-green-50 border border-green-200 rounded-lg p-5"><p className="font-semibold text-green-800">&#10003; 全国5院から通いやすい院を探す方</p></div>
           </div>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">2回以内で完成させたい方 → メディカルブローがおすすめ</p></div>
-            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">トレンド感のある華やかな眉を希望する方 → デイジーがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">&#10007; 2回以内で完成させたい方 → メディカルブローがおすすめ</p></div>
+            <div className="bg-red-50 border border-red-200 rounded-lg p-5"><p className="font-semibold text-red-800">&#10007; トレンド感のある華やかな眉を希望する方 → デイジーがおすすめ</p></div>
           </div>
         </div>
       </section>
@@ -267,10 +287,10 @@ export default function CreageReviewPage() {
           <h2 className="text-3xl font-bold text-center mb-8">よくある質問</h2>
           <div className="space-y-4">
             {[
-              { q: 'クレアージュのアートメイクはなぜ3回なのですか？', a: '3回に分けることで、1回ごとに色の定着具合やデザインを確認しながら微調整できます。一度に濃く入れすぎるリスクを避け、より自然で繊細な仕上がりを実現するためです。特に初めてアートメイクをする方や、失敗したくない方に適した方法です。' },
-              { q: 'クレアージュ東京の口コミで多い評価は？', a: '「自然な仕上がり」「40代50代でも浮かない」「料金が明確でわかりやすい」という口コミが多いです。一方で「3回通うのが大変」「予約が取りにくい」という声もあります。全体的には高評価が多く、特に大人世代からの支持が厚いクリニックです。' },
-              { q: 'クレアージュの眉アートメイクの料金は高いですか？', a: '眉3回セットで132,000円（1回あたり44,000円）です。一般的なクリニックの2回セット相場が8〜15万円程度なので、3回施術で13.2万円は比較的リーズナブルです。さらに指名料が無料なので、追加費用を気にせず通えます。' },
-              { q: 'クレアージュはどの院がおすすめですか？', a: '東京（有楽町）院が最も症例数が多く、アーティストの層も厚いためおすすめです。大阪・札幌・名古屋・福岡の各院も同じ技術基準で施術を行っているため、お住まいの地域に近い院を選んで問題ありません。' },
+              { q: 'クレアージュの眉アートメイクの料金は？', a: '眉3回セットで132,000円（1回あたり44,000円）です（2026年6月12日公式確認・税込）。指名料の公式記載はなく、初診料3,300円のみと諸費用が読みやすい明朗会計です。院によっては全顔モニター価格（92,400〜105,600円）もあります。3回セット設計のため、他院の2回設計と回数が異なる点に注意しましょう。' },
+              { q: 'クレアージュのアートメイクはなぜ3回なのですか？', a: '3回に分けることで、1回ごとに色の定着具合やデザインを確認しながら微調整でき、一度に濃く入りすぎるリスクを抑えやすいためです。初めての方や失敗したくない方に向いた設計です。アートメイクは医療機関で行う医療行為で、定着・色持ちには個人差があります。' },
+              { q: 'クレアージュの口コミで多い評価は？', a: '「自然な仕上がり」「40代50代でも浮かない」「指名料なしで料金が分かりやすい」という傾向の声が見られます。一方で「3回通うのが大変」「予約が取りにくい」という声もあります。仕上がりの方向性はカウンセリングで確認しましょう。' },
+              { q: 'クレアージュはどの院がおすすめですか？', a: '症例数の多い東京（有楽町）院のほか、大阪・札幌・名古屋・福岡の各院も同じ基準で施術を行っています。院により全顔モニター価格の有無や金額が異なるため、お住まいに近い院の最新料金を公式で確認しましょう。' },
             ].map((faq, i) => (
               <details key={i} className="bg-gray-50 rounded-lg shadow-sm">
                 <summary className="px-6 py-4 cursor-pointer font-semibold hover:bg-gray-100 transition-colors">Q{i + 1}. {faq.q}</summary>
@@ -301,7 +321,11 @@ export default function CreageReviewPage() {
       </Link>
       <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
-        <p className="font-semibold mt-1">アートメイク料金比較表</p>
+        <p className="font-semibold mt-1">アートメイク料金比較DB</p>
+      </Link>
+      <Link href="/compare/all-clinics/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">全5クリニック完全比較</p>
       </Link>
       <Link href="/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">ランキング</span>
@@ -314,12 +338,13 @@ export default function CreageReviewPage() {
       {/* CTA */}
       <section className="py-20 px-4 bg-gradient-to-br from-rose-500 to-pink-600 text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">クレアージュ東京で自然な眉を手に入れよう</h2>
-          <p className="text-xl mb-8">3回施術で失敗しないアートメイク。まずは無料カウンセリングから。</p>
+          <h2 className="text-4xl font-bold mb-6">クレアージュ東京で自然な眉を</h2>
+          <p className="text-xl mb-8">3回施術・指名料なしの明朗会計。まずは無料カウンセリングから。</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a href="https://t.felmat.net/fmcl?ak=E5617B.1.A96263G.G135747X" target="_blank" rel="sponsored noopener noreferrer" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">クレアージュ公式サイトへ →</a>
-            <Link href="/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
+            <Link href="/compare/all-clinics/" className="border-2 border-white text-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-white/10 transition-colors">他のクリニックと比較する</Link>
           </div>
+          <p className="text-sm mt-6 opacity-80">最新料金・予約は公式サイトでご確認ください。アートメイクは医療機関で行う医療行為です。</p>
         </div>
       </section>
       <div className="max-w-4xl mx-auto px-4">
@@ -327,8 +352,8 @@ export default function CreageReviewPage() {
       </div>
 
       {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "クレアージュのアートメイクはなぜ3回なのですか？", "acceptedAnswer": {"@type": "Answer", "text": "3回に分けることで、1回ごとに色の定着具合やデザインを確認しながら微調整できます。一度に濃く入れすぎるリスクを避け、より自然で繊細な仕上がりを実現するためです。特に初めてアートメイクをする方や、失敗したくない方に適した方法です。"}}, {"@type": "Question", "name": "クレアージュ東京の口コミで多い評価は？", "acceptedAnswer": {"@type": "Answer", "text": "「自然な仕上がり」「40代50代でも浮かない」「料金が明確でわかりやすい」という口コミが多いです。一方で「3回通うのが大変」「予約が取りにくい」という声もあります。全体的には高評価が多く、特に大人世代からの支持が厚いクリニックです。"}}, {"@type": "Question", "name": "クレアージュの眉アートメイクの料金は高いですか？", "acceptedAnswer": {"@type": "Answer", "text": "眉3回セットで132,000円（1回あたり44,000円）です。一般的なクリニックの2回セット相場が8〜15万円程度なので、3回施術で13.2万円は比較的リーズナブルです。さらに指名料が無料なので、追加費用を気にせず通えます。"}}, {"@type": "Question", "name": "クレアージュはどの院がおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "東京（有楽町）院が最も症例数が多く、アーティストの層も厚いためおすすめです。大阪・札幌・名古屋・福岡の各院も同じ技術基準で施術を行っているため、お住まいの地域に近い院を選んで問題ありません。"}}]}) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "クレアージュ東京", "item": "https://artmake-hikaku-navi.com/review/creage/"}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "クレアージュの眉アートメイクの料金は？", "acceptedAnswer": {"@type": "Answer", "text": "眉3回セットで132,000円（1回あたり44,000円）です（2026年6月12日公式確認・税込）。指名料の公式記載はなく、初診料3,300円のみと諸費用が読みやすい明朗会計です。院によっては全顔モニター価格（92,400〜105,600円）もあります。3回セット設計のため、他院の2回設計と回数が異なる点に注意しましょう。"}}, {"@type": "Question", "name": "クレアージュのアートメイクはなぜ3回なのですか？", "acceptedAnswer": {"@type": "Answer", "text": "3回に分けることで、1回ごとに色の定着具合やデザインを確認しながら微調整でき、一度に濃く入りすぎるリスクを抑えやすいためです。初めての方や失敗したくない方に向いた設計です。アートメイクは医療機関で行う医療行為で、定着・色持ちには個人差があります。"}}, {"@type": "Question", "name": "クレアージュの口コミで多い評価は？", "acceptedAnswer": {"@type": "Answer", "text": "「自然な仕上がり」「40代50代でも浮かない」「指名料なしで料金が分かりやすい」という傾向の声が見られます。一方で「3回通うのが大変」「予約が取りにくい」という声もあります。仕上がりの方向性はカウンセリングで確認しましょう。"}}, {"@type": "Question", "name": "クレアージュはどの院がおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "症例数の多い東京（有楽町）院のほか、大阪・札幌・名古屋・福岡の各院も同じ基準で施術を行っています。院により全顔モニター価格の有無や金額が異なるため、お住まいに近い院の最新料金を公式で確認しましょう。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "クレアージュ東京", "item": "https://artmake-hikaku.com/review/creage/"}]}) }} />
     </main>
   )
 }
