@@ -204,7 +204,7 @@ export default function SaunaPoolPage() {
           }),
         }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku-navi.com/"}, {"@type": "ListItem", "position": 2, "name": "サウナ・温泉・プール", "item": "https://artmake-hikaku-navi.com/knowledge/sauna-pool/"}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "サウナ・温泉・プール", "item": "https://artmake-hikaku.com/knowledge/sauna-pool/"}]}) }} />
     </main>
   )
 }
