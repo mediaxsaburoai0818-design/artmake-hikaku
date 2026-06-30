@@ -366,10 +366,13 @@ export default function AllergyPage() {
             パッチテスト対応・高品質色素使用のクリニックを比較。<br className="hidden md:block" />
             安心して施術を受けられるクリニックを見つけましょう。
           </p>
-          <p className="mb-8 opacity-80">アレルギー対応力で選ぶクリニックランキング</p>
+          <p className="mb-8 opacity-80">パッチテスト・色素の安全性も含めて料金で比較しましょう</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-              おすすめクリニックランキングを見る
+            <Link href="/compare/all-clinics/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+              パッチテスト対応クリニックを比較
+            </Link>
+            <Link href="/compare/price/" className="inline-block bg-rose-700/40 backdrop-blur text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-rose-700/60 transition-colors shadow-lg">
+              料金で比較する（料金比較DB）
             </Link>
           </div>
         </div>

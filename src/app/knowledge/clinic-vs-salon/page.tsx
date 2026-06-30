@@ -404,10 +404,13 @@ export default function ClinicVsSalonPage() {
             医療機関として届出がある安全なクリニックを比較。<br className="hidden md:block" />
             技術力・料金・口コミで厳選したおすすめランキングを公開中。
           </p>
-          <p className="mb-8 opacity-80">安全性と技術力で選ぶクリニックランキング</p>
+          <p className="mb-8 opacity-80">医療機関（クリニック）を料金・技法・症例で比較して選びましょう</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-              おすすめクリニックランキングを見る
+            <Link href="/compare/all-clinics/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+              医療機関のクリニックを比較
+            </Link>
+            <Link href="/compare/price/" className="inline-block bg-rose-700/40 backdrop-blur text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-rose-700/60 transition-colors shadow-lg">
+              料金で比較する（料金比較DB）
             </Link>
           </div>
         </div>

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -159,6 +161,12 @@ export default function FirstartmakeVsTrueDesignPage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="全国27院で通いやすさ・モニター価格を重視するならファーストアートメイク、大阪（心斎橋）で費用を最優先するならトゥルーデザイン（眉2回40,000円〜・写真掲載条件付き料金）が向いています。通えるエリアと写真掲載条件の可否で絞り込むのがおすすめです。"
+        a={{ name: clinicData.firstartmake.name, reviewSlug: clinicData.firstartmake.reviewSlug, totalPrice: clinicData.firstartmake.totalPrice, suitFor: '全国27院で通いやすさを重視する人、モニター価格で費用を抑えたい人、ふんわり毛並みを求める人。' }}
+        b={{ name: clinicData.trueDesign.name, reviewSlug: clinicData.trueDesign.reviewSlug, totalPrice: clinicData.trueDesign.totalPrice, suitFor: '大阪・心斎橋で受けられる人、料金を最優先したい人、写真掲載条件付き料金に納得できる人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
@@ -465,6 +473,13 @@ export default function FirstartmakeVsTrueDesignPage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.firstartmake.name} bName={clinicData.trueDesign.name}
+        aGood={clinicData.firstartmake.goodTrends} aBad={clinicData.firstartmake.badTrends}
+        bGood={clinicData.trueDesign.goodTrends} bBad={clinicData.trueDesign.badTrends}
+        aReviewSlug={clinicData.firstartmake.reviewSlug} bReviewSlug={clinicData.trueDesign.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

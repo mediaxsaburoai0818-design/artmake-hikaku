@@ -233,9 +233,12 @@ export default function HandmadeVsMachinePage() {
 
           {/* CTA */}
           <div className="glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center mb-12">
-            <h2 className="text-xl font-bold mb-4">あなたに合った技法を見つけよう</h2>
-            <p className="text-[#6B6560] mb-6">手彫り・機械彫り・コンビネーション、どれが最適かはカウンセリングで相談するのが一番です。</p>
-            <Link href="/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">おすすめクリニックランキングを見る →</Link>
+            <h2 className="text-xl font-bold mb-4">技法・料金でクリニックを比較しよう</h2>
+            <p className="text-[#6B6560] mb-6">手彫り・機械彫り・コンビネーションの対応や料金はクリニックで異なります。技法と料金で比較して選びましょう。</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/compare/all-clinics/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">技法で選ぶクリニックを比較 →</Link>
+              <Link href="/compare/price/" className="inline-block border border-[var(--gold)] text-[var(--gold)] px-8 py-4 rounded-full font-bold hover:bg-[var(--blush)]">料金で比較する →</Link>
+            </div>
           </div>
 
           {/* 関連記事 */}

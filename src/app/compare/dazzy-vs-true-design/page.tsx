@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -44,11 +46,11 @@ const comparisonItems = [
   },
   {
     label: "施術方式",
-    dazzy: "dazzy brow\n（ナチュラル＋パウダーの\n組み合わせ・人気No.1メニュー）",
+    dazzy: "dazzy brow\n（ナチュラル＋パウダーの\n組み合わせ・公式の人気メニュー）",
     trueDesign: "2D（パウダー調）\n3D（1本1本手彫り）\n4D（パウダー＋手彫り）",
     winner: "draw",
     detail:
-      "デイジーの看板メニュー「dazzy brow」は、ナチュラルな毛並みとパウダーを組み合わせた人気No.1メニュー（公式表現）です。トゥルーデザインは2D（パウダー調）・3D（1本1本手彫りの毛並み）・4D（パウダー＋手彫りの組み合わせ）の3方式から選べます。どちらも毛並み＋パウダーの組み合わせ施術に対応しており、方式の選択肢はほぼ同等と言えます。",
+      "デイジーの看板メニュー「dazzy brow」は、ナチュラルな毛並みとパウダーを組み合わせたメニューで、公式サイトで人気メニューとして案内されています。トゥルーデザインは2D（パウダー調）・3D（1本1本手彫りの毛並み）・4D（パウダー＋手彫りの組み合わせ）の3方式から選べます。どちらも毛並み＋パウダーの組み合わせ施術に対応しており、方式の選択肢はほぼ同等と言えます。",
   },
   {
     label: "初診料・麻酔代",
@@ -160,6 +162,12 @@ export default function DazzyVsTrueDesignPage() {
         </div>
       </section>
 
+      <ThirtySecVerdict
+        verdict="費用を抑えたい・大阪（心斎橋）で受けたいならトゥルーデザイン（眉2回40,000円〜・写真掲載条件付き料金）、東京・札幌・福岡で通いたい・条件なしの通常メニューで受けたいならデイジークリニックが向いています。トゥルーデザインは1院のみのため通えるエリアで絞り込むのが近道です。"
+        a={{ name: clinicData.dazzy.name, reviewSlug: clinicData.dazzy.reviewSlug, totalPrice: clinicData.dazzy.totalPrice, suitFor: '東京・札幌・福岡で通いたい人、写真掲載条件なしの通常メニューで受けたい人、リップの評判を重視する人。' }}
+        b={{ name: clinicData.trueDesign.name, reviewSlug: clinicData.trueDesign.reviewSlug, totalPrice: clinicData.trueDesign.totalPrice, suitFor: '大阪・心斎橋で受けられる人、費用を抑えたい人、写真掲載条件付き料金に納得できる人。' }}
+      />
+
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
         <div className="max-w-4xl mx-auto">
@@ -186,7 +194,7 @@ export default function DazzyVsTrueDesignPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-amber-500 font-bold mt-0.5">&#10003;</span>
-                  人気No.1メニュー「dazzy brow」（ナチュラル＋パウダー）
+                  公式の人気メニュー「dazzy brow」（ナチュラル＋パウダー）
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-amber-500 font-bold mt-0.5">&#10003;</span>
@@ -413,7 +421,7 @@ export default function DazzyVsTrueDesignPage() {
               <ul className="space-y-4">
                 {[
                   "東京・札幌・福岡など関西圏以外に住んでいる",
-                  "人気No.1メニュー「dazzy brow」を受けてみたい",
+                  "公式の人気メニュー「dazzy brow」を受けてみたい",
                   "症例写真の掲載条件なしの通常メニューが良い",
                   "アイラインを上・下・上下から細かく選びたい",
                   "全国4院展開の知名度あるクリニックが安心",
@@ -465,6 +473,13 @@ export default function DazzyVsTrueDesignPage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.dazzy.name} bName={clinicData.trueDesign.name}
+        aGood={clinicData.dazzy.goodTrends} aBad={clinicData.dazzy.badTrends}
+        bGood={clinicData.trueDesign.goodTrends} bBad={clinicData.trueDesign.badTrends}
+        aReviewSlug={clinicData.dazzy.reviewSlug} bReviewSlug={clinicData.trueDesign.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

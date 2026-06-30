@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title: 'デイジークリニック vs ファーストアートメイク 徹底比較【2026年最新】料金・技法・口コミ10項目で解説',
@@ -140,6 +142,12 @@ export default function DazzyVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="リップの評判やカウンセリングの丁寧さ・東京/札幌/福岡での通いやすさを重視するならデイジークリニック、モニター価格や全国27院の通いやすさ・諸費用の安さ（麻酔/初診0円）を重視するならファーストアートメイクが向いています。どちらもランク制のため、指名料込みの実質総額で比較しましょう。"
+        a={{ name: clinicData.dazzy.name, reviewSlug: clinicData.dazzy.reviewSlug, totalPrice: clinicData.dazzy.totalPrice, suitFor: 'リップの評判やカウンセリングの丁寧さを重視する人、東京・札幌・福岡で通いたい人、2回で完成させたい人。' }}
+        b={{ name: clinicData.firstartmake.name, reviewSlug: clinicData.firstartmake.reviewSlug, totalPrice: clinicData.firstartmake.totalPrice, suitFor: 'モニター価格で費用を抑えたい人、全国27院で通いやすさを重視する人、ふんわり毛並みを求める人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-12 px-4 bg-section-warm" id="conclusion">
@@ -298,6 +306,13 @@ export default function DazzyVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.dazzy.name} bName={clinicData.firstartmake.name}
+        aGood={clinicData.dazzy.goodTrends} aBad={clinicData.dazzy.badTrends}
+        bGood={clinicData.firstartmake.goodTrends} bBad={clinicData.firstartmake.badTrends}
+        aReviewSlug={clinicData.dazzy.reviewSlug} bReviewSlug={clinicData.firstartmake.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-12 px-4 bg-section-warm">

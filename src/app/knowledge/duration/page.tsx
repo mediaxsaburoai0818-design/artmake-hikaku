@@ -386,10 +386,13 @@ export default function DurationPage() {
             高品質な色素と確かな技術力のクリニックなら<br className="hidden md:block" />
             アートメイクの持続期間を最大化できます。
           </p>
-          <p className="mb-8 opacity-80">まずは無料カウンセリングで相談してみましょう</p>
+          <p className="mb-8 opacity-80">持ち・リタッチ費用も含めた「総額」でクリニックを比較しましょう</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-              おすすめクリニックランキングを見る
+            <Link href="/compare/price/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+              料金・持ちで選ぶクリニック比較
+            </Link>
+            <Link href="/compare/all-clinics/" className="inline-block bg-rose-700/40 backdrop-blur text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-rose-700/60 transition-colors shadow-lg">
+              クリニックを総合比較する
             </Link>
           </div>
         </div>

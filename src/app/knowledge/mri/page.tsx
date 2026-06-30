@@ -283,10 +283,13 @@ export default function MriPage() {
             MRI対応の最新色素を使用するクリニックを選びましょう。<br className="hidden md:block" />
             カウンセリングで使用色素について確認できます。
           </p>
-          <p className="mb-8 opacity-80">技術力と安全性で選ぶクリニックランキング</p>
+          <p className="mb-8 opacity-80">使用色素や除去・修正対応も含めて料金で比較しましょう</p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
-              おすすめクリニックランキングを見る
+            <Link href="/compare/all-clinics/" className="inline-block bg-white text-rose-500 px-10 py-5 rounded-lg text-xl font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+              除去・修正に対応するクリニックを比較
+            </Link>
+            <Link href="/compare/price/" className="inline-block bg-rose-700/40 backdrop-blur text-white border-2 border-white px-10 py-5 rounded-lg text-xl font-semibold hover:bg-rose-700/60 transition-colors shadow-lg">
+              料金で比較する（料金比較DB）
             </Link>
           </div>
         </div>

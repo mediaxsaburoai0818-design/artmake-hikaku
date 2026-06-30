@@ -139,9 +139,12 @@ export default function BathingPage() {
 
           {/* CTA */}
           <div className="glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center mb-12">
-            <h2 className="text-xl font-bold mb-4">アフターケア指導の丁寧なクリニックを選ぼう</h2>
-            <p className="text-[#6B6560] mb-6">術後ケアが充実したクリニックなら、定着率を高く保てます。</p>
-            <Link href="/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">おすすめクリニックランキングを見る →</Link>
+            <h2 className="text-xl font-bold mb-4">アフターケアと料金でクリニックを比較しよう</h2>
+            <p className="text-[#6B6560] mb-6">術後ケアの体制や費用はクリニックで異なります。料金・症例・サポートで比較して選びましょう。</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/compare/all-clinics/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">クリニックを比較する →</Link>
+              <Link href="/compare/price/" className="inline-block border border-[var(--gold)] text-[var(--gold)] px-8 py-4 rounded-full font-bold hover:bg-[var(--blush)]">料金で比較する →</Link>
+            </div>
           </div>
 
           {/* 関連記事 */}

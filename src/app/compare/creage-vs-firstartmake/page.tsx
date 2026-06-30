@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -160,6 +162,12 @@ export default function CreageVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="「3回セットで段階的に自然に・指名料なしの明朗会計・40代50代の実績」を重視するならクレアージュ、「モニター価格で費用を抑えたい・全国27院で通いやすさ重視・ふんわり毛並み」を求めるならファーストアートメイクが向いています。料金は回数の数え方が異なるため、実質総額で比較しましょう。"
+        a={{ name: clinicData.creage.name, reviewSlug: clinicData.creage.reviewSlug, totalPrice: clinicData.creage.totalPrice, suitFor: '3回セットで丁寧に仕上げたい人、40代・50代、指名料なしの分かりやすい料金を重視する人。' }}
+        b={{ name: clinicData.firstartmake.name, reviewSlug: clinicData.firstartmake.reviewSlug, totalPrice: clinicData.firstartmake.totalPrice, suitFor: 'モニター価格で費用を抑えたい人、全国27院で通いやすさを重視する人、ふんわりした自然な毛並みを求める人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
@@ -474,6 +482,13 @@ export default function CreageVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.creage.name} bName={clinicData.firstartmake.name}
+        aGood={clinicData.creage.goodTrends} aBad={clinicData.creage.badTrends}
+        bGood={clinicData.firstartmake.goodTrends} bBad={clinicData.firstartmake.badTrends}
+        aReviewSlug={clinicData.creage.reviewSlug} bReviewSlug={clinicData.firstartmake.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

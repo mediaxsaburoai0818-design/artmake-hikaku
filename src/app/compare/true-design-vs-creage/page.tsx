@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title: 'トゥルーデザインクリニック vs クレアージュ東京 徹底比較【2026年最新】40代50代向け10項目で解説',
@@ -140,6 +142,12 @@ export default function TrueDesignVsCreagePage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="大阪（心斎橋）で費用を抑えたいならトゥルーデザイン（眉2回40,000円〜・写真掲載条件付き料金）、全国5院で通いやすさや指名料なしの明朗会計・3回セットの丁寧な仕上げを重視するならクレアージュが向いています。どちらも40代・50代の似合わせデザインに対応しています。"
+        a={{ name: clinicData.trueDesign.name, reviewSlug: clinicData.trueDesign.reviewSlug, totalPrice: clinicData.trueDesign.totalPrice, suitFor: '大阪・心斎橋で受けられる人、料金を抑えたい人、写真掲載条件付き料金に納得できる人、似合わせデザイン重視の人。' }}
+        b={{ name: clinicData.creage.name, reviewSlug: clinicData.creage.reviewSlug, totalPrice: clinicData.creage.totalPrice, suitFor: '全国5院で通いやすさを重視する人、指名料なしの明朗会計を重視する人、3回セットで段階的に仕上げたい人。' }}
+      />
 
       {/* 結論 */}
       <section className="py-12 px-4 bg-section-warm" id="conclusion">
@@ -370,6 +378,13 @@ export default function TrueDesignVsCreagePage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.trueDesign.name} bName={clinicData.creage.name}
+        aGood={clinicData.trueDesign.goodTrends} aBad={clinicData.trueDesign.badTrends}
+        bGood={clinicData.creage.goodTrends} bBad={clinicData.creage.badTrends}
+        aReviewSlug={clinicData.trueDesign.reviewSlug} bReviewSlug={clinicData.creage.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-12 px-4 bg-section-warm">

@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -54,10 +56,10 @@ const comparisonItems = [
   {
     label: "施術方式・メニュー",
     creage: "パウダーグラデーション\nマイクロブレーディング\nコンビネーション（165,000円/3回）",
-    dazzy: "dazzy Brow（人気No.1）\nNatural Brow / Powder Brow",
+    dazzy: "dazzy Brow（人気メニュー）\nNatural Brow / Powder Brow",
     winner: "draw",
     detail:
-      "クレアージュはパウダーグラデーション・マイクロブレーディング（各132,000円/3回）・コンビネーション（165,000円/3回）の3方式から選択可能。デイジーはナチュラルとパウダーを組み合わせた「dazzy Brow」が公式で人気No.1とされるメニューで、ほかにNatural Brow・Powder Browがあります。どちらも毛並み・パウダー・組み合わせの選択肢が揃っており、方式の幅はほぼ同等です。",
+      "クレアージュはパウダーグラデーション・マイクロブレーディング（各132,000円/3回）・コンビネーション（165,000円/3回）の3方式から選択可能。デイジーはナチュラルとパウダーを組み合わせた「dazzy Brow」が公式サイトで人気メニューとして案内されており、ほかにNatural Brow・Powder Browがあります。どちらも毛並み・パウダー・組み合わせの選択肢が揃っており、方式の幅はほぼ同等です。",
   },
   {
     label: "指名料",
@@ -161,6 +163,12 @@ export default function CreageVsDazzyPage() {
         </div>
       </section>
 
+      <ThirtySecVerdict
+        verdict="眉アートメイクで「3回かけて自然に・指名料なしの明朗会計」を重視するならクレアージュ、「2回で早く完成・カウンセリングの丁寧さやリップの評判」を重視するならデイジークリニックが向いています。料金体系・回数の数え方が異なるため、実質総額で比較するのがおすすめです。"
+        a={{ name: clinicData.creage.name, reviewSlug: clinicData.creage.reviewSlug, totalPrice: clinicData.creage.totalPrice, suitFor: '3回セットで段階的に自然に仕上げたい人、40代・50代、指名料なしの分かりやすい料金を重視する人。' }}
+        b={{ name: clinicData.dazzy.name, reviewSlug: clinicData.dazzy.reviewSlug, totalPrice: clinicData.dazzy.totalPrice, suitFor: '2回で早く完成させたい人、リップの評判やカウンセリングの丁寧さを重視する人、東京・札幌・福岡で通いたい人。' }}
+      />
+
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
         <div className="max-w-4xl mx-auto">
@@ -222,7 +230,7 @@ export default function CreageVsDazzyPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-rose-500 font-bold mt-0.5">&#10003;</span>
-                  ナチュラル＋パウダーの「dazzy Brow」が人気No.1メニュー
+                  ナチュラル＋パウダーの「dazzy Brow」が公式の人気メニュー
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-rose-500 font-bold mt-0.5">&#10003;</span>
@@ -451,7 +459,7 @@ export default function CreageVsDazzyPage() {
                 {[
                   "2回で短期間に完成させたい",
                   "まず1回だけ試してみたい（Natural Brow 1回55,000円）",
-                  "人気No.1メニュー「dazzy Brow」を受けてみたい",
+                  "公式の人気メニュー「dazzy Brow」を受けてみたい",
                   "リップを1回あたり割安に受けたい（60,000円/回換算）",
                   "下アイライン・上下セットも検討したい",
                   "新宿・すすきの・天神など繁華街アクセスを重視したい",
@@ -474,6 +482,13 @@ export default function CreageVsDazzyPage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.creage.name} bName={clinicData.dazzy.name}
+        aGood={clinicData.creage.goodTrends} aBad={clinicData.creage.badTrends}
+        bGood={clinicData.dazzy.goodTrends} bBad={clinicData.dazzy.badTrends}
+        aReviewSlug={clinicData.creage.reviewSlug} bReviewSlug={clinicData.dazzy.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

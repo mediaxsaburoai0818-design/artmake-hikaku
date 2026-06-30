@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -154,6 +156,12 @@ export default function MedicalbrowVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="毛並み感の技法（7Dストローク）や割引制度の幅広さを重視するならメディカルブロー、クリーム麻酔・初診0円の諸費用の安さや全国27院の通いやすさを重視するならファーストアートメイクが向いています。どちらもランク制のため、指名料込みの実質総額で比較しましょう。"
+        a={{ name: clinicData.medicalbrow.name, reviewSlug: clinicData.medicalbrow.reviewSlug, totalPrice: clinicData.medicalbrow.totalPrice, suitFor: '毛並み感の技法を求める人、モニター価格や学割・ペア割を活用したい人、メンズアートメイクも検討する人。' }}
+        b={{ name: clinicData.firstartmake.name, reviewSlug: clinicData.firstartmake.reviewSlug, totalPrice: clinicData.firstartmake.totalPrice, suitFor: '諸費用（麻酔・初診0円）を抑えたい人、全国27院で通いやすさを重視する人、ふんわり毛並みを求める人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
@@ -460,6 +468,13 @@ export default function MedicalbrowVsFirstartmakePage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.medicalbrow.name} bName={clinicData.firstartmake.name}
+        aGood={clinicData.medicalbrow.goodTrends} aBad={clinicData.medicalbrow.badTrends}
+        bGood={clinicData.firstartmake.goodTrends} bBad={clinicData.firstartmake.badTrends}
+        aReviewSlug={clinicData.medicalbrow.reviewSlug} bReviewSlug={clinicData.firstartmake.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

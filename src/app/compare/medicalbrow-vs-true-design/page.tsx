@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -154,6 +156,12 @@ export default function MedicalbrowVsTrueDesignPage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="毛並み感の技法（7Dストローク）・全国8院の通いやすさ・割引制度を重視するならメディカルブロー、大阪（心斎橋）で費用を最優先するならトゥルーデザイン（眉2回40,000円〜・写真掲載条件付き料金）が向いています。通えるエリアと予算で絞り込むのがおすすめです。"
+        a={{ name: clinicData.medicalbrow.name, reviewSlug: clinicData.medicalbrow.reviewSlug, totalPrice: clinicData.medicalbrow.totalPrice, suitFor: '毛並み感の技法を求める人、全国8院で通いやすさを重視する人、モニター・割引を活用したい人。' }}
+        b={{ name: clinicData.trueDesign.name, reviewSlug: clinicData.trueDesign.reviewSlug, totalPrice: clinicData.trueDesign.totalPrice, suitFor: '大阪・心斎橋で受けられる人、料金を最優先したい人、写真掲載条件付き料金に納得できる人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
@@ -460,6 +468,13 @@ export default function MedicalbrowVsTrueDesignPage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.medicalbrow.name} bName={clinicData.trueDesign.name}
+        aGood={clinicData.medicalbrow.goodTrends} aBad={clinicData.medicalbrow.badTrends}
+        bGood={clinicData.trueDesign.goodTrends} bBad={clinicData.trueDesign.badTrends}
+        aReviewSlug={clinicData.medicalbrow.reviewSlug} bReviewSlug={clinicData.trueDesign.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

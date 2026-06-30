@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Breadcrumb from '@/components/Breadcrumb'
 import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
+import { ThirtySecVerdict, ReviewTrendSection } from '@/components/CompareIntro'
+import { clinicData } from '@/lib/clinicData'
 
 export const metadata: Metadata = {
   title:
@@ -154,6 +156,12 @@ export default function MedicalbrowVsDazzyPage() {
           </div>
         </div>
       </section>
+
+      <ThirtySecVerdict
+        verdict="毛並み感の技法（7Dストローク）・モニター価格・割引制度の幅広さを重視するならメディカルブロー、カウンセリングの丁寧さやリップの評判を重視するならデイジークリニックが向いています。どちらもランク制で総額が変わるため、指名料込みの実質総額で比較しましょう。"
+        a={{ name: clinicData.medicalbrow.name, reviewSlug: clinicData.medicalbrow.reviewSlug, totalPrice: clinicData.medicalbrow.totalPrice, suitFor: '毛並み感の技法を求める人、モニター価格や学割・ペア割を活用したい人、メンズアートメイクも検討する人。' }}
+        b={{ name: clinicData.dazzy.name, reviewSlug: clinicData.dazzy.reviewSlug, totalPrice: clinicData.dazzy.totalPrice, suitFor: 'カウンセリングの丁寧さを重視する人、リップの評判を重視する人、2回で完成させたい人。' }}
+      />
 
       {/* 結論先出し */}
       <section className="py-14 px-4 bg-white" id="conclusion">
@@ -457,6 +465,13 @@ export default function MedicalbrowVsDazzyPage() {
           </div>
         </div>
       </section>
+
+      <ReviewTrendSection
+        aName={clinicData.medicalbrow.name} bName={clinicData.dazzy.name}
+        aGood={clinicData.medicalbrow.goodTrends} aBad={clinicData.medicalbrow.badTrends}
+        bGood={clinicData.dazzy.goodTrends} bBad={clinicData.dazzy.badTrends}
+        aReviewSlug={clinicData.medicalbrow.reviewSlug} bReviewSlug={clinicData.dazzy.reviewSlug}
+      />
 
       {/* FAQ */}
       <section className="py-14 px-4 bg-white" id="faq">

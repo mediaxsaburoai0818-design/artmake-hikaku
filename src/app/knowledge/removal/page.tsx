@@ -304,9 +304,12 @@ export default function RemovalPage() {
 
           {/* CTA */}
           <div className="mt-12 glass-card rounded-3xl p-8 border border-[var(--gold-light)] text-center">
-            <h2 className="text-xl font-bold mb-4">除去不要な仕上がりを目指すなら</h2>
-            <p className="text-[#6B6560] mb-6">最初から実績豊富なクリニックを選ぶことが、除去リスクを回避する最善策です。</p>
-            <Link href="/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">おすすめクリニックランキングを見る →</Link>
+            <h2 className="text-xl font-bold mb-4">除去・修正に対応するクリニックを探すなら</h2>
+            <p className="text-[#6B6560] mb-6">他院修正・除去への対応や費用はクリニックで異なります。除去・修正に対応するクリニックを料金で比較して選びましょう。</p>
+            <div className="flex flex-wrap justify-center gap-3">
+              <Link href="/compare/all-clinics/" className="inline-block bg-gradient-to-r from-[var(--gold)] to-[var(--gold-light)] text-white px-8 py-4 rounded-full font-bold btn-glow">除去・修正に対応するクリニックを比較 →</Link>
+              <Link href="/compare/price/" className="inline-block border border-[var(--gold)] text-[var(--gold)] px-8 py-4 rounded-full font-bold hover:bg-[var(--blush)]">料金で比較する →</Link>
+            </div>
           </div>
 
                 {/* 比較送客CTA（柱3 医療リスク→比較） */}
