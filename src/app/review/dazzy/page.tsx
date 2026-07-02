@@ -352,6 +352,29 @@ export default function DazzyClinicReviewPage() {
         </div>
       </section>
 
+      {/* 施術の流れ */}
+      <section className="py-12 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">予約から施術当日までの流れ</h2>
+          <p className="text-sm text-gray-500 text-center mb-8">公式サイトの案内と医療アートメイクの一般的な流れをもとに整理（詳細は院・メニューで異なるためカウンセリングで要確認）</p>
+          <div className="space-y-4">
+            {[
+              { step: '1. 予約・カウンセリング予約', text: '公式サイト・LINEから予約。DAZZY CLINICはオンライン（ビデオ通話）カウンセリングに対応しており、来院前に自宅からデザインや料金の相談ができます。' },
+              { step: '2. カウンセリング・デザイン相談', text: '肌状態や希望のデザインを確認し、技法（機械彫り／手彫り／併用）とメニュー・担当ランクを決定。指名料や総額はこの段階で必ず確認しましょう。' },
+              { step: '3. 施術当日（麻酔→施術）', text: '施術部位に麻酔クリームを塗布してから施術します。眉の場合の所要時間は2〜3時間程度が一般的です。アートメイクは医療行為のため、医師の管理下で看護師等の有資格者が施術します。' },
+              { step: '4. ダウンタイム・アフターケア', text: '施術後数日は赤み・濃さが出やすく、1週間程度は患部を濡らす・こする行為を避けるのが一般的です。かさぶたが自然に剥がれると色が落ち着きます。詳しいケア方法は施術時の案内に従ってください。' },
+              { step: '5. 2回目の施術', text: '医療アートメイクは1回では定着しにくく、多くのメニューが2回1セットです。1回目から1〜3ヶ月あけて2回目を行い、色と形を仕上げるのが一般的なスケジュールです。' },
+            ].map((f, i) => (
+              <div key={i} className="bg-white rounded-lg shadow-sm p-5">
+                <p className="font-bold text-rose-600 mb-1">{f.step}</p>
+                <p className="text-sm text-gray-600 leading-relaxed">{f.text}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-gray-400 mt-4">※個人差があります。施術可否・ダウンタイムの詳細は医師の診察・カウンセリングでご確認ください。</p>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -362,6 +385,7 @@ export default function DazzyClinicReviewPage() {
               { q: 'DAZZY CLINICの3種類の技法の違いは？', a: '「機械彫り」はマシンで均一に色を入れるパウダー仕上げ、「手彫り」は1本1本手作業で描く自然な毛並み仕上げ、「機械彫り+手彫り」は両方を組み合わせたハイブリッド施術です。迷ったらカウンセリングで相談しましょう。' },
               { q: 'DAZZY CLINICは痛いですか？', a: '施術前に麻酔クリームを塗布するため、強い痛みを感じる方は少ないです。口コミでは「チクチクする程度」「思ったより全然痛くなかった」という声が多いです。痛みに弱い方は事前に相談しましょう。' },
               { q: 'DAZZY CLINICとメディカルブローどっちがいい？', a: 'コスパ重視＋技法の選択肢ならDAZZY CLINIC、実績数＋全国展開ならメディカルブローがおすすめです。DAZZY CLINICは3種類の技法から選べるのが強み、メディカルブローは累計23万件の実績と7Dストローク®が強みです。' },
+              { q: '「dazzy skin clinic」とアートメイクのDAZZY CLINICは同じですか？', a: '「dazzy skin clinic」は美容皮膚科部門の名称で、アートメイクのDAZZY CLINIC（デイジークリニック）と同じ系列です。アートメイク目的の場合はDAZZY CLINICのアートメイクメニュー（新宿・札幌・福岡天神）が該当します。詳しくは本ページ内の「dazzy skin clinicとは？」の項をご覧ください。' },
               { q: 'オンラインカウンセリングはどうやって受けられますか？', a: '公式サイトからオンラインカウンセリングの予約が可能です。ビデオ通話で自宅にいながらデザインの相談や料金の確認ができるため、遠方の方や初めての方に特におすすめです。' },
             ].map((faq, i) => (
               <details key={i} className="bg-gray-50 rounded-lg shadow-sm">
