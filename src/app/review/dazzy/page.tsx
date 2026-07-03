@@ -110,67 +110,6 @@ export default function DazzyClinicReviewPage() {
         </div>
       </section>
 
-      {/* 評価分布 */}
-      <section className="py-12 px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-bold mb-6">口コミ評価の分布</h2>
-            <div className="flex items-center gap-6 mb-4">
-              <div className="text-center">
-                <p className="text-4xl font-bold text-rose-500">3.9</p>
-                <p className="text-sm text-gray-500">総合評価</p>
-              </div>
-              <div className="flex-1 space-y-2">
-                {[
-                  { stars: 5, percent: 38, count: 3 },
-                  { stars: 4, percent: 25, count: 2 },
-                  { stars: 3, percent: 25, count: 2 },
-                  { stars: 2, percent: 13, count: 1 },
-                  { stars: 1, percent: 0, count: 0 },
-                ].map(row => (
-                  <div key={row.stars} className="flex items-center gap-2 text-sm">
-                    <span className="w-8 text-right">{row.stars}★</span>
-                    <div className="flex-1 bg-gray-100 rounded-full h-3">
-                      <div className="bg-rose-400 h-3 rounded-full" style={{ width: `${row.percent}%` }} />
-                    </div>
-                    <span className="w-8 text-gray-500">{row.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <p className="text-xs text-gray-400 mt-2">※ 当サイトに掲載された口コミ8件の評価分布です</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 総合評価 */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">総合評価</h2>
-          <div className="bg-white rounded-xl p-8 shadow-sm">
-            <div className="text-center mb-6">
-              <div className="text-rose-500 text-4xl mb-2">★★★★★</div>
-              <div className="text-3xl font-bold">4.5 / 5.0</div>
-              <div className="text-sm text-gray-500 mt-1">独自採点 90/100</div>
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-              {[
-                { label: '料金', score: '27/30' },
-                { label: '技術力', score: '22/25' },
-                { label: 'カウンセリング', score: '18/20' },
-                { label: '安全性', score: '14/15' },
-                { label: 'アクセス', score: '9/10' },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="text-sm text-gray-500">{item.label}</div>
-                  <div className="font-bold text-rose-500">{item.score}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 3種類の技法 */}
       <section className="py-12 px-4">
         <div className="max-w-4xl mx-auto">
@@ -312,7 +251,7 @@ export default function DazzyClinicReviewPage() {
           <div className="space-y-4">
             {goodReviews.map((r, i) => (
               <div key={i} className="bg-white rounded-lg p-6 shadow-sm">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
+                <div className="mb-2"><span className="text-sm font-semibold text-gray-600">{r.user}</span></div>
                 <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
               </div>
             ))}
@@ -327,7 +266,7 @@ export default function DazzyClinicReviewPage() {
           <div className="space-y-4">
             {badReviews.map((r, i) => (
               <div key={i} className="bg-white rounded-lg p-6 shadow-sm border-l-4 border-red-300">
-                <div className="flex items-center gap-2 mb-2"><span className="text-yellow-500">{'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}</span><span className="text-sm text-gray-500">{r.user}</span></div>
+                <div className="mb-2"><span className="text-sm font-semibold text-gray-600">{r.user}</span></div>
                 <p className="text-gray-600 italic">&quot;{r.text}&quot;</p>
               </div>
             ))}
