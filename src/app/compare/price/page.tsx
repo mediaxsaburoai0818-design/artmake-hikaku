@@ -4,13 +4,13 @@ import type { Metadata } from "next";
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: "アートメイク料金比較DB【2026年6月12日調査】眉・リップ・アイラインの公式料金と最安クリニック",
+  title: "アートメイクの値段・相場はいくら？【2026年】眉・リップの料金比較DBと実際に払う総額",
   description:
     "5クリニックの公式サイト料金を2026年6月12日に一斉調査した料金比較データベース。眉2回4万円〜・1回あたり換算・モニター価格・指名料/麻酔代などの追加費用まで出典付きで比較。毎月定点更新し、改定履歴も記録します。",
   keywords:
     "アートメイク 料金比較,アートメイク 安い,眉毛アートメイク 値段,アートメイク 相場,アートメイク モニター価格",
   openGraph: {
-    title: "アートメイク料金比較DB【2026年6月調査】公式料金を毎月定点更新",
+    title: "アートメイクの値段・相場はいくら？【2026年】料金比較DB・毎月定点更新",
     description:
       "眉毛・リップ・アイラインのアートメイク料金を5社比較。モニター最安28,000円〜。料金を安くするコツも解説。",
     type: "article",
@@ -211,7 +211,7 @@ const faqs = [
   },
   {
     q: "リタッチはいつ必要ですか？費用はどれくらい？",
-    a: "一般的に1〜2年でアートメイクは薄くなり始めます。リタッチの費用は1回20,000〜50,000円が相場で、トゥルーデザインクリニックでは29,700円〜とリーズナブルです。定期的なリタッチで美しい状態をキープできるため、リタッチ料金も含めた総額で比較することをおすすめします。",
+    a: "一般的に1〜2年でアートメイクは薄くなり始めます。リタッチの費用は1回20,000〜50,000円程度が目安ですが、院・部位・前回施術からの期間で大きく異なり、料金改定も頻繁なため、必ず各院の公式サイト・カウンセリングで最新額をご確認ください。リタッチ料金も含めた総額で比較するのがおすすめです。",
   },
   {
     q: "アートメイクで追加料金がかかるケースはありますか？",
@@ -295,6 +295,11 @@ export default function PriceComparisonPage() {
           <p className="text-center text-gray-500 text-sm mb-8">
             2026年6月12日に5クリニックの公式サイト料金を一斉調査（毎月定点更新）
           </p>
+          <div className="max-w-3xl mx-auto bg-white border-2 border-rose-200 rounded-xl p-6 mb-8">
+            <p className="text-sm text-gray-700 leading-relaxed">
+              <strong className="text-rose-600">結論（当サイト検証値）</strong>：メニュー表の価格だけでなく指名料等を含めた「実際に払う総額」で見ると、当サイト掲載の主要5院では<strong>眉アートメイク2回で約9.3万〜13.6万円</strong>が実勢レンジです（2026年6月12日 各院公式サイト確認・税込。モニター利用時はこれより下がります）。「安く見えるが指名料で上がる院」「高く見えるが指名料無料の院」があるため、下の比較表は総額ベースでご覧ください。
+            </p>
+          </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-xl p-6 text-center border border-rose-100">
               <div className="inline-flex items-center justify-center w-14 h-14 bg-rose-100 rounded-full mb-4">
