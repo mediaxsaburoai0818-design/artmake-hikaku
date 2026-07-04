@@ -133,7 +133,7 @@ export default function FukuokaAreaPage() {
                 link: "#",
                 color: "bg-rose-200",
               },
-            ]].map((clinic) => (
+            ].map((clinic) => (
               <div
                 key={clinic.rank}
                 className="bg-white border border-rose-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
