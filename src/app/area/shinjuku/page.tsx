@@ -5,7 +5,7 @@ import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   robots: { index: false, follow: true },
-  title: "アートメイク 新宿 おすすめクリニック2選｜駅近・アクセス抜群【2026年最新】| アートメイク比較ナビ",
+  title: "新宿のアートメイクおすすめ2院を総額で比較【2026年】デイジー新宿本院・メディカルブロー",
   description:
     "新宿エリアでおすすめのアートメイククリニック2院を徹底比較。メディカルブロー新宿院、デイジークリニック新宿院の料金・アクセス・特徴を紹介。新宿駅から徒歩5分以内。",
   keywords: "アートメイク 新宿,アートメイク 新宿 おすすめ,眉毛アートメイク 新宿,アートメイク 新宿 安い,アートメイク 新宿駅",
@@ -73,7 +73,7 @@ export default function ShinjukuAreaPage() {
                 <div className="text-3xl mb-2">&#x1f556;</div>
                 <h3 className="font-bold text-gray-800 mb-1">夜遅くまで営業</h3>
                 <p className="text-sm text-gray-600">
-                  新宿エリアのクリニックは夜19〜20時まで営業。仕事帰りや休日の買い物ついでに通える。
+                  新宿エリアは夜間まで受け付ける院もあり、仕事帰りや休日の買い物ついでに通いやすい（営業時間は院・時期により異なるため公式で要確認）。
                 </p>
               </div>
               <div className="text-center">
@@ -99,18 +99,18 @@ export default function ShinjukuAreaPage() {
               {
                 rank: 1,
                 name: "メディカルブロー 新宿院",
-                price: "28,000円〜",
+                price: "総額 約102,200円〜",
                 access: "新宿駅南口より徒歩5分",
                 station: "JR各線・小田急線・京王線・東京メトロ丸ノ内線「新宿駅」",
                 hours: "10:00〜20:00",
-                point: "年間60,000例超の実績を持つ業界最大手。6Dストロークで自然な毛並み感を実現。新宿院はグランドマスターを含む経験豊富な施術者が多数在籍し、予約枠も豊富。",
+                point: "累計23万件超の実績と7Dストローク®が強みの大手。ランク制のため、メニュー価格でなく指名料込みの総額（当サイト検証: 眉2回約102,200円〜）で比較するのがコツ。",
                 link: "/review/medicalbrow",
                 color: "bg-yellow-400",
               },
               {
                 rank: 2,
                 name: "デイジークリニック 新宿院",
-                price: "49,800円〜",
+                price: "眉2回 93,800円〜",
                 access: "新宿駅東口より徒歩5分",
                 station: "JR各線・東京メトロ丸ノ内線・副都心線「新宿駅」「新宿三丁目駅」",
                 hours: "10:00〜19:00",
@@ -183,8 +183,8 @@ export default function ShinjukuAreaPage() {
               </thead>
               <tbody>
                 {[
-                  { name: "メディカルブロー 新宿院", price: "28,000円〜", times: "2回", per: "14,000円〜", retouch: "20,000円〜" },
-                  { name: "デイジークリニック 新宿院", price: "49,800円〜", times: "2回", per: "24,900円〜", retouch: "30,000円〜" },
+                  { name: "メディカルブロー 新宿院", price: "総額 約102,200円〜", times: "2回", per: "—（ランク・指名料で変動）", retouch: "公式で要確認" },
+                  { name: "DAZZY CLINIC 新宿本院", price: "93,800円〜（Natural Brow）", times: "2回", per: "—（メニューで変動）", retouch: "公式で要確認" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -216,15 +216,15 @@ export default function ShinjukuAreaPage() {
             {[
               {
                 q: "新宿で一番安いアートメイククリニックはどこですか？",
-                a: "メディカルブロー新宿院が28,000円〜（2回セット）で最安です。施術者ランクによって料金が変動しますが、下位ランクでも基本的な技術研修は共通のため品質は保証されています。",
+                a: "「安さ」はメニュー表の価格でなく指名料込みの総額で比べるのがポイントです。当サイト検証（2026年6月12日・税込）では、DAZZY CLINIC新宿本院のNatural Browが眉2回93,800円、メディカルブローは指名料込み総額で約102,200円〜が目安です。施術者ランクで変動するためカウンセリングで総額を確認してください。",
               },
               {
                 q: "新宿駅からの行き方を教えてください",
-                a: "メディカルブロー新宿院は南口から徒歩5分、デイジークリニック新宿院は東口から徒歩5分です。どちらも駅から近く迷いにくい立地にあります。",
+                a: "どちらも新宿駅から徒歩圏ですが、出口・所要時間は公式サイトのアクセス案内で最新情報をご確認ください（ビル移転・改装で変わる場合があります）。",
               },
               {
                 q: "メディカルブローとデイジーの違いは何ですか？",
-                a: "メディカルブローは6Dストローク（毛並み）が得意で料金も安め。デイジーはオリジナルの「dazzy brow」（パウダー×毛並みのハイブリッド）が特徴で、より華やかな仕上がりを求める方に人気です。",
+                a: "メディカルブローは7Dストローク®（毛並み）と累計23万件超の実績が強み。デイジーは機械彫り・手彫り・併用の3技法から選べるのが特徴です。仕上がりの好みとランク・指名料込みの総額で比較しましょう。",
               },
               {
                 q: "土日は予約が取りにくいですか？",
@@ -315,7 +315,7 @@ export default function ShinjukuAreaPage() {
       </div>
 
       {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "新宿で一番安いアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院が28,000円〜（2回セット）で最安です。施術者ランクによって料金が変動しますが、下位ランクでも基本的な技術研修は共通のため品質は保証されています。"}}, {"@type": "Question", "name": "新宿駅からの行き方を教えてください", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院は南口から徒歩5分、デイジークリニック新宿院は東口から徒歩5分です。どちらも駅から近く迷いにくい立地にあります。"}}, {"@type": "Question", "name": "メディカルブローとデイジーの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローは6Dストローク（毛並み）が得意で料金も安め。デイジーはオリジナルの「dazzy brow」（パウダー×毛並みのハイブリッド）が特徴で、より華やかな仕上がりを求める方に人気です。"}}, {"@type": "Question", "name": "土日は予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "新宿エリアは人気が高いため、土日は2〜3週間前の予約がおすすめです。平日の夕方以降なら比較的空いていることが多いです。"}}, {"@type": "Question", "name": "新宿でメンズアートメイクは受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、メディカルブロー新宿院はメンズアートメイクの実績も豊富です。男性の眉毛デザインに特化した施術者も在籍しています。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "新宿で一番安いアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "「安さ」はメニュー表の価格でなく指名料込みの総額で比べるのがポイントです。当サイト検証（2026年6月12日・税込）では、DAZZY CLINIC新宿本院のNatural Browが眉2回93,800円、メディカルブローは指名料込み総額で約102,200円〜が目安です。施術者ランクで変動するためカウンセリングで総額を確認してください。"}}, {"@type": "Question", "name": "新宿駅からの行き方を教えてください", "acceptedAnswer": {"@type": "Answer", "text": "どちらも新宿駅から徒歩圏ですが、出口・所要時間は公式サイトのアクセス案内で最新情報をご確認ください（ビル移転・改装で変わる場合があります）。"}}, {"@type": "Question", "name": "メディカルブローとデイジーの違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローは7Dストローク®（毛並み）と累計23万件超の実績が強み。デイジーは機械彫り・手彫り・併用の3技法から選べるのが特徴です。仕上がりの好みとランク・指名料込みの総額で比較しましょう。"}}, {"@type": "Question", "name": "土日は予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "新宿エリアは人気が高いため、土日は2〜3週間前の予約がおすすめです。平日の夕方以降なら比較的空いていることが多いです。"}}, {"@type": "Question", "name": "新宿でメンズアートメイクは受けられますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい、メディカルブロー新宿院はメンズアートメイクの実績も豊富です。男性の眉毛デザインに特化した施術者も在籍しています。"}}]}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "新宿", "item": "https://artmake-hikaku.com/area/shinjuku/"}]}) }} />
     </main>
   );

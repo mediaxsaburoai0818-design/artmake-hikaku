@@ -5,7 +5,7 @@ import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   robots: { index: false, follow: true },
-  title: "アートメイク 東京 おすすめクリニック8選｜エリア別徹底比較【2026年最新】| アートメイク比較ナビ",
+  title: "東京のアートメイクおすすめクリニック比較【2026年】実際に払う総額・エリア別に解説",
   description:
     "東京でおすすめのアートメイククリニック5院を表参道・新宿・銀座・六本木エリア別に徹底比較。メディカルブロー、デイジー、ファーストアートメイク、クレアージュの料金・アクセス・口コミを紹介。",
   keywords: "アートメイク 東京 おすすめ,アートメイク 東京,眉毛アートメイク 東京,アートメイク 東京 安い,アートメイク 東京 人気",
@@ -106,91 +106,51 @@ export default function TokyoAreaPage() {
       <section className="py-16 px-4 bg-gray-50" id="clinics">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-10">
-            東京のおすすめクリニック8選
+            東京の掲載クリニック（当サイト検証済み4院）
           </h2>
           <div className="space-y-6">
             {[
               {
                 rank: 1,
-                name: "メディカルブロー 表参道院",
-                price: "28,000円〜",
-                access: "表参道駅A1出口より徒歩3分",
-                point: "年間症例数60,000例超の圧倒的実績。6Dストロークで自然な毛並み感を実現。表参道の他、新宿・六本木・銀座にも展開。",
-                areas: "表参道・新宿・六本木・銀座",
+                name: "メディカルブロー（表参道・新宿ほか）",
+                price: "総額 約102,200円〜",
+                access: "表参道ほか都内複数院（詳細は公式サイトで要確認）",
+                point: "累計23万件超の実績と7Dストローク®が強み。ランク制のため指名料込みの総額で比較を（当サイト検証: 眉2回・指名料込み目安）。",
+                areas: "表参道・新宿ほか",
                 link: "/review/medicalbrow",
                 color: "bg-yellow-400",
               },
               {
                 rank: 2,
-                name: "メディカルブロー 新宿院",
-                price: "28,000円〜",
-                access: "新宿駅南口より徒歩5分",
-                point: "新宿エリアで最もアクセスの良い大手院。平日夜20時まで営業で仕事帰りにも通いやすい。",
-                areas: "新宿",
-                link: "/review/medicalbrow",
+                name: "DAZZY CLINIC（デイジー）新宿本院",
+                price: "眉2回 93,800円〜",
+                access: "新宿（新宿本院）",
+                point: "3種類の技法から選べる。院ごとに料金が異なり、新宿本院のNatural Browは93,800円（2026年6月12日公式確認・税込）。LINEビデオカウンセリング対応。",
+                areas: "新宿（ほか札幌・福岡天神）",
+                link: "/review/dazzy",
                 color: "bg-gray-300",
               },
               {
                 rank: 3,
-                name: "デイジークリニック 新宿院",
-                price: "49,800円〜",
-                access: "新宿駅東口より徒歩5分",
-                point: "オリジナル技法「dazzy brow」が大人気。ナチュラルからしっかりメイク風まで幅広いデザインに対応。",
-                areas: "新宿",
-                link: "/review/dazzy",
+                name: "クレアージュ東京",
+                price: "総額 約135,300円（眉3回）",
+                access: "有楽町",
+                point: "指名料なしの明朗会計が特徴。眉3回セットで約135,300円（2026年6月12日公式確認・税込）。回数を重ねて仕上げたい人向け。",
+                areas: "有楽町",
+                link: "/review/creage",
                 color: "bg-amber-600",
               },
               {
                 rank: 4,
-                name: "ファーストアートメイク 銀座院",
-                price: "38,500円〜",
-                access: "銀座駅B5出口より徒歩3分",
-                point: "初回限定価格が魅力。パウダー眉の仕上がりが上品で、銀座らしい洗練されたデザインを提供。",
-                areas: "銀座",
+                name: "ファーストアートメイク（銀座）",
+                price: "モニター総額 約93,500円〜",
+                access: "銀座（全国27院展開）",
+                point: "全国27院・ランク制。モニター利用で総額を抑えやすい（2026年6月12日公式確認・税込）。適用条件はカウンセリングで要確認。",
+                areas: "銀座ほか全国",
                 link: "/review/first-artmake",
-                color: "bg-rose-200",
+                color: "bg-rose-400",
               },
-              {
-                rank: 5,
-                name: "クレアージュ東京 有楽町院",
-                price: "44,000円/回",
-                access: "有楽町駅日比谷口より徒歩1分",
-                point: "3回施術で自然なグラデーションを実現。30代〜50代の大人女性から圧倒的支持。丁寧なカウンセリングが好評。",
-                areas: "有楽町（銀座エリア）",
-                link: "/review/creage",
-                color: "bg-rose-100",
-              },
-              {
-                rank: 6,
-                name: "THE ARTMAKE TOKYO",
-                price: "88,000円（2回）",
-                access: "銀座一丁目駅より徒歩1分",
-                point: "銀座エリアの専門院。眉2回88,000円（平日モニター価格）とリーズナブル。眉・リップ・ヘアライン・ほくろと幅広いメニューに対応。※最新情報は公式サイトでご確認ください",
-                areas: "銀座",
-                link: "#",
-                color: "bg-rose-200",
-              },
-              {
-                rank: 7,
-                name: "ナチュラルアートメイク東京（渋谷院）",
-                price: "88,000円（2回）",
-                access: "渋谷駅より徒歩2分",
-                point: "全国24院展開の大手グループ。眉2回88,000円で高品質な施術を提供。駅近で通いやすく、渋谷エリアで人気上昇中。※最新情報は公式サイトでご確認ください",
-                areas: "渋谷",
-                link: "#",
-                color: "bg-rose-200",
-              },
-              {
-                rank: 8,
-                name: "Bx clinic tokyo",
-                price: "77,000円〜",
-                access: "恵比寿駅より徒歩3分",
-                point: "完全アーティスト指名制で、自分に合った施術者を選べる。眉77,000円〜。恵比寿の洗練された空間で施術を受けられる。※最新情報は公式サイトでご確認ください",
-                areas: "恵比寿",
-                link: "#",
-                color: "bg-rose-200",
-              },
-            ].map((clinic) => (
+            ]].map((clinic) => (
               <div
                 key={clinic.rank}
                 className="bg-white border border-rose-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
@@ -230,6 +190,7 @@ export default function TokyoAreaPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs text-gray-400 mt-4">※掲載は当サイトが公式サイトで料金・院情報を確認できたクリニックのみです（2026年6月12日確認・税込）。駅からの徒歩分数・営業時間は変動するため記載していません。最新情報は各公式サイトでご確認ください。</p>
         </div>
       </section>
 
@@ -252,13 +213,10 @@ export default function TokyoAreaPage() {
               </thead>
               <tbody>
                 {[
-                  { name: "メディカルブロー", price: "28,000円〜", times: "2回", area: "表参道/新宿/六本木/銀座", station: "各駅徒歩3〜5分" },
-                  { name: "ファーストアートメイク", price: "38,500円〜", times: "1回", area: "銀座", station: "銀座駅徒歩3分" },
-                  { name: "クレアージュ東京", price: "132,000円", times: "3回", area: "有楽町", station: "有楽町駅徒歩1分" },
-                  { name: "デイジークリニック", price: "49,800円〜", times: "2回", area: "新宿", station: "新宿駅徒歩5分" },
-                  { name: "THE ARTMAKE TOKYO", price: "88,000円", times: "2回", area: "銀座", station: "銀座一丁目駅徒歩1分" },
-                  { name: "ナチュラルアートメイク東京", price: "88,000円", times: "2回", area: "渋谷", station: "渋谷駅徒歩2分" },
-                  { name: "Bx clinic tokyo", price: "77,000円〜", times: "1回〜", area: "恵比寿", station: "恵比寿駅徒歩3分" },
+                  { name: "メディカルブロー", price: "総額 約102,200円〜", times: "2回", area: "表参道/新宿ほか", station: "公式サイトで要確認" },
+                  { name: "DAZZY CLINIC（新宿本院）", price: "93,800円〜", times: "2回", area: "新宿", station: "公式サイトで要確認" },
+                  { name: "クレアージュ東京", price: "総額 約135,300円", times: "3回", area: "有楽町", station: "公式サイトで要確認" },
+                  { name: "ファーストアートメイク", price: "モニター総額 約93,500円〜", times: "2回", area: "銀座ほか全国27院", station: "公式サイトで要確認" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -275,7 +233,7 @@ export default function TokyoAreaPage() {
             </table>
           </div>
           <p className="text-xs text-gray-400 mt-4 text-center">
-            ※ 料金は税込の目安です。施術者ランク・キャンペーン時期により変動します。
+            ※ 2026年6月12日に各院公式サイトで確認した税込価格（総額表記は指名料等込みの当サイト検証目安）。施術者ランク・キャンペーン時期により変動します。公式で料金・院情報を確認できたクリニックのみ掲載しています。
           </p>
         </div>
       </section>
@@ -290,7 +248,7 @@ export default function TokyoAreaPage() {
             {[
               {
                 q: "東京で一番おすすめのアートメイククリニックはどこですか？",
-                a: "総合的に見てメディカルブローがおすすめです。表参道・新宿・六本木・銀座と4拠点あり、年間60,000例以上の実績があります。料金も28,000円〜とリーズナブルです。",
+                a: "実績重視ならメディカルブロー（累計23万件超・7Dストローク®）、指名料なしの明朗会計ならクレアージュ東京、総額を抑えるならファーストアートメイクのモニター、と目的で分かれます。当サイト検証の総額目安は眉2回で約9.3万〜13.6万円です（2026年6月12日確認・税込）。",
               },
               {
                 q: "東京のどのエリアがアートメイクに通いやすいですか？",
@@ -302,11 +260,11 @@ export default function TokyoAreaPage() {
               },
               {
                 q: "東京で安くアートメイクを受けるコツはありますか？",
-                a: "メディカルブローの下位ランク施術者を選ぶと28,000円〜で受けられます。また、モニター制度の活用やキャンペーン時期を狙うことで、さらにお得に受けられます。",
+                a: "モニター制度の活用が最も効果的です（例: ファーストアートメイクはモニターで総額約93,500円〜・2026年6月12日確認）。ランク制の院では施術者ランクを下げる選択肢もありますが、メニュー表の価格だけでなく指名料込みの総額で比較するのが失敗しないコツです。",
               },
               {
                 q: "仕事帰りに通えるクリニックはありますか？",
-                a: "メディカルブロー新宿院は20時まで、デイジークリニック新宿院も19時まで営業しています。新宿・有楽町エリアのクリニックは仕事帰りに通いやすいです。",
+                a: "新宿・有楽町エリアには夜間まで受け付けるクリニックもありますが、営業時間は院・時期により変わるため、各公式サイトの最新情報でご確認ください。DAZZY CLINICはLINEのビデオカウンセリングに対応しており、来院前の相談は仕事帰りでもしやすい仕組みです。",
               },
             ].map((faq, i) => (
               <details key={i} className="bg-white rounded-lg shadow-sm group">
@@ -389,7 +347,7 @@ export default function TokyoAreaPage() {
       </div>
 
       {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "東京で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "総合的に見てメディカルブローがおすすめです。表参道・新宿・六本木・銀座と4拠点あり、年間60,000例以上の実績があります。料金も28,000円〜とリーズナブルです。"}}, {"@type": "Question", "name": "東京のどのエリアがアートメイクに通いやすいですか？", "acceptedAnswer": {"@type": "Answer", "text": "アクセス重視なら新宿がおすすめです。JR・私鉄・地下鉄が集中し、どこからでも通いやすい立地です。高級感を重視するなら銀座・表参道エリアがおすすめです。"}}, {"@type": "Question", "name": "東京のクリニックは予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "人気院は土日の予約が埋まりやすい傾向があります。平日夕方以降や、開院直後の時間帯が比較的予約を取りやすいです。2〜3週間前の予約がおすすめです。"}}, {"@type": "Question", "name": "東京で安くアートメイクを受けるコツはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブローの下位ランク施術者を選ぶと28,000円〜で受けられます。また、モニター制度の活用やキャンペーン時期を狙うことで、さらにお得に受けられます。"}}, {"@type": "Question", "name": "仕事帰りに通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー新宿院は20時まで、デイジークリニック新宿院も19時まで営業しています。新宿・有楽町エリアのクリニックは仕事帰りに通いやすいです。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "東京で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "実績重視ならメディカルブロー（累計23万件超・7Dストローク®）、指名料なしの明朗会計ならクレアージュ東京、総額を抑えるならファーストアートメイクのモニター、と目的で分かれます。当サイト検証の総額目安は眉2回で約9.3万〜13.6万円です（2026年6月12日確認・税込）。"}}, {"@type": "Question", "name": "東京のどのエリアがアートメイクに通いやすいですか？", "acceptedAnswer": {"@type": "Answer", "text": "アクセス重視なら新宿がおすすめです。JR・私鉄・地下鉄が集中し、どこからでも通いやすい立地です。高級感を重視するなら銀座・表参道エリアがおすすめです。"}}, {"@type": "Question", "name": "東京のクリニックは予約が取りにくいですか？", "acceptedAnswer": {"@type": "Answer", "text": "人気院は土日の予約が埋まりやすい傾向があります。平日夕方以降や、開院直後の時間帯が比較的予約を取りやすいです。2〜3週間前の予約がおすすめです。"}}, {"@type": "Question", "name": "東京で安くアートメイクを受けるコツはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "モニター制度の活用が最も効果的です（例: ファーストアートメイクはモニターで総額約93,500円〜・2026年6月12日確認）。ランク制の院では施術者ランクを下げる選択肢もありますが、メニュー表の価格だけでなく指名料込みの総額で比較するのが失敗しないコツです。"}}, {"@type": "Question", "name": "仕事帰りに通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "新宿・有楽町エリアには夜間まで受け付けるクリニックもありますが、営業時間は院・時期により変わるため、各公式サイトの最新情報でご確認ください。DAZZY CLINICはLINEのビデオカウンセリングに対応しており、来院前の相談は仕事帰りでもしやすい仕組みです。"}}]}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "東京", "item": "https://artmake-hikaku.com/area/tokyo/"}]}) }} />
     </main>
   );
