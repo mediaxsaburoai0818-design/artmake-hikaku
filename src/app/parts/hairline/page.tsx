@@ -231,6 +231,29 @@ export default function HairlinePage() {
             </div>
           </div>
 
+      {/* 検証済み実額 */}
+      <section className="py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-3">公式確認できた実額（2026年7月7日・税込）</h2>
+            <p className="text-sm text-gray-600 mb-4">ヘアライン・薄毛向けヘアアートメイクの料金を公式サイトで確認できたクリニックです。</p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white rounded-xl p-5 border border-gray-100">
+                <p className="font-bold text-gray-800 mb-1">アートメイクギャラリー（AMG）</p>
+                <p className="text-sm text-gray-600 mb-2">ヘアライン1回75,000円／2回140,000円（モニター2回98,000円）。生え際だけでなく分け目〜頭頂部のSMP・メンズ（M字/頭頂部）も公式メニューあり。全国6院。</p>
+                <Link href="/review/amg/" className="text-rose-500 font-semibold text-sm underline">詳細レビュー →</Link>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-gray-100">
+                <p className="font-bold text-gray-800 mb-1">バイオタッチ札幌（SSCビューティー）</p>
+                <p className="text-sm text-gray-600 mb-2">ヘアライン44,000円〜187,000円（範囲により変動・公式レンジ表記）。札幌駅徒歩1分・指名料1,100円。</p>
+                <Link href="/review/biotouch-sapporo/" className="text-rose-500 font-semibold text-sm underline">詳細レビュー →</Link>
+              </div>
+            </div>
+            <p className="text-xs text-gray-400 mt-3">※範囲・毛量により総額が変わる部位のため、見積もりはカウンセリングでの確認が必須です。</p>
+          </div>
+        </div>
+      </section>
+
           {/* FAQ */}
           <h2 className="text-2xl font-bold mb-6 text-center">よくある質問（FAQ）</h2>
           <div className="space-y-4 mb-10">

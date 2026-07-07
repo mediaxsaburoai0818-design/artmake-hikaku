@@ -286,6 +286,22 @@ export default function RemovalPage() {
             <p className="text-sm text-[#8B8580] mt-4">※ 除去の必要がないよう、最初から信頼できるクリニックを選ぶことが最も重要です。メディカルブロー（95点）やクレアージュ東京（92点）など、実績豊富なクリニックがおすすめです。</p>
           </div>
 
+      {/* 検証済み除去クリニックCV */}
+      <section className="py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
+            <h2 className="text-2xl font-bold mb-3">検証済みの除去対応クリニック（2026年7月7日 公式確認）</h2>
+            <p className="text-sm text-gray-600 mb-4">当サイトが公式サイトで除去メニューの実額を確認できたクリニックです。除去は複数回前提のため、1回単価だけでなく総額で比較しましょう。</p>
+            <div className="bg-white rounded-xl p-5 border border-gray-100">
+              <p className="font-bold text-gray-800 mb-1">アートメイクギャラリー（AMG）</p>
+              <p className="text-sm text-gray-600 mb-2">ピコレーザー除去 両眉1回48,000円（モニター36,000円）／眉専用リムーバル除去 1回25,000円（モニター17,500円）。公式に「少なくても2〜3回の照射は必要」と明記。実施院: 銀座・横浜・福岡天神。</p>
+              <Link href="/review/amg/" className="inline-block text-rose-500 font-semibold text-sm underline">AMGの詳細レビューを見る →</Link>
+            </div>
+            <p className="text-xs text-gray-400 mt-3">※料金は2026年7月7日確認の税込表記。除去の適応・回数は肌状態により異なるため、必ずカウンセリングでご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
           {/* FAQ */}
           <h2 className="text-2xl font-bold mt-16 mb-8 text-center">よくある質問（FAQ）</h2>
           <div className="space-y-4">

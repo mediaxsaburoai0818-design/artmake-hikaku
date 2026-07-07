@@ -170,6 +170,27 @@ export default function MensArtmakePage() {
             ))}
           </div>
 
+      {/* メンズ関連メニューの接続 */}
+      <section className="py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+            <h2 className="text-xl font-bold mb-3">眉以外のメンズメニューも検討する方へ</h2>
+            <div className="grid md:grid-cols-2 gap-4 text-sm">
+              <div className="bg-white rounded-xl p-5 border border-gray-100">
+                <p className="font-bold text-gray-800 mb-1">薄毛向けヘアアートメイク（SMP）</p>
+                <p className="text-gray-600 mb-2">M字・頭頂部に対応するメンズSMPはAMGが公式メニュー化（1回75,000円・2026年7月7日確認）。生え際の後退が気になる方は眉と同時相談も可能です。</p>
+                <Link href="/review/amg/" className="text-rose-500 font-semibold underline">AMGのレビュー →</Link>
+              </div>
+              <div className="bg-white rounded-xl p-5 border border-gray-100">
+                <p className="font-bold text-gray-800 mb-1">男性専門院で受けたい方</p>
+                <p className="text-gray-600 mb-2">メディカルブローのメンズ専門「メンズブロー」（六本木）は男性専門院として実在を公式確認済み。男性の来院しやすさを重視するならこちら。</p>
+                <Link href="/review/medicalbrow/" className="text-rose-500 font-semibold underline">メディカルブローのレビュー →</Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
           {/* FAQ */}
           <section id="faq" className="mb-12">
             <h2 className="text-2xl font-bold mb-6 text-center">よくある質問（FAQ）</h2>
