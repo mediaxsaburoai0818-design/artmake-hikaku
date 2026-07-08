@@ -5,12 +5,12 @@ import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   robots: { index: false, follow: true },
-  title: "アートメイク 大阪 おすすめクリニック7選｜心斎橋・梅田エリア比較【2026年最新】| アートメイク比較ナビ",
+  title: "アートメイク 大阪 おすすめクリニック5選（公式検証済み）｜心斎橋・梅田エリア比較【2026年最新】| アートメイク比較ナビ",
   description:
-    "大阪でおすすめのアートメイククリニック4院を心斎橋・梅田エリア別に徹底比較。トゥルーデザイン、メディカルブロー、デイジー、クレアージュの料金・アクセス・口コミを紹介。",
+    "大阪のアートメイククリニック5院を心斎橋・梅田エリア別に比較。クリニーク・トゥルーデザイン・THE ARTMAKE TOKYO・メディカルブロー・クレアージュの料金を各公式サイトで検証（2026年7月7日確認・税込）。",
   keywords: "アートメイク 大阪 おすすめ,アートメイク 大阪,眉毛アートメイク 大阪,アートメイク 心斎橋,アートメイク 梅田",
   openGraph: {
-    title: "アートメイク 大阪 おすすめクリニック4選｜心斎橋・梅田エリア比較",
+    title: "アートメイク 大阪 おすすめ5院｜心斎橋・梅田エリア比較（公式検証）",
     description:
       "大阪のアートメイククリニックを心斎橋・梅田エリア別に比較。料金・技術・アクセスで選ぶ。",
     type: "article",
@@ -35,7 +35,7 @@ export default function OsakaAreaPage() {
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
             大阪は心斎橋・梅田を中心に実力派クリニックが集結。
             <br className="hidden md:block" />
-            関西エリアで人気の4院を料金・技術・アクセスで徹底比較します。
+            関西で通える公式検証済みの5院を、料金・技術・アクセスで徹底比較します（2026年7月7日確認）。
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <a
@@ -91,72 +91,52 @@ export default function OsakaAreaPage() {
             {[
               {
                 rank: 1,
-                name: "トゥルーデザインクリニック 心斎橋院",
-                price: "59,400円〜",
-                access: "心斎橋駅7番出口より徒歩3分",
+                name: "クリニーク大阪心斎橋",
+                price: "4D眉 初回65,780円〜",
+                access: "心斎橋駅より徒歩圏内",
                 station: "大阪メトロ御堂筋線・長堀鶴見緑地線「心斎橋駅」",
-                point: "完全オーダーメイドデザインが特徴。骨格・筋肉・表情を分析し、一人ひとりに最適な眉をデザイン。関西で最も技術力が高いと評判のクリニック。",
-                link: "/review/true-design",
+                point: "4D眉（毛並み＋パウダー）初回限定65,780円・3D眉2回60,280円と実額が明確（2026年7月7日公式確認・税込）。大阪は心斎橋のみの展開で、料金体系がわかりやすいのが特徴。",
+                link: "/review/clinique",
                 color: "bg-yellow-400",
               },
               {
                 rank: 2,
-                name: "メディカルブロー 大阪院",
-                price: "28,000円〜",
-                access: "梅田駅より徒歩5分",
-                station: "JR「大阪駅」・大阪メトロ「梅田駅」・阪急「大阪梅田駅」",
-                point: "東京で人気の6Dストロークが大阪でも受けられる。梅田エリアで最もコスパが良く、京都・神戸からも通いやすい好立地。",
-                link: "/review/medicalbrow",
+                name: "トゥルーデザインクリニック 心斎橋院",
+                price: "眉2回 40,000円〜",
+                access: "心斎橋駅7番出口より徒歩3分",
+                station: "大阪メトロ御堂筋線・長堀鶴見緑地線「心斎橋駅」",
+                point: "完全オーダーメイドデザインが強み。眉2回40,000円〜＋指名料1,500円・麻酔別（2026年7月確認）。関西で技術力に定評のある心斎橋の実力院。",
+                link: "/review/true-design",
                 color: "bg-gray-300",
               },
               {
                 rank: 3,
-                name: "デイジークリニック 大阪院",
-                price: "49,800円〜",
-                access: "心斎橋駅より徒歩4分",
-                station: "大阪メトロ御堂筋線「心斎橋駅」",
-                point: "SNSで話題のdazzy browが大阪でも施術可能。ナチュラルからグラマラスまで幅広いデザインに対応。モニター割引も実施中。",
-                link: "/review/dazzy",
+                name: "THE ARTMAKE TOKYO 大阪院",
+                price: "眉モニター2回 88,000円〜",
+                access: "曽根崎新地（梅田エリア）",
+                station: "JR「大阪駅」・大阪メトロ「梅田駅」",
+                point: "全国6院展開。眉モニター2回88,000円（平日）・通常1回80,000円（2026年7月7日確認）。モニターは写真掲載条件あり・経験者は+20,000円の注記に注意。",
+                link: "/review/the-artmake-tokyo",
                 color: "bg-amber-600",
               },
               {
                 rank: 4,
-                name: "クレアージュ 大阪院",
-                price: "44,000円/回",
+                name: "メディカルブロー 大阪院",
+                price: "眉モニター 28,000円〜",
                 access: "梅田駅より徒歩5分",
-                station: "JR「大阪駅」・大阪メトロ「梅田駅」",
-                point: "3回施術で丁寧にグラデーションを仕上げる。30代〜50代に人気。落ち着いた院内で安心して施術を受けられる。",
-                link: "/review/creage",
+                station: "JR「大阪駅」・大阪メトロ「梅田駅」・阪急「大阪梅田駅」",
+                point: "全国同一料金体系。眉モニター28,000円〜・通常2回90,000〜150,000円（ランク別・2026年7月確認）。指名するランクで総額が変わるため、指名料込みで比較を。",
+                link: "/review/medicalbrow",
                 color: "bg-rose-200",
               },
               {
                 rank: 5,
-                name: "デザインビューティークリニック",
-                price: "33,000円（1回）",
-                access: "梅田/心斎橋/難波の3院展開",
-                station: "各院とも最寄駅より徒歩圏内",
-                point: "眉1回33,000円のワンプライス制でわかりやすい料金体系。テレビCM放映中で知名度急上昇。大阪に3院展開し、通いやすさも魅力。※最新情報は公式サイトでご確認ください",
-                link: "#",
-                color: "bg-rose-100",
-              },
-              {
-                rank: 6,
-                name: "アサイクリニック",
-                price: "66,000円〜（モニター2回）",
-                access: "心斎橋・なんばエリア",
-                station: "大阪メトロ「心斎橋駅」「なんば駅」",
-                point: "内科・皮膚科を併設した総合クリニック。眉モニター2回66,000円〜と良心的な価格設定。医療機関ならではの安心感が魅力。※最新情報は公式サイトでご確認ください",
-                link: "#",
-                color: "bg-rose-100",
-              },
-              {
-                rank: 7,
-                name: "メディカルエピレーションクリニック",
-                price: "33,000円〜（モニター1回）",
-                access: "心斎橋駅より徒歩圏内",
-                station: "大阪メトロ御堂筋線「心斎橋駅」",
-                point: "眉モニター1回33,000円と大阪でもトップクラスの低価格。心斎橋エリアで気軽にアートメイクを試したい方におすすめ。※最新情報は公式サイトでご確認ください",
-                link: "#",
+                name: "クレアージュ 大阪院",
+                price: "眉3回 132,000円",
+                access: "梅田駅より徒歩5分",
+                station: "JR「大阪駅」・大阪メトロ「梅田駅」",
+                point: "3回セットで丁寧に仕上げる方針。眉3回132,000円＝1回あたり44,000円（初診料込みの総額目安・2026年7月確認）。落ち着いた院内で30〜50代に人気。",
+                link: "/review/creage",
                 color: "bg-rose-100",
               },
             ].map((clinic) => (
@@ -221,13 +201,11 @@ export default function OsakaAreaPage() {
               </thead>
               <tbody>
                 {[
-                  { name: "メディカルブロー 大阪院", price: "28,000円〜", times: "2回", per: "14,000円〜", area: "梅田" },
+                  { name: "クリニーク大阪心斎橋", price: "65,780円〜(初回4D)", times: "1回", per: "65,780円〜", area: "心斎橋" },
+                  { name: "トゥルーデザイン 心斎橋院", price: "40,000円〜", times: "2回", per: "20,000円〜", area: "心斎橋" },
+                  { name: "THE ARTMAKE TOKYO 大阪院", price: "88,000円〜(モニター)", times: "2回", per: "44,000円〜", area: "梅田(曽根崎新地)" },
+                  { name: "メディカルブロー 大阪院", price: "28,000円〜(モニター)", times: "2回", per: "14,000円〜", area: "梅田" },
                   { name: "クレアージュ 大阪院", price: "132,000円", times: "3回", per: "44,000円", area: "梅田" },
-                  { name: "デイジークリニック 大阪院", price: "49,800円〜", times: "2回", per: "24,900円〜", area: "心斎橋" },
-                  { name: "トゥルーデザイン 心斎橋院", price: "59,400円〜", times: "2回", per: "29,700円〜", area: "心斎橋" },
-                  { name: "デザインビューティークリニック", price: "33,000円", times: "1回", per: "33,000円", area: "梅田/心斎橋/難波" },
-                  { name: "アサイクリニック", price: "66,000円〜", times: "2回（モニター）", per: "33,000円〜", area: "心斎橋・なんば" },
-                  { name: "メディカルエピレーションクリニック", price: "33,000円〜", times: "1回（モニター）", per: "33,000円〜", area: "心斎橋" },
                 ].map((row, i) => (
                   <tr
                     key={i}
@@ -259,7 +237,7 @@ export default function OsakaAreaPage() {
             {[
               {
                 q: "大阪で一番おすすめのアートメイククリニックはどこですか？",
-                a: "技術力重視ならトゥルーデザインクリニック心斎橋院がおすすめです。完全オーダーメイドのデザイン力が関西トップクラス。コスパ重視ならメディカルブロー大阪院が28,000円〜で最安です。",
+                a: "技術力重視ならトゥルーデザインクリニック心斎橋院（眉2回40,000円〜）、料金の分かりやすさならクリニーク大阪心斎橋（4D眉初回65,780円）が候補です。コスパ重視ならメディカルブロー大阪院のモニター28,000円〜が最安クラスです（いずれも2026年7月確認）。",
               },
               {
                 q: "心斎橋と梅田、どちらのエリアがおすすめですか？",
@@ -271,11 +249,11 @@ export default function OsakaAreaPage() {
               },
               {
                 q: "大阪のクリニックは東京と料金が違いますか？",
-                a: "大手クリニック（メディカルブロー、デイジー、クレアージュ）は全国統一料金のため、東京と同じ価格で受けられます。トゥルーデザインは大阪が本院です。",
+                a: "大手クリニック（メディカルブロー・クレアージュ・THE ARTMAKE TOKYO）は全国ほぼ統一料金のため、東京と同水準で受けられます。トゥルーデザイン・クリニークは心斎橋の院です。",
               },
               {
                 q: "大阪で安くアートメイクを受ける方法はありますか？",
-                a: "メディカルブロー大阪院の下位ランク施術者を選ぶのが最安です。また、デイジークリニックのモニター制度を活用すると10〜20%OFFで受けられます。",
+                a: "メディカルブロー大阪院の下位ランク施術者のモニター（28,000円〜）を選ぶのが最安クラスです。THE ARTMAKE TOKYOのモニター（写真掲載条件あり）も割安ですが、経験者は+20,000円の注記に注意してください。",
               },
             ].map((faq, i) => (
               <details key={i} className="bg-white rounded-lg shadow-sm group">
@@ -358,7 +336,7 @@ export default function OsakaAreaPage() {
       </div>
 
       {/* JSON-LD */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "大阪で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "技術力重視ならトゥルーデザインクリニック心斎橋院がおすすめです。完全オーダーメイドのデザイン力が関西トップクラス。コスパ重視ならメディカルブロー大阪院が28,000円〜で最安です。"}}, {"@type": "Question", "name": "心斎橋と梅田、どちらのエリアがおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "JR・阪急で通うなら梅田エリアがアクセス便利です。御堂筋線で通うなら心斎橋も好立地。買い物も楽しみたい方は心斎橋がおすすめです。"}}, {"@type": "Question", "name": "京都や神戸から通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "梅田エリアのメディカルブロー大阪院・クレアージュ大阪院が、JR・阪急で京都・神戸からアクセスしやすいです。片道30〜40分程度で通えます。"}}, {"@type": "Question", "name": "大阪のクリニックは東京と料金が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "大手クリニック（メディカルブロー、デイジー、クレアージュ）は全国統一料金のため、東京と同じ価格で受けられます。トゥルーデザインは大阪が本院です。"}}, {"@type": "Question", "name": "大阪で安くアートメイクを受ける方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー大阪院の下位ランク施術者を選ぶのが最安です。また、デイジークリニックのモニター制度を活用すると10〜20%OFFで受けられます。"}}]}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "大阪で一番おすすめのアートメイククリニックはどこですか？", "acceptedAnswer": {"@type": "Answer", "text": "技術力重視ならトゥルーデザインクリニック心斎橋院（眉2回40,000円〜）、料金の分かりやすさならクリニーク大阪心斎橋（4D眉初回65,780円）が候補です。コスパ重視ならメディカルブロー大阪院のモニター28,000円〜が最安クラスです（いずれも2026年7月確認）。"}}, {"@type": "Question", "name": "心斎橋と梅田、どちらのエリアがおすすめですか？", "acceptedAnswer": {"@type": "Answer", "text": "JR・阪急で通うなら梅田エリアがアクセス便利です。御堂筋線で通うなら心斎橋も好立地。買い物も楽しみたい方は心斎橋がおすすめです。"}}, {"@type": "Question", "name": "京都や神戸から通えるクリニックはありますか？", "acceptedAnswer": {"@type": "Answer", "text": "梅田エリアのメディカルブロー大阪院・クレアージュ大阪院が、JR・阪急で京都・神戸からアクセスしやすいです。片道30〜40分程度で通えます。"}}, {"@type": "Question", "name": "大阪のクリニックは東京と料金が違いますか？", "acceptedAnswer": {"@type": "Answer", "text": "大手クリニック（メディカルブロー・クレアージュ・THE ARTMAKE TOKYO）は全国ほぼ統一料金のため、東京と同水準で受けられます。トゥルーデザイン・クリニークは心斎橋の院です。"}}, {"@type": "Question", "name": "大阪で安くアートメイクを受ける方法はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "メディカルブロー大阪院の下位ランク施術者のモニター（28,000円〜）を選ぶのが最安クラスです。THE ARTMAKE TOKYOのモニター（写真掲載条件あり）も割安ですが、経験者は+20,000円の注記に注意してください。"}}]}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://artmake-hikaku.com/"}, {"@type": "ListItem", "position": 2, "name": "大阪", "item": "https://artmake-hikaku.com/area/osaka/"}]}) }} />
     </main>
   );
