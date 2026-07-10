@@ -4,8 +4,8 @@ import Breadcrumb from '@/components/Breadcrumb'
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'dazzy skin clinic（デイジークリニック）の口コミ・評判・料金【2026年6月】指名料込み総額・院別を徹底解説',
-  description: 'dazzy skin clinic（デイジークリニック／dazzy CLINIC）の口コミ・評判・料金を徹底調査。眉2回93,800円〜、指名料22,000円〜を含む「実際に払う総額」の目安、新宿・札幌・福岡天神の院別料金、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年6月12日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
+  title: 'dazzy skin clinic（デイジークリニック）の口コミ・評判・料金【2026年7月】指名料込み総額・院別を徹底解説',
+  description: 'dazzy skin clinic（デイジークリニック／dazzy CLINIC）の口コミ・評判・料金を徹底調査。眉2回93,800円〜、指名料22,000円〜を含む「実際に払う総額」の目安、新宿・札幌・福岡天神の院別料金、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年7月10日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
 const goodReviews = [
@@ -152,7 +152,7 @@ export default function DazzyClinicReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-sm text-gray-500 mt-4 text-center">※ 出典: デイジークリニック公式 各院ページ（2026年6月12日確認・税込）。料金は3院で別建てのため、受診予定院の最新料金は公式サイトでご確認ください。</p>
+          <p className="text-sm text-gray-500 mt-4 text-center">※ 出典: デイジークリニック公式 各院ページ（2026年7月10日確認・税込）。料金は3院で別建てのため、受診予定院の最新料金は公式サイトでご確認ください。</p>
         </div>
       </section>
 
@@ -202,7 +202,7 @@ export default function DazzyClinicReviewPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-3">出典: デイジークリニック公式 各院ページ（2026年6月12日確認）。予約はWeb・電話のほか、カウンセリングはLINEのビデオ通話に対応（公式FAQ）。</p>
+            <p className="text-xs text-gray-400 mt-3">出典: デイジークリニック公式 各院ページ（2026年7月10日確認）。予約はWeb・電話のほか、カウンセリングはLINEのビデオ通話に対応（公式FAQ）。</p>
           </div>
 
           <div id="skin" className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-100 scroll-mt-20">
@@ -214,7 +214,7 @@ export default function DazzyClinicReviewPage() {
               <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">①</span><span><strong>デイジークリニックの美容皮膚科部門（SKIN）</strong>：公式サイト内にダーマペン4（9,800円〜）・HIFU・ピコレーザー・医療脱毛・点滴などを扱う美容皮膚科セクションがあります。アートメイクとは別メニューです。</span></li>
               <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">②</span><span><strong>旧・大阪心斎橋院の改称先</strong>：デイジークリニック心斎橋院は「DAILY SKIN CLINIC 心斎橋院」へ改称し、別ブランドとして運営されています。<strong>デイジーのアートメイクは現在、大阪では受けられません</strong>。大阪でアートメイクを受けたい方は<Link href="/compare/dazzy-vs-true-design/" className="text-rose-600 underline">心斎橋のトゥルーデザインとの比較</Link>をご覧ください。</span></li>
             </ul>
-            <p className="text-xs text-gray-400">出典: デイジークリニック公式（skinセクション・院一覧）、ホットペッパービューティー（改称の記載）。2026年6月12日確認</p>
+            <p className="text-xs text-gray-400">出典: デイジークリニック公式（skinセクション・院一覧）、ホットペッパービューティー（改称の記載）。2026年7月10日確認</p>
           </div>
         </div>
       </section>
@@ -357,6 +357,18 @@ export default function DazzyClinicReviewPage() {
       <Link href="/compare/price/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">アートメイク料金比較表</p>
+      </Link>
+      <Link href="/compare/creage-vs-dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">クレアージュ vs デイジー徹底比較</p>
+      </Link>
+      <Link href="/compare/dazzy-vs-firstartmake/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">デイジー vs ファーストアートメイク徹底比較</p>
+      </Link>
+      <Link href="/compare/dazzy-vs-true-design/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">比較</span>
+        <p className="font-semibold mt-1">デイジー vs トゥルーデザイン徹底比較</p>
       </Link>
       <Link href="/compare/all-clinics/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
