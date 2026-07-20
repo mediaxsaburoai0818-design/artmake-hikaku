@@ -278,6 +278,10 @@ export default function StrokePage() {
           <div className="mt-12">
             <h2 className="text-xl font-bold mb-4">関連記事</h2>
             <div className="grid md:grid-cols-3 gap-4">
+              <Link href="/compare/technique/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+                <p className="font-bold text-sm">2D・3D・4D・6Dの違い</p>
+                <p className="text-xs text-[#8B8580] mt-1">技法別に徹底比較</p>
+              </Link>
               <Link href="/knowledge/powder-brow/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
                 <p className="font-bold text-sm">パウダー眉（2D）</p>
                 <p className="text-xs text-[#8B8580] mt-1">ふんわりメイク風の仕上がり</p>

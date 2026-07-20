@@ -253,6 +253,7 @@ export default function RetouchPage() {
             </div>
             <p className="text-xs text-[#8B8580] mt-4">※ 料金は税込・2026年4月時点の情報です。詳細は各クリニック公式サイトをご確認ください。</p>
             <p className="text-xs text-[#8B8580] mt-1">※ トゥルーデザインクリニックの眉リタッチ29,700円〜が5院中最安です。</p>
+            <p className="text-sm text-[#6B6560] mt-4">初回施術＋リタッチを含めた「実際に払う総額」で各院を見比べたい方は、主要8クリニックの公式実額をまとめた<Link href="/compare/price/" className="text-[var(--gold)] font-semibold underline">アートメイク料金比較DB</Link>もあわせてご覧ください。</p>
           </div>
 
           {/* リタッチしないとどうなるか */}

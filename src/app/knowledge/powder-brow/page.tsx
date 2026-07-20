@@ -272,6 +272,10 @@ export default function PowderBrowPage() {
                 <p className="font-bold text-sm">手彫り vs 機械彫り</p>
                 <p className="text-xs text-[#8B8580] mt-1">違いと選び方を徹底比較</p>
               </Link>
+              <Link href="/compare/technique/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+                <p className="font-bold text-sm">2D・3D・4D・6Dの違い</p>
+                <p className="text-xs text-[#8B8580] mt-1">技法別に徹底比較</p>
+              </Link>
             </div>
           </div>
         </div>

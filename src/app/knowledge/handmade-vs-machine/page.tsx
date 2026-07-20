@@ -257,6 +257,10 @@ export default function HandmadeVsMachinePage() {
                 <p className="font-bold text-sm">眉毛アートメイク</p>
                 <p className="text-xs text-[#8B8580] mt-1">眉アートメイクの総合ガイド</p>
               </Link>
+              <Link href="/compare/technique/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+                <p className="font-bold text-sm">2D・3D・4D・6Dの違い</p>
+                <p className="text-xs text-[#8B8580] mt-1">技法別に徹底比較</p>
+              </Link>
             </div>
           </div>
         </div>

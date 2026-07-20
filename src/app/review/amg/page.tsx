@@ -151,7 +151,7 @@ export default function AmgReviewPage() {
                 <li key={n.rank}>・{n.rank}: <span className="font-semibold">{n.fee}</span></li>
               ))}
             </ul>
-            <p className="text-xs text-gray-500 mt-3">総額の考え方: 例）AMGオーダーメイド眉2回（150,000円）＋パートナーアーティスト指名（11,000円×2回）＝<span className="font-bold">総額172,000円</span>。指名なし・モニター平日なら2回88,000円〜に抑えられます。モニターはSNS症例写真掲載への同意＋アンケートが条件です。</p>
+            <p className="text-xs text-gray-500 mt-3">総額の考え方: 例）AMGオーダーメイド眉2回（150,000円）＋パートナーアーティスト指名（11,000円×2回）＝<span className="font-bold">総額172,000円</span>。指名なし・モニター平日なら2回88,000円〜に抑えられます。モニターはSNS症例写真掲載への同意＋アンケートが条件です。AMGを含む主要8院の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-500 underline">アートメイク料金比較DB</Link>でご覧いただけます。</p>
           </div>
         </div>
       </section>

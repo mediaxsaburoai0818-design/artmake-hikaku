@@ -190,7 +190,11 @@ export default function CreageReviewPage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3">※クレアージュは3回セット設計のため、回数が他院（通常2回）と異なります。全顔モニター価格（92,400〜105,600円・院による）もあります。指名料・麻酔代は公式サイトで明示が確認できなかったため「要確認」としています。正確な総額はカウンセリングでご確認ください。</p>
-          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          <div className="mt-6 bg-rose-50 border border-rose-200 rounded-xl p-5 text-center">
+            <p className="text-sm text-gray-700 mb-3">クレアージュを含む主要8院の公式料金（実質総額）を、指名料・追加費用まで横断で比較できます。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">8院の公式料金を横断比較する →</Link>
+            <p className="text-xs text-gray-500 mt-3">全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          </div>
         </div>
       </section>
 

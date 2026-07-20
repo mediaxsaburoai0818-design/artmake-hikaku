@@ -5,7 +5,7 @@ import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'dazzy skin clinic（デイジークリニック）の口コミ・評判・料金【2026年7月】指名料込み総額・院別を徹底解説',
-  description: 'dazzy skin clinic（デイジークリニック／dazzy CLINIC）の口コミ・評判・料金を徹底調査。眉2回93,800円〜、指名料22,000円〜を含む「実際に払う総額」の目安、新宿・札幌・福岡天神の院別料金、美容皮膚科「dazzy skin clinic」との関係まで公式情報（2026年7月10日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
+  description: 'dazzy skin clinic（デイジークリニック／dazzy CLINIC）の口コミ・評判・料金を徹底調査。眉2回93,800円〜、指名料22,000円〜を含む「実際に払う総額」の目安、新宿・札幌・福岡天神の院別料金、美容皮膚科「dazzy skin clinic（デイジースキンクリニック）」との関係まで公式情報（2026年7月10日確認・税込）で解説。アートメイクは医師・看護師が施術する医療行為です。',
 }
 
 const goodReviews = [
@@ -48,7 +48,7 @@ export default function DazzyClinicReviewPage() {
         <div className="max-w-4xl mx-auto">
           <div className="bg-rose-50 border-2 border-rose-200 rounded-2xl p-6 md:p-8">
             <h2 className="text-2xl font-bold mb-2 flex items-center gap-2"><span className="text-rose-500">30秒</span>でわかる結論</h2>
-            <p className="text-sm text-gray-500 mb-6">「dazzy skin clinic」で検索された方の多くは、アートメイクのデイジークリニックを探しています（美容皮膚科部門・旧心斎橋院との違いは<a href="#skin" className="text-rose-600 underline">後述</a>）。</p>
+            <p className="text-sm text-gray-500 mb-6">「dazzy skin clinic（カタカナ表記：デイジースキンクリニック）」で検索された方の多くは、アートメイクのデイジークリニックを探しています（美容皮膚科部門・旧心斎橋院との違いは<a href="#skin" className="text-rose-600 underline">後述</a>）。</p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               <div className="bg-white rounded-xl p-5 border border-green-200">
                 <p className="font-bold text-green-700 mb-2">おすすめできる人</p>
@@ -176,7 +176,11 @@ export default function DazzyClinicReviewPage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3">※院・ランク・指名するアーティスト・キャンペーンで変動します。福岡天神院は眉2回49,800円〜と最安水準です。麻酔・初診/再診の有無は公式サイトで明示が確認できなかったため「要確認」としています。正確な総額はカウンセリングでご確認ください。</p>
-          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          <div className="mt-6 bg-rose-50 border border-rose-200 rounded-xl p-5 text-center">
+            <p className="text-sm text-gray-700 mb-3">dazzy（デイジークリニック）を含む主要8院の公式料金（実質総額）を、指名料・追加費用まで横断で比較できます。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">8院の公式料金を横断比較する →</Link>
+            <p className="text-xs text-gray-500 mt-3">全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          </div>
         </div>
       </section>
 
@@ -206,9 +210,9 @@ export default function DazzyClinicReviewPage() {
           </div>
 
           <div id="skin" className="bg-gradient-to-r from-rose-50 to-pink-50 rounded-xl p-6 border border-rose-100 scroll-mt-20">
-            <h2 className="text-xl font-bold mb-3">「dazzy skin clinic」とは？アートメイクとの関係</h2>
+            <h2 className="text-xl font-bold mb-3">「dazzy skin clinic（デイジースキンクリニック）」とは？アートメイクとの関係</h2>
             <p className="text-sm text-gray-700 leading-relaxed mb-3">
-              「dazzy skin clinic」で検索される方が探しているのは、次の2つのどちらかです。
+              「dazzy skin clinic」（カタカナで「デイジースキンクリニック」とも表記されます）で検索される方が探しているのは、次の2つのどちらかです。
             </p>
             <ul className="space-y-2 text-sm text-gray-700 mb-3">
               <li className="flex items-start gap-2"><span className="text-rose-500 font-bold">①</span><span><strong>デイジークリニックの美容皮膚科部門（SKIN）</strong>：公式サイト内にダーマペン4（9,800円〜）・HIFU・ピコレーザー・医療脱毛・点滴などを扱う美容皮膚科セクションがあります。アートメイクとは別メニューです。</span></li>
@@ -349,6 +353,18 @@ export default function DazzyClinicReviewPage() {
       <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
+      </Link>
+      <Link href="/review/the-artmake-tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">THE ARTMAKE TOKYOの口コミ・評判</p>
+      </Link>
+      <Link href="/review/true-design/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">トゥルーデザインクリニックの口コミ・評判</p>
+      </Link>
+      <Link href="/compare/technique/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">技法</span>
+        <p className="font-semibold mt-1">2D・3D・4D・6Dの違いを技法別に比較</p>
       </Link>
       <Link href="/compare/medicalbrow-vs-dazzy/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>

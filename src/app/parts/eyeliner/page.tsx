@@ -576,6 +576,15 @@ export default function EyelinerPage() {
           <p className="text-xs text-gray-400 text-center">
             ※ 料金は税込の目安です（2回施術の場合）。施術者ランク・キャンペーンにより変動します。
           </p>
+          <div className="mt-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl p-6 text-center text-white">
+            <p className="text-lg font-bold mb-2">各院の公式料金を横断比較</p>
+            <p className="text-sm opacity-90 mb-4 max-w-2xl mx-auto">
+              アイラインを含む主要8クリニックの公式サイト実額を、指名料などを合算した「実際に払う総額」ベースでまとめています（税込・確認日付きの一次データ）。各院の料金をまとめて見比べたい方はこちら。
+            </p>
+            <Link href="/compare/price/" className="inline-block bg-white text-rose-600 px-8 py-3 rounded-lg font-semibold hover:bg-rose-50 transition-colors shadow">
+              アートメイク料金比較DBを見る →
+            </Link>
+          </div>
         </div>
       </section>
 

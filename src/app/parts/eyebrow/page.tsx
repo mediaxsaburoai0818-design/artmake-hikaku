@@ -567,6 +567,15 @@ export default function EyebrowPage() {
           <p className="text-xs text-gray-400 text-center">
             ※ 料金は税込の目安です。施術者ランク・キャンペーンにより変動します。モニター価格はさらにお得になる場合があります。
           </p>
+          <div className="mt-8 bg-gradient-to-br from-rose-500 to-pink-600 rounded-xl p-6 text-center text-white">
+            <p className="text-lg font-bold mb-2">各院の公式料金を横断比較</p>
+            <p className="text-sm opacity-90 mb-4 max-w-2xl mx-auto">
+              主要8クリニックの公式サイト実額を、指名料・麻酔・初診/再診料を合算した「実際に払う総額」ベースでまとめています（税込・確認日付きの一次データ）。眉2回の実質総額をまとめて見比べたい方はこちら。
+            </p>
+            <Link href="/compare/price/" className="inline-block bg-white text-rose-600 px-8 py-3 rounded-lg font-semibold hover:bg-rose-50 transition-colors shadow">
+              アートメイク料金比較DBを見る →
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -721,6 +730,34 @@ export default function EyebrowPage() {
       <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">メディカルブローの口コミ・料金</p>
+      </Link>
+      <Link href="/review/true-design/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">トゥルーデザインクリニックの口コミ・料金</p>
+      </Link>
+      <Link href="/review/the-artmake-tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">THE ARTMAKE TOKYOの口コミ・料金</p>
+      </Link>
+      <Link href="/compare/technique/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">技法</span>
+        <p className="font-semibold mt-1">2D・3D・4D・6Dの違いを技法別に比較</p>
+      </Link>
+      <Link href="/knowledge/stroke/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">技法</span>
+        <p className="font-semibold mt-1">毛並み（ストローク）眉の特徴・料金・経過</p>
+      </Link>
+      <Link href="/knowledge/powder-brow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">技法</span>
+        <p className="font-semibold mt-1">パウダー眉の特徴・料金・他技法との比較</p>
+      </Link>
+      <Link href="/purpose/40s-50s/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">目的別</span>
+        <p className="font-semibold mt-1">40代・50代の自然な眉デザインガイド</p>
+      </Link>
+      <Link href="/review/first-artmake/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">ファーストアートメイクの口コミ・料金</p>
       </Link>
       <Link href="/parts/lip/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>

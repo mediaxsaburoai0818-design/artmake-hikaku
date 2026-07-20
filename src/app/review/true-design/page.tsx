@@ -192,7 +192,11 @@ export default function TrueDesignReviewPage() {
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3">※3D・4Dを選ぶ場合は施術料が60,000〜70,000円に上がります。料金は施術前後写真の掲載条件付き（実質モニター型価格）です。掲載範囲・条件の詳細はカウンセリングで必ずご確認ください。最新・正確な総額は公式でご確認ください。</p>
-          <p className="text-sm text-gray-600 mt-3">5社の実質総額の横並び比較は<Link href="/compare/price/" className="text-rose-600 underline">アートメイク料金比較DB</Link>、全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          <div className="mt-6 bg-rose-50 border border-rose-200 rounded-xl p-5 text-center">
+            <p className="text-sm text-gray-700 mb-3">トゥルーデザインを含む主要8院の公式料金（実質総額）を、指名料・追加費用まで横断で比較できます。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">8院の公式料金を横断比較する →</Link>
+            <p className="text-xs text-gray-500 mt-3">全項目の比較は<Link href="/compare/all-clinics/" className="text-rose-600 underline">全5クリニック比較</Link>をご覧ください。</p>
+          </div>
         </div>
       </section>
 

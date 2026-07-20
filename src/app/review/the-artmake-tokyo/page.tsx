@@ -146,7 +146,11 @@ export default function TheArtmakeTokyoReviewPage() {
           </div>
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mt-6 text-sm text-gray-700">
             <p className="font-bold text-amber-800 mb-1">総額の考え方</p>
-            <p>初めての方が平日モニターで眉2回を受ける場合: <span className="font-bold">総額88,000円</span>（指名する場合＋5,500円〜33,000円×回数）。当サイト検証の相場レンジ（眉2回 約9.3万〜16万円）を下回る最安級ですが、<span className="font-bold">写真掲載条件と「経験者+20,000円」</span>を必ず確認してください。通常価格（2回150,000円）だと中位〜やや高めです。<Link href="/compare/price/" className="text-rose-500 underline">全院の料金比較はこちら</Link>。</p>
+            <p>初めての方が平日モニターで眉2回を受ける場合: <span className="font-bold">総額88,000円</span>（指名する場合＋5,500円〜33,000円×回数）。当サイト検証の相場レンジ（眉2回 約9.3万〜16万円）を下回る最安級ですが、<span className="font-bold">写真掲載条件と「経験者+20,000円」</span>を必ず確認してください。通常価格（2回150,000円）だと中位〜やや高めです。</p>
+          </div>
+          <div className="mt-6 bg-rose-50 border border-rose-200 rounded-xl p-5 text-center">
+            <p className="text-sm text-gray-700 mb-3">THE ARTMAKE TOKYOを含む主要8院の公式料金（実質総額）を、指名料・追加費用まで横断で比較できます（2026年7月7日確認・税込）。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">THE ARTMAKE TOKYOを含む主要8院の公式料金を横断比較する →</Link>
           </div>
         </div>
       </section>

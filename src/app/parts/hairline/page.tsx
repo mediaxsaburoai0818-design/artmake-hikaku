@@ -250,6 +250,7 @@ export default function HairlinePage() {
               </div>
             </div>
             <p className="text-xs text-gray-400 mt-3">※範囲・毛量により総額が変わる部位のため、見積もりはカウンセリングでの確認が必須です。</p>
+            <p className="text-sm text-gray-600 mt-4">眉・リップなど他部位を含む主要8クリニックの公式実額（指名料等込みの実質総額）は<Link href="/compare/price/" className="text-rose-500 font-semibold underline">アートメイク料金比較DB</Link>で横断比較できます。</p>
           </div>
         </div>
       </section>

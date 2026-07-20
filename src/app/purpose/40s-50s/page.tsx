@@ -384,6 +384,10 @@ export default function FortyFiftyPage() {
       {/* 関連記事 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 text-center mb-10">
+            <p className="text-sm text-gray-700 mb-3">主要8院の公式料金を、指名料・麻酔・初診/再診などの追加費用まで含めた「実際に払う総額」で横断比較できます（税込・確認日付き）。アートメイクは医療行為で、料金・仕上がりには個人差があります。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">各院の公式料金を横断比較する →</Link>
+          </div>
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
       <Link href="/review/medicalbrow/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">

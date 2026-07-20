@@ -132,7 +132,7 @@ export default function GinzaAreaPage() {
                 access: "銀座一丁目駅より徒歩1分",
                 station: "東京メトロ有楽町線「銀座一丁目駅」",
                 point: "銀座一丁目駅徒歩1分の好立地。眉2回88,000円（平日モニター価格）。眉・リップ・ヘアライン・ほくろと幅広いメニューに対応。アートメイク専門院ならではの高い技術力が魅力。※最新情報は公式サイトでご確認ください",
-                link: "#",
+                link: "/review/the-artmake-tokyo",
                 color: "bg-rose-200",
               },
             ].map((clinic) => (
@@ -312,6 +312,10 @@ export default function GinzaAreaPage() {
       {/* 関連記事 */}
       <section className="py-12 px-4 bg-gray-50">
         <div className="max-w-4xl mx-auto">
+          <div className="bg-rose-50 border border-rose-200 rounded-xl p-6 text-center mb-10">
+            <p className="text-sm text-gray-700 mb-3">主要8院の公式料金を、指名料・麻酔・初診/再診などの追加費用まで含めた「実際に払う総額」で横断比較できます（税込・確認日付き）。アートメイクは医療行為で、料金・仕上がりには個人差があります。</p>
+            <Link href="/compare/price/" className="inline-flex items-center justify-center gap-2 bg-rose-600 text-white font-bold px-6 py-3 rounded-lg hover:bg-rose-700 transition">各院の公式料金を横断比較する →</Link>
+          </div>
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
       <Link href="/area/tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
@@ -329,6 +333,10 @@ export default function GinzaAreaPage() {
       <Link href="/review/creage/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">クレアージュ東京の口コミ・評判</p>
+      </Link>
+      <Link href="/review/the-artmake-tokyo/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">THE ARTMAKE TOKYO（銀座院）の口コミ・評判</p>
       </Link>
       <Link href="/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">ランキング</span>

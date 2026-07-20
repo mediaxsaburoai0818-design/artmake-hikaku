@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/review/elm-clinic/" },
   title: "エルムクリニックのアートメイク口コミ・評判・料金【2026年】院ごとの料金差まで検証",
   description:
-    "エルムクリニック（表参道・京都・神戸・広島・岡山・福岡・熊本）のアートメイク料金を公式サイトで検証（2026年7月7日確認・税込）。眉は院により40,000円〜75,000円と料金が異なる点が最大の注意点。年間症例4,463件（2024年度）の美容皮膚科を総額ベースで解説します。",
+    "エルムクリニック（表参道・京都・神戸・広島・岡山・福岡・熊本）のアートメイク料金を公式サイトで検証（2026年7月7日確認・税込）。眉は院により40,000円〜75,000円と料金が異なる点が最大の注意点。広島院・岡山院の口コミ・評判の傾向（実在媒体で検証）も掲載。年間症例4,463件（2024年度）の美容皮膚科を総額ベースで解説します。",
 };
 
 const clinicPricing = [
@@ -39,6 +39,10 @@ const faqs = [
   {
     q: "実績はどのくらいありますか？",
     a: "アートメイクの年間症例数4,463件（2024年度実績）が公式に公表されています。年度が注記された公表値である点は確認しやすい表記です。2011年に広島で開院した美容皮膚科グループで、施術は医師の監督下で医療従事者が行うと公式に記載されています。",
+  },
+  {
+    q: "広島院・岡山院の口コミ・評判はどうですか？",
+    a: "実在する口コミ媒体（ホットペッパービューティー・キレイレポ・トリビュー、2026年7月20日確認）で見られる眉アートメイクの傾向として、広島院・岡山院とも「麻酔で痛みが少なかった」「カウンセリングが丁寧」「仕上がりが自然」といった声が確認できます。一方で、1回では色が薄く2回の施術が前提になる、施術後約10日はメイク不可などの制限、色選びの相談余地といった中立的な声もあります。評点はホットペッパーで広島院4.45・岡山院4.74（アートメイク特化の口コミ件数は岡山院は少数）。個人の感想の傾向であり効果を保証するものではないため、最新の評価は各媒体・公式でご確認ください。",
   },
 ];
 
@@ -161,6 +165,67 @@ export default function ElmClinicReviewPage() {
             <p>・年間症例4,463件は「2024年度実績」と年度が明記された公表値で、確認しやすい表記です。</p>
             <p>・指名料の金額・医療法人の正式名称・大阪院/麻布院のアートメイク提供可否は公式サイトで確認できませんでした（確認不可としてそのまま記載）。</p>
             <p>・リップは表参道院で抗ヘルペス薬2,000円が別途かかる等、院別の付帯費用があります。予約時に総額をご確認ください。</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 院別 口コミ・評判の傾向（柱2: 広島・岡山の口コミ意図に直答） */}
+      <section className="py-12 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-3">院別の口コミ・評判の傾向（広島院・岡山院）</h2>
+          <p className="text-center text-gray-500 text-sm mb-8">口コミ本文の創作・転載はせず、実在する口コミ媒体（ホットペッパービューティー・キレイレポ・トリビュー）で確認できた<strong>傾向の要約</strong>のみを掲載します（2026年7月20日確認・眉のアートメイク中心）。評点は各媒体の実表示値です。</p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* 広島院 */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold mb-1">エルムクリニック 広島院</h3>
+              <p className="text-sm text-gray-500 mb-4">実表示評点：ホットペッパー総合4.45（口コミ361件・うちアートメイク22件）／キレイレポ4.2（29件）／トリビュー4.4（24件）</p>
+              <p className="font-semibold text-sm text-rose-600 mb-1">良い評価の傾向</p>
+              <ul className="text-sm text-gray-700 space-y-1 mb-3">
+                <li>・麻酔で施術中の痛みが少なかったとの声が複数</li>
+                <li>・カウンセリングが丁寧で、希望のイメージに沿った提案があったとの評価</li>
+                <li>・仕上がりが自然だった・メイク時間が短くなったとの実感の声</li>
+              </ul>
+              <p className="font-semibold text-sm text-gray-600 mb-1">気になる声（中立）</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>・施術後半に麻酔が切れて痛みを感じたとの報告が数件</li>
+                <li>・色選びで希望と異なる色味を勧められたと感じた声が一部</li>
+                <li>・項目別では「予約の取りやすさ」がやや低め</li>
+              </ul>
+            </div>
+
+            {/* 岡山院 */}
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-bold mb-1">エルムクリニック 岡山院</h3>
+              <p className="text-sm text-gray-500 mb-4">実表示評点：ホットペッパー総合4.74（口コミ139件・うちアートメイク3件と少数）／キレイレポ4.2（15件）／トリビュー4.2（68件）</p>
+              <p className="font-semibold text-sm text-rose-600 mb-1">良い評価の傾向</p>
+              <ul className="text-sm text-gray-700 space-y-1 mb-3">
+                <li>・メリット・デメリットを含めて丁寧に説明してくれたとの声</li>
+                <li>・麻酔クリームで痛みが少なかったとの声</li>
+                <li>・仕上がりが自然・スタッフ対応が親切・予約が取りやすいとの声</li>
+              </ul>
+              <p className="font-semibold text-sm text-gray-600 mb-1">気になる声（中立）</p>
+              <ul className="text-sm text-gray-700 space-y-1">
+                <li>・1回では色が薄くなる傾向があり2回の施術が前提との体験報告</li>
+                <li>・施術後約10日間はメイク不可などの制限への言及</li>
+                <li>・受付から施術終了まで2時間半程度かかったとの報告</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-gray-50 rounded-lg p-4 text-xs text-gray-500 leading-relaxed">
+            <p className="font-semibold text-gray-600 mb-1">口コミ・評判の参照元（実在確認済み・2026年7月20日）</p>
+            <p>
+              広島院：
+              <a href="https://clinic.beauty.hotpepper.jp/H000482332/reviews/" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">ホットペッパービューティー</a>・
+              <a href="https://kireireport.com/clinics/167" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">キレイレポ</a>・
+              <a href="https://tribeau.jp/clinics/2146" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">トリビュー</a>
+              ／ 岡山院：
+              <a href="https://clinic.beauty.hotpepper.jp/H000482330/reviews/" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">ホットペッパービューティー</a>・
+              <a href="https://kireireport.com/clinics/1829" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">キレイレポ</a>・
+              <a href="https://tribeau.jp/clinics/2619" target="_blank" rel="nofollow noopener" className="text-rose-600 underline">トリビュー</a>
+            </p>
+            <p className="mt-2">※上記は個人の感想の傾向要約であり、効果・安全性を保証するものではありません。リップ単体の第三者口コミは確認できた範囲では少数のため、眉中心の傾向です。最新の評価は各媒体・公式サイトでご確認ください。</p>
           </div>
         </div>
       </section>

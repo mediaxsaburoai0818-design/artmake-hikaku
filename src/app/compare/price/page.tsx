@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: "アートメイクの値段・相場はいくら？【2026年】眉・リップの料金比較DBと実際に払う総額",
   description:
-    "5クリニックの公式サイト料金を2026年6月12日に一斉調査した料金比較データベース。眉2回4万円〜・1回あたり換算・モニター価格・指名料/麻酔代などの追加費用まで出典付きで比較。毎月定点更新し、改定履歴も記録します。",
+    "主要8クリニックの公式サイト料金を調査した料金比較データベース（主要5院2026年6月12日＋AMG・Gメディカル・THE ARTMAKE TOKYO 2026年7月7日確認・税込）。眉2回4万円〜・1回あたり換算・モニター価格・指名料/麻酔代などの追加費用まで出典付きで比較。毎月定点更新し、改定履歴も記録します。",
   keywords:
     "アートメイク 料金比較,アートメイク 安い,眉毛アートメイク 値段,アートメイク 相場,アートメイク モニター価格",
   openGraph: {
@@ -68,7 +68,37 @@ const clinics = [
     eyeliner: "2回 70,000円",
     nomination: "1回 1,500円",
     retouch: "初診料0円・再診料1,500円・麻酔3,000円（ピコ施術時）",
-    note: "眉2回4万円〜は今回調査の最安。大阪・心斎橋1院のみ。",
+    note: "眉2回4万円〜は今回調査の最安（写真掲載条件付き）。大阪・心斎橋1院のみ。",
+  },
+  {
+    name: "アートメイクギャラリー（AMG）",
+    eyebrow: "2回 140,000円（AMGストローク/パウダー）〜150,000円（オーダーメイド）／1回 75,000円〜",
+    eyebrowMonitor: "モニター2回 平日88,000円・土日98,000円",
+    lip: "ナチュラリーリップ 2回140,000円（モニター98,000円）",
+    eyeliner: "公式サイトで要確認",
+    nomination: "3,300〜35,000円（指名しなければ基準料金）",
+    retouch: "カウンセリング診察料1,100円が別途。除去はピコ別メニュー",
+    note: "指名なしなら全アーティスト一律料金。除去・ヘアラインまで対応（6院）。2026年7月7日公式確認。",
+  },
+  {
+    name: "Gメディカルアートメイク",
+    eyebrow: "1回 75,000円（2回まとめ購入で−5,000円→145,000円）",
+    eyebrowMonitor: "公式料金表に記載なし（要確認）",
+    lip: "1回 85,000円",
+    eyeliner: "1回 55,000円",
+    nomination: "11,000円（施術者により異なる場合あり）",
+    retouch: "60,000円（3回目以降）",
+    note: "旧グロウクリニック。シンプルな1回単価＋まとめ割。表参道・新宿・大阪の3院。2026年7月7日公式確認。",
+  },
+  {
+    name: "THE ARTMAKE TOKYO",
+    eyebrow: "通常1回 80,000円／2回 150,000円",
+    eyebrowMonitor: "平日モニター2回 88,000円（土日祝98,000円）",
+    lip: "通常1回 89,000円／2回 160,000円（モニター2回128,000円）",
+    eyeliner: "上 通常1回 60,000円／2回 110,000円（モニター上2回88,000円）",
+    nomination: "5,500〜33,000円/回（アーティスト別）",
+    retouch: "自院2回以上施術の方限定（他院歴は初回扱い）。2026年7月1日改定",
+    note: "全国6院（銀座・横浜・名古屋・大阪・福岡・広島）。眉はモニター中心の料金設計。アートメイク経験者はモニター料金＋20,000円の公式注記あり。2026年7月7日公式確認。",
   },
 ];
 
@@ -203,7 +233,7 @@ const faqs = [
   },
   {
     q: "一番安いアートメイククリニックはどこですか？",
-    a: "モニター価格ではメディカルブローの眉1回28,000円〜が最安クラスです。通常価格ではデイジークリニックの眉2回49,800円〜（手彫り）が最も安い部類に入ります。ただし、安さだけで選ぶと仕上がりに不満が出る可能性もあるため、技術力とのバランスも重要です。",
+    a: "モニター価格ではメディカルブローの眉1回28,000円〜が最安クラスです。通常価格では、当サイトが公式サイトで確認した範囲ではトゥルーデザインの眉2回40,000円〜（2Dパウダー・写真掲載条件付き）が最安の部類に入ります。ただし、安さだけで選ぶと仕上がりに不満が出る可能性もあるため、技術力とのバランスも重要です。料金は改定されるため、必ず各院公式サイトで最新額をご確認ください。",
   },
   {
     q: "アートメイクの料金に含まれないものはありますか？",
@@ -227,7 +257,7 @@ export default function PriceComparisonPage() {
       <section className="bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-rose-500 text-sm font-semibold mb-2">
-            2026年4月最新
+            2026年7月最新
           </p>
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             アートメイク料金比較【2026年最新】
@@ -235,7 +265,7 @@ export default function PriceComparisonPage() {
             眉毛・リップ・アイラインの相場
           </h1>
           <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-            人気クリニック5社の料金を徹底比較。
+            人気クリニック8社の料金を徹底比較。
             <br />
             モニター価格・通常価格・リタッチ込み総額まで、
             <br className="hidden md:block" />
@@ -273,6 +303,14 @@ export default function PriceComparisonPage() {
               </thead>
               <tbody>
                 <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年7月17日</td>
+                  <td className="py-2 text-gray-600">THE ARTMAKE TOKYO（銀座・横浜・名古屋・大阪・福岡・広島の6院／眉中心）の公式実額（2026年7月7日確認・税込）を「実質総額」比較表と料金比較表に追加し、横断比較を主要8院に拡充。眉2回の実勢レンジ上限を更新（通常料金・指名なしベース）。</td>
+                </tr>
+                <tr className="border-b border-gray-200">
+                  <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年7月16日</td>
+                  <td className="py-2 text-gray-600">アートメイクギャラリー（AMG）・Gメディカルアートメイクの公式実額（2026年7月7日確認・税込）を「実質総額」比較表と料金比較表に追加し、横断比較を主要7院に拡充。指名なし・通常料金ベースの実勢レンジを更新。</td>
+                </tr>
+                <tr className="border-b border-gray-200">
                   <td className="py-2 pr-4 font-bold whitespace-nowrap">2026年6月23日</td>
                   <td className="py-2 text-gray-600">「眉2回 実質総額（指名料・麻酔・初診/再診込み）比較」を新設。料金本体の数値は6月12日調査値を継続採用（各院公式に改定の告知は確認されず）。次回の料金一斉再調査時に差分を反映予定。</td>
                 </tr>
@@ -293,11 +331,11 @@ export default function PriceComparisonPage() {
             アートメイク料金の相場
           </h2>
           <p className="text-center text-gray-500 text-sm mb-8">
-            2026年6月12日に5クリニックの公式サイト料金を一斉調査（毎月定点更新）
+            主要5院を2026年6月12日、AMG・Gメディカル・THE ARTMAKE TOKYOを2026年7月7日に公式サイト料金で確認（毎月定点更新）
           </p>
           <div className="max-w-3xl mx-auto bg-white border-2 border-rose-200 rounded-xl p-6 mb-8">
             <p className="text-sm text-gray-700 leading-relaxed">
-              <strong className="text-rose-600">結論（当サイト検証値）</strong>：メニュー表の価格だけでなく指名料等を含めた「実際に払う総額」で見ると、当サイト掲載の主要5院では<strong>眉アートメイク2回で約9.3万〜13.6万円</strong>が実勢レンジです（2026年6月12日 各院公式サイト確認・税込。モニター利用時はこれより下がります）。「安く見えるが指名料で上がる院」「高く見えるが指名料無料の院」があるため、下の比較表は総額ベースでご覧ください。
+              <strong className="text-rose-600">結論（当サイト検証値）</strong>：メニュー表の価格だけでなく指名料等を含めた「実際に払う総額」で見ると、当サイト掲載の主要8院では<strong>眉アートメイク2回で概ね約9.3万〜15万円</strong>が指名なし・通常料金の実勢レンジです（トゥルーデザインは写真掲載条件付きで約4.3万円〜、THE ARTMAKE TOKYOも平日モニター2回88,000円〜あり、モニター利用時はこれより下がります）。数値は各院公式サイト確認・税込（主要5院2026年6月12日／AMG・Gメディカル・THE ARTMAKE TOKYO 2026年7月7日）。「安く見えるが指名料で上がる院」「高く見えるが指名料無料の院」があるため、下の比較表は総額ベースでご覧ください。
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -357,7 +395,7 @@ export default function PriceComparisonPage() {
             眉アートメイク「実質総額」比較（2回・追加費用込み）
           </h2>
           <p className="text-center text-gray-500 text-sm mb-8">
-            施術料だけでなく<strong>指名料・麻酔・初診/再診料を合算</strong>した「実際に払う総額」の目安。多くの比較サイトが載せない一次データです（{surveyDate}調査の公式料金ベース）。
+            施術料だけでなく<strong>指名料・麻酔・初診/再診料を合算</strong>した「実際に払う総額」の目安。多くの比較サイトが載せない一次データです（主要5院は{surveyDate}、AMG・Gメディカル・THE ARTMAKE TOKYOは2026年7月7日に各院公式サイトで確認）。
           </p>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
@@ -406,11 +444,32 @@ export default function PriceComparisonPage() {
                   <td className="p-3">初診3,300円</td>
                   <td className="p-3 font-bold text-rose-600">約135,300円（※3回分）</td>
                 </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">アートメイクギャラリー（AMG）</td>
+                  <td className="p-3">140,000円（指名なし基準）</td>
+                  <td className="p-3">3,300〜35,000円/回（任意）</td>
+                  <td className="p-3">カウンセリング診察料1,100円</td>
+                  <td className="p-3 font-bold text-rose-600">約141,100円〜（指名なし・モニター2回88,000円〜／&apos;26.7.7確認）</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">Gメディカルアートメイク</td>
+                  <td className="p-3">145,000円（75,000×2−5,000割）</td>
+                  <td className="p-3">11,000円/回（任意）</td>
+                  <td className="p-3">公式記載なし</td>
+                  <td className="p-3 font-bold text-rose-600">約145,000円（指名なし／&apos;26.7.7確認）</td>
+                </tr>
+                <tr className="border-b border-gray-100">
+                  <td className="p-3 font-bold">THE ARTMAKE TOKYO</td>
+                  <td className="p-3">150,000円（通常）／平日モニター 88,000円</td>
+                  <td className="p-3">5,500〜33,000円/回（任意）</td>
+                  <td className="p-3">初診0円・クリーム麻酔0円（相談のみ来院3,300円）</td>
+                  <td className="p-3 font-bold text-rose-600">約150,000円（指名なし・通常／平日モニター2回88,000円〜・&apos;26.7.7確認）</td>
+                </tr>
               </tbody>
             </table>
           </div>
           <p className="text-xs text-gray-500 mt-3">
-            ※{surveyDate}に各院公式サイトで確認した通常料金ベースの概算です。モニター・ランク・院・キャンペーンで変動します。クレアージュは3回セット設計のため回数が他院（2回）と異なる点に注意（1回あたり44,000円）。指名料は最小構成で算出。麻酔・初診/再診は施術内容により変わります。最新・正確な総額は各院のカウンセリングでご確認ください。
+            ※メディカルブロー・クレアージュ・デイジー・ファースト・トゥルーデザインは{surveyDate}、アートメイクギャラリー（AMG）・Gメディカル・THE ARTMAKE TOKYOは2026年7月7日に各院公式サイトで確認した通常料金ベースの概算です。モニター・ランク・院・キャンペーンで変動します。クレアージュは3回セット設計のため回数が他院（2回）と異なる点に注意（1回あたり44,000円）。AMG・Gメディカル・THE ARTMAKE TOKYOの指名料は任意（指名しなければ基準料金）。THE ARTMAKE TOKYOはモニター利用時、アートメイク経験者はモニター料金＋20,000円の公式注記があります。麻酔・初診/再診は施術内容により変わります。最新・正確な総額は各院のカウンセリングでご確認ください。
           </p>
           <p className="text-xs text-gray-500 mt-1">
             「安く見えて高くなる落とし穴」など実質総額の考え方は<a href="/knowledge/price-guide/" className="text-rose-600 underline">料金相場ガイド</a>でも解説しています。
@@ -422,7 +481,7 @@ export default function PriceComparisonPage() {
       <section className="py-16 px-4 bg-gray-50" id="price-table">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">
-            人気5社の料金比較表
+            人気8社の料金比較表
           </h2>
           <p className="text-center text-gray-500 text-sm mb-8">
             眉毛・リップ・アイライン・指名料・リタッチ料を一覧比較
@@ -485,7 +544,94 @@ export default function PriceComparisonPage() {
             ))}
           </div>
           <p className="text-xs text-gray-400 mt-4">
-            ※ 料金は2026年4月時点の公式サイト情報に基づきます。税込表示。最新料金は各クリニック公式サイトでご確認ください。
+            ※ 料金は公式サイト情報に基づきます（主要5院2026年6月12日／AMG・Gメディカル・THE ARTMAKE TOKYO 2026年7月7日確認）。税込表示。最新料金は各クリニック公式サイトでご確認ください。
+          </p>
+        </div>
+      </section>
+
+      {/* モニター価格ミニ比較表 */}
+      <section className="py-16 px-4 bg-white" id="monitor-price">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-3">
+            モニター価格ミニ比較表（眉・公式確認分のみ）
+          </h2>
+          <p className="text-center text-gray-500 text-sm mb-6">
+            公式サイトでモニター料金と条件が確認できた院だけを掲載。上の通常料金の実質総額とは適用範囲が異なります。
+          </p>
+          <div className="max-w-3xl mx-auto mb-8 bg-amber-50 border border-amber-200 rounded-lg p-4">
+            <p className="text-sm text-amber-900 leading-relaxed">
+              <span className="font-semibold">モニター価格についての注意：</span>
+              モニターは、施術前後の症例写真の提供・SNSやサイトへの掲載同意などを条件とする割引枠です。適用条件・対象範囲・提供枚数などが通常価格と異なり、平日限定や審査・経験者加算がある院もあります。金額・条件は各院公式サイトの記載に基づき、確認日を併記しています（税込）。仕上がりや効果を保証するものではありません。申込前に必ず公式サイト・カウンセリングで最新条件をご確認ください。
+            </p>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full bg-white rounded-xl shadow-lg text-sm border border-gray-100">
+              <thead className="bg-rose-500 text-white">
+                <tr>
+                  <th className="p-4 text-left min-w-[150px]">クリニック</th>
+                  <th className="p-4 min-w-[190px]">眉モニター料金</th>
+                  <th className="p-4 text-left min-w-[260px]">主な条件</th>
+                  <th className="p-4 min-w-[110px]">確認日</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  {
+                    name: "THE ARTMAKE TOKYO",
+                    price: "平日モニター2回 88,000円（土日祝98,000円）",
+                    cond: "施術前後の写真をサイト・Instagramに掲載（顔50%以下等のトリミング条件）。アートメイク経験者は+20,000円（公式明記）。",
+                    date: "2026年7月7日",
+                  },
+                  {
+                    name: "AMG（アートメイクギャラリー）",
+                    price: "モニター2回 平日88,000円（土日98,000円）",
+                    cond: "SNSでの症例写真掲載への同意＋アンケート回答が条件（AMGストローク／ナチュラリーパウダー）。",
+                    date: "2026年7月7日",
+                  },
+                  {
+                    name: "ファーストアートメイク",
+                    price: "眉モニター2回 88,000〜98,000円（平日34,900円/回〜）",
+                    cond: "平日枠・写真掲載等の条件付き。クリーム麻酔0円・初診料0円。",
+                    date: "2026年6月12日",
+                  },
+                  {
+                    name: "メディカルブロー",
+                    price: "初回モニター 28,000〜48,000円（1回・ランク別）",
+                    cond: "SNS掲載が条件。ランク・院・キャンペーンで金額が変動。",
+                    date: "2026年6月12日",
+                  },
+                  {
+                    name: "ELM CLINIC（表参道院）",
+                    price: "眉モニター 48,000〜62,000円（毛並みモニター58,000円）",
+                    cond: "表参道院のモニター枠。院・条件は公式サイトで要確認（予約はLINEのみ）。",
+                    date: "2026年7月7日",
+                  },
+                  {
+                    name: "トゥルーデザインクリニック",
+                    price: "眉2回 40,000円（2D）〜（実質モニター型価格）",
+                    cond: "掲載料金自体が施術前後写真をSNS等に掲載する条件付き設定。3D・4Dは60,000〜70,000円に上がる。",
+                    date: "2026年6月12日",
+                  },
+                ].map((m, i) => (
+                  <tr
+                    key={i}
+                    className={`border-b border-gray-100 ${i % 2 === 0 ? "bg-rose-50/30" : "bg-white"}`}
+                  >
+                    <td className="p-4 font-semibold text-gray-800">{m.name}</td>
+                    <td className="p-4 text-center text-rose-600 font-semibold">
+                      {m.price}
+                    </td>
+                    <td className="p-4 text-left text-gray-600 leading-relaxed">
+                      {m.cond}
+                    </td>
+                    <td className="p-4 text-center text-gray-500">{m.date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-gray-400 mt-4">
+            ※ 本表は公式サイトでモニター料金と条件を確認できた院のみを掲載しています（税込）。Gメディカルアートメイクは公式料金表にモニター価格の記載が確認できず（2026年7月7日時点）、DAZZY CLINICはモニター制度の公式記載が確認できないため、クレアージュは眉単体のモニター料金がなく全顔モニターのみのため、いずれも本表から除外しています。モニターは条件付きの割引枠で通常価格と適用範囲が異なります。金額・条件は改定される場合があるため、申込前に各院公式サイトで最新情報をご確認ください。
           </p>
         </div>
       </section>

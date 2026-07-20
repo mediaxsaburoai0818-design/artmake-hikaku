@@ -187,6 +187,7 @@ export default function MolePage() {
               </tbody>
             </table>
             <p className="text-xs text-[#8B8580] mt-2 text-center">※ 料金は税込の目安です。キャンペーンにより変動する場合があります。</p>
+            <p className="text-sm text-[#6B6560] mt-4 text-center">眉・リップなど主要8クリニックの公式実額（指名料等込みの実質総額）は<Link href="/compare/price/" className="text-[var(--gold)] font-semibold underline">アートメイク料金比較DB</Link>で横断比較できます。</p>
           </div>
 
           {/* 持続期間・注意点 */}
