@@ -759,6 +759,10 @@ export default function EyebrowPage() {
         <span className="text-rose-500 text-xs font-semibold">クリニック</span>
         <p className="font-semibold mt-1">ファーストアートメイクの口コミ・料金</p>
       </Link>
+      <Link href="/review/elm-clinic/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">エルムクリニックの口コミ・料金（広島・岡山院ほか）</p>
+      </Link>
       <Link href="/parts/lip/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">部位別</span>
         <p className="font-semibold mt-1">リップアートメイクの種類・相場</p>

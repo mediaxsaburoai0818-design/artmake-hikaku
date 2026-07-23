@@ -760,6 +760,10 @@ export default function AllClinicsPage() {
               <p className="font-bold text-sm">デイジークリニックの口コミ・評判</p>
               <p className="text-xs text-[#8B8580] mt-1">モニター価格の実態を調査</p>
             </Link>
+            <Link href="/review/elm-clinic/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
+              <p className="font-bold text-sm">エルムクリニックの口コミ・評判</p>
+              <p className="text-xs text-[#8B8580] mt-1">広島・岡山院ほか全国展開の実力は？</p>
+            </Link>
             <Link href="/knowledge/failure/" className="glass-card rounded-2xl p-4 hover:shadow-md transition-shadow border border-[var(--pink-beige)]">
               <p className="font-bold text-sm">アートメイク失敗事例10選</p>
               <p className="text-xs text-[#8B8580] mt-1">後悔しないための対策</p>

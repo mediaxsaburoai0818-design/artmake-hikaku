@@ -257,6 +257,10 @@ export default function HiroshimaAreaPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-6">関連記事</h2>
           <div className="grid md:grid-cols-2 gap-4">
+            <Link href="/review/elm-clinic/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+              <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+              <p className="font-semibold mt-1">エルムクリニック広島院の口コミ・料金</p>
+            </Link>
             <Link href="/area/fukuoka/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
               <span className="text-rose-500 text-xs font-semibold">エリア</span>
               <p className="font-semibold mt-1">福岡のおすすめクリニック</p>

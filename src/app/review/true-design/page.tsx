@@ -329,6 +329,10 @@ export default function TrueDesignReviewPage() {
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">全5クリニック完全比較</p>
       </Link>
+      <Link href="/review/elm-clinic/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
+        <span className="text-rose-500 text-xs font-semibold">クリニック</span>
+        <p className="font-semibold mt-1">エルムクリニックの口コミ・料金（広島・岡山院ほか）</p>
+      </Link>
       <Link href="/compare/dazzy-vs-true-design/" className="block bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition border border-gray-100">
         <span className="text-rose-500 text-xs font-semibold">比較</span>
         <p className="font-semibold mt-1">デイジー vs トゥルーデザイン比較</p>
